@@ -1,0 +1,1 @@
+powershell.exe ./blog-deploy.ps1
