@@ -73,7 +73,7 @@ header:
 # Author
 author:
     email: julio.batista@outlook.com
-    bio:
+    bio: Olá, eu sou Júlio César Batista e um desenvolvedor de software na <a href="http://www.inventti.com.br" target="_blank">Inventti</a>. Sou bacharel em Ciência da Computação pela <a href="http://www.furb.br" target="_blank">FURB</a> e tenho interesse por várias áreas relacionadas à computação. No meu tempo livre gosto de ler, estudar, praticar esportes, sair com a minha namorada e filosofar sobre "<em>a vida o universo e tudo mais</em>"! Seja bem-vindo ao meu blog!
     job: Desenvolvedor de software
     location: Blumenau, SC - Brasil
     # Your profile picture located in folder `source/_images/` (development)
@@ -116,5 +116,5 @@ google_analytics_id: UA-64940786-1
 # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
 gravatar_email: jcb.1611@gmail.com
 # Your swiftype install key
-swiftype_install_key:
+swiftype_install_key: k3aYhKBfynH2NnC3xm15
 
