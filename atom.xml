@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://ejulio.github.io//"/>
-  <updated>2015-07-21T23:06:24.000Z</updated>
+  <updated>2015-08-27T22:38:53.000Z</updated>
   <id>http://ejulio.github.io//</id>
   
   <author>
@@ -14,6 +14,34 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[The Dolly Zoom Effect]]></title>
+    <link href="http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/"/>
+    <id>http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/</id>
+    <published>2015-08-27T22:00:00.000Z</published>
+    <updated>2015-08-27T22:38:53.000Z</updated>
+    <content type="html"><![CDATA[<h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
+<h3 id="O_código_[no_Github]">O código [no <a href="https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect" title="Código no github" target="_blank" rel="external">Github</a>]</h3><p>Inicialmente nós temos que fazer o setup da cena como no código abaixo.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=index.html"></script><br>Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.</p>
+<p>O movimento da câmera (tag <strong>Movimento</strong> no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=mover-camera.js"></script><br>O zoom (tag <strong>Zoom</strong> no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o <em>FOV</em> (<em>Field of View</em>) da câmera.</p>
+<p>Para que o efeito fique correto, é necessário diminuir o zoom enquanto move a câmera em direção ao objeto e posteriormente aumentar o zoom enquanto move a câmera para longe do objeto. Abaixo está o código de uma função que demonstra o efeito.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=zoom.js"></script><br>Neste momento nós temos os dois componentes principais do efeito, o movimento da câmera e o zoom. Agora podemos trabalhar em como realizar o efeito que consiste em aproximar a câmera do objeto enquanto se diminui o campo de visão.</p>
+<script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=the-dolly-zoom-effect.js"></script>
+<p>No código acima, o <em>if</em> faz o movimento de aproximação com objeto, movendo a câmera em direção ao objeto e aumentando o <em>FOV</em>. Enquanto o <em>else</em> afasta o objeto, movendo a câmera na direção contrária do objeto e diminuindo o <em>FOV</em>.</p>
+<p>Abraços.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<]]>
+    </summary>
+    
+      <category term="3D" scheme="http://ejulio.github.io/tags/3D/"/>
+    
+      <category term="computação gráfica" scheme="http://ejulio.github.io/tags/computacao-grafica/"/>
+    
+      <category term="three.js" scheme="http://ejulio.github.io/tags/three-js/"/>
+    
+      <category term="exemplos" scheme="http://ejulio.github.io/categories/exemplos/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Olá novo mundo!]]></title>

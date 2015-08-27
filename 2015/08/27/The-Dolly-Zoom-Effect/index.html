@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Júlio César Batista">
-    <title>Olá novo mundo! - Júlio César Batista</title>
+    <title>The Dolly Zoom Effect - Júlio César Batista</title>
     <meta name="author" content="Júlio César Batista">
     <meta name="description" content="Júlio César Batista">
     <link rel="icon" href="/assets/images/favicon.png">
@@ -154,16 +154,16 @@
     
         <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">Olá novo mundo!</h1>
+        <h1 class="post-title" itemprop="headline">The Dolly Zoom Effect</h1>
     
     <div class="post-meta">
-    <time  itemprop="datePublished" content="Tue Jul 21 2015 19:44:06 GMT-0300">
-        Jul 21, 2015
+    <time  itemprop="datePublished" content="Thu Aug 27 2015 19:00:00 GMT-0300">
+        Aug 27, 2015
     </time>
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/Kernel/">Kernel</a>
+    <a class="category-link" href="/categories/exemplos/">exemplos</a>
 
 
     
@@ -171,11 +171,13 @@
 </div>
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
-        <p>Olá, pessoal. Tudo certo!?</p>
-<p>Depois de muito tempo aqui estou eu. Há uns 3 anos eu começava a minha jornada na internet com o meu antigo <a href="https://ejuliobatista.wordpress.com/" title="blog antigo" target="_blank" rel="external">blog</a> e este eu resolvi dar uma cara  nova para essa jornada. Estava apenas esperando terminar a minha graduação em ciência da computação pela <a href="http://www.furb.br" title="FURB" target="_blank" rel="external">FURB</a> para poder voltar a escrever. </p>
-<p>Para iniciar essa nova jornada criei esse blog utilizando <a href="http://www.hexo.io" title="hexo" target="_blank" rel="external">hexo</a>, a hospedagem com <a href="http://pages.github.com" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>, <a href="https://swiftype.com/" title="Swiftype" target="_blank" rel="external">Swiftype</a> para pesquisa e <a href="https://disqus.com/" title="Disqus" target="_blank" rel="external">Disqus</a> para comentários. O tema que eu estou usando é <a href="https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme" title="Tema Tranquilpeak" target="_blank" rel="external">Tranquilpeak</a> com uma <a href="https://pixabay.com/pt/a-turva-plano-de-fundo-borr%C3%A3o-819385/" title="Imagem de fundo no Pixabay" target="_blank" rel="external">imagem de fundo do pixabay</a>.</p>
-<p>Por aqui a ideia é de escrever sobre os mais variados temas. Ultimamente tenho me interessado bastante por aprendizado de máquina, mas não vou escrever somente sobre esse assunto.</p>
-<p>Era isso pessoal. Espero vocês nessa nova jornada.<br>Abraços.</p>
+        <h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
+<h3 id="O_código_[no_Github]">O código [no <a href="https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect" title="Código no github" target="_blank" rel="external">Github</a>]</h3><p>Inicialmente nós temos que fazer o setup da cena como no código abaixo.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=index.html"></script><br>Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.</p>
+<p>O movimento da câmera (tag <strong>Movimento</strong> no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=mover-camera.js"></script><br>O zoom (tag <strong>Zoom</strong> no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o <em>FOV</em> (<em>Field of View</em>) da câmera.</p>
+<p>Para que o efeito fique correto, é necessário diminuir o zoom enquanto move a câmera em direção ao objeto e posteriormente aumentar o zoom enquanto move a câmera para longe do objeto. Abaixo está o código de uma função que demonstra o efeito.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=zoom.js"></script><br>Neste momento nós temos os dois componentes principais do efeito, o movimento da câmera e o zoom. Agora podemos trabalhar em como realizar o efeito que consiste em aproximar a câmera do objeto enquanto se diminui o campo de visão.</p>
+<script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=the-dolly-zoom-effect.js"></script>
+<p>No código acima, o <em>if</em> faz o movimento de aproximação com objeto, movendo a câmera em direção ao objeto e aumentando o <em>FOV</em>. Enquanto o <em>else</em> afasta o objeto, movendo a câmera na direção contrária do objeto e diminuindo o <em>FOV</em>.</p>
+<p>Abraços.</p>
 
         
             
@@ -183,12 +185,19 @@
     </div>
     <div class="post-footer main-content-wrap">
         
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/3D/">3D</a> <a class="tag tag--primary tag--small t-link" href="/tags/computacao-grafica/">computação gráfica</a> <a class="tag tag--primary tag--small t-link" href="/tags/three-js/">three.js</a>
+
+            </div>
+        
         <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/08/27/The-Dolly-Zoom-Effect/"  data-tooltip="The Dolly Zoom Effect">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -196,7 +205,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/07/21/Ola-novo-mundo/" data-tooltip="Olá novo mundo!">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -206,17 +215,17 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ejulio.github.io/2015/07/21/Ola-novo-mundo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ejulio.github.io/2015/07/21/Ola-novo-mundo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ejulio.github.io/2015/07/21/Ola-novo-mundo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
@@ -255,7 +264,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/08/27/The-Dolly-Zoom-Effect/"  data-tooltip="The Dolly Zoom Effect">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
@@ -263,7 +272,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2015/07/21/Ola-novo-mundo/" data-tooltip="Olá novo mundo!">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
                     <i class="fa fa-angle-right"></i>
@@ -273,17 +282,17 @@
     </nav>
     <ul class="post-actions post-action-share">
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ejulio.github.io/2015/07/21/Ola-novo-mundo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ejulio.github.io/2015/07/21/Ola-novo-mundo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
         <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ejulio.github.io/2015/07/21/Ola-novo-mundo/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
