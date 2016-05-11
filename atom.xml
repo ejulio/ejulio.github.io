@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://ejulio.github.io//"/>
-  <updated>2015-08-27T22:38:53.000Z</updated>
+  <updated>2016-05-11T01:16:48.577Z</updated>
   <id>http://ejulio.github.io//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/"/>
     <id>http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/</id>
     <published>2015-08-27T22:00:00.000Z</published>
-    <updated>2015-08-27T22:38:53.000Z</updated>
+    <updated>2016-05-11T01:16:48.577Z</updated>
     <content type="html"><![CDATA[<h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
 <h3 id="O_código_[no_Github]">O código [no <a href="https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect" title="Código no github" target="_blank" rel="external">Github</a>]</h3><p>Inicialmente nós temos que fazer o setup da cena como no código abaixo.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=index.html"></script><br>Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.</p>
 <p>O movimento da câmera (tag <strong>Movimento</strong> no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=mover-camera.js"></script><br>O zoom (tag <strong>Zoom</strong> no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o <em>FOV</em> (<em>Field of View</em>) da câmera.</p>
@@ -48,7 +48,7 @@
     <link href="http://ejulio.github.io/2015/07/21/Ola-novo-mundo/"/>
     <id>http://ejulio.github.io/2015/07/21/Ola-novo-mundo/</id>
     <published>2015-07-21T22:44:06.000Z</published>
-    <updated>2015-07-21T23:06:24.000Z</updated>
+    <updated>2016-05-04T00:21:24.904Z</updated>
     <content type="html"><![CDATA[<p>Olá, pessoal. Tudo certo!?</p>
 <p>Depois de muito tempo aqui estou eu. Há uns 3 anos eu começava a minha jornada na internet com o meu antigo <a href="https://ejuliobatista.wordpress.com/" title="blog antigo" target="_blank" rel="external">blog</a> e este eu resolvi dar uma cara  nova para essa jornada. Estava apenas esperando terminar a minha graduação em ciência da computação pela <a href="http://www.furb.br" title="FURB" target="_blank" rel="external">FURB</a> para poder voltar a escrever. </p>
 <p>Para iniciar essa nova jornada criei esse blog utilizando <a href="http://www.hexo.io" title="hexo" target="_blank" rel="external">hexo</a>, a hospedagem com <a href="http://pages.github.com" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>, <a href="https://swiftype.com/" title="Swiftype" target="_blank" rel="external">Swiftype</a> para pesquisa e <a href="https://disqus.com/" title="Disqus" target="_blank" rel="external">Disqus</a> para comentários. O tema que eu estou usando é <a href="https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme" title="Tema Tranquilpeak" target="_blank" rel="external">Tranquilpeak</a> com uma <a href="https://pixabay.com/pt/a-turva-plano-de-fundo-borr%C3%A3o-819385/" title="Imagem de fundo no Pixabay" target="_blank" rel="external">imagem de fundo do pixabay</a>.</p>
