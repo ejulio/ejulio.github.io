@@ -7,12 +7,12 @@ tags:
 - 3D
 - computação gráfica
 ---
-###A ideia
+### A ideia 
 No post de hoje eu gostaria de demonstrar como fazer o efeito 3D "dolly zoom effect" utilizando a three.js.
 {% iframe http://codepen.io/ejulio/full/RPqgxp/ %}
 Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.
 {% iframe https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204 %}
-###O código [no [Github](https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect "Código no github")]
+### O código [no [Github](https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect "Código no github")]
 Inicialmente nós temos que fazer o setup da cena como no código abaixo.
 {% gist 726c7aea6a127c1d4dd6 index.html %}
 Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.
