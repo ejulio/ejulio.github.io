@@ -8,8 +8,8 @@ git push origin source
 
 hexo generate --deploy
 
-copy CNAME ../master
-copy .nojekyll ../master
+cp CNAME ../master
+cp .nojekyll ../master
 
 cd ../master
 git add --all
