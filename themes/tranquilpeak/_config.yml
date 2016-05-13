@@ -23,6 +23,20 @@ sidebar:
             title: Home
             url: /
             icon: home
+        about:
+            title: Sobre
+            url: /#about
+            icon: question
+        search:
+            title: Pesquisar
+            url: /#search
+            icon: search
+            # `st-search-show-outputs` classes are used to open swiftype search window
+            class: st-search-show-outputs
+        publicacoes:
+            title: Publicações
+            url: /publicacoes
+            icon: newspaper-o
         categories:
             title: Categorias
             url: /all-categories
@@ -31,16 +45,6 @@ sidebar:
             title: Tags
             url: /all-tags
             icon: tags
-        search:
-            title: Pesquisar
-            url: /#search
-            icon: search
-            # `st-search-show-outputs` classes are used to open swiftype search window
-            class: st-search-show-outputs
-        about:
-            title: Sobre
-            url: /#about
-            icon: question
     author_links:
          github:
              title: GitHub
@@ -50,6 +54,10 @@ sidebar:
              title: Twitter
              url: https://twitter.com/ejuliobatista
              icon: twitter
+         linkedin:
+             title: Linkedin
+             url: https://br.linkedin.com/in/juliobatista
+             icon: linkedin
          mail:
              title: Mail
              url: mailto:julio.batista@outlook.com
