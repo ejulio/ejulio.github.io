@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="null">
+<html lang="pt-br">
     
 <head>
     <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
@@ -7,13 +8,36 @@
     <meta name="generator" content="Júlio César Batista">
     <title>The Dolly Zoom Effect - Júlio César Batista</title>
     <meta name="author" content="Júlio César Batista">
-    <meta name="description" content="Júlio César Batista">
-    <link rel="icon" href="/assets/images/favicon.png">
     
-        <link rel="alternative" type="application/atom+xml" title="RSS" href="atom.xml">
+    
+        <link rel="icon" href="http://juliocesarbatista.com/assets/images/favicon.png">
+    
+    
+        <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
+    
+    <meta name="description" content="A ideiaNo post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="The Dolly Zoom Effect">
+<meta property="og:url" content="http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/index.html">
+<meta property="og:site_name" content="Júlio César Batista">
+<meta property="og:description" content="A ideiaNo post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.">
+<meta property="og:updated_time" content="2016-05-22T16:51:05.120Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Dolly Zoom Effect">
+<meta name="twitter:description" content="A ideiaNo post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.">
+<meta name="twitter:creator" content="@ejuliobatista">
+    
+    
+        
+    
+    
+        <meta property="og:image" content="http://www.gravatar.com/avatar/695c59efea4970a56c6a3c49bbc8bba0?s=640"/>
+    
+    
+    
     
     <!--STYLES-->
-    <link rel="stylesheet" href="/assets/css/style.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/style-27vrduj1jopliavvnzi7ibndpmbvg7lzo4a2uswrsi4m5vwauf2qi8s1v3or.min.css" type="text/css">
     <!--STYLES END-->
     
     <script type="text/javascript">
@@ -27,93 +51,131 @@
         })();
     </script>
 
+    
 </head>
 
     <body>
         <div id="blog">
-            <header id="header" data-behavior="1">
+            <!-- Define author's picture -->
+
+
+    
+        
+    
+
+<header id="header" data-behavior="3">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <h1 class="header-title">
-        <a class="header-title-link" href="http://ejulio.github.io">Júlio César Batista</a>
+        <a class="header-title-link" href="/ ">Júlio César Batista</a>
     </h1>
     
-        <a class="header-right-picture" href="/#about">
+        
+            <a  class="header-right-picture "
+                href="/#about">
+        
+        
             <img class="header-picture" src="http://www.gravatar.com/avatar/695c59efea4970a56c6a3c49bbc8bba0?s=90"/>
+        
         </a>
     
 </header>
-            <nav id="sidebar" data-behavior="1">
+
+            <!-- Define author's picture -->
+
+
     
-    <div class="sidebar-profile">
-        <a href="/#about">
-            
-            <img class="sidebar-profile-picture" src="http://www.gravatar.com/avatar/695c59efea4970a56c6a3c49bbc8bba0?s=90"/>
-            
-        </a>
-        <span class="sidebar-profile-name">Júlio César Batista</span>
-    </div>
+
+<nav id="sidebar" data-behavior="3">
+    
+        <div class="sidebar-profile">
+            <a href="/#about">
+                    <img class="sidebar-profile-picture" src="http://www.gravatar.com/avatar/695c59efea4970a56c6a3c49bbc8bba0?s=110"/>
+            </a>
+            <span class="sidebar-profile-name">Júlio César Batista</span>
+        </div>
     
     
-    <ul class="sidebar-buttons">
+        <ul class="sidebar-buttons">
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/ "
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-home"></i>
                     <span class="sidebar-button-desc">Home</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/#about">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/#about"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-question"></i>
                     <span class="sidebar-button-desc">Sobre</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/log-book">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/log-book"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-book"></i>
                     <span class="sidebar-button-desc">Diário de bordo</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/publications">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/publications"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-mortar-board"></i>
                     <span class="sidebar-button-desc">Publicações</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link st-search-show-outputs" href="/#search">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link st-search-show-outputs"
+                         href="/#search"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-search"></i>
                     <span class="sidebar-button-desc">Pesquisar</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/all-categories">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-categories"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
                     <span class="sidebar-button-desc">Categorias</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/all-tags">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/all-tags"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
                     <span class="sidebar-button-desc">Tags</span>
                 </a>
@@ -121,39 +183,39 @@
         
     </ul>
     
-    <ul class="sidebar-buttons">
+        <ul class="sidebar-buttons">
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="https://github.com/ejulio" target="_blank">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://github.com/ejulio" target="_blank">
+                
                     <i class="sidebar-button-icon fa fa-lg fa-github"></i>
                     <span class="sidebar-button-desc">GitHub</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="https://twitter.com/ejuliobatista" target="_blank">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://twitter.com/ejuliobatista" target="_blank">
+                
                     <i class="sidebar-button-icon fa fa-lg fa-twitter"></i>
                     <span class="sidebar-button-desc">Twitter</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="https://br.linkedin.com/in/juliobatista" target="_blank">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="https://br.linkedin.com/in/juliobatista" target="_blank">
+                
                     <i class="sidebar-button-icon fa fa-lg fa-linkedin"></i>
                     <span class="sidebar-button-desc">Linkedin</span>
                 </a>
         </li>
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="mailto:julio.batista@outlook.com" target="_blank">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link " href="mailto:julio.batista@outlook.com" target="_blank">
+                
                     <i class="sidebar-button-icon fa fa-lg fa-envelope-o"></i>
                     <span class="sidebar-button-desc">Mail</span>
                 </a>
@@ -161,12 +223,15 @@
         
     </ul>
     
-    <ul class="sidebar-buttons">
+        <ul class="sidebar-buttons">
         
-        <li class="sidebar-button">
-            
-                <a  class="sidebar-button-link " href="/atom.xml">
-            
+            <li class="sidebar-button">
+                
+                    <a  class="sidebar-button-link "
+                         href="/atom.xml"
+                        
+                    >
+                
                     <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
                     <span class="sidebar-button-desc">RSS</span>
                 </a>
@@ -175,20 +240,30 @@
     </ul>
     
 </nav>
-            <div id="main" data-behavior="1">
+
+            
+            <div id="main" data-behavior="3"
+                 class="
+                        hasCoverMetaIn
+                        ">
                 
 <article class="post" itemscope itemType="http://schema.org/BlogPosting">
     
-        <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">The Dolly Zoom Effect</h1>
+        <div class="post-header main-content-wrap text-left">
+    
+        <h1 class="post-title" itemprop="headline">
+            The Dolly Zoom Effect
+        </h1>
     
     <div class="post-meta">
-    <time  itemprop="datePublished" content="Thu Aug 27 2015 19:00:00 GMT-0300">
-        Aug 27, 2015
+    <time itemprop="datePublished" content="Thu Aug 27 2015 19:00:00 GMT-0300">
+	
+		    27/08/2015
+    	
     </time>
     
-        <span>in </span>
+        <span>em </span>
         
     <a class="category-link" href="/categories/exemplos/">exemplos</a>
 
@@ -197,8 +272,9 @@
 </div>
 </div>
     
-    <div class="post-content markdown main-content-wrap" itemprop="articleBody">
-        <h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
+    <div class="post-content markdown" itemprop="articleBody">
+        <div class="main-content-wrap">
+            <h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><a id="more"></a><br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
 <h3 id="O_código_[no_Github]">O código [no <a href="https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect" title="Código no github" target="_blank" rel="external">Github</a>]</h3><p>Inicialmente nós temos que fazer o setup da cena como no código abaixo.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=index.html"></script><br>Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.</p>
 <p>O movimento da câmera (tag <strong>Movimento</strong> no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=mover-camera.js"></script><br>O zoom (tag <strong>Zoom</strong> no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o <em>FOV</em> (<em>Field of View</em>) da câmera.</p>
 <p>Para que o efeito fique correto, é necessário diminuir o zoom enquanto move a câmera em direção ao objeto e posteriormente aumentar o zoom enquanto move a câmera para longe do objeto. Abaixo está o código de uma função que demonstra o efeito.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=zoom.js"></script><br>Neste momento nós temos os dois componentes principais do efeito, o movimento da câmera e o zoom. Agora podemos trabalhar em como realizar o efeito que consiste em aproximar a câmera do objeto enquanto se diminui o campo de visão.</p>
@@ -206,14 +282,13 @@
 <p>No código acima, o <em>if</em> faz o movimento de aproximação com objeto, movendo a câmera em direção ao objeto e aumentando o <em>FOV</em>. Enquanto o <em>else</em> afasta o objeto, movendo a câmera na direção contrária do objeto e diminuindo o <em>FOV</em>.</p>
 <p>Abraços.</p>
 
-        
             
-        
+        </div>
     </div>
-    <div class="post-footer main-content-wrap">
+    <div id="post-footer" class="post-footer main-content-wrap">
         
             <div class="post-footer-tags">
-                <span class="text-color-light text-small">TAGGED IN</span><br/>
+                <span class="text-color-light text-small">ETIQUETADO em</span><br/>
                 
     <a class="tag tag--primary tag--small t-link" href="/tags/3D/">3D</a> <a class="tag tag--primary tag--small t-link" href="/tags/computacao-grafica/">computação gráfica</a> <a class="tag tag--primary tag--small t-link" href="/tags/three-js/">three.js</a>
 
@@ -227,50 +302,64 @@
                     <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     <a class="post-action-btn btn btn--default tooltip--top" href="/2015/07/21/Ola-novo-mundo/" data-tooltip="Olá novo mundo!">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">PRÓXIMO</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
             </li>
         </ul>
     </nav>
     <ul class="post-actions post-action-share">
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
         
-            <li class="post-action hide-xs">
+            <li class="post-action">
                 <a class="post-action-btn btn btn--default" href="#disqus_thread">
                     <i class="fa fa-comment-o"></i>
                 </a>
             </li>
         
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
 
         
-            <div id="disqus_thread">
+            
+                <div id="disqus_thread">
     <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
+            
         
     </div>
 </article>
@@ -285,7 +374,7 @@
 
             </div>
             
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="1">
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="3">
                     <div class="post-actions-wrap">
     <nav>
         <ul class="post-actions post-action-nav">
@@ -294,50 +383,87 @@
                     <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">PREVIOUS</span>
+                    <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
                 </a>
             </li>
             <li class="post-action">
                 
                     <a class="post-action-btn btn btn--default tooltip--top" href="/2015/07/21/Ola-novo-mundo/" data-tooltip="Olá novo mundo!">
                 
-                    <span class="hide-xs hide-sm text-small icon-mr">NEXT</span>
+                    <span class="hide-xs hide-sm text-small icon-mr">PRÓXIMO</span>
                     <i class="fa fa-angle-right"></i>
                 </a>
             </li>
         </ul>
     </nav>
     <ul class="post-actions post-action-share">
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-google-plus"></i>
             </a>
         </li>
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-facebook-official"></i>
             </a>
         </li>
-        <li class="post-action">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://ejulio.github.io/2015/08/27/The-Dolly-Zoom-Effect/">
+        <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
                 <i class="fa fa-twitter"></i>
             </a>
         </li>
         
-            <li class="post-action hide-xs">
+            <li class="post-action">
                 <a class="post-action-btn btn btn--default" href="#disqus_thread">
                     <i class="fa fa-comment-o"></i>
                 </a>
             </li>
         
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
     </ul>
 </div>
 
 
                 </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="3">
+    <ul class="share-options">
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
+                <i class="fa fa-google-plus"></i><span class="">Compartilhar no Google Plus</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
+                <i class="fa fa-facebook-official"></i><span>Compartilhar no Facebook</span>
+            </a>
+        </li>
+        <li class="share-option">
+            <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/">
+                <i class="fa fa-twitter"></i><span>Compartilhar no Twitter</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
             
         </div>
-        <div id="about">
+        
+
+
+    
+
+<div id="about">
     <div id="about-card">
         <div id="about-btn-close">
             <i class="fa fa-remove"></i>
@@ -367,22 +493,32 @@
         
     </div>
 </div>
-        <div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
+
+        
+<div id="cover" style="background-image:url('/assets/images/cover.jpg');"></div>
     </body>
     <!--SCRIPTS-->
-<script src="/assets/js/script.min.js" type="text/javascript"></script>
+<script src="/assets/js/scrip-tu4ziscb5jrkjxubeugdgizktyuugflfq5jvgz4agzzmwifuq01g1lmq8giw.min.js" type="text/javascript"></script>
 <!--SCRIPTS END-->
 
-    <script type="text/javascript">
-        var disqus_shortname = 'juliobatista';
-        (function() {
-            var dsq = document.createElement('script');
-            dsq.type = 'text/javascript';
-            dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
+    
+        <script>
+             var disqus_config = function () {
+                 this.page.url = 'http://juliocesarbatista.com/2015/08/27/The-Dolly-Zoom-Effect/';
+                 
+                    this.page.identifier = '2015/08/27/The-Dolly-Zoom-Effect/';
+                                  
+             };
+            (function() {
+                var d = document, s = d.createElement('script');
+                var disqus_shortname = 'juliobatista';
+                s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+    
 
 
     <script type="text/javascript">
