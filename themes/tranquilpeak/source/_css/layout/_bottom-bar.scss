@@ -1,11 +1,13 @@
 // bottom bar which contains navigation and share options
 #bottom-bar {
+    display:            none;
     position:           fixed;
     bottom:             0;
     height:             60px;
     background:         white;
     margin:             0;
     border-top:         1px solid #eef2f8;
+    padding:            0 15px;
     z-index:            map-get($z-indexes, c-post-bottom-bar);
     transition:         transform .25s ease-in-out;
     -webkit-transition: -webkit-transform .25s ease-in-out;

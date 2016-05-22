@@ -1,5 +1,16 @@
 title: Diário de bordo
 date: 2016-05-22 11:32:53
+keywords:
+- computer science
+- research
+- programming
+- computer vision
+- machine learning
+- programação
+- visão computacional
+- aprendizado de máquina
+- pesquisa
+- ciência da computação
 ---
 Coleção de links que considero interessantes e que podem servir para futuras referências. Alguns links de repositórios e pesquisadores também podem ser encontrados no [GitHub](https://github.com/ejulio).
 

@@ -7,12 +7,12 @@ title: Júlio César Batista
 subtitle:
 description:
 author: Júlio César Batista
-language:
+language: pt-br
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://ejulio.github.io
+url: http://juliocesarbatista.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

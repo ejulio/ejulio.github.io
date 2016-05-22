@@ -9,6 +9,7 @@ tags:
 ---
 ### A ideia 
 No post de hoje eu gostaria de demonstrar como fazer o efeito 3D "dolly zoom effect" utilizando a three.js.
+<!-- more -->
 {% iframe http://codepen.io/ejulio/full/RPqgxp/ %}
 Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.
 {% iframe https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204 %}

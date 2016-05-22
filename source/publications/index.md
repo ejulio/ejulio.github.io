@@ -1,5 +1,11 @@
 title: Publicações
 date: 2016-05-12 21:40:02
+keywords:
+- computer science
+- publications
+- research
+- pesquisa
+- ciência da computação
 ---
 ## 2015
 - #### Signa: Uma aplicação para auxílio no ensino-aprendizagem da LIBRAS
