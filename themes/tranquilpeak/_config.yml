@@ -33,7 +33,7 @@ sidebar:
             icon: book
         publicacoes:
             title: Publicações
-            url: /publicacoes
+            url: /publications
             icon: mortar-board
         search:
             title: Pesquisar
