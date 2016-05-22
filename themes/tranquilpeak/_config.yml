@@ -27,16 +27,20 @@ sidebar:
             title: Sobre
             url: /#about
             icon: question
+        logbook:
+            title: Diário de bordo
+            url: /log-book
+            icon: book
+        publicacoes:
+            title: Publicações
+            url: /publicacoes
+            icon: mortar-board
         search:
             title: Pesquisar
             url: /#search
             icon: search
             # `st-search-show-outputs` classes are used to open swiftype search window
             class: st-search-show-outputs
-        publicacoes:
-            title: Publicações
-            url: /publicacoes
-            icon: newspaper-o
         categories:
             title: Categorias
             url: /all-categories
