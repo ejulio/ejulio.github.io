@@ -274,8 +274,8 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h3 id="A_ideia">A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><a id="more"></a><br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
-<h3 id="O_código_[no_Github]">O código [no <a href="https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect" title="Código no github" target="_blank" rel="external">Github</a>]</h3><p>Inicialmente nós temos que fazer o setup da cena como no código abaixo.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=index.html"></script><br>Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.</p>
+            <h3 id="A-ideia"><a href="#A-ideia" class="headerlink" title="A ideia"></a>A ideia</h3><p>No post de hoje eu gostaria de demonstrar como fazer o efeito 3D “dolly zoom effect” utilizando a three.js.<br><a id="more"></a><br><iframe src="http://codepen.io/ejulio/full/RPqgxp/" width="100%" height="300" frameborder="0" allowfullscreen></iframe><br>Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.<br><iframe src="https://clip.mn/embed/yt-Y2gTSjoEExc?pid=2204" width="100%" height="300" frameborder="0" allowfullscreen></iframe></p>
+<h3 id="O-codigo-no-Github"><a href="#O-codigo-no-Github" class="headerlink" title="O código [no Github]"></a>O código [no <a href="https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect" title="Código no github" target="_blank" rel="external">Github</a>]</h3><p>Inicialmente nós temos que fazer o setup da cena como no código abaixo.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=index.html"></script><br>Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.</p>
 <p>O movimento da câmera (tag <strong>Movimento</strong> no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=mover-camera.js"></script><br>O zoom (tag <strong>Zoom</strong> no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o <em>FOV</em> (<em>Field of View</em>) da câmera.</p>
 <p>Para que o efeito fique correto, é necessário diminuir o zoom enquanto move a câmera em direção ao objeto e posteriormente aumentar o zoom enquanto move a câmera para longe do objeto. Abaixo está o código de uma função que demonstra o efeito.<br><script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=zoom.js"></script><br>Neste momento nós temos os dois componentes principais do efeito, o movimento da câmera e o zoom. Agora podemos trabalhar em como realizar o efeito que consiste em aproximar a câmera do objeto enquanto se diminui o campo de visão.</p>
 <script src="//gist.github.com/726c7aea6a127c1d4dd6.js?file=the-dolly-zoom-effect.js"></script>
@@ -299,7 +299,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/05/27/Cross-validation-testando-o-desempenho-de-um-classificador/"  data-tooltip="Cross-validation: testando o desempenho de um classificador">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
@@ -380,7 +380,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/05/27/Cross-validation-testando-o-desempenho-de-um-classificador/"  data-tooltip="Cross-validation: testando o desempenho de um classificador">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">ANTERIOR</span>
