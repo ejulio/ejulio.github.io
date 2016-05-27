@@ -65,11 +65,15 @@ pagination_dir: page
 ## Themes: http://hexo.io/themes/
 theme: tranquilpeak
 
+marked:
+  gfm: true
+  tables: true
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type:
-  
+
 feed:
   type: atom
   path: atom.xml
