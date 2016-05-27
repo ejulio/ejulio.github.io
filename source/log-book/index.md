@@ -39,7 +39,8 @@ Coleção de links que considero interessantes e que podem servir para futuras r
 
 # Livros
 - [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/): Livro gratuito sobre deep learning.
-- [Natural Language Processing with Python - Analyzing text with the Natural Language Toolkit](http://www.nltk.org/book/): Livro sobre processamento de linguagem natural usando python e NLTK.
+- [Natural Language Processing with Python - Analyzing text with the Natural Language Toolkit](http://www.nltk.org/book/): Livro gratuito sobre processamento de linguagem natural usando python e NLTK.
+- [Introduction to Information Retrieval](http://nlp.stanford.edu/IR-book/): Livro gratuiro sobre extração de informações e aprendizado de máquina.
 - [The Feynman Lectures on Physics](http://www.feynmanlectures.caltech.edu/): Versão online gratuita.
 - [FreeTechBooks](http://www.freetechbooks.com/): Livros gratuitos sobre ciência da computação e programação.
 - [OpenIntro](https://www.openintro.org/index.php): Livros gratuitos de estatística.
