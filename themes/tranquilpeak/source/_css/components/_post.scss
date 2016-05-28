@@ -35,6 +35,7 @@
         margin-top:     20px;
         font-weight:    400;
         overflow:       hidden;
+        text-align:     justify;
         @include prefix('hypens', 'auto', 'webkit' 'moz');
 
         img {

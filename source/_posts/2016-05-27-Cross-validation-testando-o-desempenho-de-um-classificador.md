@@ -35,13 +35,13 @@ A validação cruzada nada mais é do que separar uma parte dos dados para ser u
 Nas linhas 4 e 5 os dados são separados para validação cruzada usando o método. Os dados para treinamento do classificador são armazenados em `train_data` e `train_labels` e os dados de teste são armazenados em `test_data` e `train_data`. O tamanho dos conjuntos e controlado por `test_size`, sendo que o valor `0.1` representa 10% de dados para teste.
 As linhas 7 e 8 treinam o classificador e fazem a classificação dos dados de teste. Na linha 9 é exibida a [matriz de confusão](http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/) que indica o desempenho do classificador. Abaixo está o resultado da execução do código acima.
 
-|                            | alt.atheism | comp.graphics | sci.med | soc.religion.christian | Total   |
-| -------------------------- |-------------|------------------------|---------------|---------| ------- |
-| **alt.atheism**            | 50          | 1                      | 1             | 1       | 53      |
-| **comp.graphics**          | 0           | 61                     | 0             | 0       | 61      |
-| **sci.med**                | 0           | 3                      | 55            | 1       | 59      |
-| **soc.religion.christian** | 0           | 2                      | 0             | 51      | 53      |
-| **Total**                  | 50          | 67                     | 56            | 53      | **226** |
+|                             | alt.atheism | comp.graphics | sci.med | soc.religion .christian | Total   |
+| --------------------------  |-------------|---------------|---------|-------------------------| ------- |
+| **alt.atheism**             | 50          | 1             | 1       | 1                       | 53      |
+| **comp.graphics**           | 0           | 61            | 0       | 0                       | 61      |
+| **sci.med**                 | 0           | 3             | 55      | 1                       | 59      |
+| **soc.religion .christian** | 0           | 2             | 0       | 51                      | 53      |
+| **Total**                   | 50          | 67            | 56      | 53                      | **226** |
 
 Os cabeçalhos e os totais eu adicionei manualmente. O _Total_ ao final de cada linha indica quantas amostras de determinada classe existiam no dataset de teste. Por exemplo, existem 53 amostras da classe `alt.atheism` nos dados para treinamento. O _Total_ das colunas indica quantas amostras de teste foram classificados como determinada classe no dataset de teste. Por exemplo, 67 amostras foram classificadas como `comp.graphics`.
 
@@ -53,13 +53,13 @@ As linhas 2 e 3 fazem a extração de características do dataset. A linha 5 efe
 # Alterando o classificador
 Agora é possível alterar o classificador e as características usadas para ver se há uma melhora (ou piora) na classificação. Por exemplo, é possível alterar o _kernel_ do _SVM_ de `'linear'` para `'rbf'` alterando a linha `classifier = OneVsOneClassifier(SVC(kernel = 'linear', random_state = 84))` para `classifier = OneVsOneClassifier(SVC(kernel = 'rbf', random_state = 84))`. O resultado da validação cruzada _k-fold_ é: `[ 0.26548673  0.26548673  0.26548673  0.26548673  0.26503341]` e `Accuracy: 0.2653960620454501 +/- 0.0003626544730670034`. A matriz de confusão é:
 
-|                            | alt.atheism | comp.graphics | sci.med | soc.religion.christian | Total |
-| -------------------------- |-------------|---------------|---------|------------------------| ------- |
-| **alt.atheism**            | 0           | 0             | 0       | 53                     | 53      |
-| **comp.graphics**          | 0           | 0             | 0       | 61                     | 61      |
-| **sci.med**                | 0           | 0             | 0       | 59                     | 59      |
-| **soc.religion.christian** | 0           | 0             | 0       | 53                     | 53      |
-| **Total**                  | 0           | 0             | 0       | 226                    | **226** |
+|                             | alt.atheism | comp.graphics | sci.med | soc.religion .christian | Total   |
+| --------------------------  |-------------|---------------|---------|-------------------------| ------- |
+| **alt.atheism**             | 0           | 0             | 0       | 53                      | 53      |
+| **comp.graphics**           | 0           | 0             | 0       | 61                      | 61      |
+| **sci.med**                 | 0           | 0             | 0       | 59                      | 59      |
+| **soc.religion .christian** | 0           | 0             | 0       | 53                      | 53      |
+| **Total**                   | 0           | 0             | 0       | 226                     | **226** |
 
 É possível perceber que apenas uma mudança no _kernel_ resultou em uma piora do classificador. Por isso é importante testar os parâmetros disponíveis no classificador e as diferentes características que podem ser extraídas dos dados para verificar o desempenho da classificação.
 
