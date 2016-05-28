@@ -5,7 +5,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="http://juliocesarbatista.com//"/>
-  <updated>2016-05-27T21:55:50.124Z</updated>
+  <updated>2016-05-28T14:44:24.309Z</updated>
   <id>http://juliocesarbatista.com//</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://juliocesarbatista.com/2016/05/27/Cross-validation-testando-o-desempenho-de-um-classificador/"/>
     <id>http://juliocesarbatista.com/2016/05/27/Cross-validation-testando-o-desempenho-de-um-classificador/</id>
     <published>2016-05-27T19:44:24.000Z</published>
-    <updated>2016-05-27T21:55:50.124Z</updated>
+    <updated>2016-05-28T14:44:24.309Z</updated>
     <content type="html"><![CDATA[<p>Olá pessoal, tudo certo!?</p>
 <p>Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.<br><a id="more"></a><br><!-- toc --></p>
 <h1 id="Dados-e-caracteristicas"><a href="#Dados-e-caracteristicas" class="headerlink" title="Dados e características"></a>Dados e características</h1><p>O exemplo de teste será a classificação de texto baseado no <a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html" target="_blank" rel="external">tutorial de classificação de texto do <em>scikit-learn</em></a>. O código inicial é:<br><script src="//gist.github.com/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=dados-e-caracteristicas.py"></script><br>Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação. Os dados são do dataset <em>Twenty Newsgroups</em> que está disponível no <em>scikit-learn</em> e será baixado apenas quando a aplicação for executada pela primeira vez. Estamos fazendo o download apenas das categorias definidas nas linhas 12 e 13, mas é possível usar <a href="http://qwone.com/~jason/20Newsgroups/" target="_blank" rel="external">outras categorias</a>.<br>Na linha 18 definimos o classificador, que é um <em>SVM</em> utilizando a técnica um-contra-um para classificar mais de duas classes.<br>Nas linhas 21 e 22 iniciamos as classes que fazem a extração de características. <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer" target="_blank" rel="external"><code>CountVectorizer</code></a> quebra o texto em <a href="https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29" target="_blank" rel="external"><em>tokens</em></a> e faz a contagem da <a href="https://en.wikipedia.org/wiki/Bag-of-words_model" target="_blank" rel="external"><em>bag of words</em></a>. <a href="http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer" target="_blank" rel="external"><code>TfidfTransformer</code></a> transforma as contagens em frequências usando <a href="http://www.tfidf.com/" target="_blank" rel="external"><em>Term Frequency-Inverse Document Frequency</em></a>.<br>A função <code>fit_classifier</code> na linha 24 treina o classificador com dos dados <code>train_data</code> e as classes <code>train_labels</code>. As linhas 26 e 27 fazem a extração de características dos dados e a linha 28 efetua o treinamento do classificador.<br>A função <code>predict</code> na linha 30 faz a classificação dos dados <code>test_data</code>. As linhas 31 e 32 fazem a extração de características e a linha 33 retorna as classificações para os dados.</p>
@@ -32,7 +32,7 @@
 <th>alt.atheism</th>
 <th>comp.graphics</th>
 <th>sci.med</th>
-<th>soc.religion.christian</th>
+<th>soc.religion .christian</th>
 <th>Total</th>
 </tr>
 </thead>
@@ -62,7 +62,7 @@
 <td>59</td>
 </tr>
 <tr>
-<td><strong>soc.religion.christian</strong></td>
+<td><strong>soc.religion .christian</strong></td>
 <td>0</td>
 <td>2</td>
 <td>0</td>
@@ -89,7 +89,7 @@
 <th>alt.atheism</th>
 <th>comp.graphics</th>
 <th>sci.med</th>
-<th>soc.religion.christian</th>
+<th>soc.religion .christian</th>
 <th>Total</th>
 </tr>
 </thead>
@@ -119,7 +119,7 @@
 <td>59</td>
 </tr>
 <tr>
-<td><strong>soc.religion.christian</strong></td>
+<td><strong>soc.religion .christian</strong></td>
 <td>0</td>
 <td>0</td>
 <td>0</td>
@@ -192,16 +192,16 @@
     <link href="http://juliocesarbatista.com/2015/07/21/Ola-novo-mundo/"/>
     <id>http://juliocesarbatista.com/2015/07/21/Ola-novo-mundo/</id>
     <published>2015-07-21T22:44:06.000Z</published>
-    <updated>2016-05-04T00:21:24.904Z</updated>
+    <updated>2016-05-28T14:40:20.500Z</updated>
     <content type="html"><![CDATA[<p>Olá, pessoal. Tudo certo!?</p>
-<p>Depois de muito tempo aqui estou eu. Há uns 3 anos eu começava a minha jornada na internet com o meu antigo <a href="https://ejuliobatista.wordpress.com/" title="blog antigo" target="_blank" rel="external">blog</a> e este eu resolvi dar uma cara  nova para essa jornada. Estava apenas esperando terminar a minha graduação em ciência da computação pela <a href="http://www.furb.br" title="FURB" target="_blank" rel="external">FURB</a> para poder voltar a escrever. </p>
-<p>Para iniciar essa nova jornada criei esse blog utilizando <a href="http://www.hexo.io" title="hexo" target="_blank" rel="external">hexo</a>, a hospedagem com <a href="http://pages.github.com" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>, <a href="https://swiftype.com/" title="Swiftype" target="_blank" rel="external">Swiftype</a> para pesquisa e <a href="https://disqus.com/" title="Disqus" target="_blank" rel="external">Disqus</a> para comentários. O tema que eu estou usando é <a href="https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme" title="Tema Tranquilpeak" target="_blank" rel="external">Tranquilpeak</a> com uma <a href="https://pixabay.com/pt/a-turva-plano-de-fundo-borr%C3%A3o-819385/" title="Imagem de fundo no Pixabay" target="_blank" rel="external">imagem de fundo do pixabay</a>.</p>
+<p>Depois de muito tempo aqui estou eu. Há uns 3 anos eu começava a minha jornada na internet com o meu antigo <a href="https://ejuliobatista.wordpress.com/" title="blog antigo" target="_blank" rel="external">blog</a> e este eu resolvi dar uma cara  nova para essa jornada. Estava apenas esperando terminar a minha graduação em ciência da computação pela <a href="http://www.furb.br" title="FURB" target="_blank" rel="external">FURB</a> para poder voltar a escrever.<br><a id="more"></a><br>Para iniciar essa nova jornada criei esse blog utilizando <a href="http://www.hexo.io" title="hexo" target="_blank" rel="external">hexo</a>, a hospedagem com <a href="http://pages.github.com" title="GitHub Pages" target="_blank" rel="external">GitHub Pages</a>, <a href="https://swiftype.com/" title="Swiftype" target="_blank" rel="external">Swiftype</a> para pesquisa e <a href="https://disqus.com/" title="Disqus" target="_blank" rel="external">Disqus</a> para comentários. O tema que eu estou usando é <a href="https://github.com/LouisBarranqueiro/tranquilpeak-hexo-theme" title="Tema Tranquilpeak" target="_blank" rel="external">Tranquilpeak</a> com uma <a href="https://pixabay.com/pt/a-turva-plano-de-fundo-borr%C3%A3o-819385/" title="Imagem de fundo no Pixabay" target="_blank" rel="external">imagem de fundo do pixabay</a>.</p>
 <p>Por aqui a ideia é de escrever sobre os mais variados temas. Ultimamente tenho me interessado bastante por aprendizado de máquina, mas não vou escrever somente sobre esse assunto.</p>
 <p>Era isso pessoal. Espero vocês nessa nova jornada.<br>Abraços.</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p>Olá, pessoal. Tudo certo!?</p>
-<p>Depois de muito tempo aqui estou eu. Há uns 3 anos eu começava a minha jornada na internet com o meu an]]>
+<p>Depois de muito tempo aqui estou eu. Há uns 3 anos eu começava a minha jornada na internet com o meu antigo <a href="https://ejuliobatista.wordpress.com/" title="blog antigo">blog</a> e este eu resolvi dar uma cara  nova para essa jornada. Estava apenas esperando terminar a minha graduação em ciência da computação pela <a href="http://www.furb.br" title="FURB">FURB</a> para poder voltar a escrever.<br>]]>
+    
     </summary>
     
       <category term="Kernel" scheme="http://juliocesarbatista.com/categories/Kernel/"/>
