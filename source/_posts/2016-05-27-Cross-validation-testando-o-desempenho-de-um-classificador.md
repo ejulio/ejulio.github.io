@@ -3,10 +3,10 @@ date: 2016-05-27 16:44:24
 categories:
 - aprendizado de máquina
 tags:
-- aprendizado de máquina
 - validação cruzada
 - python
 - scikit-learn
+- exemplos
 keywords:
 - machine learning
 - cross-validation

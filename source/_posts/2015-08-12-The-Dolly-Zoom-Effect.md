@@ -1,11 +1,11 @@
 title: The Dolly Zoom Effect
 date: 2015-08-27 19:00:00
 categories:
-- exemplos
+- computação gráfica
 tags:
 - three.js
 - 3D
-- computação gráfica
+- exemplos
 ---
 ### A ideia 
 No post de hoje eu gostaria de demonstrar como fazer o efeito 3D "dolly zoom effect" utilizando a three.js.

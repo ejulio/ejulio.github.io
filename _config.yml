@@ -44,7 +44,7 @@ highlight:
   tab_replace:
 
 # Category & Tag
-default_category: uncategorized
+default_category: kernel
 category_map:
 tag_map:
 
@@ -64,6 +64,9 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 theme: tranquilpeak
+
+math:
+  engine: 'katex'
 
 marked:
   gfm: true
