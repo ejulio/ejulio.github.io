@@ -23,12 +23,21 @@ Coleção de links que considero interessantes e que podem servir para futuras r
 - [Pedro Felipe Felzenszwalb](http://cs.brown.edu/~pff/).
 - [Fernando De la Torre](http://www.cs.cmu.edu/~ftorre/).
 - [Georg Nebehay](http://gnebehay.com/).
+- [Patrik Huber](http://www.patrikhuber.ch).
+- [Kris Kitani](http://www.cs.cmu.edu/~kkitani/).
+- [Svetlana Lazebnik](http://web.engr.illinois.edu/~slazebni/).
+- [Parag Kumar Mital](http://pkmital.com/home/).
+- [Andrej Karpathy](http://cs.stanford.edu/people/karpathy/).
+- [Gabriele Fanelli](http://www.fanelli.li/).
+- [Giuseppe Serra](http://giuseppeserra.com/).
 
 # Frameworks / Libraries
 - [OpenCV](http://opencv.org/) `[python, C++]`: Biblioteca para visão computacional e aprendizado de máquina.
-- [Dlib](http://dlib.net/) `[python, C++]`: Biblioteca para processamento de imagens, aprendizado de máquina e outros. 
+- [Dlib](http://dlib.net/) `[python, C++]`: Biblioteca para processamento de imagens, aprendizado de máquina e outros.
+- [4DFace](http://www.4dface.org/) `[C++]`: 3DMM para construir um modelo 3D face a partir de vídeos 2D.
 - [OpenFace](https://github.com/TadasBaltrusaitis/OpenFace) `[C++]`: Ferramenta para análise de comportamento facial.
-- [VLFeat](http://www.vlfeat.org/index.html) `[python]`: Biblioteca para visão computacional.
+- [Menpo](http://www.menpo.org) `[python]`: Framework com métodos para modelagem deformável 2D e 3D.
+- [VLFeat](http://www.vlfeat.org/index.html) `[C, MATLAB]`: Biblioteca para visão computacional.
 - [SimpleCV](http://simplecv.org/) `[python]`: Biblioteca para visão computacional.
 - [NLTK](http://www.nltk.org/) `[python]`: Ferramenta processamento de linguagem natural.
 - [scikit-image](http://scikit-image.org/) `[python]`: Biblioteca para processamento de imagens.
@@ -37,8 +46,17 @@ Coleção de links que considero interessantes e que podem servir para futuras r
 - [clmtrackr](https://github.com/auduno/clmtrackr) `[javascript]`: Biblioteca para tracking de características faciais usando Contrained Local Models.
 - [Accord.NET](http://accord-framework.net/) `[C#]`: Framework para aprendizado de máquina e visão computacional.
 
+# Datasets
+- [Head Pose Database](http://gi4e.unavarra.es/databases/hpdb/): Database para estimativa da pose da cabeça (*pitch*, *yaw* e *roll*).
+- [Head Pose Image Database](http://www-prima.inrialpes.fr/perso/Gourier/Faces/HPDatabase.html): Database para estimativa da pose da cabeça (*pitch*, *yaw*).
+- [Biwi Kinect Head Pose Database](https://data.vision.ee.ethz.ch/cvl/gfanelli/head_pose/head_forest.html#db): Database para estimativa da pose da cabeça (*pitch*, *yaw*).
+- [Annotated Faces in the wild - AFW](http://www.ics.uci.edu/~xzhu/face/): Database para detecção de faces e *landmarks* em ambientes não controlados.
+- [AFLW2000-3D](http://www.cbsr.ia.ac.cn/users/xiangyuzhu/projects/3DDFA/main.htm): Database para alinhamento de faces com rotação.
+
 # Livros
+- [Programming Computer Vision](http://programmingcomputervision.com/): Livro sobre visão computacional com python.
 - [Neural Networks and Deep Learning](http://neuralnetworksanddeeplearning.com/): Livro gratuito sobre deep learning.
+- [Planning Algorithms](http://planning.cs.uiuc.edu): Livro gratuito sobre algoritmos de planejamento.
 - [Natural Language Processing with Python - Analyzing text with the Natural Language Toolkit](http://www.nltk.org/book/): Livro gratuito sobre processamento de linguagem natural usando python e NLTK.
 - [Introduction to Information Retrieval](http://nlp.stanford.edu/IR-book/): Livro gratuiro sobre extração de informações e aprendizado de máquina.
 - [The Feynman Lectures on Physics](http://www.feynmanlectures.caltech.edu/): Versão online gratuita.
@@ -46,6 +64,8 @@ Coleção de links que considero interessantes e que podem servir para futuras r
 - [OpenIntro](https://www.openintro.org/index.php): Livros gratuitos de estatística.
 - [The MOOCulus Textbook](https://mooculus.osu.edu/handouts): Livro gratuito sobre cálculo.
 - [Community Calculus](http://communitycalculus.org): Livro gratuito sobre cálculo.
+- [Learn You a Haskell for Great Good](http://learnyouahaskell.com/): Livro gatuito sobre Haskell.
+- [Learn You Some Erlang for Great Good](http://learnyousomeerlang.com/): Livro gratuito sobre Erlang.
 
 # Vídeos / Cursos
 - [Computer Vision Talks](http://www.computervisiontalks.com/): Vídeos sobre visão computacional.
@@ -53,6 +73,10 @@ Coleção de links que considero interessantes e que podem servir para futuras r
 - [Mathematical Monk](https://www.youtube.com/user/mathematicalmonk/): Canal no YouTube com vídeos sobre aprendizado de máquina, teoria da informação e probabilidade.
 
 # Outros recursos
+- [ShortScience.org](http://www.shortscience.org): Plataforma para auxiliar no entendimento de artigos científicos.
+- [The Open Source Data Science Masters](http://datasciencemasters.org/): Currículo online para aprender Data Science.
+- [OpenFace](https://cmusatyalab.github.io/openface): Reconhecimento facial usando Deep Neural Networks em python.
 - [Reproducible Research in Computational Science](http://www.csee.wvu.edu/~xinl/source.html): Códigos fonte de pesquisas sobre ciência da computação.
 - [CVonline](http://homepages.inf.ed.ac.uk/rbf/CVonline/): Recursos sobre visão computacional.
 - [Annotated Computer Vision Bibliography](http://iris.usc.edu/Vision-Notes/bibliography/contents.html): Bibliografia sobre vários temas relacionados à visão computacional como: reconhecimento de face, reconhecimento de padrões, super resolução e outros.
+- [nbviewer](http://nbviewer.jupyter.org/): Jupyter Notebooks sobre vários temas.
