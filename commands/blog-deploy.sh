@@ -2,13 +2,14 @@
 
 cd source
 
+rm -rf public
 git add --all
 git commit -m "$1"
 git push origin source
 
 hugo
 
-rm ../master/*
+rm -rf ../master/*
 cp CNAME ../master
 cp .nojekyll ../master
 mv ./public/* ../master
