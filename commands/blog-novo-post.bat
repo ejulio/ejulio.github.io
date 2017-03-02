@@ -1,1 +1,0 @@
-powershell.exe ./blog-novo-post.ps1 -nome '%1'
