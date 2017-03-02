@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/categories/computa%C3%A7%C3%A3o-gr%C3%A1fica/index.xml</link>
+    <description>Recent content on Júlio César Batista</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
+    <atom:link href="http://juliocesarbatista.com/categories/computa%C3%A7%C3%A3o-gr%C3%A1fica/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>The Dolly Zoom Effect</title>
+      <link>http://juliocesarbatista.com/post/The-Dolly-Zoom-Effect/</link>
+      <pubDate>Thu, 27 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/The-Dolly-Zoom-Effect/</guid>
+      <description>
+
+&lt;h3 id=&#34;a-ideia&#34;&gt;A ideia&lt;/h3&gt;
+
+&lt;p&gt;No post de hoje eu gostaria de demonstrar como fazer o efeito 3D &lt;a href=&#34;http://codepen.io/ejulio/full/RPqgxp/&#34;&gt;&lt;em&gt;dolly zoom effect&lt;/em&gt;&lt;/a&gt; utilizando a three.js.
+&lt;!-- more --&gt;
+Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/Y2gTSjoEExc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;o-código-no-github-https-github-com-ejulio-blog-posts-tree-master-the-dolly-zoom-effect-código-no-github&#34;&gt;O código [no &lt;a href=&#34;https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect&#34; title=&#34;Código no github&#34;&gt;Github&lt;/a&gt;]&lt;/h3&gt;
+
+&lt;p&gt;Inicialmente nós temos que fazer o setup da cena como no código abaixo.
+&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=index.html&#34;&gt;&lt;/script&gt;
+Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.&lt;/p&gt;
+
+&lt;p&gt;O movimento da câmera (tag &lt;strong&gt;Movimento&lt;/strong&gt; no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.
+&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=mover-camera.js&#34;&gt;&lt;/script&gt;
+O zoom (tag &lt;strong&gt;Zoom&lt;/strong&gt; no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o &lt;em&gt;FOV&lt;/em&gt; (&lt;em&gt;Field of View&lt;/em&gt;) da câmera.&lt;/p&gt;
+
+&lt;p&gt;Para que o efeito fique correto, é necessário diminuir o zoom enquanto move a câmera em direção ao objeto e posteriormente aumentar o zoom enquanto move a câmera para longe do objeto. Abaixo está o código de uma função que demonstra o efeito.
+&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=zoom.js&#34;&gt;&lt;/script&gt;
+Neste momento nós temos os dois componentes principais do efeito, o movimento da câmera e o zoom. Agora podemos trabalhar em como realizar o efeito que consiste em aproximar a câmera do objeto enquanto se diminui o campo de visão.&lt;/p&gt;
+
+&lt;p&gt;&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=the-dolly-zoom-effect.js&#34;&gt;&lt;/script&gt;
+No código acima, o &lt;em&gt;if&lt;/em&gt; faz o movimento de aproximação com objeto, movendo a câmera em direção ao objeto e aumentando o &lt;em&gt;FOV&lt;/em&gt;. Enquanto o &lt;em&gt;else&lt;/em&gt; afasta o objeto, movendo a câmera na direção contrária do objeto e diminuindo o &lt;em&gt;FOV&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;Abraços.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/index.xml</link>
+    <description>Recent content on Júlio César Batista</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
+    <atom:link href="http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Cross-validation: testando o desempenho de um classificador</title>
+      <link>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</link>
+      <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</guid>
+      <description>
+
+&lt;p&gt;Olá pessoal, tudo certo!?&lt;/p&gt;
+
+&lt;p&gt;Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.
+&lt;!-- more --&gt;
+&lt;!-- toc --&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;dados-e-características&#34;&gt;Dados e características&lt;/h1&gt;
+
+&lt;p&gt;O exemplo de teste será a classificação de texto baseado no &lt;a href=&#34;http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html&#34;&gt;tutorial de classificação de texto do &lt;em&gt;scikit-learn&lt;/em&gt;&lt;/a&gt;. O código inicial é:&lt;/p&gt;
+
+&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=dados-e-caracteristicas.py&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação. Os dados são do dataset &lt;em&gt;Twenty Newsgroups&lt;/em&gt; que está disponível no &lt;em&gt;scikit-learn&lt;/em&gt; e será baixado apenas quando a aplicação for executada pela primeira vez. Estamos fazendo o download apenas das categorias definidas nas linhas 12 e 13, mas é possível usar &lt;a href=&#34;http://qwone.com/~jason/20Newsgroups/&#34;&gt;outras categorias&lt;/a&gt;.
+Na linha 18 definimos o classificador, que é um &lt;em&gt;SVM&lt;/em&gt; utilizando a técnica um-contra-um para classificar mais de duas classes.
+Nas linhas 21 e 22 iniciamos as classes que fazem a extração de características. &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer&#34;&gt;&lt;em&gt;CountVectorizer&lt;/em&gt;&lt;/a&gt; quebra o texto em &lt;a href=&#34;https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29&#34;&gt;&lt;em&gt;tokens&lt;/em&gt;&lt;/a&gt; e faz a contagem da &lt;a href=&#34;https://en.wikipedia.org/wiki/Bag-of-words_model&#34;&gt;&lt;em&gt;bag of words&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer&#34;&gt;&lt;em&gt;TfidfTransformer&lt;/em&gt;&lt;/a&gt; transforma as contagens em frequências usando &lt;a href=&#34;http://www.tfidf.com/&#34;&gt;&lt;em&gt;Term Frequency-Inverse Document Frequency&lt;/em&gt;&lt;/a&gt;.
+A função _fit&lt;em&gt;classifier&lt;/em&gt; na linha 24 treina o classificador com dos dados _train&lt;em&gt;data&lt;/em&gt; e as classes _train&lt;em&gt;labels&lt;/em&gt;. As linhas 26 e 27 fazem a extração de características dos dados e a linha 28 efetua o treinamento do classificador.
+A função &lt;em&gt;predict&lt;/em&gt; na linha 30 faz a classificação dos dados _test&lt;em&gt;data&lt;/em&gt;. As linhas 31 e 32 fazem a extração de características e a linha 33 retorna as classificações para os dados.&lt;/p&gt;
+
+&lt;h1 id=&#34;validação-cruzada-e-a-matriz-de-confusão&#34;&gt;Validação cruzada e a matriz de confusão&lt;/h1&gt;
+
+&lt;p&gt;A validação cruzada nada mais é do que separar uma parte dos dados para ser usado treinamento e outra parte para ser usada como teste. Para isso, o &lt;em&gt;scikit-learn&lt;/em&gt; oferece uma função que faz a separação automaticamente dos dados.
+&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=validacao-cruzada-e-matriz-de-confusao.py&#34;&gt;&lt;/script&gt;
+Nas linhas 4 e 5 os dados são separados para validação cruzada usando o método. Os dados para treinamento do classificador são armazenados em _train&lt;em&gt;data&lt;/em&gt; e _train&lt;em&gt;labels&lt;/em&gt; e os dados de teste são armazenados em _test&lt;em&gt;data&lt;/em&gt; e _train&lt;em&gt;data&lt;/em&gt;. O tamanho dos conjuntos e controlado por _test&lt;em&gt;size&lt;/em&gt;, sendo que o valor &lt;em&gt;0.1&lt;/em&gt; representa 10% de dados para teste.
+As linhas 7 e 8 treinam o classificador e fazem a classificação dos dados de teste. Na linha 9 é exibida a &lt;a href=&#34;http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/&#34;&gt;matriz de confusão&lt;/a&gt; que indica o desempenho do classificador. Abaixo está o resultado da execução do código acima.&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;alt.atheism&lt;/th&gt;
+&lt;th&gt;comp.graphics&lt;/th&gt;
+&lt;th&gt;sci.med&lt;/th&gt;
+&lt;th&gt;soc.religion .christian&lt;/th&gt;
+&lt;th&gt;Total&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;alt.atheism&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;comp.graphics&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;sci.med&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;55&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;soc.religion .christian&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;51&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;50&lt;/td&gt;
+&lt;td&gt;67&lt;/td&gt;
+&lt;td&gt;56&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;226&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Os cabeçalhos e os totais eu adicionei manualmente. O &lt;em&gt;Total&lt;/em&gt; ao final de cada linha indica quantas amostras de determinada classe existiam no dataset de teste. Por exemplo, existem 53 amostras da classe &lt;em&gt;alt.atheism&lt;/em&gt; nos dados para treinamento. O &lt;em&gt;Total&lt;/em&gt; das colunas indica quantas amostras de teste foram classificados como determinada classe no dataset de teste. Por exemplo, 67 amostras foram classificadas como &lt;em&gt;comp.graphics&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;validação-cruzada-k-fold&#34;&gt;Validação cruzada &lt;em&gt;k-fold&lt;/em&gt;&lt;/h1&gt;
+
+&lt;p&gt;É uma forma de validação cruzada que divide os dados em &lt;em&gt;k&lt;/em&gt; subconjuntos (de mesmo tamanho se possível). Em cada rodada, um subconjunto é separado para teste e os &lt;em&gt;k - 1&lt;/em&gt; subconjuntos restantes são usados para treinamento. A ideia é que cada amostra seja usada para teste apenas uma vez e &lt;em&gt;k - 1&lt;/em&gt; vezes para treinamento e ao final o erro médio é computado como uma métrica do desempenho do classificador. O &lt;em&gt;scikit-learn&lt;/em&gt; também oferece uma função que facilita a execução da validação cruzada &lt;em&gt;k-fold&lt;/em&gt;.
+&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=validacao-cruzada-k-fold.py&#34;&gt;&lt;/script&gt;
+As linhas 2 e 3 fazem a extração de características do dataset. A linha 5 efetua a validação cruzada &lt;em&gt;k-fold&lt;/em&gt; nos dados, sendo que o valor &lt;em&gt;k&lt;/em&gt; é definido por &lt;em&gt;cv&lt;/em&gt; que nesse caso é &lt;em&gt;5&lt;/em&gt;. Portanto os dados serão divididos em cinco subconjuntos e testados. A linha 7 exibe os resultados obtidos para cada execução e a linha 8 exibe a média de acertos do classificador nas &lt;em&gt;k&lt;/em&gt; execuções. O resultado da execução do código acima é &lt;em&gt;[ 0.96460177  0.97345133  0.96238938  0.9579646   0.97327394]&lt;/em&gt; e &lt;em&gt;Accuracy: 0.9663362043479118 +/- 0.01224505099481929&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h1 id=&#34;alterando-o-classificador&#34;&gt;Alterando o classificador&lt;/h1&gt;
+
+&lt;p&gt;Agora é possível alterar o classificador e as características usadas para ver se há uma melhora (ou piora) na classificação. Por exemplo, é possível alterar o &lt;em&gt;kernel&lt;/em&gt; do &lt;em&gt;SVM&lt;/em&gt; de &lt;em&gt;&amp;lsquo;linear&amp;rsquo;&lt;/em&gt; para &lt;em&gt;&amp;lsquo;rbf&amp;rsquo;&lt;/em&gt; alterando a linha _classifier = OneVsOneClassifier(SVC(kernel = &amp;lsquo;linear&amp;rsquo;, random&lt;em&gt;state = 84))&lt;/em&gt; para _classifier = OneVsOneClassifier(SVC(kernel = &amp;lsquo;rbf&amp;rsquo;, random&lt;em&gt;state = 84))&lt;/em&gt;. O resultado da validação cruzada &lt;em&gt;k-fold&lt;/em&gt; é: &lt;em&gt;[ 0.26548673  0.26548673  0.26548673  0.26548673  0.26503341]&lt;/em&gt; e &lt;em&gt;Accuracy: 0.2653960620454501 +/- 0.0003626544730670034&lt;/em&gt;. A matriz de confusão é:&lt;/p&gt;
+
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;alt.atheism&lt;/th&gt;
+&lt;th&gt;comp.graphics&lt;/th&gt;
+&lt;th&gt;sci.med&lt;/th&gt;
+&lt;th&gt;soc.religion .christian&lt;/th&gt;
+&lt;th&gt;Total&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;alt.atheism&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;comp.graphics&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;td&gt;61&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;sci.med&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;td&gt;59&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;soc.religion .christian&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;td&gt;53&lt;/td&gt;
+&lt;/tr&gt;
+
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;226&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;226&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;É possível perceber que apenas uma mudança no &lt;em&gt;kernel&lt;/em&gt; resultou em uma piora do classificador. Por isso é importante testar os parâmetros disponíveis no classificador e as diferentes características que podem ser extraídas dos dados para verificar o desempenho da classificação.&lt;/p&gt;
+
+&lt;p&gt;Para hoje é isso. &lt;a href=&#34;https://github.com/ejulio/blog-posts/blob/master/cross-validation-testando-o-desempenho-de-um-classificador/cross-validation.py&#34;&gt;O código final está no GitHub&lt;/a&gt;.
+Abraços e até a próxima :)&lt;/p&gt;
+
+&lt;h1 id=&#34;referências&#34;&gt;Referências&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://qwone.com/~jason/20Newsgroups/&#34;&gt;20 Newsgroups&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Bag-of-words_model&#34;&gt;Bag-of-words model&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/cross_validation.html&#34;&gt;Cross-validation: evaluating estimator performance&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.cs.cmu.edu/~schneide/tut5/node42.html&#34;&gt;Cross validation&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction&#34;&gt;Feature extraction&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.tfidf.com/&#34;&gt;Tf-idf :: A Single-Page Tutorial - Information Retrieval and Text Mining&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29&#34;&gt;Tokenization (lexical analysis)&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/&#34;&gt;Simple guide to confusion matrix terminology&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html&#34;&gt;sklearn.metrics.confusion_matrix&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer&#34;&gt;sklearn.feature_extraction.text.TfidfTransformer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer&#34;&gt;sklearn.feature_extraction.text.CountVectorizer&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.cross_val_score.html#sklearn.cross_validation.cross_val_score&#34;&gt;sklearn.cross_validation.cross_val_score&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html&#34;&gt;Working With Text Data&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
