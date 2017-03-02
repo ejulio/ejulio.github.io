@@ -8,6 +8,7 @@ git push origin source
 
 hugo
 
+rm ../master/*
 cp CNAME ../master
 cp .nojekyll ../master
 mv ./public/* ../master
