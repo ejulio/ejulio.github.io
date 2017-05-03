@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/tags/tensorflow/index.xml</link>
+    <description>Recent content on Júlio César Batista</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
+    <atom:link href="http://juliocesarbatista.com/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Desmistificando o Deep Learning com TensorFlow</title>
+      <link>http://juliocesarbatista.com/post/desmistificando-o-deep-learning-com-tensorflow/</link>
+      <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/desmistificando-o-deep-learning-com-tensorflow/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
+
+&lt;p&gt;Eu e o &lt;a href=&#34;https://twitter.com/vitoralbiero&#34;&gt;Vítor Albiero&lt;/a&gt; vamos falar sobre deep learning na &lt;a href=&#34;http://www.thedevelopersconference.com.br/tdc/2017/florianopolis/trilha-datascience-e-machine-learning&#34;&gt;The Developers Conference (TDC) Florianópolis 2017 na trilha de Data Science e Machine Learning&lt;/a&gt;. A palestra se chama &amp;ldquo;Desmistificando o Deep Learning com TesnsorFlow&amp;rdquo; e também vai estar na trilha stadium da Intel e vai ser &lt;a href=&#34;https://www.eventials.com/Globalcode/quinta-de-manha-stadium-intel-floripa-2017/&#34;&gt;transmitida gratuitamente pela internet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Nesses links você pode acessar os slides da talk e também o código.&lt;/p&gt;
+
+&lt;p&gt;Espero que você goste!&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
