@@ -9,6 +9,20 @@
     <atom:link href="http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto</title>
+      <link>http://juliocesarbatista.com/post/conheca_o_machine_learning/</link>
+      <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/conheca_o_machine_learning/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
+
+&lt;p&gt;Amanhã (&lt;sup&gt;14&lt;/sup&gt;&amp;frasl;&lt;sub&gt;08&lt;/sub&gt;) eu vou apresentar a palestra &amp;ldquo;Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto&amp;rdquo; na &lt;a href=&#34;http://www.fai.com.br/portal/semanainfo/index.php&#34;&gt;XXI Semana de Informática da UNIFAI&lt;/a&gt; em Adamantina, São Paulo. Os slides da palestra podem ser visualizados &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/conheca_o_machine_learning/conheca_o_machine_learning.pdf&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Espero que você goste!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Desmistificando o Deep Learning com TensorFlow</title>
       <link>http://juliocesarbatista.com/post/desmistificando-o-deep-learning-com-tensorflow/</link>
       <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
