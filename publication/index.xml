@@ -6,8 +6,17 @@
     <description>Recent content in Publication-rsses on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Fri, 01 Jul 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Jun 2017 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://juliocesarbatista.com/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AUMPNet: Simultaneous Action Units Detection and Intensity Estimation on Multipose Facial Images Using a Single Convolutional Neural Network</title>
+      <link>http://juliocesarbatista.com/publication/aumpnet/</link>
+      <pubDate>Sat, 03 Jun 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/publication/aumpnet/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Landmark-free smile intensity estimation</title>
