@@ -9,6 +9,20 @@
     <atom:link href="http://juliocesarbatista.com/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Como funcionam as redes neurais</title>
+      <link>http://juliocesarbatista.com/post/como-funcionam-as-redes-neurais/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/como-funcionam-as-redes-neurais/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
+
+&lt;p&gt;Amanhã, 30 de novembro, eu vou apresentar a palestra &amp;ldquo;Como funcionam as rdes neurais&amp;rdquo; no &lt;a href=&#34;https://www.meetup.com/GDG-Blumenau/&#34;&gt;GDG Blumenau&lt;/a&gt; aqui em Blumenau, Santa Catarina. Os slides  e exemplo da palestra estão disponíveis &lt;a href=&#34;https://github.com/ejulio/talks/tree/master/como-funcionam-as-redes-neurais&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aparece por lá para conferir e trocar uma ideia :D&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto</title>
       <link>http://juliocesarbatista.com/post/conheca_o_machine_learning/</link>
       <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
