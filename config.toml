@@ -16,7 +16,7 @@ date_format = "2006/01/02"
 # Publications can have a Params.kind, such as "book".
 # Both parameters are mapped to an icon in partials/pub-icon.html.
 
-about = "Olá, meu nome é Júlio César Batista. Eu desenvolvo softwares. Atualmente sou pesquisador no [IMAGO Research Group - UFPR](http://www.imago.ufpr.br); ~~desenvolvedor na [Inventti](http://www.inventti.com.br)~~; ~~desenvolvedor na [Ellevo](http://www.ellevo.com)~~. Também sou mestrando em informática pela [UFPR](http://ufpr.br) e bacharel em ciência da computação pela [FURB](http://www.furb.br). É um prazer conhecê-lo, seja bem-vindo."
+about = "Olá, meu nome é Júlio César Batista. Eu desenvolvo softwares. Atualmente sou desenvolvedor na desenvolvedor na [Inventti](http://www.inventti.com.br) e pesquisador no [IMAGO UFPR Research Group](http://www.imago.ufpr.br); ~~desenvolvedor na [Inventti](http://www.inventti.com.br)~~; ~~desenvolvedor na [Ellevo](http://www.ellevo.com)~~. Também sou mestrando em informática pela [UFPR](http://ufpr.br) e bacharel em ciência da computação pela [FURB](http://www.furb.br). É um prazer conhecê-lo, seja bem-vindo."
 bio_twitter = "ejuliobatista"
 
 # Title of posts section on main page.
@@ -46,7 +46,7 @@ pubs_title = "Publicações"
   icon_pack = "fa"
   link = "mailto:julio.batista@outlook.com"
   text = "julio.batista@outlook.com "
-    
+
 [[params.social]]
   icon = "twitter"
   icon_pack = "fa"
