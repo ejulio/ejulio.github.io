@@ -21,7 +21,7 @@ Com isso, é possível colocar o *template* padrão de OKRs:
 <!-- more -->
 
 Dado esse *template*, para um OKR hipotético para uma empresa hipotética, podemos iniciar o alinhamento da equipe.
-Sabemos que para o ano corrente a empresa quer ser a maior rede social do mundto e, para isso, deve conquistar 2 bilhões de usuários ativos.
+Sabemos que para o ano corrente a empresa quer ser a maior rede social do mundo e, para isso, deve conquistar 2 bilhões de usuários ativos.
 Esse *Key-Result* passa para os demais departamentos da empresa (marketing, comercial, desenvolvimento, ...) e cada departamento cria seus próprios OKRs com estratégias para que a empresa como um todo alcance o objetivo através dos Key-Results.
 
 Certo, mas o que isso tem a ver com o desenvolvimento de software?
