@@ -9,6 +9,21 @@
     <atom:link href="http://juliocesarbatista.com/tags/talks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Processamento de imagens com python</title>
+      <link>http://juliocesarbatista.com/post/processamento-imagens-python-grupy/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/processamento-imagens-python-grupy/</guid>
+      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
+
+&lt;p&gt;Na última semana de janeiro, ainda não tem data definida, vou falar sobre processamento de imagens com python e &lt;a href=&#34;http://scikit-image.org/&#34;&gt;scikit-image&lt;/a&gt; no &lt;a href=&#34;https://www.meetup.com/hackerspaceblumenau/events/trlwpnyxcbkc/&#34;&gt;Grupy Blumenau&lt;/a&gt;.
+O notebook com o conteúdo da apresentação já está &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/processamento-imagens-python/Processamento%20de%20imagens%20com%20python.ipynb&#34;&gt;disponível no GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Aparece por lá para conferir e trocar uma ideia :D&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Como funcionam as redes neurais</title>
       <link>http://juliocesarbatista.com/post/como-funcionam-as-redes-neurais/</link>
       <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
