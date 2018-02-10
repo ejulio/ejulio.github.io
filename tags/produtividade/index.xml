@@ -9,6 +9,28 @@
     <atom:link href="http://juliocesarbatista.com/tags/produtividade/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
+      <title>Sobre métodos ágeis</title>
+      <link>http://juliocesarbatista.com/post/sobre-metodos-ageis/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/sobre-metodos-ageis/</guid>
+      <description>&lt;p&gt;Vamos falar sobre metodologias ágeis, principalmente em um SAAS (&lt;em&gt;Software as a Service&lt;/em&gt;). Para começar, não sou um &lt;em&gt;expert&lt;/em&gt; em metodologias ágeis, assim como não passei por todos os possíveis casos que eles podem envolver. Portanto, posso ter uma visão enviesada para os conceitos que acredito fazer mais sentido. Depois desse &lt;em&gt;disclaimer&lt;/em&gt;, vamos lá!&lt;/p&gt;
+
+&lt;!-- more --&gt;
+
+&lt;p&gt;Não me leve a mal, eu acho que Scrum (e outras metodologias baseadas em &lt;em&gt;sprint&lt;/em&gt;) é uma metodologia fantástica, só não acredito que ele seja o melhor processo para uma empresa que trabalha com um SAAS. Por exemplo, o primeiro princípio ágil diz, basicamente, que &lt;em&gt;entregamos e validamos o software continua e rapidamente com o cliente&lt;/em&gt;. Porém, se você está em um SAAS e trabalha com &lt;em&gt;sprints&lt;/em&gt; de duas semanas, as entregas só ocorrem no final das &lt;em&gt;sprints&lt;/em&gt;, ou seja, o cliente só vê a nova &lt;em&gt;feature&lt;/em&gt; à cada 15 dias. Bem, se considerar os casos mais antigos, no RUP, as entregas eram a cada x meses, então estamos bem.&lt;/p&gt;
+
+&lt;p&gt;Idealmente queremos diminuir o tempo de entrega e acabamos adotando práticas como entrega contínua que permitem &lt;em&gt;releases&lt;/em&gt; de software diariamente, por exemplo. Nesse caso, podemos entregar software todos os dias, mas o nosso ciclo de revisão e validação ocorre somente no final de cada &lt;em&gt;sprint&lt;/em&gt;, ou seja, a cada 15 dias. Bem, acredito que possamos fazer melhor que isso. Esse ato de fazer melhor é uma evolução natural, para equipes que já praticam métodos ágeis à algum tempo. Quando a equipe muda de RUP para ágil, a tendência é adotar Scrum ou algum método com mais &amp;ldquo;práticas&amp;rdquo; para que seja mais fácil de trabalhar. Porém, com avanço e entendimento de como esses métodos funcionam por parte da equipe, eliminar regras/rituais se torna algo importante para deixar os métodos mais enxutos até alcançar um ambiente com características próximas do Lean.&lt;/p&gt;
+
+&lt;p&gt;A evolução natural que eu vejo é adoção de práticas como o Kanban, com a ideia de sistemas puxados e sem a necessidade de forçar ciclos. Por exemplo, uma &lt;em&gt;task/bug&lt;/em&gt; pode aparecer em um &lt;em&gt;backlog&lt;/em&gt;, que é priorizado, para o time de desenvolvimento. Como o &lt;em&gt;backlog&lt;/em&gt; é priorizado, o time pega o &lt;em&gt;card&lt;/em&gt; que está no topo, visto que esse é o mais importante e debate, incluindo todos os interessados, sobre o que deve ser feito. Depois disso, passamos para um processo de implementação e, assim que pronto, podemos fazer uma revisão e validação da entrega. Nesse ponto, se ela for aceita, vai para produção. Caso contrário, ela pode ser priorizada novamente para que se trabalhe nessa tarefa novamente nos próximos dias, ou ela pode ter perdido a preferência e ficar para o próximo mês por exemplo. O importante para notar aqui é o ciclo rápido de revisão e validação. No início, precisávamos esperar 15 dias para validar a entrega, nesse modelo, supondo que a entrega levasse 3 dias, em 3 dias teríamos validado e entregue a &lt;em&gt;feature&lt;/em&gt; para o cliente.&lt;/p&gt;
+
+&lt;p&gt;Obviamente que o que eu descrevi é um cenário ideal e tudo mais. Porém, acredito que essa seja uma boa forma de praticar um desenvolvimento de software com menos desperdícios e com foco em agregar valor para o cliente com entregas de &lt;em&gt;features&lt;/em&gt; que ele vai usar. No mais, também fica evidente que ocorrem mais reuniões para entender as tarefas e revisões, diferente dos métodos com &lt;em&gt;sprint&lt;/em&gt; que fixam uma reunião de planejamento e outra de revisão.&lt;/p&gt;
+
+&lt;p&gt;No mais, não digo que as ideias aqui são as melhores e que elas vão funcionar em todos os casos. Imagino que cada projeto tem sua particularidade e que métodos baseados em &lt;em&gt;sprints&lt;/em&gt; funcionam em muitos deles, mas podemos passar a pensar em outros modelos, conforme o &lt;a href=&#34;http://modernagile.org/&#34;&gt;&lt;em&gt;modern agile&lt;/em&gt;&lt;/a&gt;. Além disso, lembre-se do primeiro item do manifesto ágil &amp;ldquo;Pessoas e suas interações sobre processos e ferramentas&amp;rdquo;. Nesse caso, não devemos focar necessariamente no processo, mas sim nas pessoas que fazem parte da equipe e como os processos podem melhorar a interação entre elas para que o produto final possa ser um sucesso!&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>Objectives and Key-Results (OKRs)</title>
       <link>http://juliocesarbatista.com/post/okrs/</link>
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
