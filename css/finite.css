@@ -57,7 +57,7 @@ body {
 
 
 /* Last footer.  */
-.endofpage { 
+.endofpage {
     background-color: #a80101;
     height: 50px;
     margin-top: 3ex;
@@ -230,7 +230,7 @@ ul.taxonomy-terms {
 
 .button.hollow.primary {
     font-family: 'Alegreya', sans;
-    text-transform: uppercase;  
+    text-transform: uppercase;
     border: 1px solid #101730;
     color: #101730;
     transition: none;
@@ -378,6 +378,10 @@ ul.taxonomy-terms {
 }
 
 .post-content {
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 1.75rem;
+}
+
+.post-body {
+    font-size: 1.1rem;
 }
