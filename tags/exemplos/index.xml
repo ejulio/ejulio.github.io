@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Júlio César Batista</title>
-    <link>http://juliocesarbatista.com/tags/exemplos/index.xml</link>
-    <description>Recent content on Júlio César Batista</description>
+    <title>Exemplos on Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/tags/exemplos/</link>
+    <description>Recent content in Exemplos on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <atom:link href="http://juliocesarbatista.com/tags/exemplos/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://juliocesarbatista.com/tags/exemplos/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>A normalização e o Gradient Descent</title>
@@ -14,485 +17,37 @@
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/a-normalizacao-e-o-gradient-descent/</guid>
-      <description>&lt;p&gt;Vamos falar sobre machine learning.
-Estou [enfim] participando do &lt;em&gt;&lt;a href=&#34;https://www.coursera.org/learn/machine-learning&#34;&gt;MOOC&lt;/a&gt;&lt;/em&gt; do &lt;a href=&#34;https://twitter.com/AndrewYNg&#34;&gt;Andrew Ng, Ph. D.&lt;/a&gt; no &lt;a href=&#34;http://coursera.org&#34;&gt;Coursera&lt;/a&gt; e me deparei com a importância de normalizar os dados antes de efetuar a otimização do algoritmo de aprendizado.
-Não leve a mal, sei, há certo tempo, que é importante normalizar os valores de entrada para que o algoritmo tenha uma melhor, e mais rápida, convergência.
-Entretanto, nunca havia, ao menos até onde percebi, me deparado com o quanto esse pré-processamento implica no processo.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Se você já leu ou fez algum exemplo/tutorial sobre &lt;em&gt;machine learning&lt;/em&gt;, provavelmente, sabe que é importante normalizar as entradas/características antes de iniciar o processo de otimização.
-Geralmente, isso é feito com &lt;em&gt;standardizing&lt;/em&gt; ao aplicar $\frac{\mathbf{x}_j - \mathbf{\mu}_j}{\mathbf{\sigma}_j}$ que vai deixar as características ($\mathbf{x}$) com média ($\mathbf{\mu}$) 0 e desvido padrão ($\mathbf{\sigma}$) 1.
-Especialmente no caso do &lt;em&gt;gradient descent&lt;/em&gt; (método de otimização baseado em derivadas), essa normalização é importante para &amp;ldquo;garantir uma superfície mais uniforme&amp;rdquo; de forma que o algoritmo consegue caminhar em direção ao melhor ponto da otimização.
-Nesse caso, estava &lt;a href=&#34;https://github.com/ejulio/coursera-machine-learning/blob/master/Week%203/Assignment%20Logistic%20Regression.ipynb&#34;&gt;implementando&lt;/a&gt; o &lt;em&gt;gradient descent&lt;/em&gt; para otimizar uma simples regressão logísitica com 2 variáveis de entradas, um problema razoavelmente simples.
-Porém, quando executei a rotina com ~1,000 iterações ao algoritmo mal e mal saiu do lugar.
-Passei um tempo revirando o código, achei uns possíveis bugs e arrumei algumas coisas.
-Mesmo assim, nada de otimizar, ou chegar próximo do valor esperado no exercício.
-Com isso, fui verificar o fórum para ver se alguém teve o mesmo problema e me deparei com um usuário que precisou de 1,000,000 de iterações para convergir implementando em R.
-Bem, fiz o teste e, realmente, com 1,000,000 de iterações minha implementação em python (não quero usar o MATLAB :b) convergiu para um valor aproximado ao informado no exercício.
-Enfim, não fazia muito sentido 1,000,000 de iterações para um problema de classificação binária com 2 variáveis.
-Depois de pesquisar mais um pouco e ver em algum lugar do fórum a palavra mágica &lt;strong&gt;normalização&lt;/strong&gt;, me lembrei que não havia normalizado as características antes de iniciar a otimização.
-Dito e feito, implementei a normalização e com um teste com ~10,000 iterações a minha implementação convergiu para o valor esperado no exercício.&lt;/p&gt;
-
-&lt;p&gt;Lição aprendida! Apesar de saber da importância de normalizar as entradas do algoritmo, nunca tinha pensado sobre o quão difícil é o problema sem normalizar.
-Agora, tive um ótimo exemplo do que realmente está acontecendo durante esse processo de otimização.
-Enfim, o que escrevi aqui não deve ser novidade para quem já fez algo com &lt;em&gt;machine learning&lt;/em&gt;, mas pode ser que ajude a quem está começando a ter uma noção do porque de alguns detalhes serem importantes para o processo como um todo.&lt;/p&gt;
-</description>
+      <description>Vamos falar sobre machine learning. Estou [enfim] participando do MOOC do Andrew Ng, Ph. D. no Coursera e me deparei com a importância de normalizar os dados antes de efetuar a otimização do algoritmo de aprendizado. Não leve a mal, sei, há certo tempo, que é importante normalizar os valores de entrada para que o algoritmo tenha uma melhor, e mais rápida, convergência. Entretanto, nunca havia, ao menos até onde percebi, me deparado com o quanto esse pré-processamento implica no processo.</description>
     </item>
     
     <item>
       <title>Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos</title>
-      <link>http://juliocesarbatista.com/post/Batman-e-voce-Desenhando-o-simbolo-do-Batman-com-retas-parabolas-e-circulos/</link>
+      <link>http://juliocesarbatista.com/post/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/</link>
       <pubDate>Wed, 08 Jun 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://juliocesarbatista.com/post/Batman-e-voce-Desenhando-o-simbolo-do-Batman-com-retas-parabolas-e-circulos/</guid>
-      <description>
-
-&lt;p&gt;Olá, tudo certo!?&lt;/p&gt;
-
-&lt;p&gt;Hoje vamos trabalhar com a ideia de desenhar o símbolo do &lt;em&gt;Batman&lt;/em&gt; com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos. A partir destes componentes básicos, aplicamos transformações e restrições no domínio da equação que formam o desenho. Para fazer o desenho vamos usar o &lt;a href=&#34;https://www.desmos.com/calculator&#34;&gt;Desmos&lt;/a&gt; (calculadora gráfica online).
-&lt;!-- more --&gt;
-&lt;!-- toc --&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;ao-infinito-e-além-desenhando-a-cabeça-do-morcego-com-retas&#34;&gt;Ao infinito e além: desenhando a cabeça do morcego com retas&lt;/h1&gt;
-
-&lt;p&gt;Vamos começar pelos componentes mais simples que são as retas. Usamos três retas para desenhar a cabeça e as orelhas do morcego como pode ser visto da Figura 1.
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/z5kd3vxn4q.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 1 - Retas que formam a cabeça do morceço&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-A reta horizontal no meio tem equação $y = 6 { -0.5 &amp;lt; x &amp;lt; 0.5 }$
-&amp;gt; Os valores entre &lt;em&gt;{}&lt;/em&gt; limitam os valores (domínio) de &lt;em&gt;x&lt;/em&gt; na equação. Por exemplo, a equação só terá valores para &lt;em&gt;y&lt;/em&gt; quando &lt;em&gt;x&lt;/em&gt; estiver entre &lt;em&gt;-0.5&lt;/em&gt; e &lt;em&gt;0.5&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;As duas retas inclinadas seguem uma intuição semelhante, mas tem equações diferentes. A reta da direita (laranja) pode ser desenhada com a equação $y = 2x + 5 {0.5 &amp;lt; x &amp;lt; 1} $ e a reta da esquerda com $ y = -2x + 5 {-1 &amp;lt; x &amp;lt; -0.5} $. É possível perceber que as equações são muito parecidas e agora vamos ver porque as retas podem ser desenhadas com as equações anteriores.&lt;/p&gt;
-
-&lt;h2 id=&#34;por-que-as-retas-se-comportam-dessa-forma&#34;&gt;Por que as retas se comportam dessa forma?&lt;/h2&gt;
-
-&lt;p&gt;Existem três retas (que eu conheço) que são super simples $ x = 1 $ (reta roxa na Figura 2), $ y = 1 $ (reta laranja na Figura 2) e $ y = x $ (reta preta na Figura 2). A reta $ x = 1 $ é uma reta vertical que passa por qualquer coordenada no eixo &lt;em&gt;y&lt;/em&gt;, mas apenas na coordenada &lt;em&gt;1&lt;/em&gt; no eixo &lt;em&gt;x&lt;/em&gt;. A reta $ y = 1 $ é uma reta horizontal que passa em qualquer coordenada no eixo &lt;em&gt;x&lt;/em&gt;, mas apenas na coordenada &lt;em&gt;1&lt;/em&gt; do eixo &lt;em&gt;y&lt;/em&gt;. A reta $ y = x $ é uma diagonal que passa em qualquer coordenada no eixo &lt;em&gt;x&lt;/em&gt; e também em qualquer coordenada do eixo &lt;em&gt;y&lt;/em&gt;.
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/nrs6m83gwl.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 2 - Exemplos de retas vertical, horizontal e diagonal.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;As equações anteriores podem ser alteradas com transformações que mudam o comportamento da reta. Alterando $ y = x $ para $ y = x + 2 $ é possível perceber que a reta foi deslocada um pouco para cima, passando pelo eixo &lt;em&gt;y&lt;/em&gt; no ponto &lt;em&gt;(0, 2)&lt;/em&gt;. Agora se alterar a reta para $ y = x - 5 $ é possível perceber que a reta foi deslocada um pouco para baixo passando pelo eixo &lt;em&gt;y&lt;/em&gt; no ponto &lt;em&gt;(0,-5)&lt;/em&gt;. Isso demonstra que é possível construir uma reta apenas sabendo em qual coordenada ela passa pelo eixo &lt;em&gt;y&lt;/em&gt;.
-&amp;gt; Pergunta: Como construir uma reta que passe no eixo &lt;em&gt;y&lt;/em&gt; no ponto &lt;em&gt;(0, 7)&lt;/em&gt;?
-&amp;gt; Resposta: A equação para essa reta é $ y = x + 7 $.&lt;/p&gt;
-
-&lt;p&gt;As equações estão no formato $ y = mx + b $ sendo:
-- &lt;em&gt;b&lt;/em&gt; a coordenada &lt;em&gt;y&lt;/em&gt; que corta o eixo &lt;em&gt;y&lt;/em&gt;;
-- &lt;em&gt;m&lt;/em&gt; é a inclinação da reta.&lt;/p&gt;
-
-&lt;p&gt;Até mesmo a reta $ y = 1 $ está nesse formato, mas no caso dela $ y = 0x + 1 $ por isso $ y = 1 $ o &lt;em&gt;0x&lt;/em&gt; é porque ela não tem inclinação. A reta $ y = x $ também está neste formato, mas com a coordenada &lt;em&gt;y&lt;/em&gt; com valor &lt;em&gt;0&lt;/em&gt; porque ela passa pela origem.&lt;/p&gt;
-
-&lt;p&gt;A inclinação da reta é o quanto a reta muda em &lt;em&gt;y&lt;/em&gt; em relação ao quanto a reta muda em &lt;em&gt;x&lt;/em&gt;. Nas retas acima, exceto $ y = 1 $, é possível perceber que a reta tem inclinação &lt;em&gt;1&lt;/em&gt;. A inclinação &lt;em&gt;1&lt;/em&gt; indica uma variação de &lt;em&gt;1&lt;/em&gt; para &lt;em&gt;1&lt;/em&gt; entre &lt;em&gt;x&lt;/em&gt; e &lt;em&gt;y&lt;/em&gt;, ou seja, ela move &lt;em&gt;1&lt;/em&gt; em &lt;em&gt;x&lt;/em&gt; e &lt;em&gt;1&lt;/em&gt; em &lt;em&gt;y&lt;/em&gt;. Como é possível descobrir a inclinação? Simples, mas é necessário saber 2 pontos onde reta passa e a equação $ m = \frac{y_2 - y_1}{x_2 - x_1} $. Utilizando os pontos &lt;em&gt;(-7, 0)&lt;/em&gt; e &lt;em&gt;(-6, 1)&lt;/em&gt; da reta $ y = x + 7 $ e aplicando-os na equação obtém-se $ m = \frac{1 - 0}{-6 - (-7)} = \frac{1}{-6 + 1} = \frac{1}{1} = 1 $ validando a inclinação (&lt;em&gt;m&lt;/em&gt;) da equação $ y = x + 7 $.&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Questão: Qual a equação de uma reta que tem $ m = \frac{2}{3} $ e passa no eixo &lt;em&gt;y&lt;/em&gt; no ponto &lt;em&gt;(0, -9)&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;Resposta: A equação é $ y = \frac{2}{3}x + 3 $.&lt;/p&gt;
-
-&lt;p&gt;Questão: Qual a equação de uma reta que passa pelos pontos &lt;em&gt;(0, 3)&lt;/em&gt; e &lt;em&gt;(3, 13)&lt;/em&gt;?&lt;/p&gt;
-
-&lt;p&gt;Resposta: A inclinação é $ m = \frac{3 - 13}{0 - 3} = \frac{-10}{-3} = \frac{10}{3} $ e a reta é $ y = \frac{10}{3}x - 9 $.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h1 id=&#34;obtendo-o-sinal-de-parabólica-desenhando-as-asas-com-parábolas&#34;&gt;Obtendo o sinal de parabólica: desenhando as asas com parábolas&lt;/h1&gt;
-
-&lt;p&gt;As asas do morcego são desenhadas com seis parábolas. São duas parábolas para a parte superior e duas para a parte inferior demonstradas na Figura 3.
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/wildlc6iwt.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 3 - Parábolas que formam as asas do morcego.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-A equação da parábola superior esquerda é $ y = \frac{1}{4} (x + 5)^2 + 3 { -9 &amp;lt; x &amp;lt; -1 } $ e a equação da parábola superior direita é $ y = \frac{1}{4} (x - 5)^2 + 3 { 1 &amp;lt; x &amp;lt; 9 } $.
-As equações para as parábolas inferiores da esquerda são respectivamente $ y = -\frac{1}{4}(x+5)^2 { -9 &amp;lt; x &amp;lt; -3 } $ e $ y = -(x + 2)^2 { 0 &amp;gt; x &amp;gt; -3 } $.
-As equações para as parábolas inferiores da direita são respectivamente $ y = -(x - 2)^2 { 0 &amp;lt; x &amp;lt; 3 } $ e $ y = -\frac{1}{4}(x - 5)^2 { 3 &amp;lt; x &amp;lt; 9 } $. Da mesma forma que as retas, é possível perceber que as parábolas são semelhantes em alguns pontos e parecem seguir um padrão.&lt;/p&gt;
-
-&lt;h2 id=&#34;por-que-as-parábolas-se-comportam-dessa-forma&#34;&gt;Por que as parábolas se comportam dessa forma?&lt;/h2&gt;
-
-&lt;p&gt;A parábola mais simples é $ y = x^2 $ (parábola vermelha na Figura 4) e as demais parábolas são criadas aplicando transformações nessa parábola. As parábolas possuem (da mesma forma que as retas) uma intercepção em &lt;em&gt;y&lt;/em&gt; (ponto que passa pelo eixo &lt;em&gt;y&lt;/em&gt;). Também é possível notar uma intercepção em &lt;em&gt;x&lt;/em&gt; (ponto que passa pelo eixo &lt;em&gt;x&lt;/em&gt;). As parábolas podem ter &lt;em&gt;1&lt;/em&gt;, &lt;em&gt;2&lt;/em&gt; ou &lt;em&gt;nenhuma&lt;/em&gt; intercepção em &lt;em&gt;x&lt;/em&gt; como nos exemplos a seguir:
-- $ y = x^2 + 2 $ (parábola verde na Figura 4) não possui intercepção em &lt;em&gt;x&lt;/em&gt; (não passa nenhuma vez pelo eixo &lt;em&gt;x&lt;/em&gt;).
-- $ y = x^2 - 2 $ (parábola azul na Figura 4) possui duas intercepções em &lt;em&gt;x&lt;/em&gt; (passa duas vezes pelo eixo &lt;em&gt;x&lt;/em&gt;).&lt;/p&gt;
-
-&lt;p&gt;As transformações acima são semelhantes as aplicadas na reta, adicionando um termo sem variável na equação move o resultado no eixo &lt;em&gt;y&lt;/em&gt;.
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/gm3s5jzl2s.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 4 - Exemplos de transformações em parábolas no eixo y.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;As parábolas também podem ser movimentadas na horizontal pelo eixo &lt;em&gt;x&lt;/em&gt; e para isso é necessário alterar o termo $ x^2 $. Para mover a parábola &lt;em&gt;2&lt;/em&gt; unidades para a esquerda $ x^2 $ é alterado para $ (x + 2)^2 $ (parábola verde na Figura 5). Para mover a parábola &lt;em&gt;2&lt;/em&gt; unidades para a direita $ x^2 $ é alterado para $ (x - 2)^2 $ (parábola azul na Figura 5). Outra propriedade que pode ser percebida é que todos os movimentos efetuados até o momento mudaram a posição do vértice da parábola. Portanto, apenas olhando para a equação $ y = (x + 2)^2 - 2 $ é possível dizer que o vértice da parábola está no ponto &lt;em&gt;(-2, -2)&lt;/em&gt;. Dessa forma, podemos mover a parábola pensando apenas onde deve ficar o vértice.
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/re4ddvqfdv.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 5 - Exemplos de transformações em parábolas no eixo x.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Além de movimentar a parábola, também é possível alterar a sua largura. Essa propriedade é controlada pelo coeficiente de $ x^2 $. Para que a parábola seja mais larga, deve-se diminuir o coeficiente de $ x^2 $. Por exemplo, $ y = \frac{1}{4}x^2 $ (parábola roxa na Figura 6) e $ y = \frac{1}{2}x^2 $ (parábola azul na Figura 6). Para que a parábola seja mais estreita, deve-se aumentar o coeficiente de $ x^2 $. Por exemplo, $ y = 2x^2 $ (parábola laranja na Figura 6) e $ y = 4x^2 $ (parábola preta na Figura 6).
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/xqrvo4b3k4.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 6 - Exemplos de transformações na largura da parábola.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Além da espessura da parábola, o coeficiente de $ x^2 $ também controla a direção da parábola. Com um coeficiente positivo ($ y = 5x^2 $), a parábola abre para cima (parábola vermelha na Figura 7) e com um coeficiente negativo ($ y = -5x^2 $) a parábola abre para baixo (parábola azul na Figura 7).
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/kc8h4e0nej.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 7 - Exemplos de transformações na direção da parábola.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;h1 id=&#34;correndo-atrás-do-próprio-rabo-desenhando-as-laterais-das-asas-com-círculos&#34;&gt;Correndo atrás do próprio rabo: desenhando as laterais das asas com círculos&lt;/h1&gt;
-
-&lt;p&gt;As laterais das asas podem ser desenhadas com dois meio círculos como pode ser visto na Figura 8.
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/f8x1bw5ecr.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 8 - Asas completas com círculos completando as laterais das asas.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-
-A equação para o meio círculo da lateral esquerda é $ (x + 9)^2 + (y - \frac{3}{2})^2 = 30 { -9 &amp;gt; x } $ e a equação para o meio círculo da lateral direita é $ (x - 9)^2 + (y - \frac{3}{2})^2 = 30 { 9 &amp;lt; x } $.&lt;/p&gt;
-
-&lt;h2 id=&#34;por-que-os-círculos-se-comportam-dessa-forma&#34;&gt;Por que os círculos se comportam dessa forma?&lt;/h2&gt;
-
-&lt;p&gt;A equação básica para um círculo é $ x^2 + y^2 = 4 $, sendo $ 4 = r^2 $. A partir dessa equação é possível explorar as mesmas propriedades que já vistas nas parábolas e retas. Para movimentar o círculo no eixo &lt;em&gt;x&lt;/em&gt;, é preciso mudar a base de $ x^2 $. Por exemplo, a equação para movimentar o centro &lt;em&gt;2&lt;/em&gt; unidades para a esquerda é $ (x + 2)^2 + y^2 = 4 $ (círculo verde na Figura 9) e a equação para movimentar &lt;em&gt;2&lt;/em&gt; unidades para a direita é $ (x - 2)^2 + y^2 = 4 $ (círculo roxo na Figura 9). A mesma ideia vale para movimentar no eixo &lt;em&gt;y&lt;/em&gt;. A equação para movimentar &lt;em&gt;2&lt;/em&gt; unidades para cima é $ x^2 + (y - 2)^2 = 4 $ (círculo preto na Figura 9) e a equação para movimentar &lt;em&gt;2&lt;/em&gt; unidades para baixo é $ x^2 + (y + 2)^2 = 4 $ (círculo laranja na Figura 9).
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/asdq81q09k.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 9 - Exemplos de transformações no círculo nos eixos x e y.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;Também é possível controlar o tamanho do círculo. Para isso, é necessário alterar o termo do lado direito da equação ($ r^2 $). Por exemplo, a equação $ x^2 + y^2 = 9 $ (círculo azul na Figura 10) desenha um círculo maior que a equação $ x^2 + y^2 = 5 $ (círculo vermelho na Figura 10).
-
-&lt;figure &gt;
-    
-        &lt;img src=&#34;https://s3.amazonaws.com/grapher/exports/ojsgf1d4ca.png&#34; /&gt;
-    
-    
-    &lt;figcaption&gt;
-        &lt;h4&gt;Figura 10 - Exemplos de transformações no tamanho do círculo.&lt;/h4&gt;
-        
-    &lt;/figcaption&gt;
-    
-&lt;/figure&gt;
-&lt;/p&gt;
-
-&lt;p&gt;É isso por hoje.
-Abraços e até a próxima :D.&lt;/p&gt;
-</description>
+      <guid>http://juliocesarbatista.com/post/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/</guid>
+      <description>Olá, tudo certo!?
+Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos.</description>
     </item>
     
     <item>
       <title>Cross-validation: testando o desempenho de um classificador</title>
-      <link>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</link>
+      <link>http://juliocesarbatista.com/post/cross-validation-testando-o-desempenho-de-um-classificador/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</guid>
-      <description>
-
-&lt;p&gt;Olá pessoal, tudo certo!?&lt;/p&gt;
-
-&lt;p&gt;Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.
-&lt;!-- more --&gt;
-&lt;!-- toc --&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;dados-e-características&#34;&gt;Dados e características&lt;/h1&gt;
-
-&lt;p&gt;O exemplo de teste será a classificação de texto baseado no &lt;a href=&#34;http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html&#34;&gt;tutorial de classificação de texto do &lt;em&gt;scikit-learn&lt;/em&gt;&lt;/a&gt;. O código inicial é:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=dados-e-caracteristicas.py&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação. Os dados são do dataset &lt;em&gt;Twenty Newsgroups&lt;/em&gt; que está disponível no &lt;em&gt;scikit-learn&lt;/em&gt; e será baixado apenas quando a aplicação for executada pela primeira vez. Estamos fazendo o download apenas das categorias definidas nas linhas 12 e 13, mas é possível usar &lt;a href=&#34;http://qwone.com/~jason/20Newsgroups/&#34;&gt;outras categorias&lt;/a&gt;.
-Na linha 18 definimos o classificador, que é um &lt;em&gt;SVM&lt;/em&gt; utilizando a técnica um-contra-um para classificar mais de duas classes.
-Nas linhas 21 e 22 iniciamos as classes que fazem a extração de características. &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer&#34;&gt;&lt;em&gt;CountVectorizer&lt;/em&gt;&lt;/a&gt; quebra o texto em &lt;a href=&#34;https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29&#34;&gt;&lt;em&gt;tokens&lt;/em&gt;&lt;/a&gt; e faz a contagem da &lt;a href=&#34;https://en.wikipedia.org/wiki/Bag-of-words_model&#34;&gt;&lt;em&gt;bag of words&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer&#34;&gt;&lt;em&gt;TfidfTransformer&lt;/em&gt;&lt;/a&gt; transforma as contagens em frequências usando &lt;a href=&#34;http://www.tfidf.com/&#34;&gt;&lt;em&gt;Term Frequency-Inverse Document Frequency&lt;/em&gt;&lt;/a&gt;.
-A função _fit&lt;em&gt;classifier&lt;/em&gt; na linha 24 treina o classificador com dos dados _train&lt;em&gt;data&lt;/em&gt; e as classes _train&lt;em&gt;labels&lt;/em&gt;. As linhas 26 e 27 fazem a extração de características dos dados e a linha 28 efetua o treinamento do classificador.
-A função &lt;em&gt;predict&lt;/em&gt; na linha 30 faz a classificação dos dados _test&lt;em&gt;data&lt;/em&gt;. As linhas 31 e 32 fazem a extração de características e a linha 33 retorna as classificações para os dados.&lt;/p&gt;
-
-&lt;h1 id=&#34;validação-cruzada-e-a-matriz-de-confusão&#34;&gt;Validação cruzada e a matriz de confusão&lt;/h1&gt;
-
-&lt;p&gt;A validação cruzada nada mais é do que separar uma parte dos dados para ser usado treinamento e outra parte para ser usada como teste. Para isso, o &lt;em&gt;scikit-learn&lt;/em&gt; oferece uma função que faz a separação automaticamente dos dados.
-&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=validacao-cruzada-e-matriz-de-confusao.py&#34;&gt;&lt;/script&gt;
-Nas linhas 4 e 5 os dados são separados para validação cruzada usando o método. Os dados para treinamento do classificador são armazenados em _train&lt;em&gt;data&lt;/em&gt; e _train&lt;em&gt;labels&lt;/em&gt; e os dados de teste são armazenados em _test&lt;em&gt;data&lt;/em&gt; e _train&lt;em&gt;data&lt;/em&gt;. O tamanho dos conjuntos e controlado por _test&lt;em&gt;size&lt;/em&gt;, sendo que o valor &lt;em&gt;0.1&lt;/em&gt; representa 10% de dados para teste.
-As linhas 7 e 8 treinam o classificador e fazem a classificação dos dados de teste. Na linha 9 é exibida a &lt;a href=&#34;http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/&#34;&gt;matriz de confusão&lt;/a&gt; que indica o desempenho do classificador. Abaixo está o resultado da execução do código acima.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;alt.atheism&lt;/th&gt;
-&lt;th&gt;comp.graphics&lt;/th&gt;
-&lt;th&gt;sci.med&lt;/th&gt;
-&lt;th&gt;soc.religion .christian&lt;/th&gt;
-&lt;th&gt;Total&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;alt.atheism&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;50&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;comp.graphics&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;sci.med&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;55&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;59&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;soc.religion .christian&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;51&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;50&lt;/td&gt;
-&lt;td&gt;67&lt;/td&gt;
-&lt;td&gt;56&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;226&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Os cabeçalhos e os totais eu adicionei manualmente. O &lt;em&gt;Total&lt;/em&gt; ao final de cada linha indica quantas amostras de determinada classe existiam no dataset de teste. Por exemplo, existem 53 amostras da classe &lt;em&gt;alt.atheism&lt;/em&gt; nos dados para treinamento. O &lt;em&gt;Total&lt;/em&gt; das colunas indica quantas amostras de teste foram classificados como determinada classe no dataset de teste. Por exemplo, 67 amostras foram classificadas como &lt;em&gt;comp.graphics&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;validação-cruzada-k-fold&#34;&gt;Validação cruzada &lt;em&gt;k-fold&lt;/em&gt;&lt;/h1&gt;
-
-&lt;p&gt;É uma forma de validação cruzada que divide os dados em &lt;em&gt;k&lt;/em&gt; subconjuntos (de mesmo tamanho se possível). Em cada rodada, um subconjunto é separado para teste e os &lt;em&gt;k - 1&lt;/em&gt; subconjuntos restantes são usados para treinamento. A ideia é que cada amostra seja usada para teste apenas uma vez e &lt;em&gt;k - 1&lt;/em&gt; vezes para treinamento e ao final o erro médio é computado como uma métrica do desempenho do classificador. O &lt;em&gt;scikit-learn&lt;/em&gt; também oferece uma função que facilita a execução da validação cruzada &lt;em&gt;k-fold&lt;/em&gt;.
-&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=validacao-cruzada-k-fold.py&#34;&gt;&lt;/script&gt;
-As linhas 2 e 3 fazem a extração de características do dataset. A linha 5 efetua a validação cruzada &lt;em&gt;k-fold&lt;/em&gt; nos dados, sendo que o valor &lt;em&gt;k&lt;/em&gt; é definido por &lt;em&gt;cv&lt;/em&gt; que nesse caso é &lt;em&gt;5&lt;/em&gt;. Portanto os dados serão divididos em cinco subconjuntos e testados. A linha 7 exibe os resultados obtidos para cada execução e a linha 8 exibe a média de acertos do classificador nas &lt;em&gt;k&lt;/em&gt; execuções. O resultado da execução do código acima é &lt;em&gt;[ 0.96460177  0.97345133  0.96238938  0.9579646   0.97327394]&lt;/em&gt; e &lt;em&gt;Accuracy: 0.9663362043479118 +/- 0.01224505099481929&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;alterando-o-classificador&#34;&gt;Alterando o classificador&lt;/h1&gt;
-
-&lt;p&gt;Agora é possível alterar o classificador e as características usadas para ver se há uma melhora (ou piora) na classificação. Por exemplo, é possível alterar o &lt;em&gt;kernel&lt;/em&gt; do &lt;em&gt;SVM&lt;/em&gt; de &lt;em&gt;&amp;lsquo;linear&amp;rsquo;&lt;/em&gt; para &lt;em&gt;&amp;lsquo;rbf&amp;rsquo;&lt;/em&gt; alterando a linha _classifier = OneVsOneClassifier(SVC(kernel = &amp;lsquo;linear&amp;rsquo;, random&lt;em&gt;state = 84))&lt;/em&gt; para _classifier = OneVsOneClassifier(SVC(kernel = &amp;lsquo;rbf&amp;rsquo;, random&lt;em&gt;state = 84))&lt;/em&gt;. O resultado da validação cruzada &lt;em&gt;k-fold&lt;/em&gt; é: &lt;em&gt;[ 0.26548673  0.26548673  0.26548673  0.26548673  0.26503341]&lt;/em&gt; e &lt;em&gt;Accuracy: 0.2653960620454501 +/- 0.0003626544730670034&lt;/em&gt;. A matriz de confusão é:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;alt.atheism&lt;/th&gt;
-&lt;th&gt;comp.graphics&lt;/th&gt;
-&lt;th&gt;sci.med&lt;/th&gt;
-&lt;th&gt;soc.religion .christian&lt;/th&gt;
-&lt;th&gt;Total&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;alt.atheism&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;comp.graphics&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;sci.med&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;59&lt;/td&gt;
-&lt;td&gt;59&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;soc.religion .christian&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;226&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;226&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;É possível perceber que apenas uma mudança no &lt;em&gt;kernel&lt;/em&gt; resultou em uma piora do classificador. Por isso é importante testar os parâmetros disponíveis no classificador e as diferentes características que podem ser extraídas dos dados para verificar o desempenho da classificação.&lt;/p&gt;
-
-&lt;p&gt;Para hoje é isso. &lt;a href=&#34;https://github.com/ejulio/blog-posts/blob/master/cross-validation-testando-o-desempenho-de-um-classificador/cross-validation.py&#34;&gt;O código final está no GitHub&lt;/a&gt;.
-Abraços e até a próxima :)&lt;/p&gt;
-
-&lt;h1 id=&#34;referências&#34;&gt;Referências&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qwone.com/~jason/20Newsgroups/&#34;&gt;20 Newsgroups&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Bag-of-words_model&#34;&gt;Bag-of-words model&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/cross_validation.html&#34;&gt;Cross-validation: evaluating estimator performance&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.cs.cmu.edu/~schneide/tut5/node42.html&#34;&gt;Cross validation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction&#34;&gt;Feature extraction&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.tfidf.com/&#34;&gt;Tf-idf :: A Single-Page Tutorial - Information Retrieval and Text Mining&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29&#34;&gt;Tokenization (lexical analysis)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/&#34;&gt;Simple guide to confusion matrix terminology&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html&#34;&gt;sklearn.metrics.confusion_matrix&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer&#34;&gt;sklearn.feature_extraction.text.TfidfTransformer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer&#34;&gt;sklearn.feature_extraction.text.CountVectorizer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.cross_val_score.html#sklearn.cross_validation.cross_val_score&#34;&gt;sklearn.cross_validation.cross_val_score&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html&#34;&gt;Working With Text Data&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://juliocesarbatista.com/post/cross-validation-testando-o-desempenho-de-um-classificador/</guid>
+      <description>Olá pessoal, tudo certo!?
+Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos. Dados e características O exemplo de teste será a classificação de texto baseado no tutorial de classificação de texto do scikit-learn. O código inicial é:
+ Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação.</description>
     </item>
     
     <item>
       <title>The Dolly Zoom Effect</title>
-      <link>http://juliocesarbatista.com/post/The-Dolly-Zoom-Effect/</link>
+      <link>http://juliocesarbatista.com/post/the-dolly-zoom-effect/</link>
       <pubDate>Thu, 27 Aug 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://juliocesarbatista.com/post/The-Dolly-Zoom-Effect/</guid>
-      <description>
-
-&lt;h3 id=&#34;a-ideia&#34;&gt;A ideia&lt;/h3&gt;
-
-&lt;p&gt;No post de hoje eu gostaria de demonstrar como fazer o efeito 3D &lt;a href=&#34;http://codepen.io/ejulio/full/RPqgxp/&#34;&gt;&lt;em&gt;dolly zoom effect&lt;/em&gt;&lt;/a&gt; utilizando a three.js.
-&lt;!-- more --&gt;
-Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.
-
-&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
-  &lt;iframe src=&#34;//www.youtube.com/embed/Y2gTSjoEExc&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
- &lt;/div&gt;
-&lt;/p&gt;
-
-&lt;h3 id=&#34;o-código-no-github-https-github-com-ejulio-blog-posts-tree-master-the-dolly-zoom-effect-código-no-github&#34;&gt;O código [no &lt;a href=&#34;https://github.com/ejulio/blog-posts/tree/master/the-dolly-zoom-effect&#34; title=&#34;Código no github&#34;&gt;Github&lt;/a&gt;]&lt;/h3&gt;
-
-&lt;p&gt;Inicialmente nós temos que fazer o setup da cena como no código abaixo.
-&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=index.html&#34;&gt;&lt;/script&gt;
-Esse código, cria a cena com um plano, uma esfera e cinco cubos. Com os objetos necessários criados, podemos trabalhar com os dois componentes do efeito, o movimento e o zoom.&lt;/p&gt;
-
-&lt;p&gt;O movimento da câmera (tag &lt;strong&gt;Movimento&lt;/strong&gt; no vídeo acima) pode ser feito facilmente apenas movendo a câmera em direção ao nosso objeto, ou seja, apenas precisamos mudar as coordenadas da câmera.
-&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=mover-camera.js&#34;&gt;&lt;/script&gt;
-O zoom (tag &lt;strong&gt;Zoom&lt;/strong&gt; no vídeo acima) trabalha da mesma forma que o movimento, porém para aumentarmos o zoom nós precisamos diminuir o &lt;em&gt;FOV&lt;/em&gt; (&lt;em&gt;Field of View&lt;/em&gt;) da câmera.&lt;/p&gt;
-
-&lt;p&gt;Para que o efeito fique correto, é necessário diminuir o zoom enquanto move a câmera em direção ao objeto e posteriormente aumentar o zoom enquanto move a câmera para longe do objeto. Abaixo está o código de uma função que demonstra o efeito.
-&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=zoom.js&#34;&gt;&lt;/script&gt;
-Neste momento nós temos os dois componentes principais do efeito, o movimento da câmera e o zoom. Agora podemos trabalhar em como realizar o efeito que consiste em aproximar a câmera do objeto enquanto se diminui o campo de visão.&lt;/p&gt;
-
-&lt;p&gt;&lt;script src=&#34;//gist.github.com/ejulio/726c7aea6a127c1d4dd6.js?file=the-dolly-zoom-effect.js&#34;&gt;&lt;/script&gt;
-No código acima, o &lt;em&gt;if&lt;/em&gt; faz o movimento de aproximação com objeto, movendo a câmera em direção ao objeto e aumentando o &lt;em&gt;FOV&lt;/em&gt;. Enquanto o &lt;em&gt;else&lt;/em&gt; afasta o objeto, movendo a câmera na direção contrária do objeto e diminuindo o &lt;em&gt;FOV&lt;/em&gt;.&lt;/p&gt;
-
-&lt;p&gt;Abraços.&lt;/p&gt;
-</description>
+      <guid>http://juliocesarbatista.com/post/the-dolly-zoom-effect/</guid>
+      <description>A ideia No post de hoje eu gostaria de demonstrar como fazer o efeito 3D dolly zoom effect utilizando a three.js. Antes de irmos para a parte do código, eu vou deixar o link do vídeo onde eu vi o efeito. O vídeo também fala de outros efeitos e eu vou deixar marcado em dois pontos importantes para explicar o efeito posteriormente.   O código [no Github] Inicialmente nós temos que fazer o setup da cena como no código abaixo.</description>
     </item>
     
   </channel>

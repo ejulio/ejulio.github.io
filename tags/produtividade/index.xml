@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Júlio César Batista</title>
-    <link>http://juliocesarbatista.com/tags/produtividade/index.xml</link>
-    <description>Recent content on Júlio César Batista</description>
+    <title>Produtividade on Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/tags/produtividade/</link>
+    <description>Recent content in Produtividade on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <atom:link href="http://juliocesarbatista.com/tags/produtividade/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 10 Feb 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://juliocesarbatista.com/tags/produtividade/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Sobre métodos ágeis</title>
@@ -14,20 +17,8 @@
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/sobre-metodos-ageis/</guid>
-      <description>&lt;p&gt;Vamos falar sobre metodologias ágeis, principalmente em um SAAS (&lt;em&gt;Software as a Service&lt;/em&gt;). Para começar, não sou um &lt;em&gt;expert&lt;/em&gt; em metodologias ágeis, assim como não passei por todos os possíveis casos que eles podem envolver. Portanto, posso ter uma visão enviesada para os conceitos que acredito fazer mais sentido. Depois desse &lt;em&gt;disclaimer&lt;/em&gt;, vamos lá!&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Não me leve a mal, eu acho que Scrum (e outras metodologias baseadas em &lt;em&gt;sprint&lt;/em&gt;) é uma metodologia fantástica, só não acredito que ele seja o melhor processo para uma empresa que trabalha com um SAAS. Por exemplo, o primeiro princípio ágil diz, basicamente, que &lt;em&gt;entregamos e validamos o software continua e rapidamente com o cliente&lt;/em&gt;. Porém, se você está em um SAAS e trabalha com &lt;em&gt;sprints&lt;/em&gt; de duas semanas, as entregas só ocorrem no final das &lt;em&gt;sprints&lt;/em&gt;, ou seja, o cliente só vê a nova &lt;em&gt;feature&lt;/em&gt; à cada 15 dias. Bem, se considerar os casos mais antigos, no RUP, as entregas eram a cada x meses, então estamos bem.&lt;/p&gt;
-
-&lt;p&gt;Idealmente queremos diminuir o tempo de entrega e acabamos adotando práticas como entrega contínua que permitem &lt;em&gt;releases&lt;/em&gt; de software diariamente, por exemplo. Nesse caso, podemos entregar software todos os dias, mas o nosso ciclo de revisão e validação ocorre somente no final de cada &lt;em&gt;sprint&lt;/em&gt;, ou seja, a cada 15 dias. Bem, acredito que possamos fazer melhor que isso. Esse ato de fazer melhor é uma evolução natural, para equipes que já praticam métodos ágeis à algum tempo. Quando a equipe muda de RUP para ágil, a tendência é adotar Scrum ou algum método com mais &amp;ldquo;práticas&amp;rdquo; para que seja mais fácil de trabalhar. Porém, com avanço e entendimento de como esses métodos funcionam por parte da equipe, eliminar regras/rituais se torna algo importante para deixar os métodos mais enxutos até alcançar um ambiente com características próximas do Lean.&lt;/p&gt;
-
-&lt;p&gt;A evolução natural que eu vejo é adoção de práticas como o Kanban, com a ideia de sistemas puxados e sem a necessidade de forçar ciclos. Por exemplo, uma &lt;em&gt;task/bug&lt;/em&gt; pode aparecer em um &lt;em&gt;backlog&lt;/em&gt;, que é priorizado, para o time de desenvolvimento. Como o &lt;em&gt;backlog&lt;/em&gt; é priorizado, o time pega o &lt;em&gt;card&lt;/em&gt; que está no topo, visto que esse é o mais importante e debate, incluindo todos os interessados, sobre o que deve ser feito. Depois disso, passamos para um processo de implementação e, assim que pronto, podemos fazer uma revisão e validação da entrega. Nesse ponto, se ela for aceita, vai para produção. Caso contrário, ela pode ser priorizada novamente para que se trabalhe nessa tarefa novamente nos próximos dias, ou ela pode ter perdido a preferência e ficar para o próximo mês por exemplo. O importante para notar aqui é o ciclo rápido de revisão e validação. No início, precisávamos esperar 15 dias para validar a entrega, nesse modelo, supondo que a entrega levasse 3 dias, em 3 dias teríamos validado e entregue a &lt;em&gt;feature&lt;/em&gt; para o cliente.&lt;/p&gt;
-
-&lt;p&gt;Obviamente que o que eu descrevi é um cenário ideal e tudo mais. Porém, acredito que essa seja uma boa forma de praticar um desenvolvimento de software com menos desperdícios e com foco em agregar valor para o cliente com entregas de &lt;em&gt;features&lt;/em&gt; que ele vai usar. No mais, também fica evidente que ocorrem mais reuniões para entender as tarefas e revisões, diferente dos métodos com &lt;em&gt;sprint&lt;/em&gt; que fixam uma reunião de planejamento e outra de revisão.&lt;/p&gt;
-
-&lt;p&gt;No mais, não digo que as ideias aqui são as melhores e que elas vão funcionar em todos os casos. Imagino que cada projeto tem sua particularidade e que métodos baseados em &lt;em&gt;sprints&lt;/em&gt; funcionam em muitos deles, mas podemos passar a pensar em outros modelos, conforme o &lt;a href=&#34;http://modernagile.org/&#34;&gt;&lt;em&gt;modern agile&lt;/em&gt;&lt;/a&gt;. Além disso, lembre-se do primeiro item do manifesto ágil &amp;ldquo;Pessoas e suas interações sobre processos e ferramentas&amp;rdquo;. Nesse caso, não devemos focar necessariamente no processo, mas sim nas pessoas que fazem parte da equipe e como os processos podem melhorar a interação entre elas para que o produto final possa ser um sucesso!&lt;/p&gt;
-</description>
+      <description>Vamos falar sobre metodologias ágeis, principalmente em um SAAS (Software as a Service). Para começar, não sou um expert em metodologias ágeis, assim como não passei por todos os possíveis casos que eles podem envolver. Portanto, posso ter uma visão enviesada para os conceitos que acredito fazer mais sentido. Depois desse disclaimer, vamos lá!
+Não me leve a mal, eu acho que Scrum (e outras metodologias baseadas em sprint) é uma metodologia fantástica, só não acredito que ele seja o melhor processo para uma empresa que trabalha com um SAAS.</description>
     </item>
     
     <item>
@@ -36,51 +27,8 @@
       <pubDate>Tue, 09 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/okrs/</guid>
-      <description>&lt;p&gt;Vamos falar sobre desenvolvimento de software.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Objectives and Key-Results&lt;/em&gt; (OKRs) são uma prática/&lt;em&gt;framework&lt;/em&gt;/metodologia para definir objetivos, os &lt;em&gt;Objectives&lt;/em&gt;, e definir resultados que indiquem o quão próximos estamos desses objetivos, os &lt;em&gt;Key-Results&lt;/em&gt;.
-Essa prática não é um &lt;em&gt;framework&lt;/em&gt; ágil como o Scrum/XP/Kanban, mas sim uma forma de alinhar os objetivos da empresa com todos os indivíduos e como cada um pode contribuir nesses objetivos.
-Com isso, é possível colocar o &lt;em&gt;template&lt;/em&gt; padrão de OKRs:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Objective&lt;/em&gt;: Ter a maior rede social do mundo&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Key-Results&lt;/em&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;2 bilhões de usuários ativos&lt;/li&gt;
-&lt;li&gt;Cada usuário gera 3 novos usuários (convidam usuários que permanecem na plataforma)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Dado esse &lt;em&gt;template&lt;/em&gt;, para um OKR hipotético para uma empresa hipotética, podemos iniciar o alinhamento da equipe.
-Sabemos que para o ano corrente a empresa quer ser a maior rede social do mundo e, para isso, deve conquistar 2 bilhões de usuários ativos.
-Esse &lt;em&gt;Key-Result&lt;/em&gt; passa para os demais departamentos da empresa (marketing, comercial, desenvolvimento, &amp;hellip;) e cada departamento cria seus próprios OKRs com estratégias para que a empresa como um todo alcance o objetivo através dos Key-Results.&lt;/p&gt;
-
-&lt;p&gt;Certo, mas o que isso tem a ver com o desenvolvimento de software?
-Ou até mesmo com o desenvolvimento ágil?
-Bem, o ponto que eu acho mais interessante dessa abordagem para equipes ágeis é que ela permite que a equipe faça sugestão de inovações.
-A ideia de OKRs não é que a equipe de diretores defina o que deve ser feito, em geral, eles apenas definem onde querem chegar e como saber se chegaram lá.
-Porém, a estratégia de como chegar lá fica para os departamentos e equipes, ou seja, as pessoas criam estratégias que podem levar inovações e à conquista desses objetivos.
-Esse, eu acredito, é o ponto mais importante dessa estratégia, porque dessa forma todas as pessoas tem a possibilidade de saber para onde a empresa está indo e dar sugestões de como chegar lá, não apenas seguir um &lt;em&gt;roadmap&lt;/em&gt; decidido anualmente.
-Outro ponto que é interessante para equipes ágeis é que, os objetivos possuem &lt;em&gt;Key-Results&lt;/em&gt; e com eles é possível, em toda reunião de planejamento/retrospectiva, verificar se as estórias/tarefas selecionadas estão nos aproximando do nosso objetivo ou não.
-Claro, é importante notar que os OKRs tem uma cadência normal de 90 dias, ou seja, a cada 3 meses as equipes se reúnem e renovam seus OKRs com novas estratégias para alcançar os objetivos.&lt;/p&gt;
-
-&lt;p&gt;Obviamente, os OKRs não substituem uma prática ágil, mas são mais uma ferramenta para permitir o alinhamento das equipes com os objetivos da empresa.
-Finalmente, tem um ponto que eu acho ser o mais interessante dos OKRs que é: os &lt;em&gt;Key-Results&lt;/em&gt; são mensuráveis e possuem um número que deve ser alcançado.
-Essa forma, permite uma visão clara do quão próximo estamos do nosso objetivo.
-É muito melhor ter um &lt;em&gt;Key-Result&lt;/em&gt; do tipo &amp;ldquo;Funcionalidade X entregue com 10 usuários ativos na primeira semana&amp;rdquo; do que &amp;ldquo;Implementar a funcionalidade X&amp;rdquo;.
-Como saber se estamos próximos do nosso objetivo se o &lt;em&gt;Key-Result&lt;/em&gt; é &amp;ldquo;Implementar a funcionalidade X&amp;rdquo;?
-Como já sabemos, o tempo para implementar algo é apenas uma estimativa e não uma ciência exata.&lt;/p&gt;
-
-&lt;p&gt;Enfim, deixei aqui algumas considerações sobre OKRs que li nos últimos meses e vou deixar aqui embaixo alguns links com material adicional caso você tenha interesse em saber mais sobre essa prática.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;http://felipecastro.com/pt-br/okr/o-que-e-okr/&#34;&gt;O guia do iniciante OKR&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://www.oreilly.com/business/free/files/introduction-to-okrs.pdf&#34;&gt;Introduction to OKRs&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;http://eleganthack.com/category/high-performing-teams/okrs-2/&#34;&gt;OKRs&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>Vamos falar sobre desenvolvimento de software.
+Objectives and Key-Results (OKRs) são uma prática/framework/metodologia para definir objetivos, os Objectives, e definir resultados que indiquem o quão próximos estamos desses objetivos, os Key-Results. Essa prática não é um framework ágil como o Scrum/XP/Kanban, mas sim uma forma de alinhar os objetivos da empresa com todos os indivíduos e como cada um pode contribuir nesses objetivos. Com isso, é possível colocar o template padrão de OKRs:</description>
     </item>
     
   </channel>

@@ -1,10 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>http://juliocesarbatista.com/</loc>
-    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>http://juliocesarbatista.com/post/matemagica-para-devs/</loc>
@@ -62,7 +58,7 @@
   </url>
   
   <url>
-    <loc>http://juliocesarbatista.com/post/Batman-e-voce-Desenhando-o-simbolo-do-Batman-com-retas-parabolas-e-circulos/</loc>
+    <loc>http://juliocesarbatista.com/post/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
   </url>
   
@@ -72,13 +68,217 @@
   </url>
   
   <url>
-    <loc>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</loc>
+    <loc>http://juliocesarbatista.com/post/cross-validation-testando-o-desempenho-de-um-classificador/</loc>
     <lastmod>2016-05-27T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://juliocesarbatista.com/post/The-Dolly-Zoom-Effect/</loc>
+    <loc>http://juliocesarbatista.com/post/the-dolly-zoom-effect/</loc>
     <lastmod>2015-08-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/3d/</loc>
+    <lastmod>2015-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/</loc>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/categories/</loc>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/categories/computa%C3%A7%C3%A3o-gr%C3%A1fica/</loc>
+    <lastmod>2015-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/c%C3%A1lculo/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/deep-learning/</loc>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/categories/desenvolvimento-de-software/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/desmos/</loc>
+    <lastmod>2016-06-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/estat%C3%ADstica/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/exemplos/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/gradient-descent/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/grupy/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/categories/matem%C3%A1tica/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/m%C3%A9todos-%C3%A1geis/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/normaliza%C3%A7%C3%A3o-de-caracter%C5%9Biticas/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/otimiza%C3%A7%C3%A3o/</loc>
+    <lastmod>2017-09-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/post/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/categories/processamento-de-imagens/</loc>
+    <lastmod>2018-01-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/processo-de-desenvolvimento/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/produtividade/</loc>
+    <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/publication/</loc>
+    <lastmod>2017-10-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/python/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/redes-neurais/</loc>
+    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/redes-neurais-convolucionais/</loc>
+    <lastmod>2017-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/scikit-learn/</loc>
+    <lastmod>2016-05-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/</loc>
+    <lastmod>2015-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/talks/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/tensorflow/</loc>
+    <lastmod>2017-05-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/three.js/</loc>
+    <lastmod>2015-08-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/transforma%C3%A7%C3%B5es/</loc>
+    <lastmod>2016-06-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/valida%C3%A7%C3%A3o-cruzada/</loc>
+    <lastmod>2016-05-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/%C3%A1lgebra/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/%C3%A1lgebra-linear/</loc>
+    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Júlio César Batista</title>
-    <link>http://juliocesarbatista.com/tags/redes-neurais-convolucionais/index.xml</link>
-    <description>Recent content on Júlio César Batista</description>
+    <title>Redes Neurais Convolucionais on Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/tags/redes-neurais-convolucionais/</link>
+    <description>Recent content in Redes Neurais Convolucionais on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <atom:link href="http://juliocesarbatista.com/tags/redes-neurais-convolucionais/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 13 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://juliocesarbatista.com/tags/redes-neurais-convolucionais/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto</title>
@@ -14,12 +17,9 @@
       <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/conheca_o_machine_learning/</guid>
-      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
-
-&lt;p&gt;Amanhã, 14 de agosto, eu vou apresentar a palestra &amp;ldquo;Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto&amp;rdquo; na &lt;a href=&#34;http://www.fai.com.br/portal/semanainfo/index.php&#34;&gt;XXI Semana de Informática da UNIFAI&lt;/a&gt; em Adamantina, São Paulo. Os slides da palestra podem ser visualizados &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/conheca_o_machine_learning/conheca_o_machine_learning.pdf&#34;&gt;aqui&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Espero que você goste!&lt;/p&gt;
-</description>
+      <description>Olá, tudo bem!?
+Amanhã, 14 de agosto, eu vou apresentar a palestra &amp;ldquo;Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto&amp;rdquo; na XXI Semana de Informática da UNIFAI em Adamantina, São Paulo. Os slides da palestra podem ser visualizados aqui.
+Espero que você goste!</description>
     </item>
     
     <item>
@@ -28,14 +28,10 @@
       <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/desmistificando-o-deep-learning-com-tensorflow/</guid>
-      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
-
-&lt;p&gt;Eu e o &lt;a href=&#34;https://twitter.com/vitoralbiero&#34;&gt;Vítor Albiero&lt;/a&gt; vamos falar sobre deep learning na &lt;a href=&#34;http://www.thedevelopersconference.com.br/tdc/2017/florianopolis/trilha-datascience-e-machine-learning&#34;&gt;The Developers Conference (TDC) Florianópolis 2017 na trilha de Data Science e Machine Learning&lt;/a&gt;. A palestra se chama &amp;ldquo;Desmistificando o Deep Learning com TesnsorFlow&amp;rdquo; e também vai estar na trilha stadium da Intel e vai ser &lt;a href=&#34;https://www.eventials.com/Globalcode/quinta-de-manha-stadium-intel-floripa-2017/&#34;&gt;transmitida gratuitamente pela internet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nesses links você pode acessar os &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/desmistificando-o-deep-learning-com-tensorflow/Desmistificando_o_Deep_Learning_com_TensorFlow.pdf&#34;&gt;slides&lt;/a&gt; da talk e também os &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/desmistificando-o-deep-learning-com-tensorflow&#34;&gt;códigos&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Espero que você goste!&lt;/p&gt;
-</description>
+      <description>Olá, tudo bem!?
+Eu e o Vítor Albiero vamos falar sobre deep learning na The Developers Conference (TDC) Florianópolis 2017 na trilha de Data Science e Machine Learning. A palestra se chama &amp;ldquo;Desmistificando o Deep Learning com TesnsorFlow&amp;rdquo; e também vai estar na trilha stadium da Intel e vai ser transmitida gratuitamente pela internet.
+Nesses links você pode acessar os slides da talk e também os códigos.
+Espero que você goste!</description>
     </item>
     
   </channel>

@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Júlio César Batista</title>
-    <link>http://juliocesarbatista.com/tags/estat%C3%ADstica/index.xml</link>
-    <description>Recent content on Júlio César Batista</description>
+    <title>Estatística on Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/tags/estat%C3%ADstica/</link>
+    <description>Recent content in Estatística on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <atom:link href="http://juliocesarbatista.com/tags/estat%C3%ADstica/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://juliocesarbatista.com/tags/estat%C3%ADstica/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Matemágica para devs</title>
@@ -14,26 +17,9 @@
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/matemagica-para-devs/</guid>
-      <description>&lt;p&gt;Oi, tudo certo!?&lt;/p&gt;
-
-&lt;p&gt;Nos dias 28/07/2018 e 11/08/2018 eu apresentei duas palestras sobre matemática com foco em conceitos úteis para desenvolvedores de software.
-O conteúdo está disponível no &lt;a href=&#34;https://github.com/ejulio/talks/tree/master/matemagica-para-devs&#34;&gt;GitHub&lt;/a&gt;.
-De forma geral, vimos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Conceitos fundamentais da álgebra;&lt;/li&gt;
-&lt;li&gt;Distribuições e os conceitos de média, moda, mediana e desvio padrão na estatística;&lt;/li&gt;
-&lt;li&gt;Matrizes, vetores e &lt;em&gt;norms&lt;/em&gt; na álgebra linear;&lt;/li&gt;
-&lt;li&gt;Funções, derivadas e otimização com cálculo.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A ideia era aproximar esses conceitos com Python e bibliotecas que facilitam essas operações.&lt;/p&gt;
-
-&lt;p&gt;Estou pensando em trazer esse conteúdo novamente no começo do ano que vem.
-Então, se você tem interesse, fique ligado no &lt;a href=&#34;https://www.meetup.com/hackerspaceblumenau/&#34;&gt;Meetup do Hackerspace Blumenau&lt;/a&gt; ou participe do &lt;a href=&#34;http://www.hackerspaceblumenau.org/&#34;&gt;Hackerspace Blumenau&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Até mais :)&lt;/p&gt;
-</description>
+      <description>Oi, tudo certo!?
+Nos dias 28/07/2018 e 11/08/2018 eu apresentei duas palestras sobre matemática com foco em conceitos úteis para desenvolvedores de software. O conteúdo está disponível no GitHub. De forma geral, vimos:
+ Conceitos fundamentais da álgebra; Distribuições e os conceitos de média, moda, mediana e desvio padrão na estatística; Matrizes, vetores e norms na álgebra linear; Funções, derivadas e otimização com cálculo.  A ideia era aproximar esses conceitos com Python e bibliotecas que facilitam essas operações.</description>
     </item>
     
   </channel>

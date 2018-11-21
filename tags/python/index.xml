@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Júlio César Batista</title>
-    <link>http://juliocesarbatista.com/tags/python/index.xml</link>
-    <description>Recent content on Júlio César Batista</description>
+    <title>Python on Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/tags/python/</link>
+    <description>Recent content in Python on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <atom:link href="http://juliocesarbatista.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 13 Aug 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://juliocesarbatista.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
     
     <item>
       <title>Matemágica para devs</title>
@@ -14,26 +17,9 @@
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/matemagica-para-devs/</guid>
-      <description>&lt;p&gt;Oi, tudo certo!?&lt;/p&gt;
-
-&lt;p&gt;Nos dias 28/07/2018 e 11/08/2018 eu apresentei duas palestras sobre matemática com foco em conceitos úteis para desenvolvedores de software.
-O conteúdo está disponível no &lt;a href=&#34;https://github.com/ejulio/talks/tree/master/matemagica-para-devs&#34;&gt;GitHub&lt;/a&gt;.
-De forma geral, vimos:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Conceitos fundamentais da álgebra;&lt;/li&gt;
-&lt;li&gt;Distribuições e os conceitos de média, moda, mediana e desvio padrão na estatística;&lt;/li&gt;
-&lt;li&gt;Matrizes, vetores e &lt;em&gt;norms&lt;/em&gt; na álgebra linear;&lt;/li&gt;
-&lt;li&gt;Funções, derivadas e otimização com cálculo.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A ideia era aproximar esses conceitos com Python e bibliotecas que facilitam essas operações.&lt;/p&gt;
-
-&lt;p&gt;Estou pensando em trazer esse conteúdo novamente no começo do ano que vem.
-Então, se você tem interesse, fique ligado no &lt;a href=&#34;https://www.meetup.com/hackerspaceblumenau/&#34;&gt;Meetup do Hackerspace Blumenau&lt;/a&gt; ou participe do &lt;a href=&#34;http://www.hackerspaceblumenau.org/&#34;&gt;Hackerspace Blumenau&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Até mais :)&lt;/p&gt;
-</description>
+      <description>Oi, tudo certo!?
+Nos dias 28/07/2018 e 11/08/2018 eu apresentei duas palestras sobre matemática com foco em conceitos úteis para desenvolvedores de software. O conteúdo está disponível no GitHub. De forma geral, vimos:
+ Conceitos fundamentais da álgebra; Distribuições e os conceitos de média, moda, mediana e desvio padrão na estatística; Matrizes, vetores e norms na álgebra linear; Funções, derivadas e otimização com cálculo.  A ideia era aproximar esses conceitos com Python e bibliotecas que facilitam essas operações.</description>
     </item>
     
     <item>
@@ -42,13 +28,9 @@ Então, se você tem interesse, fique ligado no &lt;a href=&#34;https://www.meet
       <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/processamento-imagens-python-grupy/</guid>
-      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
-
-&lt;p&gt;Na última semana de janeiro, ainda não tem data definida, vou falar sobre processamento de imagens com python e &lt;a href=&#34;http://scikit-image.org/&#34;&gt;scikit-image&lt;/a&gt; no &lt;a href=&#34;https://www.meetup.com/hackerspaceblumenau/events/trlwpnyxcbkc/&#34;&gt;Grupy Blumenau&lt;/a&gt;.
-O notebook com o conteúdo da apresentação já está &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/processamento-imagens-python/Processamento%20de%20imagens%20com%20python.ipynb&#34;&gt;disponível no GitHub&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Aparece por lá para conferir e trocar uma ideia :D&lt;/p&gt;
-</description>
+      <description>Olá, tudo bem!?
+Na última semana de janeiro, ainda não tem data definida, vou falar sobre processamento de imagens com python e scikit-image no Grupy Blumenau. O notebook com o conteúdo da apresentação já está disponível no GitHub.
+Aparece por lá para conferir e trocar uma ideia :D</description>
     </item>
     
     <item>
@@ -57,30 +39,7 @@ O notebook com o conteúdo da apresentação já está &lt;a href=&#34;https://g
       <pubDate>Wed, 27 Sep 2017 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/a-normalizacao-e-o-gradient-descent/</guid>
-      <description>&lt;p&gt;Vamos falar sobre machine learning.
-Estou [enfim] participando do &lt;em&gt;&lt;a href=&#34;https://www.coursera.org/learn/machine-learning&#34;&gt;MOOC&lt;/a&gt;&lt;/em&gt; do &lt;a href=&#34;https://twitter.com/AndrewYNg&#34;&gt;Andrew Ng, Ph. D.&lt;/a&gt; no &lt;a href=&#34;http://coursera.org&#34;&gt;Coursera&lt;/a&gt; e me deparei com a importância de normalizar os dados antes de efetuar a otimização do algoritmo de aprendizado.
-Não leve a mal, sei, há certo tempo, que é importante normalizar os valores de entrada para que o algoritmo tenha uma melhor, e mais rápida, convergência.
-Entretanto, nunca havia, ao menos até onde percebi, me deparado com o quanto esse pré-processamento implica no processo.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;p&gt;Se você já leu ou fez algum exemplo/tutorial sobre &lt;em&gt;machine learning&lt;/em&gt;, provavelmente, sabe que é importante normalizar as entradas/características antes de iniciar o processo de otimização.
-Geralmente, isso é feito com &lt;em&gt;standardizing&lt;/em&gt; ao aplicar $\frac{\mathbf{x}_j - \mathbf{\mu}_j}{\mathbf{\sigma}_j}$ que vai deixar as características ($\mathbf{x}$) com média ($\mathbf{\mu}$) 0 e desvido padrão ($\mathbf{\sigma}$) 1.
-Especialmente no caso do &lt;em&gt;gradient descent&lt;/em&gt; (método de otimização baseado em derivadas), essa normalização é importante para &amp;ldquo;garantir uma superfície mais uniforme&amp;rdquo; de forma que o algoritmo consegue caminhar em direção ao melhor ponto da otimização.
-Nesse caso, estava &lt;a href=&#34;https://github.com/ejulio/coursera-machine-learning/blob/master/Week%203/Assignment%20Logistic%20Regression.ipynb&#34;&gt;implementando&lt;/a&gt; o &lt;em&gt;gradient descent&lt;/em&gt; para otimizar uma simples regressão logísitica com 2 variáveis de entradas, um problema razoavelmente simples.
-Porém, quando executei a rotina com ~1,000 iterações ao algoritmo mal e mal saiu do lugar.
-Passei um tempo revirando o código, achei uns possíveis bugs e arrumei algumas coisas.
-Mesmo assim, nada de otimizar, ou chegar próximo do valor esperado no exercício.
-Com isso, fui verificar o fórum para ver se alguém teve o mesmo problema e me deparei com um usuário que precisou de 1,000,000 de iterações para convergir implementando em R.
-Bem, fiz o teste e, realmente, com 1,000,000 de iterações minha implementação em python (não quero usar o MATLAB :b) convergiu para um valor aproximado ao informado no exercício.
-Enfim, não fazia muito sentido 1,000,000 de iterações para um problema de classificação binária com 2 variáveis.
-Depois de pesquisar mais um pouco e ver em algum lugar do fórum a palavra mágica &lt;strong&gt;normalização&lt;/strong&gt;, me lembrei que não havia normalizado as características antes de iniciar a otimização.
-Dito e feito, implementei a normalização e com um teste com ~10,000 iterações a minha implementação convergiu para o valor esperado no exercício.&lt;/p&gt;
-
-&lt;p&gt;Lição aprendida! Apesar de saber da importância de normalizar as entradas do algoritmo, nunca tinha pensado sobre o quão difícil é o problema sem normalizar.
-Agora, tive um ótimo exemplo do que realmente está acontecendo durante esse processo de otimização.
-Enfim, o que escrevi aqui não deve ser novidade para quem já fez algo com &lt;em&gt;machine learning&lt;/em&gt;, mas pode ser que ajude a quem está começando a ter uma noção do porque de alguns detalhes serem importantes para o processo como um todo.&lt;/p&gt;
-</description>
+      <description>Vamos falar sobre machine learning. Estou [enfim] participando do MOOC do Andrew Ng, Ph. D. no Coursera e me deparei com a importância de normalizar os dados antes de efetuar a otimização do algoritmo de aprendizado. Não leve a mal, sei, há certo tempo, que é importante normalizar os valores de entrada para que o algoritmo tenha uma melhor, e mais rápida, convergência. Entretanto, nunca havia, ao menos até onde percebi, me deparado com o quanto esse pré-processamento implica no processo.</description>
     </item>
     
     <item>
@@ -89,214 +48,21 @@ Enfim, o que escrevi aqui não deve ser novidade para quem já fez algo com &lt;
       <pubDate>Wed, 03 May 2017 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/post/desmistificando-o-deep-learning-com-tensorflow/</guid>
-      <description>&lt;p&gt;Olá, tudo bem!?&lt;/p&gt;
-
-&lt;p&gt;Eu e o &lt;a href=&#34;https://twitter.com/vitoralbiero&#34;&gt;Vítor Albiero&lt;/a&gt; vamos falar sobre deep learning na &lt;a href=&#34;http://www.thedevelopersconference.com.br/tdc/2017/florianopolis/trilha-datascience-e-machine-learning&#34;&gt;The Developers Conference (TDC) Florianópolis 2017 na trilha de Data Science e Machine Learning&lt;/a&gt;. A palestra se chama &amp;ldquo;Desmistificando o Deep Learning com TesnsorFlow&amp;rdquo; e também vai estar na trilha stadium da Intel e vai ser &lt;a href=&#34;https://www.eventials.com/Globalcode/quinta-de-manha-stadium-intel-floripa-2017/&#34;&gt;transmitida gratuitamente pela internet&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Nesses links você pode acessar os &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/desmistificando-o-deep-learning-com-tensorflow/Desmistificando_o_Deep_Learning_com_TensorFlow.pdf&#34;&gt;slides&lt;/a&gt; da talk e também os &lt;a href=&#34;https://github.com/ejulio/talks/blob/master/desmistificando-o-deep-learning-com-tensorflow&#34;&gt;códigos&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Espero que você goste!&lt;/p&gt;
-</description>
+      <description>Olá, tudo bem!?
+Eu e o Vítor Albiero vamos falar sobre deep learning na The Developers Conference (TDC) Florianópolis 2017 na trilha de Data Science e Machine Learning. A palestra se chama &amp;ldquo;Desmistificando o Deep Learning com TesnsorFlow&amp;rdquo; e também vai estar na trilha stadium da Intel e vai ser transmitida gratuitamente pela internet.
+Nesses links você pode acessar os slides da talk e também os códigos.
+Espero que você goste!</description>
     </item>
     
     <item>
       <title>Cross-validation: testando o desempenho de um classificador</title>
-      <link>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</link>
+      <link>http://juliocesarbatista.com/post/cross-validation-testando-o-desempenho-de-um-classificador/</link>
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
-      <guid>http://juliocesarbatista.com/post/Cross-validation-testando-o-desempenho-de-um-classificador/</guid>
-      <description>
-
-&lt;p&gt;Olá pessoal, tudo certo!?&lt;/p&gt;
-
-&lt;p&gt;Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.
-&lt;!-- more --&gt;
-&lt;!-- toc --&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;dados-e-características&#34;&gt;Dados e características&lt;/h1&gt;
-
-&lt;p&gt;O exemplo de teste será a classificação de texto baseado no &lt;a href=&#34;http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html&#34;&gt;tutorial de classificação de texto do &lt;em&gt;scikit-learn&lt;/em&gt;&lt;/a&gt;. O código inicial é:&lt;/p&gt;
-
-&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=dados-e-caracteristicas.py&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação. Os dados são do dataset &lt;em&gt;Twenty Newsgroups&lt;/em&gt; que está disponível no &lt;em&gt;scikit-learn&lt;/em&gt; e será baixado apenas quando a aplicação for executada pela primeira vez. Estamos fazendo o download apenas das categorias definidas nas linhas 12 e 13, mas é possível usar &lt;a href=&#34;http://qwone.com/~jason/20Newsgroups/&#34;&gt;outras categorias&lt;/a&gt;.
-Na linha 18 definimos o classificador, que é um &lt;em&gt;SVM&lt;/em&gt; utilizando a técnica um-contra-um para classificar mais de duas classes.
-Nas linhas 21 e 22 iniciamos as classes que fazem a extração de características. &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer&#34;&gt;&lt;em&gt;CountVectorizer&lt;/em&gt;&lt;/a&gt; quebra o texto em &lt;a href=&#34;https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29&#34;&gt;&lt;em&gt;tokens&lt;/em&gt;&lt;/a&gt; e faz a contagem da &lt;a href=&#34;https://en.wikipedia.org/wiki/Bag-of-words_model&#34;&gt;&lt;em&gt;bag of words&lt;/em&gt;&lt;/a&gt;. &lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer&#34;&gt;&lt;em&gt;TfidfTransformer&lt;/em&gt;&lt;/a&gt; transforma as contagens em frequências usando &lt;a href=&#34;http://www.tfidf.com/&#34;&gt;&lt;em&gt;Term Frequency-Inverse Document Frequency&lt;/em&gt;&lt;/a&gt;.
-A função _fit&lt;em&gt;classifier&lt;/em&gt; na linha 24 treina o classificador com dos dados _train&lt;em&gt;data&lt;/em&gt; e as classes _train&lt;em&gt;labels&lt;/em&gt;. As linhas 26 e 27 fazem a extração de características dos dados e a linha 28 efetua o treinamento do classificador.
-A função &lt;em&gt;predict&lt;/em&gt; na linha 30 faz a classificação dos dados _test&lt;em&gt;data&lt;/em&gt;. As linhas 31 e 32 fazem a extração de características e a linha 33 retorna as classificações para os dados.&lt;/p&gt;
-
-&lt;h1 id=&#34;validação-cruzada-e-a-matriz-de-confusão&#34;&gt;Validação cruzada e a matriz de confusão&lt;/h1&gt;
-
-&lt;p&gt;A validação cruzada nada mais é do que separar uma parte dos dados para ser usado treinamento e outra parte para ser usada como teste. Para isso, o &lt;em&gt;scikit-learn&lt;/em&gt; oferece uma função que faz a separação automaticamente dos dados.
-&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=validacao-cruzada-e-matriz-de-confusao.py&#34;&gt;&lt;/script&gt;
-Nas linhas 4 e 5 os dados são separados para validação cruzada usando o método. Os dados para treinamento do classificador são armazenados em _train&lt;em&gt;data&lt;/em&gt; e _train&lt;em&gt;labels&lt;/em&gt; e os dados de teste são armazenados em _test&lt;em&gt;data&lt;/em&gt; e _train&lt;em&gt;data&lt;/em&gt;. O tamanho dos conjuntos e controlado por _test&lt;em&gt;size&lt;/em&gt;, sendo que o valor &lt;em&gt;0.1&lt;/em&gt; representa 10% de dados para teste.
-As linhas 7 e 8 treinam o classificador e fazem a classificação dos dados de teste. Na linha 9 é exibida a &lt;a href=&#34;http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/&#34;&gt;matriz de confusão&lt;/a&gt; que indica o desempenho do classificador. Abaixo está o resultado da execução do código acima.&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;alt.atheism&lt;/th&gt;
-&lt;th&gt;comp.graphics&lt;/th&gt;
-&lt;th&gt;sci.med&lt;/th&gt;
-&lt;th&gt;soc.religion .christian&lt;/th&gt;
-&lt;th&gt;Total&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;alt.atheism&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;50&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;comp.graphics&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;sci.med&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;3&lt;/td&gt;
-&lt;td&gt;55&lt;/td&gt;
-&lt;td&gt;1&lt;/td&gt;
-&lt;td&gt;59&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;soc.religion .christian&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;2&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;51&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;50&lt;/td&gt;
-&lt;td&gt;67&lt;/td&gt;
-&lt;td&gt;56&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;226&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;Os cabeçalhos e os totais eu adicionei manualmente. O &lt;em&gt;Total&lt;/em&gt; ao final de cada linha indica quantas amostras de determinada classe existiam no dataset de teste. Por exemplo, existem 53 amostras da classe &lt;em&gt;alt.atheism&lt;/em&gt; nos dados para treinamento. O &lt;em&gt;Total&lt;/em&gt; das colunas indica quantas amostras de teste foram classificados como determinada classe no dataset de teste. Por exemplo, 67 amostras foram classificadas como &lt;em&gt;comp.graphics&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;validação-cruzada-k-fold&#34;&gt;Validação cruzada &lt;em&gt;k-fold&lt;/em&gt;&lt;/h1&gt;
-
-&lt;p&gt;É uma forma de validação cruzada que divide os dados em &lt;em&gt;k&lt;/em&gt; subconjuntos (de mesmo tamanho se possível). Em cada rodada, um subconjunto é separado para teste e os &lt;em&gt;k - 1&lt;/em&gt; subconjuntos restantes são usados para treinamento. A ideia é que cada amostra seja usada para teste apenas uma vez e &lt;em&gt;k - 1&lt;/em&gt; vezes para treinamento e ao final o erro médio é computado como uma métrica do desempenho do classificador. O &lt;em&gt;scikit-learn&lt;/em&gt; também oferece uma função que facilita a execução da validação cruzada &lt;em&gt;k-fold&lt;/em&gt;.
-&lt;script src=&#34;//gist.github.com/ejulio/8bb6cf3dd81465cc3e7c238ef98dbbaf.js?file=validacao-cruzada-k-fold.py&#34;&gt;&lt;/script&gt;
-As linhas 2 e 3 fazem a extração de características do dataset. A linha 5 efetua a validação cruzada &lt;em&gt;k-fold&lt;/em&gt; nos dados, sendo que o valor &lt;em&gt;k&lt;/em&gt; é definido por &lt;em&gt;cv&lt;/em&gt; que nesse caso é &lt;em&gt;5&lt;/em&gt;. Portanto os dados serão divididos em cinco subconjuntos e testados. A linha 7 exibe os resultados obtidos para cada execução e a linha 8 exibe a média de acertos do classificador nas &lt;em&gt;k&lt;/em&gt; execuções. O resultado da execução do código acima é &lt;em&gt;[ 0.96460177  0.97345133  0.96238938  0.9579646   0.97327394]&lt;/em&gt; e &lt;em&gt;Accuracy: 0.9663362043479118 +/- 0.01224505099481929&lt;/em&gt;.&lt;/p&gt;
-
-&lt;h1 id=&#34;alterando-o-classificador&#34;&gt;Alterando o classificador&lt;/h1&gt;
-
-&lt;p&gt;Agora é possível alterar o classificador e as características usadas para ver se há uma melhora (ou piora) na classificação. Por exemplo, é possível alterar o &lt;em&gt;kernel&lt;/em&gt; do &lt;em&gt;SVM&lt;/em&gt; de &lt;em&gt;&amp;lsquo;linear&amp;rsquo;&lt;/em&gt; para &lt;em&gt;&amp;lsquo;rbf&amp;rsquo;&lt;/em&gt; alterando a linha _classifier = OneVsOneClassifier(SVC(kernel = &amp;lsquo;linear&amp;rsquo;, random&lt;em&gt;state = 84))&lt;/em&gt; para _classifier = OneVsOneClassifier(SVC(kernel = &amp;lsquo;rbf&amp;rsquo;, random&lt;em&gt;state = 84))&lt;/em&gt;. O resultado da validação cruzada &lt;em&gt;k-fold&lt;/em&gt; é: &lt;em&gt;[ 0.26548673  0.26548673  0.26548673  0.26548673  0.26503341]&lt;/em&gt; e &lt;em&gt;Accuracy: 0.2653960620454501 +/- 0.0003626544730670034&lt;/em&gt;. A matriz de confusão é:&lt;/p&gt;
-
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;alt.atheism&lt;/th&gt;
-&lt;th&gt;comp.graphics&lt;/th&gt;
-&lt;th&gt;sci.med&lt;/th&gt;
-&lt;th&gt;soc.religion .christian&lt;/th&gt;
-&lt;th&gt;Total&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;alt.atheism&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;comp.graphics&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;td&gt;61&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;sci.med&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;59&lt;/td&gt;
-&lt;td&gt;59&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;soc.religion .christian&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;td&gt;53&lt;/td&gt;
-&lt;/tr&gt;
-
-&lt;tr&gt;
-&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;0&lt;/td&gt;
-&lt;td&gt;226&lt;/td&gt;
-&lt;td&gt;&lt;strong&gt;226&lt;/strong&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;É possível perceber que apenas uma mudança no &lt;em&gt;kernel&lt;/em&gt; resultou em uma piora do classificador. Por isso é importante testar os parâmetros disponíveis no classificador e as diferentes características que podem ser extraídas dos dados para verificar o desempenho da classificação.&lt;/p&gt;
-
-&lt;p&gt;Para hoje é isso. &lt;a href=&#34;https://github.com/ejulio/blog-posts/blob/master/cross-validation-testando-o-desempenho-de-um-classificador/cross-validation.py&#34;&gt;O código final está no GitHub&lt;/a&gt;.
-Abraços e até a próxima :)&lt;/p&gt;
-
-&lt;h1 id=&#34;referências&#34;&gt;Referências&lt;/h1&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://qwone.com/~jason/20Newsgroups/&#34;&gt;20 Newsgroups&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Bag-of-words_model&#34;&gt;Bag-of-words model&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/cross_validation.html&#34;&gt;Cross-validation: evaluating estimator performance&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.cs.cmu.edu/~schneide/tut5/node42.html&#34;&gt;Cross validation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/feature_extraction.html#text-feature-extraction&#34;&gt;Feature extraction&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.tfidf.com/&#34;&gt;Tf-idf :: A Single-Page Tutorial - Information Retrieval and Text Mining&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;https://en.wikipedia.org/wiki/Tokenization_%28lexical_analysis%29&#34;&gt;Tokenization (lexical analysis)&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.dataschool.io/simple-guide-to-confusion-matrix-terminology/&#34;&gt;Simple guide to confusion matrix terminology&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.metrics.confusion_matrix.html&#34;&gt;sklearn.metrics.confusion_matrix&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#sklearn.feature_extraction.text.TfidfTransformer&#34;&gt;sklearn.feature_extraction.text.TfidfTransformer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.CountVectorizer.html#sklearn.feature_extraction.text.CountVectorizer&#34;&gt;sklearn.feature_extraction.text.CountVectorizer&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.cross_val_score.html#sklearn.cross_validation.cross_val_score&#34;&gt;sklearn.cross_validation.cross_val_score&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html&#34;&gt;Working With Text Data&lt;/a&gt;.&lt;/p&gt;
-</description>
+      <guid>http://juliocesarbatista.com/post/cross-validation-testando-o-desempenho-de-um-classificador/</guid>
+      <description>Olá pessoal, tudo certo!?
+Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos. Dados e características O exemplo de teste será a classificação de texto baseado no tutorial de classificação de texto do scikit-learn. O código inicial é:
+ Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação.</description>
     </item>
     
   </channel>

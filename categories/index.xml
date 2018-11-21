@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Júlio César Batista</title>
+    <link>http://juliocesarbatista.com/categories/</link>
+    <description>Recent content in Categories on Júlio César Batista</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
+    <lastBuildDate>Thu, 30 Nov 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://juliocesarbatista.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Aprendizado De Máquina</title>
+      <link>http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/</link>
+      <pubDate>Thu, 30 Nov 2017 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Computação Gráfica</title>
+      <link>http://juliocesarbatista.com/categories/computa%C3%A7%C3%A3o-gr%C3%A1fica/</link>
+      <pubDate>Thu, 27 Aug 2015 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/categories/computa%C3%A7%C3%A3o-gr%C3%A1fica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Desenvolvimento De Software</title>
+      <link>http://juliocesarbatista.com/categories/desenvolvimento-de-software/</link>
+      <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/categories/desenvolvimento-de-software/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Matemática</title>
+      <link>http://juliocesarbatista.com/categories/matem%C3%A1tica/</link>
+      <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/categories/matem%C3%A1tica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Processamento De Imagens</title>
+      <link>http://juliocesarbatista.com/categories/processamento-de-imagens/</link>
+      <pubDate>Sat, 20 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/categories/processamento-de-imagens/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
