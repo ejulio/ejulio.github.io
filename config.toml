@@ -16,7 +16,7 @@ date_format = "2006/01/02"
 # Publications can have a Params.kind, such as "book".
 # Both parameters are mapped to an icon in partials/pub-icon.html.
 
-about = "Olá, meu nome é Júlio César Batista e eu sou desenvolvedor na [Inventti](http://www.inventti.com.br) e pesquisador no [IMAGO UFPR Research Group](http://www.imago.ufpr.br); ~~desenvolvedor na [Inventti](http://www.inventti.com.br)~~; ~~desenvolvedor na [Ellevo](http://www.ellevo.com)~~. Também sou mestrando em informática pela [UFPR](http://ufpr.br) e bacharel em ciência da computação pela [FURB](http://www.furb.br). É um prazer conhecê-lo, seja bem-vindo."
+about = "Olá, meu nome é Júlio César Batista e eu sou desenvolvedor (_shubber_) na [Scrapinghub](https://scrapinghub.com/) e pesquisador no [IMAGO UFPR Research Group](http://www.imago.ufpr.br); ~~desenvolvedor na [Inventti](http://www.inventti.com.br)~~; ~~desenvolvedor na [Ellevo](http://www.ellevo.com)~~. Também sou mestre em informática pela [UFPR](http://ufpr.br) e bacharel em ciência da computação pela [FURB](http://www.furb.br). É um prazer conhecê-lo, seja bem-vindo."
 bio_twitter = "ejuliobatista"
 
 # Title of posts section on main page.
