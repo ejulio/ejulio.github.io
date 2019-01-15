@@ -6,10 +6,19 @@
     <description>Recent content on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Mon, 13 Aug 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Oct 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://juliocesarbatista.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Regressão múltipla com redes neurais convolucionais para estimativa conjunta da intensidade de Action Units</title>
+      <link>http://juliocesarbatista.com/publication/wtd-2017/</link>
+      <pubDate>Tue, 30 Oct 2018 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/publication/wtd-2017/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Matemágica para devs</title>
