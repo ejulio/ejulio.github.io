@@ -103,8 +103,12 @@ Aqui a sintaxe é a mesma que para outras sequências em _python_, utilizamos `i
 cidades = {'Blumenau', 'Gaspar', 'Indaial'}
 'Blumenau' in cidades
 > True
+'Blumenau' not in cidades
+> False
 'Pomerode' in cidades
 > False
+'Pomerode' not in cidades
+> True
 ```
 
 Outro caso comum, é saber se um conjunto _A_ contém um conjunto _B_.
