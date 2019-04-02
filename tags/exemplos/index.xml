@@ -6,10 +6,20 @@
     <description>Recent content in Exemplos on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Wed, 27 Sep 2017 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://juliocesarbatista.com/tags/exemplos/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Python: conjuntos (sets)</title>
+      <link>http://juliocesarbatista.com/post/python-sets/</link>
+      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/python-sets/</guid>
+      <description>Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
+Por que conjuntos? Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.</description>
+    </item>
     
     <item>
       <title>A normalização e o Gradient Descent</title>
