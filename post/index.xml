@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Mon, 01 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://juliocesarbatista.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Limpando dados (data cleaning)</title>
+      <link>http://juliocesarbatista.com/post/data-cleaning/</link>
+      <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/data-cleaning/</guid>
+      <description>A limpeza dos dados é um passo importante na construção de uma análise e modelo. Entretanto, não existe um fluxo exato para seguir, a ideia é explorar o dataset e identificar registros inválidos e aplicar regras para corrigí-los. A seguir tem uma lista do que procurar/corrigir em datasets.
+1. Conversão de tipos Simples, se o valor deve ser um numérico e está como string, então usa-se o tipo mais apropriado.</description>
+    </item>
     
     <item>
       <title>Python: conjuntos (sets)</title>

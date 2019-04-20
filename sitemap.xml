@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://juliocesarbatista.com/post/data-cleaning/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/post/python-sets/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
   </url>
@@ -94,6 +99,12 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/categories/an%C3%A1lise-de-dados/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/categories/aprendizado-de-m%C3%A1quina/</loc>
     <lastmod>2017-11-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -101,7 +112,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/categories/</loc>
-    <lastmod>2017-11-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -114,6 +125,12 @@
   <url>
     <loc>http://juliocesarbatista.com/tags/c%C3%A1lculo/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/data-cleaning/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -161,7 +178,13 @@
   
   <url>
     <loc>http://juliocesarbatista.com/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/limpeza-de-dados/</loc>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -197,7 +220,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-04-01T00:00:00+00:00</lastmod>
+    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
