@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://juliocesarbatista.com/post/votes-scores-ranks/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/post/data-cleaning/</loc>
     <lastmod>2019-04-20T00:00:00+00:00</lastmod>
   </url>
@@ -100,7 +105,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/categories/an%C3%A1lise-de-dados/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -111,8 +116,20 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/arrows-impossibility-theorem/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/bordas-method/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/categories/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -153,6 +170,12 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/elo-ranking/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/tags/estat%C3%ADstica/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -177,8 +200,14 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/icc31/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -213,6 +242,12 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/ordena%C3%A7%C3%A3o-topol%C3%B3gica/</loc>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/tags/otimiza%C3%A7%C3%A3o/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -220,7 +255,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-04-20T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

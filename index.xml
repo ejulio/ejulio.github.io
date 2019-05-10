@@ -6,10 +6,20 @@
     <description>Recent content on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 10 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://juliocesarbatista.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Votes, scores e ranks</title>
+      <link>http://juliocesarbatista.com/post/votes-scores-ranks/</link>
+      <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/votes-scores-ranks/</guid>
+      <description>Votes, scores e ranks são, normalmente, utilizados em conjunto. Por exemplo, scores são funções utilizadas para reduzir dados multi-dimensionais para uma única dimensão. Com base nesse score, é possível ordenar os dados através de um rank. Assim, é possível acessar o n-ésimo elemento a partir de um rank. Votes, é um dos exemplos que pode ser reduzido a partir de uma função score.
+Um exemplo comum é o ranking de produtos em uma página baseado na avaliação dos usuários.</description>
+    </item>
     
     <item>
       <title>Limpando dados (data cleaning)</title>
