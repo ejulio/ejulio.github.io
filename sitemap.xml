@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://juliocesarbatista.com/post/combinatoria/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/post/votes-scores-ranks/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
   </url>
@@ -134,6 +139,12 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/coeficiente-binomial/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/categories/computa%C3%A7%C3%A3o-gr%C3%A1fica/</loc>
     <lastmod>2015-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -188,6 +199,12 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/fatorial/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/tags/gradient-descent/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -207,7 +224,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -225,13 +242,19 @@
   
   <url>
     <loc>http://juliocesarbatista.com/categories/matem%C3%A1tica/</loc>
-    <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://juliocesarbatista.com/tags/m%C3%A9todos-%C3%A1geis/</loc>
     <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://juliocesarbatista.com/tags/n-escolhe-k/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -254,8 +277,14 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/permuta%C3%A7%C3%A3o/</loc>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-05-10T00:00:00+00:00</lastmod>
+    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
