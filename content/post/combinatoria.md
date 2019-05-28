@@ -19,6 +19,7 @@ $ S = \text{ \{ A, B, C, D \} } $ e $n = \lvert S \rvert = 4$
 
 Resposta: A quantidade de permutações de $S$, ou seja,
 $n! = n \times (n-1) \times (n-2) \times ... \times 1$.
+
 Uma interpretação:
 
 * O primeiro elemento do novo conjunto pode ser qualquer um dos $n$ elementos
