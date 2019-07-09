@@ -34,8 +34,8 @@ De forma geral, sempre vale se perguntar se o que é feito na fase de treino do 
 Se a resposta é afirmativa, então é possível proceder; se existe dúvida, é melhor não fazer para evitar um viés do modelo.
 
 Além dos pontos acima também é importante garantir que não exista _leakage_ em $\mathcal{X}$ para $\mathcal{y}$.
-Por exemplo, utilizar a pontuação (_rating_) de uma avaliação junto com o texto para prever o sentimento (bou/ruim) da avaliação.
-Nesse caso, o modelo pode simplesmente ignorar o texto e usar a pontuação, visto que uma pontuação baixa indicar uma revisão (sentimento) ruim.
+Por exemplo, utilizar a pontuação (_rating_) de uma avaliação junto com o texto para prever o sentimento (bom/ruim) da avaliação.
+Nesse caso, o modelo pode simplesmente ignorar o texto e usar a pontuação, visto que uma pontuação baixa indica uma revisão (sentimento) ruim.
 
 Referências:
 
