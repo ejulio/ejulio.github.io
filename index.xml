@@ -6,10 +6,19 @@
     <description>Recent content on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://juliocesarbatista.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Experimentos com Machine Learning</title>
+      <link>http://juliocesarbatista.com/post/experimentos-ml/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/post/experimentos-ml/</guid>
+      <description>O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados.</description>
+    </item>
     
     <item>
       <title>Técnicas de combinatória</title>

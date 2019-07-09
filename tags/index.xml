@@ -48,6 +48,24 @@
     </item>
     
     <item>
+      <title>Concept Drift</title>
+      <link>http://juliocesarbatista.com/tags/concept-drift/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/tags/concept-drift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Covariate Shift</title>
+      <link>http://juliocesarbatista.com/tags/covariate-shift/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/tags/covariate-shift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Cálculo</title>
       <link>http://juliocesarbatista.com/tags/c%C3%A1lculo/</link>
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
@@ -107,6 +125,15 @@
       <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/tags/exemplos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Experimentos</title>
+      <link>http://juliocesarbatista.com/tags/experimentos/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/tags/experimentos/</guid>
       <description></description>
     </item>
     
@@ -251,6 +278,15 @@
       <pubDate>Sun, 13 Aug 2017 00:00:00 +0000</pubDate>
       
       <guid>http://juliocesarbatista.com/tags/redes-neurais-convolucionais/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sample Bias</title>
+      <link>http://juliocesarbatista.com/tags/sample-bias/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://juliocesarbatista.com/tags/sample-bias/</guid>
       <description></description>
     </item>
     
