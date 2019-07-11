@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://juliocesarbatista.com/post/soma-pares-fibonacci/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/post/experimentos-ml/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
   </url>
@@ -228,6 +233,12 @@
   </url>
   
   <url>
+    <loc>http://juliocesarbatista.com/tags/fibonacci/</loc>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://juliocesarbatista.com/tags/gradient-descent/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -247,7 +258,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/</loc>
-    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -265,7 +276,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/categories/matem%C3%A1tica/</loc>
-    <lastmod>2019-05-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -307,7 +318,7 @@
   
   <url>
     <loc>http://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -170,6 +170,8 @@ Nesse caso, o modelo pode simplesmente ignorar o texto e usar a pontuação, vis
       <li class="arrow" aria-disabled="true"><a href="http://juliocesarbatista.com/post/combinatoria/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Técnicas de combinatória</a></li>
       
       
+      <li class="arrow" aria-disabled="true"><a href="http://juliocesarbatista.com/post/soma-pares-fibonacci/"><em>Next<span class="show-for-sr"> page</span></em>: Soma dos números pares na sequência Fibonacci&nbsp;&raquo;</a></li>
+      
     </ul>
 
     
@@ -203,9 +205,14 @@ Nesse caso, o modelo pode simplesmente ignorar o texto e usar a pontuação, vis
     
     
     <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
     </script>
-    <script async src="http://juliocesarbatista.com/js/MathJax/MathJax.js?config=TeX-AMS_CHTML"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
     
     
   </body>
