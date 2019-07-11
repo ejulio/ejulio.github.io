@@ -6,7 +6,10 @@ tags: ["Fibonacci"]
 math: true
 ---
 
-Os números de Fibonacci são uma sequência definida como $F\_n = F\_{n-2} + F\_{n-1}$.
+Os números de Fibonacci 
+([Wikipedia](https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci),
+[Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number))
+são uma sequência definida como $F\_n = F\_{n-2} + F\_{n-1}$.
 Os primeiros números são _0_ e _1_, e partinf deles, a sequência segue conforme:
 _0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ..._.
 Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F\_n < C$?
