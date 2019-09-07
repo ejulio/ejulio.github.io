@@ -78,3 +78,8 @@ pubs_count = 3
   name = "Recursos"
   url = "/logbook/"
   weight = 4
+
+[[menu.main]]
+  name = "Aulas"
+  url = "/aulas-sumario/"
+  weight = 5
