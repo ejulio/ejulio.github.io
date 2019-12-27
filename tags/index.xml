@@ -30,6 +30,15 @@
     </item>
     
     <item>
+      <title>Boolean Query</title>
+      <link>https://juliocesarbatista.com/tags/boolean-query/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/boolean-query/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Bordas Method</title>
       <link>https://juliocesarbatista.com/tags/bordas-method/</link>
       <pubDate>Fri, 10 May 2019 00:00:00 +0000</pubDate>
@@ -192,6 +201,15 @@
     </item>
     
     <item>
+      <title>Matriz Incidência</title>
+      <link>https://juliocesarbatista.com/tags/matriz-incid%C3%AAncia/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/matriz-incid%C3%AAncia/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Métodos Ágeis</title>
       <link>https://juliocesarbatista.com/tags/m%C3%A9todos-%C3%A1geis/</link>
       <pubDate>Sat, 10 Feb 2018 00:00:00 +0000</pubDate>
@@ -266,7 +284,7 @@
     <item>
       <title>Python</title>
       <link>https://juliocesarbatista.com/tags/python/</link>
-      <pubDate>Mon, 01 Apr 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/python/</guid>
       <description></description>
@@ -305,6 +323,15 @@
       <pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/scikit-learn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scipy Sparse Matrix</title>
+      <link>https://juliocesarbatista.com/tags/scipy-sparse-matrix/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/scipy-sparse-matrix/</guid>
       <description></description>
     </item>
     
