@@ -215,6 +215,7 @@ Existem apenas duas diferenças entre os exemplos de código:
 
 Este foi um exemplo de como modelar consultas _booleanas_ em documentos a partir de uma matriz de termos e documentos.
 
-Referências:
+## Referências
+
 * [Capítulo 1, _Boolean Retrieval_](https://nlp.stanford.edu/IR-book/html/htmledition/boolean-retrieval-1.html)
 
