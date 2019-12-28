@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://juliocesarbatista.com/post/indice-invertido/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/</loc>
     <lastmod>2019-12-27T00:00:00+00:00</lastmod>
   </url>
@@ -143,7 +148,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/tags/boolean-query/</loc>
-    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -268,8 +273,14 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/inverted-index/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/</loc>
-    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -310,6 +321,12 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/nltk/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/normaliza%C3%A7%C3%A3o-de-caracter%C5%9Biticas/</loc>
     <lastmod>2017-09-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -335,7 +352,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -365,13 +382,13 @@
   
   <url>
     <loc>https://juliocesarbatista.com/tags/python/</loc>
-    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://juliocesarbatista.com/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/</loc>
-    <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -450,6 +467,12 @@
   <url>
     <loc>https://juliocesarbatista.com/tags/%C3%A1lgebra-linear/</loc>
     <lastmod>2018-08-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/%C3%ADndice-invertido/</loc>
+    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

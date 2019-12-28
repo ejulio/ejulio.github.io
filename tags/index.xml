@@ -32,7 +32,7 @@
     <item>
       <title>Boolean Query</title>
       <link>https://juliocesarbatista.com/tags/boolean-query/</link>
-      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/boolean-query/</guid>
       <description></description>
@@ -192,6 +192,15 @@
     </item>
     
     <item>
+      <title>Inverted Index</title>
+      <link>https://juliocesarbatista.com/tags/inverted-index/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/inverted-index/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Limpeza De Dados</title>
       <link>https://juliocesarbatista.com/tags/limpeza-de-dados/</link>
       <pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate>
@@ -224,6 +233,15 @@
       <pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/n-escolhe-k/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nltk</title>
+      <link>https://juliocesarbatista.com/tags/nltk/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/nltk/</guid>
       <description></description>
     </item>
     
@@ -284,7 +302,7 @@
     <item>
       <title>Python</title>
       <link>https://juliocesarbatista.com/tags/python/</link>
-      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/python/</guid>
       <description></description>
@@ -395,6 +413,15 @@
       <pubDate>Mon, 13 Aug 2018 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/%C3%A1lgebra-linear/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Índice Invertido</title>
+      <link>https://juliocesarbatista.com/tags/%C3%ADndice-invertido/</link>
+      <pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/%C3%ADndice-invertido/</guid>
       <description></description>
     </item>
     
