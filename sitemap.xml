@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://juliocesarbatista.com/post/consideracoes-sobre-indices/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/post/indice-invertido/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
   </url>
@@ -280,7 +285,13 @@
   
   <url>
     <loc>https://juliocesarbatista.com/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/lemmatization/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -352,7 +363,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -388,7 +399,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -423,6 +434,18 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/stemming/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/stop-words/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/</loc>
     <lastmod>2015-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -441,14 +464,32 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/term/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/three.js/</loc>
     <lastmod>2015-08-27T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/token/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/transforma%C3%A7%C3%B5es/</loc>
     <lastmod>2016-06-08T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/type/</loc>
+    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

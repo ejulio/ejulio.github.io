@@ -2,7 +2,7 @@
 <html class="no-js" lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>Recuperação De Informação | Júlio César Batista</title>
+    <title>Lemmatization | Júlio César Batista</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://juliocesarbatista.com/css/foundation.min.css">
@@ -116,114 +116,6 @@
 <p class="justified post-content">Para construir um índice, seja uma matriz de incidência ou um índice invertido, alguns detalhes em relação aos documentos e aos termos do vocabulário devem ser considerados.
 Documentos O primeiro ponto a se considerar é o que será indexado, o que será um documento no índice. Um livro pode ser considerado um documento, o problema é que existem muitas palavras em um livro e diferentes palavras podem ocorrer em capítulos diferentes gerando um resultado não esperado.... 
 	<a href="https://juliocesarbatista.com/post/consideracoes-sobre-indices/">[Continue lendo]</a>
-</p>
-    
-    <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/indice-invertido/">Índice invertido (inverted index)</a>
-</h4>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2019-12-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2019/12/28
-    </time>
-  </span>
-  
-    
-    
-      <span class="post-categories">
-        <span class="nowrap">
-          
-            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
-            
-          
-        </span>
-      </span>
-    
-  
-
-  
-    
-    
-      <span class="post-tags">
-        <span class="nowrap"><i class="fa fa-tags"></i>
-          
-            <a href="https://juliocesarbatista.com/tags/python">python</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/inverted-index">inverted index</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/%c3%adndice-invertido">índice invertido</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/boolean-query">boolean query</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/nltk">nltk</a>
-            
-          
-        </span>
-      </span>
-    
-  
-</div>
-
-<p class="justified post-content">A matriz de incidência termo-documento é uma das formas de representar um índice de termos por documento. Mesmo usando o conceito de uma matriz esparsa, essa estrutura pode crescer muito para ser usada em memória. Uma alternativa para esse caso é usar um índice invertido (inverted index).
-Dados os seguintes documentos como exemplo:
- Uma casa à venda em Blumenau Vendo terreno em Gaspar Alugo apartamento em Indaial  A matriz de incidência é:... 
-	<a href="https://juliocesarbatista.com/post/indice-invertido/">[Continue lendo]</a>
-</p>
-    
-    <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/">Matriz de incidência termo-documento</a>
-</h4>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2019-12-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2019/12/27
-    </time>
-  </span>
-  
-    
-    
-      <span class="post-categories">
-        <span class="nowrap">
-          
-            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
-            
-          
-        </span>
-      </span>
-    
-  
-
-  
-    
-    
-      <span class="post-tags">
-        <span class="nowrap"><i class="fa fa-tags"></i>
-          
-            <a href="https://juliocesarbatista.com/tags/python">python</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/matriz-incid%c3%aancia">matriz incidência</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/scipy-sparse-matrix">scipy sparse matrix</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/boolean-query">boolean query</a>
-            
-          
-        </span>
-      </span>
-    
-  
-</div>
-
-<p class="justified post-content">Para obter as ocorrências de uma query booleana, por exemplo, casa AND blumenau seria necessário passar em todos os documentos procurando por casa e depois procurar novamente por blumenau. De certa forma, essa abordagem não é completamente ruim. Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.
-Agora considere uma nova consulta, por exemplo, casa AND gaspar, seria necessário repassar em todos os documentos novamente.... 
-	<a href="https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/">[Continue lendo]</a>
 </p>
     
     <div class="row">
