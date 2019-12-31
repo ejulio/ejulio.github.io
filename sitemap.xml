@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://juliocesarbatista.com/post/algoritmos-indices/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/post/consideracoes-sobre-indices/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
   </url>
@@ -134,6 +139,12 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/algoritmos/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/categories/an%C3%A1lise-de-dados/</loc>
     <lastmod>2019-05-10T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -236,6 +247,12 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/estruturas-de-dados/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/exemplos/</loc>
     <lastmod>2019-04-01T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -278,6 +295,12 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/intersect/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/inverted-index/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -285,7 +308,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -363,7 +386,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -393,13 +416,13 @@
   
   <url>
     <loc>https://juliocesarbatista.com/tags/python/</loc>
-    <lastmod>2019-12-28T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://juliocesarbatista.com/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/</loc>
-    <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -430,6 +453,18 @@
   <url>
     <loc>https://juliocesarbatista.com/tags/scipy-sparse-matrix/</loc>
     <lastmod>2019-12-27T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/set/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/skip-list/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -490,6 +525,12 @@
   <url>
     <loc>https://juliocesarbatista.com/tags/type/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/union/</loc>
+    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
