@@ -2,7 +2,7 @@
 title: "Índice invertido (inverted index)"
 date: 2019-12-28
 categories: ["Recuperação de informação"]
-tags: ["python", "inverted index", "índice invertido", "boolean query", "nltk"]
+tags: ["python", "inverted index", "índice invertido", "boolean query", "nltk", "estruturas de dados"]
 math: false
 ---
 
