@@ -2,7 +2,7 @@
 title: "Executando consultas por frases"
 date: 2020-01-03
 categories: ["Recuperação de informação"]
-tags: ["python", "k-gram index", "bi-word index", "phrase queries"]
+tags: ["python", "k-gram index", "bi-word index", "phrase queries", "phrase index"]
 math: true
 ---
 
@@ -141,7 +141,7 @@ Para isso, é necessário uma lista de _stop words_ ou usar técnicas de Process
 Uma vez que se sabe a função das palavras é possível montar o índice ignorando palavras de estrutura (artigos, preposições, ...) que aparecem entre substantivos/verbos.
 Portanto, dado que _renegotiation of the constitution_ seria anotado como _N X X N_ (N: substantivo, X: palavra auxiliar).
 Uma estrutura de índice poderia ser montada com `NX*N`, ou seja, um substantivo (`N`) seguido por zero ou mais palavras auxiliares (`X*`) seguido por mais um substantivo (`N`).
-Essa seria uma alternativa para considerar o casos especiais onde é necessário indexar mais que duas palavras em sequência.
+Essa alternativa para considerar os casos especiais onde é necessário indexar mais que duas palavras em sequência é chamada de _phrase index_, visto que frases completas podem ser indexadas e não apenas termos ou sequências fixas de _k_-termos.
 
 O índice _bi-word_ é uma forma para resolver o problema de consultas por frases.
 Mas tem a limitação de espaço, visto que indexar sequências muito grandes pode ser proibitivo (em espaço) e também resultar em uma consulta demorada.
