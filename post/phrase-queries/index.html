@@ -101,6 +101,9 @@
             ,
           
             <a href="https://juliocesarbatista.com/tags/phrase-queries">phrase queries</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/phrase-index">phrase index</a>
             
           
         </span>
@@ -252,7 +255,7 @@ Para isso, é necessário uma lista de <em>stop words</em> ou usar técnicas de 
 Uma vez que se sabe a função das palavras é possível montar o índice ignorando palavras de estrutura (artigos, preposições, &hellip;) que aparecem entre substantivos/verbos.
 Portanto, dado que <em>renegotiation of the constitution</em> seria anotado como <em>N X X N</em> (N: substantivo, X: palavra auxiliar).
 Uma estrutura de índice poderia ser montada com <code>NX*N</code>, ou seja, um substantivo (<code>N</code>) seguido por zero ou mais palavras auxiliares (<code>X*</code>) seguido por mais um substantivo (<code>N</code>).
-Essa seria uma alternativa para considerar o casos especiais onde é necessário indexar mais que duas palavras em sequência.</p>
+Essa alternativa para considerar os casos especiais onde é necessário indexar mais que duas palavras em sequência é chamada de <em>phrase index</em>, visto que frases completas podem ser indexadas e não apenas termos ou sequências fixas de <em>k</em>-termos.</p>
 
 <p>O índice <em>bi-word</em> é uma forma para resolver o problema de consultas por frases.
 Mas tem a limitação de espaço, visto que indexar sequências muito grandes pode ser proibitivo (em espaço) e também resultar em uma consulta demorada.</p>
@@ -266,7 +269,7 @@ Mas tem a limitação de espaço, visto que indexar sequências muito grandes po
 
       </div>
 
-      <meta itemprop="wordCount" content="1125">
+      <meta itemprop="wordCount" content="1144">
       <meta itemprop="datePublished" content="2020-01-03">
       <meta itemprop="url" content="https://juliocesarbatista.com/post/phrase-queries/">
     </article>
