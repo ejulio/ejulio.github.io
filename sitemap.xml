@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://juliocesarbatista.com/post/phrase-queries/</loc>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/post/algoritmos-indices/</loc>
     <lastmod>2019-12-31T00:00:00+00:00</lastmod>
   </url>
@@ -163,6 +168,12 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/bi-word-index/</loc>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/boolean-query/</loc>
     <lastmod>2019-12-28T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -308,7 +319,13 @@
   
   <url>
     <loc>https://juliocesarbatista.com/</loc>
-    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/k-gram-index/</loc>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -385,8 +402,14 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/phrase-queries/</loc>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/post/</loc>
-    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -416,13 +439,13 @@
   
   <url>
     <loc>https://juliocesarbatista.com/tags/python/</loc>
-    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://juliocesarbatista.com/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/</loc>
-    <lastmod>2019-12-31T00:00:00+00:00</lastmod>
+    <lastmod>2020-01-03T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
