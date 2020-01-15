@@ -61,6 +61,54 @@
     
     
     <h4 class="post-title">
+	<a href="https://juliocesarbatista.com/post/compressao-indices-vbe/">Compressão de índices: Variable Byte Encoding</a>
+</h4>
+<div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2020-01-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2020/01/15
+    </time>
+  </span>
+  
+    
+    
+      <span class="post-categories">
+        <span class="nowrap">
+          
+            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
+            
+          
+        </span>
+      </span>
+    
+  
+
+  
+    
+    
+      <span class="post-tags">
+        <span class="nowrap"><i class="fa fa-tags"></i>
+          
+            <a href="https://juliocesarbatista.com/tags/variable-byte-encoding">variable byte encoding</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/python">python</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/%c3%adndice-invertido">índice invertido</a>
+            
+          
+        </span>
+      </span>
+    
+  
+</div>
+
+<p class="justified post-content">Uma vez que o índice invertido está montado com postings lists, é necessário persistí-lo em disco. O detalhe é que, se o índice for persistido como texto em UTF-8, cada caractére vai requisitar ao menos 8 bytes. Portando, o id 4568912 requer 7 bytes para ser armazenado. A contrapartida é que, se for armazenado como um numérico (int por exemplo), precisa de apenas 4 bytes. Porém, é possível conseguir uma melhora na compressão ao considerar a estrutura de dados que será armazenada.... 
+	<a href="https://juliocesarbatista.com/post/compressao-indices-vbe/">[Continue lendo]</a>
+</p>
+    
+    <h4 class="post-title">
 	<a href="https://juliocesarbatista.com/post/phrase-queries/">Executando consultas por frases</a>
 </h4>
 <div class="post-metadata">
@@ -173,65 +221,6 @@
 <p class="justified post-content">Uma das vantagens do índice invertido é a possibilidade de otimizar os algoritmos utilizados nas consultas. Esses algoritmos já são implementados por set no python, mas não garantem a sequência dos ids dos documentos e também não permitem algumas otimizações. Portanto, é necessário passar por esses algoritmos para ver as extensões e como elas podem ajudar.
 intersecção de conjuntos Uma consulta casa AND blumenau precisa efetuar a intersecção entre os documentos de casa e os documentos de blumenau.... 
 	<a href="https://juliocesarbatista.com/post/algoritmos-indices/">[Continue lendo]</a>
-</p>
-    
-    <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/indice-invertido/">Índice invertido (inverted index)</a>
-</h4>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2019-12-28 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2019/12/28
-    </time>
-  </span>
-  
-    
-    
-      <span class="post-categories">
-        <span class="nowrap">
-          
-            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
-            
-          
-        </span>
-      </span>
-    
-  
-
-  
-    
-    
-      <span class="post-tags">
-        <span class="nowrap"><i class="fa fa-tags"></i>
-          
-            <a href="https://juliocesarbatista.com/tags/python">python</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/inverted-index">inverted index</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/%c3%adndice-invertido">índice invertido</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/boolean-query">boolean query</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/nltk">nltk</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/estruturas-de-dados">estruturas de dados</a>
-            
-          
-        </span>
-      </span>
-    
-  
-</div>
-
-<p class="justified post-content">A matriz de incidência termo-documento é uma das formas de representar um índice de termos por documento. Mesmo usando o conceito de uma matriz esparsa, essa estrutura pode crescer muito para ser usada em memória. Uma alternativa para esse caso é usar um índice invertido (inverted index).
-Dados os seguintes documentos como exemplo:
- Uma casa à venda em Blumenau Vendo terreno em Gaspar Alugo apartamento em Indaial  A matriz de incidência é:... 
-	<a href="https://juliocesarbatista.com/post/indice-invertido/">[Continue lendo]</a>
 </p>
     
     <div class="row">
