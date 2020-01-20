@@ -1,0 +1,436 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>Executando consultas por frases: Positional Index | Júlio César Batista</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://juliocesarbatista.com/css/foundation.min.css">
+    <link rel="stylesheet" href="https://juliocesarbatista.com/css/highlight.min.css">
+    <link rel="stylesheet" href="https://juliocesarbatista.com/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://juliocesarbatista.com/css/academicons.min.css">
+    <link rel="stylesheet" href="https://juliocesarbatista.com/css/fonts.css">
+    <link rel="stylesheet" href="https://juliocesarbatista.com/css/finite.css">
+  </head>
+  <body>
+    <header>
+      <nav class="nav-bar">
+	
+	  <div class="title-bar" data-responsive-toggle="site-menu" data-hide-for="medium">	      
+	    <button class="site-hamburger" type="button" data-toggle>
+	      <i class="fa fa-bars fa-lg" aria-hidden="true"></i>
+	    </button>
+	    <div class="title-bar-title site-title">
+	      <a href="https://juliocesarbatista.com/">Júlio César Batista</a>
+	    </div>
+	    <div class="title-bar-right pull-right">
+	      
+
+
+
+	    </div>
+	  </div>
+	    
+	  
+	    <div class="top-bar" id="site-menu" >	      
+	      <div class="top-bar-title show-for-medium site-title">
+		<a href="https://juliocesarbatista.com/">Júlio César Batista</a>
+	      </div>
+	      <div class="top-bar-left">
+		<ul class="menu vertical medium-horizontal">
+		  
+		  
+		  <li><a href="https://juliocesarbatista.com/publication/">Publicações</a></li>
+		  
+		  <li><a href="https://juliocesarbatista.com/post/">Blog</a></li>
+		  
+		  <li><a href="https://juliocesarbatista.com/logbook/">Recursos</a></li>
+		  
+		</ul>
+	      </div>
+	      <div class="top-bar-right show-for-medium">
+		
+
+
+
+	      </div>
+	    </div>
+	  
+	</nav>
+    </header>
+    <main>
+      
+<div class="row">
+  <div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+      
+      <h1 itemprop="name">Executando consultas por frases: Positional Index</h1>
+      <div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2020-01-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2020/01/20
+    </time>
+  </span>
+  
+    
+    
+      <span class="post-categories">
+        <span class="nowrap">
+          
+            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
+            
+          
+        </span>
+      </span>
+    
+  
+
+  
+    
+    
+      <span class="post-tags">
+        <span class="nowrap"><i class="fa fa-tags"></i>
+          
+            <a href="https://juliocesarbatista.com/tags/python">python</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/positional-index">positional index</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/phrase-queries">phrase queries</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/positional-intersect">positional intersect</a>
+            
+          
+        </span>
+      </span>
+    
+  
+</div>
+
+      <div class="post-body" itemprop="articleBody">
+        
+
+<p>Para realizar a consulta por frases (sequências de palavras) é necessário um <a href="https://juliocesarbatista.com/post/phrase-queries/">índice <em>k-gram</em></a>.
+Porém, criar um índice todas as combinações de termos pode ocupar muito espaço em disco/memória.
+Principalmente se for necessário indexar combinações de 5 ou mais palavras, visto que muitas combinações podem aparecer apenas uma ou outra vez.
+Uma solução para esse problema é um <em>positional index</em> (índice de posições).</p>
+
+<p>Em um índice invertido, termos são mapeados para listas com <em>ids</em> de documentos.
+No <em>positional index</em>, além dos <em>ids</em>, também são mantidas as posições em que o termo aparece no documento.</p>
+
+<p>Seguindo os documentos de exemplo:</p>
+
+<ul>
+<li>Uma casa à venda em Blumenau</li>
+<li>Vendo terreno em Gaspar</li>
+<li>Alugo apartamento em Indaial</li>
+</ul>
+
+<p>O <em>positional index</em> seria</p>
+
+<pre><code class="language-python">
+positional_index = {
+    &quot;Uma&quot;: {
+        0: [0]
+    },
+    &quot;casa&quot;: {
+        0: [1]
+    },
+    &quot;à&quot;: {
+        0: [2]
+    },
+    &quot;venda&quot;: {
+        0: [3]
+    },
+    &quot;em&quot;: {
+        0: [4],
+        1: [2],
+        2: [2]
+    },
+    &quot;Blumenau&quot;: {
+        0: [5]
+    },
+    &quot;Vendo&quot;: {
+        1: [0]
+    },
+    &quot;terreno&quot;: {
+        1: [1]
+    },
+    &quot;Gaspar&quot;: {
+        1: [3]
+    },
+    &quot;Alugo&quot;: {
+        2: [0]
+    },
+    &quot;apartamento&quot;: {
+        2: [1]
+    },
+    &quot;Indaial&quot;: {
+        2: [3]
+    }
+}
+</code></pre>
+
+<p>A partir desse índice, é possível reconstruir os documentos, visto que existe a identificação dos documentos e posição em que cada termo aparece nos documentos.
+Porém, a grande vantagem é que consultas por sequências de palavras podem ser executadas para qualquer quantidade.
+Por exemplo, a consulta <code>casa em blumenau</code> pode ser executada, já que é possível encontrar os documentos e verificar se os termos <code>casa</code>, <code>em</code>, <code>blumenau</code> aparecem em sequência nesses documentos.
+Também é possível executar consultas em intervalos/janelas (<em>windows</em>), como <code>casa \3 blumenau</code> (<em>proximity query</em>) indicando que se deseja todos os documentos onde <code>blumenau</code> aparece em até três termos de distância de <code>casa</code>.
+Para executar essas consultas, é necessário implementar o algoritmo de <code>positional_intersect</code>, como demonstrado na <a href="https://nlp.stanford.edu/IR-book/html/htmledition/positional-indexes-1.html">seção Positional Indexes de <em>Introduction to Information Retrieval</em></a>.</p>
+
+<p>Para construir o <em>positional index</em>.</p>
+
+<pre><code class="language-python">
+import nltk
+from nltk.corpus import brown
+from itertools import chain
+import string
+from collections import defaultdict
+
+nltk.download('brown')
+
+def filtrar_pontuacao(doc):
+    return (p for p in doc if p not in string.punctuation)
+
+DOCUMENTOS = brown.paras()
+DOCUMENTOS = [list(chain.from_iterable(p)) for p in DOCUMENTOS]
+documentos = (filtrar_pontuacao(p) for p in DOCUMENTOS)
+documentos = [list(p) for p in documentos]
+
+positional_index = defaultdict(lambda: defaultdict(list))
+
+for (doc_id, doc) in enumerate(documentos):
+    for (i, termo) in enumerate(doc):
+        positional_index[termo][doc_id].append(i)
+</code></pre>
+
+<p>O algoritmo <code>positional_intersect</code> é similar a intersecção de listas, a diferença é que ele também verifica se a posição dos termos está em até uma distância <code>k</code>.
+Na implementação abaixo, a grande diferença fica no bloco <code>else</code> que percorre as posições que os termos ocorrem e verifica se a posição do <em>termo 1</em> está até <code>k</code> distância da posição do <em>termo 2</em> (<code>abs(pp1_pos - pp2_pos) &lt;= k</code>).
+O resultado é uma lista de tuplas contendo o <em>id</em> do documento e posição dos <em>termo 1</em> e <em>termo 2</em>.</p>
+
+<pre><code class="language-python">def positional_intersect(p1, p2, k):
+    answer = []
+
+    p1 = iter(p1.items())
+    p2 = iter(p2.items())
+    (p1_doc_id, pp1) = next(p1, (None, None))
+    (p2_doc_id, pp2) = next(p2, (None, None))
+    while True:
+        if not (p1_doc_id and p2_doc_id):
+            break
+
+        if p1_doc_id &lt; p2_doc_id:
+            (p1_doc_id, pp1) = next(p1, (None, None))
+        elif p1_doc_id &gt; p2_doc_id:
+            (p2_doc_id, pp2) = next(p2, (None, None))
+        else:
+            for pp1_pos in pp1:
+                l = []
+                for pp2_pos in pp2:
+                    if abs(pp1_pos - pp2_pos) &lt;= k:
+                        answer.append((p1_doc_id, pp1_pos, pp2_pos))
+                    elif pp2_pos &gt; pp1_pos:
+                        break
+            (p1_doc_id, pp1) = next(p1, (None, None))
+            (p2_doc_id, pp2) = next(p2, (None, None))
+
+    return answer
+
+p1 = {1: [1, 10, 100]}
+p2 = {2: [2, 11, 101]}
+assert positional_intersect(p1, p2, 0) == []
+assert positional_intersect(p1, p2, 1) == []
+assert positional_intersect(p1, p2, 2) == []
+assert positional_intersect(p1, p2, 3) == []
+
+p1 = {1: [1, 10, 100]}
+p2 = {1: [2, 11, 101]}
+assert positional_intersect(p1, p2, 0) == []
+assert positional_intersect(p1, p2, 1) == [(1, 1, 2), (1, 10, 11), (1, 100, 101)]
+assert positional_intersect(p1, p2, 2) == [(1, 1, 2), (1, 10, 11), (1, 100, 101)]
+assert positional_intersect(p1, p2, 3) == [(1, 1, 2), (1, 10, 11), (1, 100, 101)]
+
+
+p1 = {1: [1, 10, 100, 200]}
+p2 = {1: [2, 13, 102, 204]}
+assert positional_intersect(p1, p2, 0) == []
+assert positional_intersect(p1, p2, 1) == [(1, 1, 2)]
+assert positional_intersect(p1, p2, 2) == [(1, 1, 2), (1, 100, 102)]
+assert positional_intersect(p1, p2, 3) == [(1, 1, 2), (1, 10, 13), (1, 100, 102)]
+
+p1 = {1: [1]}
+p2 = {1: [2, 13, 102, 204]}
+assert positional_intersect(p1, p2, 0) == []
+assert positional_intersect(p1, p2, 1) == [(1, 1, 2)]
+assert positional_intersect(p1, p2, 2) == [(1, 1, 2)]
+assert positional_intersect(p1, p2, 3) == [(1, 1, 2)]
+
+p1 = {1: [1]}
+p2 = {1: [2, 3]}
+assert positional_intersect(p1, p2, 0) == []
+assert positional_intersect(p1, p2, 1) == [(1, 1, 2)]
+assert positional_intersect(p1, p2, 2) == [(1, 1, 2), (1, 1, 3)]
+assert positional_intersect(p1, p2, 3) == [(1, 1, 2), (1, 1, 3)]
+
+p1 = {1: [2, 3]}
+p2 = {1: [1]}
+assert positional_intersect(p1, p2, 0) == []
+assert positional_intersect(p1, p2, 1) == [(1, 2, 1)]
+assert positional_intersect(p1, p2, 2) == [(1, 2, 1), (1, 3, 1)]
+assert positional_intersect(p1, p2, 3) == [(1, 2, 1), (1, 3, 1)]
+</code></pre>
+
+<p>Vale notar que o algoritmo considera a distância <code>k</code> em ambas as direções, portanto, <em>termo 2</em> pode aparecer até <code>k</code> termos antes ou depois de <em>termo 1</em>.
+Abaixo segue o mesmo exemplo da consulta de índices <em>k-gram</em>.</p>
+
+<pre><code class="language-python">print('House /2 Representatives')
+house = positional_index['House']
+representatives = positional_index['Representatives']
+for (doc_id, p1, p2) in positional_intersect(house, representatives, 2):
+    print(
+        '&gt;',
+        '[',
+        doc_id,
+        p1,
+        p2,
+        ']',
+        ' '.join(documentos[doc_id][p1 - 3:p2 + 3])
+    )
+    print(' '.join(DOCUMENTOS[doc_id]))
+    print()
+</code></pre>
+
+<p>Sendo o resultado (omitindo os textos para economizar espaço):</p>
+
+<blockquote>
+<p>House /2 Representatives</p>
+
+<p>[ 102 15 17 ] by the Texas House of Representatives was an</p>
+
+<p>[ 1889 61 63 ] representative with the House of Representatives turned guest</p>
+
+<p>[ 7792 83 85 ] pushed through the House of Representatives by the</p>
+
+<p>[ 8008 9 11 ] terms in the House of Representatives has been</p>
+
+<p>[ 8010 28 30 ] Speaker of the House of Representatives more than</p>
+
+<p>[ 8015 45 47 ] Member of the House of Representatives in the</p>
+
+<p>[ 8189 7 9 ] the Senate and House of Representatives of the</p>
+
+<p>[ 8199 7 9 ] the Senate and House of Representatives of the</p>
+
+<p>[ 8202 7 9 ] the Senate and House of Representatives of the</p>
+
+<p>[ 8525 65 67 ] Senate and the House of Representatives As I</p>
+</blockquote>
+
+<pre><code class="language-python">print('Texas House /2 Representatives')
+texas = positional_index['Texas']
+house = positional_index['House']
+texas_house = defaultdict(list)
+for (doc_id, _, i) in positional_intersect(texas, house, 1):
+    # ignora a posição de &quot;Texas&quot;, visto que &quot;House&quot;
+    # será usado na próxima comparação
+    texas_house[doc_id].append(i)
+
+representatives = positional_index['Representatives']
+for (doc_id, p1, p2) in positional_intersect(texas_house, representatives, 2):
+    print(
+        '&gt;',
+        '[',
+        doc_id,
+        p1,
+        p2,
+        ']',
+        ' '.join(documentos[doc_id][p1 - 3:p2 + 3])
+    )
+    print(' '.join(DOCUMENTOS[doc_id]))
+    print()
+
+</code></pre>
+
+<p>Sendo o resultado</p>
+
+<blockquote>
+<p>Texas House /2 Representatives</p>
+
+<p>[ 102 15 17 ] by the Texas House of Representatives was an
+Rep. James Cotten of Weatherford insisted that a water development bill passed by the Texas House of Representatives was an effort by big cities like Dallas and Fort Worth to cover up places like Paradise , a Wise County hamlet of 250 people .</p>
+</blockquote>
+
+<p>Vale notar que o <em>positional index</em> resolve a possibilidade de consultas com sequências indeterminadas de palavras.
+Porém, elevando o custo computacional (requer executar mais interseções) e com um leve aumento de armazenamento (armazenar posições dos termos).
+Mesmo assim, ainda pode ser melhor que usar índices <em>k-gram</em>.
+Sendo que a melhor abordagem pode ser uma combinação híbrida dos dois índices.
+Por exemplo, combinações muito frequentes de palavras, como <em>machine learning</em>, <em>Elvis Presley</em> poderiam ser pré-computadas e armazenadas num índice <em>k-gram</em> para evitar o uso do <em>positional index</em>, já que são consultas/frases frequentes.
+Outro detalhe é a combinação de <em>stop words</em>, por exemplo <em>of the</em> ou <em>The Who</em> (banda), já que tendem a ser listas grandes e executar a intersecção pode ser muito custoso em cada execução.
+Portanto, o melhor índice vai depender do caso de uso, mas uma solução conjunta pode ser a melhor solução após a análise de frequência de consultas.</p>
+
+<h2 id="referências">Referências</h2>
+
+<ul>
+<li><a href="https://nlp.stanford.edu/IR-book/html/htmledition/positional-indexes-1.html">Positional Indexes</a></li>
+<li><a href="https://www.systems.ethz.ch/sites/default/files/file/ir2018spring/04%20Information%20Retrieval%20-%20Tolerant%20retrieval.pdf">Tolerant Retrieval</a></li>
+<li><a href="http://web.stanford.edu/class/cs276/19handouts/lecture2-intro-boolean-1per.pdf">Inverted Indices: Dictionary and postings lists, boolean querying</a></li>
+</ul>
+
+      </div>
+
+      <meta itemprop="wordCount" content="1351">
+      <meta itemprop="datePublished" content="2020-01-20">
+      <meta itemprop="url" content="https://juliocesarbatista.com/post/phrase-queries-positional-index/">
+    </article>
+
+    <ul class="pagination" role="navigation" aria-label="Pagination">
+      
+      <li class="arrow" aria-disabled="true"><a href="https://juliocesarbatista.com/post/compressao-indices-vbe/">&laquo; <em>Previous<span class="show-for-sr"> page</span></em>: Compressão de índices: Variable Byte Encoding</a></li>
+      
+      
+    </ul>
+
+    
+  </div>
+</div>
+
+    </main>
+    
+<footer>
+  <hr>
+  <div class="row">
+   <div class="column small-10 small-centered text-center">
+     <em>Gostou ou tem algum comentário? Vamos conversar no <span class="nowrap"><i class="fa fa-twitter-square"></i> Twitter</span>, <a href="http://twitter.com/ejuliobatista">@ejuliobatista</a>!</em>
+    </div>
+  </div>
+</footer>
+
+
+    <div class="endofpage">
+    </div>
+
+    <script src="https://juliocesarbatista.com/js/jquery.js"></script>
+    <script src="https://juliocesarbatista.com/js/what-input.js"></script>
+    <script src="https://juliocesarbatista.com/js/foundation.min.js"></script>
+    <script src="https://juliocesarbatista.com/js/finite.js"></script>
+
+    
+    <script src="https://juliocesarbatista.com/js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
+    </script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+    
+    
+  </body>
+</html>

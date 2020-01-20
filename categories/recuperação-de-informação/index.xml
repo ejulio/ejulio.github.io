@@ -6,10 +6,20 @@
     <description>Recent content in Recuperação De Informação on Júlio César Batista</description>
     <generator>Hugo -- gohugo.io</generator>
     <copyright>Copyright (c) 2016 Júlio César Batista</copyright>
-    <lastBuildDate>Wed, 15 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://juliocesarbatista.com/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Executando consultas por frases: Positional Index</title>
+      <link>https://juliocesarbatista.com/post/phrase-queries-positional-index/</link>
+      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/post/phrase-queries-positional-index/</guid>
+      <description>Para realizar a consulta por frases (sequências de palavras) é necessário um índice k-gram. Porém, criar um índice todas as combinações de termos pode ocupar muito espaço em disco/memória. Principalmente se for necessário indexar combinações de 5 ou mais palavras, visto que muitas combinações podem aparecer apenas uma ou outra vez. Uma solução para esse problema é um positional index (índice de posições).
+Em um índice invertido, termos são mapeados para listas com ids de documentos.</description>
+    </item>
     
     <item>
       <title>Compressão de índices: Variable Byte Encoding</title>

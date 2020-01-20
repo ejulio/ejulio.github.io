@@ -2,7 +2,7 @@
 <html class="no-js" lang="en-US">
   <head>
     <meta charset="utf-8">
-    <title>Posts | Júlio César Batista</title>
+    <title>Recuperação De Informação | Júlio César Batista</title>
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://juliocesarbatista.com/css/foundation.min.css">
@@ -57,16 +57,16 @@
     <main>
       
 <div class="row">
-  <div class="column small-12 medium-10 medium-offset-1 end large-offset-0 large-8">
+  <div class="column small-12">
     
     
-      <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/phrase-queries-positional-index/">Executando consultas por frases: Positional Index</a>
+    <h4 class="post-title">
+	<a href="https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/">Matriz de incidência termo-documento</a>
 </h4>
 <div class="post-metadata">
   <span class="post-date">
-    <time datetime="2020-01-20 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2020/01/20
+    <time datetime="2019-12-27 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2019/12/27
     </time>
   </span>
   
@@ -92,13 +92,16 @@
             <a href="https://juliocesarbatista.com/tags/python">python</a>
             ,
           
-            <a href="https://juliocesarbatista.com/tags/positional-index">positional index</a>
+            <a href="https://juliocesarbatista.com/tags/matriz-incid%c3%aancia">matriz incidência</a>
             ,
           
-            <a href="https://juliocesarbatista.com/tags/phrase-queries">phrase queries</a>
+            <a href="https://juliocesarbatista.com/tags/scipy-sparse-matrix">scipy sparse matrix</a>
             ,
           
-            <a href="https://juliocesarbatista.com/tags/positional-intersect">positional intersect</a>
+            <a href="https://juliocesarbatista.com/tags/boolean-query">boolean query</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/estruturas-de-dados">estruturas de dados</a>
             
           
         </span>
@@ -107,124 +110,22 @@
   
 </div>
 
-<p class="justified post-content">Para realizar a consulta por frases (sequências de palavras) é necessário um índice k-gram. Porém, criar um índice todas as combinações de termos pode ocupar muito espaço em disco/memória. Principalmente se for necessário indexar combinações de 5 ou mais palavras, visto que muitas combinações podem aparecer apenas uma ou outra vez. Uma solução para esse problema é um positional index (índice de posições).
-Em um índice invertido, termos são mapeados para listas com ids de documentos.... 
-	<a href="https://juliocesarbatista.com/post/phrase-queries-positional-index/">[Continue lendo]</a>
-</p>
-    
-      <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/compressao-indices-vbe/">Compressão de índices: Variable Byte Encoding</a>
-</h4>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2020-01-15 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2020/01/15
-    </time>
-  </span>
-  
-    
-    
-      <span class="post-categories">
-        <span class="nowrap">
-          
-            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
-            
-          
-        </span>
-      </span>
-    
-  
-
-  
-    
-    
-      <span class="post-tags">
-        <span class="nowrap"><i class="fa fa-tags"></i>
-          
-            <a href="https://juliocesarbatista.com/tags/variable-byte-encoding">variable byte encoding</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/python">python</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/%c3%adndice-invertido">índice invertido</a>
-            
-          
-        </span>
-      </span>
-    
-  
-</div>
-
-<p class="justified post-content">Uma vez que o índice invertido está montado com postings lists, é necessário persistí-lo em disco. O detalhe é que, se o índice for persistido como texto em UTF-8, cada caractére vai requisitar ao menos 8 bytes. Portando, o id 4568912 requer 7 bytes para ser armazenado. A contrapartida é que, se for armazenado como um numérico (int por exemplo), precisa de apenas 4 bytes. Porém, é possível conseguir uma melhora na compressão ao considerar a estrutura de dados que será armazenada.... 
-	<a href="https://juliocesarbatista.com/post/compressao-indices-vbe/">[Continue lendo]</a>
-</p>
-    
-      <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/phrase-queries/">Executando consultas por frases</a>
-</h4>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2020-01-03 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2020/01/03
-    </time>
-  </span>
-  
-    
-    
-      <span class="post-categories">
-        <span class="nowrap">
-          
-            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
-            
-          
-        </span>
-      </span>
-    
-  
-
-  
-    
-    
-      <span class="post-tags">
-        <span class="nowrap"><i class="fa fa-tags"></i>
-          
-            <a href="https://juliocesarbatista.com/tags/python">python</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/k-gram-index">k-gram index</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/bi-word-index">bi-word index</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/phrase-queries">phrase queries</a>
-            ,
-          
-            <a href="https://juliocesarbatista.com/tags/phrase-index">phrase index</a>
-            
-          
-        </span>
-      </span>
-    
-  
-</div>
-
-<p class="justified post-content">A partir de um índice de termos/documentos só é possível efetuar consultas de ocorrência de termos e filtros com operadores AND, OR e NOT. Entretanto, o que é preciso para executar uma consulta por presidente do Brasil? A forma mais simples, é converter essa consulta em presidente AND do AND Brasil (o do pode ser removido se quiser remover stop words). O detalhe é que essa consulta vai retornar qualquer documento que contenha presidente e Brasil, mas que não não fale necessariamento do presidente do Brasil.... 
-	<a href="https://juliocesarbatista.com/post/phrase-queries/">[Continue lendo]</a>
+<p class="justified post-content">Para obter as ocorrências de uma query booleana, por exemplo, casa AND blumenau seria necessário passar em todos os documentos procurando por casa e depois procurar novamente por blumenau. De certa forma, essa abordagem não é completamente ruim. Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.
+Agora considere uma nova consulta, por exemplo, casa AND gaspar, seria necessário repassar em todos os documentos novamente.... 
+	<a href="https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/">[Continue lendo]</a>
 </p>
     
     <div class="row">
   <div class="column small-12">
     <ul class="pagination" role="navigation" aria-label="Pagination">
       
-        <li class="arrow" aria-disabled="true">
-          <a href="https://juliocesarbatista.com/post/page/2/">&laquo; Posts <em>antigos<span class="show-for-sr"></span></em></a>
-        </li>
-      
       <li>
-        <span>Página 1 de 8</span>
+        <span>Página 3 de 3</span>
       </li>      
+      
+        <li class="arrow" aria-disabled="true">
+          <a href="https://juliocesarbatista.com/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/page/2/"> Posts <em>recentes<span class="show-for-sr"></span></em>&nbsp;&raquo;</a>
+        </li>
       
     </ul>
   </div>
