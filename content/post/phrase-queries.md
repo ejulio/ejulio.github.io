@@ -147,5 +147,6 @@ O índice _bi-word_ é uma forma para resolver o problema de consultas por frase
 Mas tem a limitação de espaço, visto que indexar sequências muito grandes pode ser proibitivo (em espaço) e também resultar em uma consulta demorada.
 
 ## Referências
+
 * [Positional postings and phrase queries](https://nlp.stanford.edu/IR-book/html/htmledition/positional-postings-and-phrase-queries-1.html)
 * [3. Term Vocabulary](https://www.systems.ethz.ch/sites/default/files/03%20Information%20Retrieval%20-%20Term%20vocabulary.pdf)
