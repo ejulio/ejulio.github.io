@@ -84,6 +84,15 @@
     </item>
     
     <item>
+      <title>Correção Ortográfica</title>
+      <link>https://juliocesarbatista.com/tags/corre%C3%A7%C3%A3o-ortogr%C3%A1fica/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/corre%C3%A7%C3%A3o-ortogr%C3%A1fica/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Covariate Shift</title>
       <link>https://juliocesarbatista.com/tags/covariate-shift/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
@@ -237,9 +246,18 @@
     </item>
     
     <item>
+      <title>Jaccard Coefficient</title>
+      <link>https://juliocesarbatista.com/tags/jaccard-coefficient/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/jaccard-coefficient/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>K Gram Index</title>
       <link>https://juliocesarbatista.com/tags/k-gram-index/</link>
-      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/k-gram-index/</guid>
       <description></description>
@@ -392,7 +410,7 @@
     <item>
       <title>Python</title>
       <link>https://juliocesarbatista.com/tags/python/</link>
-      <pubDate>Mon, 20 Jan 2020 00:00:00 +0000</pubDate>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/python/</guid>
       <description></description>
@@ -458,6 +476,15 @@
       <pubDate>Tue, 31 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>https://juliocesarbatista.com/tags/skip-list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spell Correction</title>
+      <link>https://juliocesarbatista.com/tags/spell-correction/</link>
+      <pubDate>Tue, 11 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://juliocesarbatista.com/tags/spell-correction/</guid>
       <description></description>
     </item>
     
