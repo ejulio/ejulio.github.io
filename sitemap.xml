@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://juliocesarbatista.com/post/provas-matematicas-diretas/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/post/correcao-ortografica-k-gram-index/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
   </url>
@@ -225,6 +230,12 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/conjectura/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/tags/corre%C3%A7%C3%A3o-ortogr%C3%A1fica/</loc>
     <lastmod>2020-02-11T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -346,7 +357,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -375,8 +386,14 @@
   </url>
   
   <url>
+    <loc>https://juliocesarbatista.com/tags/l%C3%B3gica/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://juliocesarbatista.com/categories/matem%C3%A1tica/</loc>
-    <lastmod>2019-07-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -454,7 +471,7 @@
   
   <url>
     <loc>https://juliocesarbatista.com/post/</loc>
-    <lastmod>2020-02-11T00:00:00+00:00</lastmod>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -473,6 +490,12 @@
   <url>
     <loc>https://juliocesarbatista.com/tags/produtividade/</loc>
     <lastmod>2018-02-10T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/provas/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -551,6 +574,12 @@
   <url>
     <loc>https://juliocesarbatista.com/tags/stop-words/</loc>
     <lastmod>2019-12-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://juliocesarbatista.com/tags/tabela-know-show/</loc>
+    <lastmod>2020-03-23T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

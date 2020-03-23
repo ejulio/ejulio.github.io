@@ -61,6 +61,64 @@
     
     
       <h4 class="post-title">
+	<a href="https://juliocesarbatista.com/post/consideracoes-sobre-indices/">Considerações sobre a construção de índices</a>
+</h4>
+<div class="post-metadata">
+  <span class="post-date">
+    <time datetime="2019-12-30 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+      2019/12/30
+    </time>
+  </span>
+  
+    
+    
+      <span class="post-categories">
+        <span class="nowrap">
+          
+            <a href="https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o">Recuperação de informação</a>
+            
+          
+        </span>
+      </span>
+    
+  
+
+  
+    
+    
+      <span class="post-tags">
+        <span class="nowrap"><i class="fa fa-tags"></i>
+          
+            <a href="https://juliocesarbatista.com/tags/token">token</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/term">term</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/type">type</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/stemming">stemming</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/lemmatization">lemmatization</a>
+            ,
+          
+            <a href="https://juliocesarbatista.com/tags/stop-words">stop-words</a>
+            
+          
+        </span>
+      </span>
+    
+  
+</div>
+
+<p class="justified post-content">Para construir um índice, seja uma matriz de incidência ou um índice invertido, alguns detalhes em relação aos documentos e aos termos do vocabulário devem ser considerados.
+Documentos O primeiro ponto a se considerar é o que será indexado, o que será um documento no índice. Um livro pode ser considerado um documento, o problema é que existem muitas palavras em um livro e diferentes palavras podem ocorrer em capítulos diferentes gerando um resultado não esperado.... 
+	<a href="https://juliocesarbatista.com/post/consideracoes-sobre-indices/">[Continue lendo]</a>
+</p>
+    
+      <h4 class="post-title">
 	<a href="https://juliocesarbatista.com/post/indice-invertido/">Índice invertido (inverted index)</a>
 </h4>
 <div class="post-metadata">
@@ -172,50 +230,6 @@ Dados os seguintes documentos como exemplo:
 <p class="justified post-content">Para obter as ocorrências de uma query booleana, por exemplo, casa AND blumenau seria necessário passar em todos os documentos procurando por casa e depois procurar novamente por blumenau. De certa forma, essa abordagem não é completamente ruim. Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.
 Agora considere uma nova consulta, por exemplo, casa AND gaspar, seria necessário repassar em todos os documentos novamente.... 
 	<a href="https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/">[Continue lendo]</a>
-</p>
-    
-      <h4 class="post-title">
-	<a href="https://juliocesarbatista.com/post/soma-pares-fibonacci/">Soma dos números pares na sequência Fibonacci</a>
-</h4>
-<div class="post-metadata">
-  <span class="post-date">
-    <time datetime="2019-07-11 00:00:00 &#43;0000 UTC" itemprop="datePublished">
-      2019/07/11
-    </time>
-  </span>
-  
-    
-    
-      <span class="post-categories">
-        <span class="nowrap">
-          
-            <a href="https://juliocesarbatista.com/categories/matem%c3%a1tica">Matemática</a>
-            
-          
-        </span>
-      </span>
-    
-  
-
-  
-    
-    
-      <span class="post-tags">
-        <span class="nowrap"><i class="fa fa-tags"></i>
-          
-            <a href="https://juliocesarbatista.com/tags/fibonacci">Fibonacci</a>
-            
-          
-        </span>
-      </span>
-    
-  
-</div>
-
-<p class="justified post-content">Os números de Fibonacci (Wikipedia, Wikipedia) são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$. Os primeiros números são 0 e 1, e a partir deles, a sequência segue: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &hellip;. Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n &lt; C$?
-A solução simples é fazer um script conforme
-C = 100 F_n2 = 0 F_n1 = 1 soma = 0 while True: F_n = F_n2 + F_n1 if F_n &gt;= C: break elif F_n % 2 == 0: soma += F_n F_n2 = F_n1 F_n1 = F_n print(soma)  Mas é possível fazer melhor?... 
-	<a href="https://juliocesarbatista.com/post/soma-pares-fibonacci/">[Continue lendo]</a>
 </p>
     
     <div class="row">
