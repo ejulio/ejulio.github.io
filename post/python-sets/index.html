@@ -1,0 +1,207 @@
+<!doctype html><html class=no-js lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Python: conjuntos (sets) | Júlio César Batista</title>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet href=https://juliocesarbatista.com/css/foundation.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/highlight.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/font-awesome.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/academicons.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/fonts.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/finite.css>
+</head>
+<body>
+<header>
+<nav class=nav-bar>
+<div class=title-bar data-responsive-toggle=site-menu data-hide-for=medium>
+<button class=site-hamburger type=button data-toggle>
+<i class="fa fa-bars fa-lg" aria-hidden=true></i>
+</button>
+<div class="title-bar-title site-title">
+<a href=https://juliocesarbatista.com/>Júlio César Batista</a>
+</div>
+<div class="title-bar-right pull-right">
+</div>
+</div>
+<div class=top-bar id=site-menu>
+<div class="top-bar-title show-for-medium site-title">
+<a href=https://juliocesarbatista.com/>Júlio César Batista</a>
+</div>
+<div class=top-bar-left>
+<ul class="menu vertical medium-horizontal">
+<li><a href=https://juliocesarbatista.com/publication/>Publicações</a></li>
+<li><a href=https://juliocesarbatista.com/post/>Blog</a></li>
+<li><a href=https://juliocesarbatista.com/logbook/>Recursos</a></li>
+</ul>
+</div>
+<div class="top-bar-right show-for-medium">
+</div>
+</div>
+</nav>
+</header>
+<main>
+<div class=row>
+<div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+<article class=article itemscope itemtype=http://schema.org/Article>
+<h1 itemprop=name>Python: conjuntos (sets)</h1>
+<div class=post-metadata>
+<span class=post-date>
+<time datetime="2019-04-01 00:00:00 +0000 UTC" itemprop=datePublished>
+2019/04/01
+</time>
+</span>
+<span class=post-categories>
+<span class=nowrap>
+<a href=https://juliocesarbatista.com/categories/linguagens-de-programa%c3%a7%c3%a3o>Linguagens de Programação</a>
+</span>
+</span>
+<span class=post-tags>
+<span class=nowrap><i class="fa fa-tags"></i>
+<a href=https://juliocesarbatista.com/tags/exemplos>Exemplos</a>
+,
+<a href=https://juliocesarbatista.com/tags/python>python</a>
+</span>
+</span>
+</div>
+<div class=post-body itemprop=articleBody>
+<p>Vamos falar um pouco sobre <em>sets</em> (conjuntos) em <em>python</em>.
+Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.</p>
+<h2 id=por-que-conjuntos>Por que conjuntos?</h2>
+<p>Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.</p>
+<p><em>Observação</em>: um <em>set</em> é uma construção matemática da <em>Teoria dos Conjuntos</em> :)</p>
+<h2 id=definindo-um-conjunto>Definindo um conjunto</h2>
+<p>Podemos definir um conjunto de duas formas.</p>
+<pre><code># utilizando a sintaxe de {}
+conjunto = {'Terra', 'Marte', 'Saturno'}
+
+# utilizando a classe `set`
+conjunto = set(['Terra', 'Marte', 'Saturno'])
+</code></pre><p>Não existe muita diferença entre as versões, apenas que na segunda podemos utilizar uma lista e definir o conjunto com entradas do usuário.
+Utilizando a sintaxe <code>conjunto = set(['Terra', 'Marte', 'Saturno'])</code> podemos obter uma lista de elementos não repetidos. Por exemplo:</p>
+<pre><code>uma_lista = ['Terra', 'Marte', 'Saturno', 'Terra']
+conjunto = set(uma_lista)
+conjunto
+&gt; set(['Saturno', 'Marte', 'Terra']) # Note que tem apenas um elemento 'Terra'
+</code></pre><h2 id=operações-com-conjuntos>Operações com conjuntos</h2>
+<p>Além de garantir a unicidade de elementos, também podemos efetuar operações com conjuntos aumentando a sua aplicação.</p>
+<h3 id=união>União</h3>
+<p>Aqui os elementos de um conjunto <em>A</em> são adicionados aos elementos de um conjunto <em>B</em>.
+Note que o resultado é um novo conjunto.</p>
+<pre><code># exemplos de bibliotecas
+usuario_a = {'pandas', 'numpy', 'tensorflow'}
+usuario_b = {'pandas', 'pytorch'}
+resultado = usuario_a | usuario_b
+resultado
+&gt; set(['tensorflow', 'pytorch', 'numpy', 'pandas'])
+</code></pre><p>Note no exemplo acima que <code>pandas</code> ocorre nos dois conjuntos, mas apenas uma vez no conjunto <code>resultado</code>.
+A sintaxe utilizando o operador <code>|</code> é uma facilidade para <code>usuario_a.union(usuario_b)</code>.</p>
+<h3 id=intersecção>Intersecção</h3>
+<p>Obtemos os elementos que ocorrem no conjunto <em>A</em> e no conjunto <em>B</em>.
+O resultado também é um novo conjunto.</p>
+<pre><code># exemplos de bibliotecas
+usuario_a = {'pandas', 'numpy', 'tensorflow'}
+usuario_b = {'pandas', 'pytorch'}
+resultado = usuario_a &amp; usuario_b
+resultado
+&gt; set(['pandas'])
+</code></pre><p>Note no exemplo acima que <code>pandas</code> é o único elemento que ocorre nos dois conjuntos.
+Nesse exemplo, o operador <code>&</code> também é apenas uma facilidade para <code>usuario_a.intersection(usuario_b)</code>.</p>
+<h3 id=diferença>Diferença</h3>
+<p>Outra operação que é muito comum com conjuntos é a diferença.
+Nesse caso, queremos os elementos do conjunto <em>A</em> que não existem no conjunto <em>B</em>.
+Novamente, o resultado é um novo conjunto.</p>
+<pre><code># exemplos de bibliotecas
+usuario_a = {'pandas', 'numpy', 'tensorflow'}
+usuario_b = {'pandas', 'pytorch'}
+resultado = usuario_a - usuario_b
+resultado
+&gt; set(['tensorflow', 'numpy'])
+</code></pre><p>O elemento <code>pandas</code> ocorre nos dois conjuntos, portanto ele foi removido no conjunto resultante.
+Como <code>numpy</code> e <code>tensorflow</code> ocorrem apenas no conjunto <code>usuario_a</code>, eles formam o resultado.</p>
+<h3 id=pertinência>Pertinência</h3>
+<p>Como podemos saber se um elemento pertence ao conjunto?
+Aqui a sintaxe é a mesma que para outras sequências em <em>python</em>, utilizamos <code>in</code>.</p>
+<pre><code>cidades = {'Blumenau', 'Gaspar', 'Indaial'}
+'Blumenau' in cidades
+&gt; True
+'Blumenau' not in cidades
+&gt; False
+'Pomerode' in cidades
+&gt; False
+'Pomerode' not in cidades
+&gt; True
+</code></pre><p>Outro caso comum, é saber se um conjunto <em>A</em> contém um conjunto <em>B</em>.</p>
+<pre><code>cidades_a = {'Blumenau', 'Gaspar', 'Indaial'}
+cidades_b = {'Blumenau', 'Indaial'}
+cidades_b.issubset(cidades_a)
+&gt; True
+cidades_b &lt;= cidades_a
+&gt; True
+
+cidades_c = {'Blumenau', 'Pomerode'}
+cidades_c.issubset(cidades_a)
+&gt; False
+cidades_c &lt;= cidades_a
+&gt; False
+</code></pre><p>Note nos exemplos acima que o operador <code>&lt;=</code> é apenas uma facilidade para a função <code>issubset</code> disponível nos conjuntos. Dessa forma, podemos testar se o conjunto <em>B</em> é um subconjunto <em>A</em>.
+Também podemos fazer a operação inversa, utilizando o operador <code>>=</code> ou a função <code>issuperset</code>.</p>
+<pre><code>cidades_a = {'Blumenau', 'Gaspar', 'Indaial'}
+cidades_b = {'Blumenau', 'Indaial'}
+cidades_a.issuperset(cidades_b)
+&gt; True
+cidades_a &gt;= cidades_b
+&gt; True
+
+cidades_c = {'Blumenau', 'Pomerode'}
+cidades_a.issuperset(cidades_c)
+&gt; False
+cidades_a &gt;= cidades_c
+&gt; False
+</code></pre><h3 id=igualdade>Igualdade</h3>
+<p>Finalmente, podemos também testar a igualdade de conjuntos.
+Assim como outras sequências em <em>python</em>, a veracidade é dada pelos elmentos internos e não pela instância do objeto.</p>
+<pre><code>cidades_a = {'Blumenau', 'Gaspar', 'Indaial'}
+cidades_b = {'Blumenau', 'Indaial', 'Gaspar'}
+cidades_a == cidades_b
+&gt; True
+cidades_a != cidades_b
+&gt; False
+cidades_c = {'Blumenau', 'Indaial', 'Pomerode'}
+cidades_a == cidades_c
+&gt; False
+cidades_a != cidades_c
+&gt; True
+</code></pre><p>Bem pessoal, acho que era isso para hoje.
+Espero ter passado uma ideia de como são as operações e alguns casos de uso que podemos ter com <em>sets</em> em <em>python</em>. E você tem algum caso específico que quer compartilhar ou alguma dúvida? Manda um <em>tweet</em> :)</p>
+<p>Abraço!</p>
+</div>
+<meta itemprop=wordCount content="699">
+<meta itemprop=datePublished content="2019-04-01">
+<meta itemprop=url content="https://juliocesarbatista.com/post/python-sets/">
+</article>
+<ul class=pagination role=navigation aria-label=Pagination>
+<li class=arrow aria-disabled=true><a href=https://juliocesarbatista.com/post/matemagica-para-devs/>&#171; <em>Previous<span class=show-for-sr> page</span></em>: Matemágica para devs</a></li>
+<li class=arrow aria-disabled=true><a href=https://juliocesarbatista.com/post/data-cleaning/><em>Next<span class=show-for-sr> page</span></em>: Limpando dados (data cleaning)&nbsp;&#187;</a></li>
+</ul>
+</div>
+</div>
+</main>
+<footer>
+<hr>
+<div class=row>
+<div class="column small-10 small-centered text-center">
+<em>Gostou ou tem algum comentário? Vamos conversar no <span class=nowrap><i class="fa fa-twitter-square"></i> Twitter</span>, <a href=http://twitter.com/ejuliobatista>@ejuliobatista</a>!</em>
+</div>
+</div>
+</footer>
+<div class=endofpage>
+</div>
+<script src=https://juliocesarbatista.com/js/jquery.js></script>
+<script src=https://juliocesarbatista.com/js/what-input.js></script>
+<script src=https://juliocesarbatista.com/js/foundation.min.js></script>
+<script src=https://juliocesarbatista.com/js/finite.js></script>
+<script src=https://juliocesarbatista.com/js/highlight.pack.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+</body>
+</html>

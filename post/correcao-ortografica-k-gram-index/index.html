@@ -1,0 +1,248 @@
+<!doctype html><html class=no-js lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Correção ortográfica com índice k-gram | Júlio César Batista</title>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet href=https://juliocesarbatista.com/css/foundation.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/highlight.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/font-awesome.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/academicons.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/fonts.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/finite.css>
+</head>
+<body>
+<header>
+<nav class=nav-bar>
+<div class=title-bar data-responsive-toggle=site-menu data-hide-for=medium>
+<button class=site-hamburger type=button data-toggle>
+<i class="fa fa-bars fa-lg" aria-hidden=true></i>
+</button>
+<div class="title-bar-title site-title">
+<a href=https://juliocesarbatista.com/>Júlio César Batista</a>
+</div>
+<div class="title-bar-right pull-right">
+</div>
+</div>
+<div class=top-bar id=site-menu>
+<div class="top-bar-title show-for-medium site-title">
+<a href=https://juliocesarbatista.com/>Júlio César Batista</a>
+</div>
+<div class=top-bar-left>
+<ul class="menu vertical medium-horizontal">
+<li><a href=https://juliocesarbatista.com/publication/>Publicações</a></li>
+<li><a href=https://juliocesarbatista.com/post/>Blog</a></li>
+<li><a href=https://juliocesarbatista.com/logbook/>Recursos</a></li>
+</ul>
+</div>
+<div class="top-bar-right show-for-medium">
+</div>
+</div>
+</nav>
+</header>
+<main>
+<div class=row>
+<div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+<article class=article itemscope itemtype=http://schema.org/Article>
+<h1 itemprop=name>Correção ortográfica com índice k-gram</h1>
+<div class=post-metadata>
+<span class=post-date>
+<time datetime="2020-02-11 00:00:00 +0000 UTC" itemprop=datePublished>
+2020/02/11
+</time>
+</span>
+<span class=post-categories>
+<span class=nowrap>
+<a href=https://juliocesarbatista.com/categories/recupera%c3%a7%c3%a3o-de-informa%c3%a7%c3%a3o>Recuperação de informação</a>
+</span>
+</span>
+<span class=post-tags>
+<span class=nowrap><i class="fa fa-tags"></i>
+<a href=https://juliocesarbatista.com/tags/python>python</a>
+,
+<a href=https://juliocesarbatista.com/tags/k-gram-index>k-gram index</a>
+,
+<a href=https://juliocesarbatista.com/tags/corre%c3%a7%c3%a3o-ortogr%c3%a1fica>correção ortográfica</a>
+,
+<a href=https://juliocesarbatista.com/tags/spell-correction>spell correction</a>
+,
+<a href=https://juliocesarbatista.com/tags/jaccard-coefficient>jaccard coefficient</a>
+</span>
+</span>
+</div>
+<div class=post-body itemprop=articleBody>
+<p>Ao escrever uma consulta, o usuário pode cometer erros ortográficos durante a digitação.
+Esses erros podem ter duas formas: escrita incorreta da palavra (<em>comesso</em> ao invés de <em>começo</em>), contexto (<em>no meu casa</em> ao invés de <em>na minha casa</em>).
+Note que no primeiro exemplo, a palavra está incorreta; no segundo, as palavras estão corretas mas o contexto é errado.
+Nesse momento, a ideia é ver como é possível fazer a correção de erros de escrito (primeiro caso).
+Uma forma de fazer isso é comparando partes menores das palavras (<em>substrings</em>, ou <em>k-grams</em>).
+Um <em>k-gram</em> define uma <em>substring</em> de tamanho <em>k</em>.
+Portanto, os <em>3-grams</em> de <em>começo</em> são: <code>com</code>, <code>ome</code>, <code>meç</code>, <code>eço</code>.
+Um detalhe importante é que, é comum adicionar $k - 1$ caractéres especiais, normalmente <code>$</code> no início e fim da palavra.
+Assim, os <em>3-grams</em> de <em>começo</em> são: <code>$$c</code>, <code>$co</code>, <code>com</code>, <code>ome</code>, <code>meç</code>, <code>eço</code>, <code>ço$</code>, <code>o$$</code>.
+Uma vez que os <em>3-grams</em> da palavra são conhecidos, é possível efetuar o mesmo procedimento para a palavras que será usada na comparação.
+Nesse caso, <em>comesso</em>: <code>$$c</code>, <code>$co</code>, <code>com</code>, <code>ome</code>, <code>mes</code>, <code>ess</code>, <code>sso</code>, <code>so$</code>, <code>o$$</code>.</p>
+<p>Com os <em>3-grams</em> das duas palavras, é possível calcular uma medida de &ldquo;similaridade&rdquo; entre esses <em>k-grams</em>.
+Note que, quanto mais <em>k-grams</em> duas palavras tem em comum, maior a chance de uma delas ser a correção ortográfica da outra.
+Uma forma de medir essa similaridade é com o Coeficiente de Jaccard (<em>Jaccard Coefficient</em>), que é uma medida genérica de similaridade entre conjuntos (<em>sets</em>).
+Portanto, dados dois conjuntos $A$ e $B$ o coeficiente é calculado como $\frac{\lvert A \cap B \rvert}{\lvert A \cup B \rvert}$.
+Sendo o numerador a quantidade de elementos que os conjuntos tem em comum (intersecção) e o denominador o total de elementos na união dos conjuntos.
+Usando a palavras em um exemplo com <em>python</em>:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>A <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;$$c&#34;</span>, <span style=color:#e6db74>&#34;$co&#34;</span>, <span style=color:#e6db74>&#34;com&#34;</span>, <span style=color:#e6db74>&#34;ome&#34;</span>, <span style=color:#e6db74>&#34;meç&#34;</span>, <span style=color:#e6db74>&#34;eço&#34;</span>, <span style=color:#e6db74>&#34;ço$&#34;</span>, <span style=color:#e6db74>&#34;o$$&#34;</span>}
+B <span style=color:#f92672>=</span> {<span style=color:#e6db74>&#34;$$c&#34;</span>, <span style=color:#e6db74>&#34;$co&#34;</span>, <span style=color:#e6db74>&#34;com&#34;</span>, <span style=color:#e6db74>&#34;ome&#34;</span>, <span style=color:#e6db74>&#34;mes&#34;</span>, <span style=color:#e6db74>&#34;ess&#34;</span>, <span style=color:#e6db74>&#34;sso&#34;</span>, <span style=color:#e6db74>&#34;so$&#34;</span>, <span style=color:#e6db74>&#34;o$$&#34;</span>}
+jaccard <span style=color:#f92672>=</span> len(A <span style=color:#f92672>&amp;</span> B) <span style=color:#f92672>/</span> len(A <span style=color:#f92672>|</span> B)
+</code></pre></div><p>Um detalhe é que, para calcular o Coeficiente de Jaccard é apenas necessário saber o tamanho das palavras e quantos <em>k-grams</em> elas tem em comum.
+O motivo para essa otimização, é calcular os <em>k-grams</em> de todos os termos no índice pode ser custoso.
+Assim, sabendo apenas o tamanho dos termos no índice e quantos <em>k-grams</em> o termo da consulta tem em comum com o termo do índice, o cálculo pode ser otimizado.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>k <span style=color:#f92672>=</span> <span style=color:#ae81ff>3</span>  <span style=color:#75715e># k-grams</span>
+termo_1 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;começo&#34;</span>
+termo_2 <span style=color:#f92672>=</span> <span style=color:#e6db74>&#34;comesso&#34;</span>
+n_k_grams_em_comum <span style=color:#f92672>=</span> <span style=color:#ae81ff>5</span>  <span style=color:#75715e># {&#34;com&#34;, &#34;$co&#34;, &#34;$$c&#34;, &#34;o$$&#34;, &#34;ome&#34;}</span>
+n_k_grams_termo_1 <span style=color:#f92672>=</span> (k <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> len(termo_1)
+n_k_grams_termo_2 <span style=color:#f92672>=</span> (k <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> len(termo_2)
+jaccard <span style=color:#f92672>=</span> n_k_grams_em_comum <span style=color:#f92672>/</span> (n_k_grams_termo_1 <span style=color:#f92672>+</span> n_k_grams_termo_2 <span style=color:#f92672>-</span> n_k_grams_em_comum)
+</code></pre></div><p>O detalhe da otimização é que, uma palavra de tamanho $m$ terá $m - (k - 1)$ <em>k-grams</em>.
+Entretanto, como são adicionados $k - 1$ caractéres especiais no começo e final da palavra, o resultado é $(k - 1) + m + (k - 1) - (k - 1) = (k - 1) + m$.</p>
+<p>Por fim, a busca das termos candidatos para correção ortográfica não ocorre no índice invertido.
+Para isso é utilizado um índice auxiliar, um índice de <em>k-grams</em> (<em>k-gram index</em>).
+Esse índice mapeia <em>k-grams</em> para os termos que existem no índice invertido.
+Segue um exemplo, considerando alguns dos <em>k-grams</em> anteriores:</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>k_gram_index <span style=color:#f92672>=</span> {
+    <span style=color:#e6db74>&#34;$$c&#34;</span>: {<span style=color:#e6db74>&#34;começo&#34;</span>, <span style=color:#e6db74>&#34;capaz&#34;</span>, <span style=color:#e6db74>&#34;comer&#34;</span>, <span style=color:#e6db74>&#34;correr&#34;</span>, <span style=color:#f92672>...</span>},
+    <span style=color:#e6db74>&#34;com&#34;</span>: {<span style=color:#e6db74>&#34;comigo&#34;</span>, <span style=color:#e6db74>&#34;comando&#34;</span>, <span style=color:#e6db74>&#34;começo&#34;</span>, <span style=color:#f92672>...</span>},
+    <span style=color:#e6db74>&#34;ome&#34;</span>, {<span style=color:#e6db74>&#34;homem&#34;</span>, <span style=color:#e6db74>&#34;começo&#34;</span>, <span style=color:#e6db74>&#34;fome&#34;</span>, <span style=color:#f92672>...</span>},
+    <span style=color:#e6db74>&#34;o$$&#34;</span>, {<span style=color:#e6db74>&#34;moço&#34;</span>, <span style=color:#e6db74>&#34;carro&#34;</span>, <span style=color:#e6db74>&#34;pescoço&#34;</span>, <span style=color:#e6db74>&#34;começo&#34;</span>, <span style=color:#f92672>...</span>}
+}
+</code></pre></div><p>Com base nesse índice, a correção de um termo consiste em computar os <em>k-grams</em> do termo e encontrar todos termos que possuem <em>k-grams</em> em comum.
+A partir desse ponto, é possível contar quantos <em>k-grams</em> existem em comum para calcular o Coeficiente de Jaccard de forma otimizada.</p>
+<p>Dado um índice invertido (<a href=https://juliocesarbatista.com/post/phrase-queries/>exemplo</a>), o seguinte código monta o índice <em>k-gram</em>.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> collections <span style=color:#f92672>import</span> defaultdict
+
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>k_grams</span>(termo, k):
+    pad <span style=color:#f92672>=</span> k <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>
+    termo <span style=color:#f92672>=</span> (<span style=color:#e6db74>&#39;$&#39;</span> <span style=color:#f92672>*</span> pad) <span style=color:#f92672>+</span> termo <span style=color:#f92672>+</span> (<span style=color:#e6db74>&#39;$&#39;</span> <span style=color:#f92672>*</span> pad)
+    <span style=color:#66d9ef>return</span> {termo[i:i <span style=color:#f92672>+</span> k] <span style=color:#66d9ef>for</span> i <span style=color:#f92672>in</span> range(len(termo) <span style=color:#f92672>-</span> pad)}
+
+
+k_gram_index <span style=color:#f92672>=</span> defaultdict(set)
+<span style=color:#66d9ef>for</span> termo <span style=color:#f92672>in</span> inverted_index:
+    <span style=color:#66d9ef>for</span> k_gram <span style=color:#f92672>in</span> k_grams(termo, k<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>):
+        k_gram_index[k_gram]<span style=color:#f92672>.</span>add(termo)   
+</code></pre></div><p>Uma vez que o índice está construído, é possível encontrar os termos mais similares.</p>
+<div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=color:#f92672>from</span> collections <span style=color:#f92672>import</span> Counter
+
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>n_k_grams</span>(termo, k):
+    <span style=color:#66d9ef>return</span> (k <span style=color:#f92672>-</span> <span style=color:#ae81ff>1</span>) <span style=color:#f92672>+</span> len(termo)
+
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>jaccard_coefficient</span>(t1_n_k_grams, t2_n_k_grams, n_shared_k_grams):
+    <span style=color:#66d9ef>return</span> n_shared_k_grams <span style=color:#f92672>/</span> (t1_n_k_grams <span style=color:#f92672>+</span> t2_n_k_grams <span style=color:#f92672>-</span> n_shared_k_grams)
+    
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>corrigir_termo</span>(termo):
+    candidatos <span style=color:#f92672>=</span> [k_gram_index[k_gram] <span style=color:#66d9ef>for</span> k_gram <span style=color:#f92672>in</span> k_grams(termo, k<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>)]
+    candidatos <span style=color:#f92672>=</span> chain<span style=color:#f92672>.</span>from_iterable(candidatos)
+    jaccards <span style=color:#f92672>=</span> []
+    <span style=color:#66d9ef>for</span> (candidato, n_comum) <span style=color:#f92672>in</span> Counter(candidatos)<span style=color:#f92672>.</span>items():
+        j <span style=color:#f92672>=</span> jaccard_coefficient(
+            n_k_grams(termo, k<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>),
+            n_k_grams(candidato, k<span style=color:#f92672>=</span><span style=color:#ae81ff>3</span>),
+            n_comum
+        )
+        jaccards<span style=color:#f92672>.</span>append((candidato, j))
+    <span style=color:#66d9ef>return</span> max(jaccards, key<span style=color:#f92672>=</span><span style=color:#66d9ef>lambda</span> x: x[<span style=color:#ae81ff>1</span>])[<span style=color:#ae81ff>0</span>]
+
+
+<span style=color:#66d9ef>def</span> <span style=color:#a6e22e>consultar</span>(query):
+    termos <span style=color:#f92672>=</span> query<span style=color:#f92672>.</span>split()
+    docs_ids <span style=color:#f92672>=</span> [inverted_index[t] <span style=color:#66d9ef>for</span> t <span style=color:#f92672>in</span> termos]
+    <span style=color:#66d9ef>if</span> all(docs_ids):
+        <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#34;Resultados para </span><span style=color:#e6db74>{</span>query<span style=color:#e6db74>}</span><span style=color:#e6db74> ...&#34;</span>
+    
+    correcao <span style=color:#f92672>=</span> []
+    <span style=color:#66d9ef>for</span> (termo, doc_ids) <span style=color:#f92672>in</span> zip(termos, docs_ids):
+        <span style=color:#66d9ef>if</span> doc_ids:
+            correcao<span style=color:#f92672>.</span>append(termo)  <span style=color:#75715e># termo existe no índice</span>
+        <span style=color:#66d9ef>else</span>:
+            correcao<span style=color:#f92672>.</span>append(corrigir_termo(termo))
+    
+    correcao <span style=color:#f92672>=</span> <span style=color:#e6db74>&#39; &#39;</span><span style=color:#f92672>.</span>join(correcao)
+    <span style=color:#66d9ef>return</span> <span style=color:#e6db74>f</span><span style=color:#e6db74>&#39;Você quis dizer &#34;</span><span style=color:#e6db74>{</span>correcao<span style=color:#e6db74>}</span><span style=color:#e6db74>&#34;&#39;</span>
+</code></pre></div><ul>
+<li><code>consultar('Texas House of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Resultados para Texas House of Representatives &mldr;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Texas House of Represenatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Você quis dizer &ldquo;Texas House of Representatives&rdquo;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Texs House of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Você quis dizer &ldquo;Texts House of Representatives&rdquo;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Teas House of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Você quis dizer &ldquo;Teams House of Representatives&rdquo;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Texas Hose of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Resultados para Texas Hose of Representatives &mldr;&rsquo;</p>
+</blockquote>
+<p>A partir dos exemplos acima é possível notar que, alguns termos são corrigidos corretamente, mas outros não.
+Um detalhe que é importante adicionar é o contexto, que deve ajudar muito na hora de selecionar o melhor termo para correção.
+Finalmente, o <em>k-gram index</em> é uma boa abordagem inicial para encontrar termos candidatos quando o usuário envia uma consulta com termos incorretos, ou inexistentes no índice invertido.</p>
+<h2 id=referências>Referências</h2>
+<ul>
+<li><a href=https://nlp.stanford.edu/IR-book/html/htmledition/k-gram-indexes-for-spelling-correction-1.html>Introduction to Information Retrieval: k-gram indexes for spelling correction</a></li>
+</ul>
+</div>
+<meta itemprop=wordCount content="925">
+<meta itemprop=datePublished content="2020-02-11">
+<meta itemprop=url content="https://juliocesarbatista.com/post/correcao-ortografica-k-gram-index/">
+</article>
+<ul class=pagination role=navigation aria-label=Pagination>
+<li class=arrow aria-disabled=true><a href=https://juliocesarbatista.com/post/phrase-queries-positional-index/>&#171; <em>Previous<span class=show-for-sr> page</span></em>: Executando consultas por frases: Positional Index</a></li>
+<li class=arrow aria-disabled=true><a href=https://juliocesarbatista.com/post/provas-matematicas-diretas/><em>Next<span class=show-for-sr> page</span></em>: Provas matemáticas diretas&nbsp;&#187;</a></li>
+</ul>
+</div>
+</div>
+</main>
+<footer>
+<hr>
+<div class=row>
+<div class="column small-10 small-centered text-center">
+<em>Gostou ou tem algum comentário? Vamos conversar no <span class=nowrap><i class="fa fa-twitter-square"></i> Twitter</span>, <a href=http://twitter.com/ejuliobatista>@ejuliobatista</a>!</em>
+</div>
+</div>
+</footer>
+<div class=endofpage>
+</div>
+<script src=https://juliocesarbatista.com/js/jquery.js></script>
+<script src=https://juliocesarbatista.com/js/what-input.js></script>
+<script src=https://juliocesarbatista.com/js/foundation.min.js></script>
+<script src=https://juliocesarbatista.com/js/finite.js></script>
+<script src=https://juliocesarbatista.com/js/highlight.pack.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script type=text/x-mathjax-config>
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</body>
+</html>

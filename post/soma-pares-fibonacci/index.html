@@ -1,0 +1,210 @@
+<!doctype html><html class=no-js lang=en-us>
+<head>
+<meta charset=utf-8>
+<title>Soma dos números pares na sequência Fibonacci | Júlio César Batista</title>
+<meta http-equiv=x-ua-compatible content="ie=edge">
+<meta name=viewport content="width=device-width,initial-scale=1">
+<link rel=stylesheet href=https://juliocesarbatista.com/css/foundation.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/highlight.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/font-awesome.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/academicons.min.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/fonts.css>
+<link rel=stylesheet href=https://juliocesarbatista.com/css/finite.css>
+</head>
+<body>
+<header>
+<nav class=nav-bar>
+<div class=title-bar data-responsive-toggle=site-menu data-hide-for=medium>
+<button class=site-hamburger type=button data-toggle>
+<i class="fa fa-bars fa-lg" aria-hidden=true></i>
+</button>
+<div class="title-bar-title site-title">
+<a href=https://juliocesarbatista.com/>Júlio César Batista</a>
+</div>
+<div class="title-bar-right pull-right">
+</div>
+</div>
+<div class=top-bar id=site-menu>
+<div class="top-bar-title show-for-medium site-title">
+<a href=https://juliocesarbatista.com/>Júlio César Batista</a>
+</div>
+<div class=top-bar-left>
+<ul class="menu vertical medium-horizontal">
+<li><a href=https://juliocesarbatista.com/publication/>Publicações</a></li>
+<li><a href=https://juliocesarbatista.com/post/>Blog</a></li>
+<li><a href=https://juliocesarbatista.com/logbook/>Recursos</a></li>
+</ul>
+</div>
+<div class="top-bar-right show-for-medium">
+</div>
+</div>
+</nav>
+</header>
+<main>
+<div class=row>
+<div class="column small-12 medium-10 medium-offset-1 end large-8 large-offset-0">
+<article class=article itemscope itemtype=http://schema.org/Article>
+<h1 itemprop=name>Soma dos números pares na sequência Fibonacci</h1>
+<div class=post-metadata>
+<span class=post-date>
+<time datetime="2019-07-11 00:00:00 +0000 UTC" itemprop=datePublished>
+2019/07/11
+</time>
+</span>
+<span class=post-categories>
+<span class=nowrap>
+<a href=https://juliocesarbatista.com/categories/matem%c3%a1tica>Matemática</a>
+</span>
+</span>
+<span class=post-tags>
+<span class=nowrap><i class="fa fa-tags"></i>
+<a href=https://juliocesarbatista.com/tags/fibonacci>Fibonacci</a>
+</span>
+</span>
+</div>
+<div class=post-body itemprop=articleBody>
+<p>Os números de Fibonacci
+(<a href=https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci>Wikipedia</a>,
+<a href=https://en.wikipedia.org/wiki/Fibonacci_number>Wikipedia</a>)
+são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$.
+Os primeiros números são <em>0</em> e <em>1</em>, e a partir deles, a sequência segue:
+<em>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &mldr;</em>.
+Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n &lt; C$?</p>
+<p>A solução simples é fazer um <em>script</em> conforme</p>
+<pre><code>C = 100
+F_n2 = 0
+F_n1 = 1
+soma = 0
+while True:
+    F_n = F_n2 + F_n1
+    if F_n &gt;= C:
+        break
+    elif F_n % 2 == 0:
+        soma += F_n
+    F_n2 = F_n1
+    F_n1 = F_n
+print(soma)
+</code></pre><p>Mas é possível fazer melhor?
+Sim, e isso requer pensar em como um número na sequência Fibonacci é calculado.</p>
+<p>Inicialmente é necessário notar que um número par aparece a cada três posições:</p>
+<table>
+<thead>
+<tr>
+<th>$F_0$</th>
+<th>$F_1$</th>
+<th>$F_2$</th>
+<th>$F_3$</th>
+<th>$F_4$</th>
+<th>$F_5$</th>
+<th>$F_6$</th>
+<th>$F_7$</th>
+<th>$F_8$</th>
+<th>$F_9$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>1</td>
+<td>1</td>
+<td><strong>2</strong></td>
+<td>3</td>
+<td>5</td>
+<td><strong>8</strong></td>
+<td>13</td>
+<td>21</td>
+<td><strong>34</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Como os intervalos são regulares, a próxima questão é saber se as diferenças também são regulares.
+Portanto, existe alguma regularidade entre $F_{n+3} - F_n$?</p>
+<blockquote>
+<p><em>Reescreve a diferença (substitui $F_n$ e $F_{n+3}$ pelas definições)</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = (F_{n+1} + F_{n+2}) - (F_{n-1} + F_{n-2})$</p>
+<blockquote>
+<p><em>Reescreve a diferença (substitui $F_{n+2}$ e $F_{n+1}$ pelas definições)</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = ((F_{n} + F_{n-1}) + (F_{n} + F_{n+1})) - (F_{n-1} + F_{n-2})$</p>
+<blockquote>
+<p><em>Reescreve a diferença (substitui $F_{n+1}$ pela definição)</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = ((F_{n} + F_{n-1}) + (F_{n} + (F_{n} + F_{n-1}))) - (F_{n-1} + F_{n-2})$</p>
+<blockquote>
+<p><em>Organiza</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = F_{n} + F_{n} + F_{n} + F_{n-1} + F_{n-1} - F_{n-1} - F_{n-2}$</p>
+<blockquote>
+<p><em>Cancela $F_{n-1} - F_{n-1}$ e junta $F_{n} + F_{n} + F_{n}$</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = 3F_{n} + F_{n-1} - F_{n-2}$</p>
+<blockquote>
+<p><em>Reescreve $F_{n-1}$</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = 3F_{n} + F_{n-3} + F_{n-2} - F_{n-2}$</p>
+<blockquote>
+<p><em>Cancela $F_{n-2} - F_{n-2}$</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = 3F_{n} + F_{n-3}$</p>
+<blockquote>
+<p><em>Resolve $F_{n+3}$</em></p>
+</blockquote>
+<p>$F_{n+3} = 3F_{n} + F_{n-3} + F_n$</p>
+<p>$F_{n+3} = 4F_{n} + F_{n-3}$</p>
+<p>Portanto, o próximo número par da sequência Fibonacci ($F_{n+3}$) é dado por
+$F_{n+3} = 4F_{n} + F_{n-3}$, sendo $F_n$ o número par atual e $F_{n-3}$ o número par anterior.</p>
+<p>Um script para resolver</p>
+<pre><code>C = 100
+F_n6 = 0
+F_n3 = 2
+soma = F_n3 + F_n6
+while True:
+    F_n = 4 * F_n3 + F_n6
+    if F_n &gt;= C:
+        break
+    soma += F_n
+    F_n6 = F_n3
+    F_n3 = F_n
+print(soma)
+</code></pre><p>Pronto, dessa forma é possível calcular a soma de números Fibonacci pares
+evitando calcular os números ímpares e o m[odulo/resto (<code>%</code>) da divisão.</p>
+</div>
+<meta itemprop=wordCount content="423">
+<meta itemprop=datePublished content="2019-07-11">
+<meta itemprop=url content="https://juliocesarbatista.com/post/soma-pares-fibonacci/">
+</article>
+<ul class=pagination role=navigation aria-label=Pagination>
+<li class=arrow aria-disabled=true><a href=https://juliocesarbatista.com/post/experimentos-ml/>&#171; <em>Previous<span class=show-for-sr> page</span></em>: Experimentos com Machine Learning</a></li>
+<li class=arrow aria-disabled=true><a href=https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/><em>Next<span class=show-for-sr> page</span></em>: Matriz de incidência termo-documento&nbsp;&#187;</a></li>
+</ul>
+</div>
+</div>
+</main>
+<footer>
+<hr>
+<div class=row>
+<div class="column small-10 small-centered text-center">
+<em>Gostou ou tem algum comentário? Vamos conversar no <span class=nowrap><i class="fa fa-twitter-square"></i> Twitter</span>, <a href=http://twitter.com/ejuliobatista>@ejuliobatista</a>!</em>
+</div>
+</div>
+</footer>
+<div class=endofpage>
+</div>
+<script src=https://juliocesarbatista.com/js/jquery.js></script>
+<script src=https://juliocesarbatista.com/js/what-input.js></script>
+<script src=https://juliocesarbatista.com/js/foundation.min.js></script>
+<script src=https://juliocesarbatista.com/js/finite.js></script>
+<script src=https://juliocesarbatista.com/js/highlight.pack.js></script>
+<script>hljs.initHighlightingOnLoad()</script>
+<script type=text/x-mathjax-config>
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          processEscapes: true
+        }
+      });
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML" async></script>
+</body>
+</html>
