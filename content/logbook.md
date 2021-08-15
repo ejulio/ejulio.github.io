@@ -49,6 +49,7 @@ Coleção de links que considero interessantes e que podem servir para futuras r
 - [Mathematical Monk](https://www.youtube.com/user/mathematicalmonk/): Canal no YouTube com vídeos sobre aprendizado de máquina, teoria da informação e probabilidade.
 - [Neural Networks](https://www.youtube.com/playlist?list=PL6Xpj9I5qXYEcOhn7TqghAJ6NAPrNmUBH): Vídeos criados por Hugo Larochelle sobre redes neurais.
 - [Deep learning at Oxford](https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu): Vídeos das aulas de deep learning em Oxford em 2015 com Nando de Freitas.
+- [Master of Data Science Degree Programs (MS)](https://www.datascienceprograms.org/degree/masters): Lista com programas de mestrado em Data Science em várias universidades.
 
 # Outros recursos
 - [ShortScience.org](http://www.shortscience.org): Plataforma para auxiliar no entendimento de artigos científicos.
