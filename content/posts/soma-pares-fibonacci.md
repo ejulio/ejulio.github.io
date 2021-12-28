@@ -97,4 +97,4 @@ print(soma)
 ```
 
 Pronto, dessa forma é possível calcular a soma de números Fibonacci pares
-evitando calcular os números ímpares e o m[odulo/resto (`%`) da divisão.
+evitando calcular os números ímpares e o módulo/resto (`%`) da divisão.

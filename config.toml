@@ -1,80 +1,97 @@
-baseurl = "https://juliocesarbatista.com/"
+baseURL = "https://juliocesarbatista.com"
 title = "Júlio César Batista"
-author = "Júlio César Batista"
-copyright = "Copyright (c) 2016 Júlio César Batista"
-canonifyurls = true
-paginate = 3
-theme="finite"
+theme = "hugo-coder"
+languageCode = "pt-br"
+defaultContentLanguage = "pt-br"
+paginate = 20
+pygmentsStyle = "bw"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
+enableEmoji = true
+# Enable Disqus comments
+# disqusShortname = "yourdiscussshortname"
 
 [params]
+author = "Júlio César Batista"
+description = "Some description"
+keywords = "blog,software,developer"
+info = ["Software Developer"]
+avatarURL = "img/portrait.jpg"
+dateFormat = "2006-01-02"
+since = 2016
+# Git Commit in Footer, uncomment the line below to enable it
+commit = "https://github.com/luizdepra/hugo-coder/tree/"
+# Right To Left, shift content direction for languagues such as Arabic
+rtl = false
+colorScheme = "auto"
+# Hide the toggle button, along with the associated vertical divider
+hideColorSchemeToggle = false
+# Series see also post count
+maxSeeAlsoItems = 5
+# Custom CSS
+customCSS = []
+# Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
+customSCSS = []
+# Custom JS
+customJS = []
 
-# Date format (refer to Go's date format: http://flippinggodateformat.com)
-# Examples: "Mon, Jan 2, 2006" or "2006-01-02"
-date_format = "2006/01/02"
 
-# Publications can have a Params.publication for citation references.
-# Publications can have a Params.kind, such as "book".
-# Both parameters are mapped to an icon in partials/pub-icon.html.
-
-about = "Olá, meu nome é Júlio César Batista e eu sou desenvolvedor (_shubber_) na [Scrapinghub](https://scrapinghub.com/) e pesquisador no [IMAGO UFPR Research Group](http://www.imago.ufpr.br); ~~desenvolvedor na [Inventti](http://www.inventti.com.br)~~; ~~desenvolvedor na [Ellevo](http://www.ellevo.com)~~. Também sou mestre em informática pela [UFPR](http://ufpr.br) e bacharel em ciência da computação pela [FURB](http://www.furb.br). É um prazer conhecê-lo, seja bem-vindo."
-bio_twitter = "ejuliobatista"
-
-# Title of posts section on main page.
-#posts_title = "Posts"
-
-# Number of posts to show on main page.
-posts_count = 3
-
-# Title of publications section on main page.
-pubs_title = "Publicações"
-
-# Number of publications to show on main page.
-pubs_count = 3
-
-[[params.education]]
-  course = "M. Sc. em Informática"
-  institution = "Universidade Federal do Paraná - UFPR"
-  year = 2018
-
-[[params.education]]
-  course = "B. Sc. em Ciência da Computação"
-  institution = "Universidade Regional de Blumenau - FURB"
-  year = 2015
+[taxonomies]
+category = "categories"
+series = "series"
+tag = "tags"
+author = "authors"
 
 [[params.social]]
-  icon = "envelope"
-  icon_pack = "fa"
-  link = "mailto:julio.batista@outlook.com"
-  text = "julio.batista@outlook.com "
+name = "Github"
+icon = "fa fa-2x fa-github"
+weight = 1
+url = "https://github.com/ejulio/"
+target = "_blank"
 
 [[params.social]]
-  icon = "twitter"
-  icon_pack = "fa"
-  link = "https://twitter.com/ejuliobatista"
-  text = "@ejuliobatista"
-  site = "Twitter"
+name = "LinkedIn"
+icon = "fa fa-2x fa-linkedin"
+weight = 4
+url = "https://www.linkedin.com/in/juliobatista/"
+target = "_blank"
 
 [[params.social]]
-  icon = "github"
-  icon_pack = "fa"
-  link = "https://github.com/ejulio"
-  text = "ejulio"
-  site = "GitHub"
+name = "CV"
+icon = "fa fa-2x fa-file"
+weight = 4
+url = "docs/cv.pdf"
+target = "_blank"
 
-# Navigation Links
-# The weight parameter defines the order that the links will appear in.
-
-[[menu.main]]
-  name = "Publicações"
-  url = "/publication/"
-  weight = 2
+[languages.pt-br]
+languageName = ":brazil:"
 
 [[menu.main]]
-  name = "Blog"
-  url = "/post/"
-  weight = 3
+name = "Sobre"
+weight = 1
+url = "about/"
 
 [[menu.main]]
-  name = "Recursos"
-  url = "/logbook/"
-  weight = 4
+name = "Publicações"
+weight = 2
+url = "categories/publicação/"
+
+[[menu.main]]
+name = "Blog"
+weight = 3
+url = "posts/"
+
+[[menu.main]]
+name = "Categorias"
+weight = 4
+url = "categories/"
+
+# [[languages.pt-br.menu.main]]
+# name = "Projetos"
+# weight = 3
+# url = "projects/"
+
+# [[languages.pt-br.menu.main]]
+# name = "Contato"
+# weight = 5
+# url = "contact/"
