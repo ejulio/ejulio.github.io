@@ -1,0 +1,233 @@
+<!doctype html><html lang=pt-br>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="pt-br">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Júlio César Batista">
+<meta name=description content="Os números de Fibonacci (Wikipedia, Wikipedia) são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$. Os primeiros números são 0 e 1, e a partir deles, a sequência segue: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &mldr;. Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n < C$?
+A solução simples é fazer um script conforme
+C = 100 F_n2 = 0 F_n1 = 1 soma = 0 while True: F_n = F_n2 + F_n1 if F_n >= C: break elif F_n % 2 == 0: soma += F_n F_n2 = F_n1 F_n1 = F_n print(soma) Mas é possível fazer melhor?">
+<meta name=keywords content="blog,software,developer">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Soma dos números pares na sequência Fibonacci">
+<meta name=twitter:description content="Os números de Fibonacci (Wikipedia, Wikipedia) são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$. Os primeiros números são 0 e 1, e a partir deles, a sequência segue: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &mldr;. Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n < C$?
+A solução simples é fazer um script conforme
+C = 100 F_n2 = 0 F_n1 = 1 soma = 0 while True: F_n = F_n2 + F_n1 if F_n >= C: break elif F_n % 2 == 0: soma += F_n F_n2 = F_n1 F_n1 = F_n print(soma) Mas é possível fazer melhor?">
+<meta property="og:title" content="Soma dos números pares na sequência Fibonacci">
+<meta property="og:description" content="Os números de Fibonacci (Wikipedia, Wikipedia) são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$. Os primeiros números são 0 e 1, e a partir deles, a sequência segue: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &mldr;. Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n < C$?
+A solução simples é fazer um script conforme
+C = 100 F_n2 = 0 F_n1 = 1 soma = 0 while True: F_n = F_n2 + F_n1 if F_n >= C: break elif F_n % 2 == 0: soma += F_n F_n2 = F_n1 F_n1 = F_n print(soma) Mas é possível fazer melhor?">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://juliocesarbatista.com/posts/soma-pares-fibonacci/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-07-11T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-07-11T00:00:00+00:00">
+<title>
+Soma dos números pares na sequência Fibonacci · Júlio César Batista
+</title>
+<link rel=canonical href=https://juliocesarbatista.com/posts/soma-pares-fibonacci/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.91.2">
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+Júlio César Batista
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>Sobre</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/>Categorias</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://juliocesarbatista.com/posts/soma-pares-fibonacci/>
+Soma dos números pares na sequência Fibonacci
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-07-11T00:00:00Z>
+2019-07-11
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+2 minutos de leitura
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/matem%C3%A1tica/>Matemática</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/fibonacci/>Fibonacci</a>
+</span></div>
+</div>
+</header>
+<div>
+<p>Os números de Fibonacci
+(<a href=https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci>Wikipedia</a>,
+<a href=https://en.wikipedia.org/wiki/Fibonacci_number>Wikipedia</a>)
+são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$.
+Os primeiros números são <em>0</em> e <em>1</em>, e a partir deles, a sequência segue:
+<em>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &mldr;</em>.
+Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n &lt; C$?</p>
+<p>A solução simples é fazer um <em>script</em> conforme</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>C = 100
+F_n2 = 0
+F_n1 = 1
+soma = 0
+while True:
+    F_n = F_n2 + F_n1
+    if F_n &gt;= C:
+        break
+    elif F_n % 2 == 0:
+        soma += F_n
+    F_n2 = F_n1
+    F_n1 = F_n
+print(soma)
+</code></pre></div><p>Mas é possível fazer melhor?
+Sim, e isso requer pensar em como um número na sequência Fibonacci é calculado.</p>
+<p>Inicialmente é necessário notar que um número par aparece a cada três posições:</p>
+<table>
+<thead>
+<tr>
+<th>$F_0$</th>
+<th>$F_1$</th>
+<th>$F_2$</th>
+<th>$F_3$</th>
+<th>$F_4$</th>
+<th>$F_5$</th>
+<th>$F_6$</th>
+<th>$F_7$</th>
+<th>$F_8$</th>
+<th>$F_9$</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>0</strong></td>
+<td>1</td>
+<td>1</td>
+<td><strong>2</strong></td>
+<td>3</td>
+<td>5</td>
+<td><strong>8</strong></td>
+<td>13</td>
+<td>21</td>
+<td><strong>34</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Como os intervalos são regulares, a próxima questão é saber se as diferenças também são regulares.
+Portanto, existe alguma regularidade entre $F_{n+3} - F_n$?</p>
+<blockquote>
+<p><em>Reescreve a diferença (substitui $F_n$ e $F_{n+3}$ pelas definições)</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = (F_{n+1} + F_{n+2}) - (F_{n-1} + F_{n-2})$</p>
+<blockquote>
+<p><em>Reescreve a diferença (substitui $F_{n+2}$ e $F_{n+1}$ pelas definições)</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = ((F_{n} + F_{n-1}) + (F_{n} + F_{n+1})) - (F_{n-1} + F_{n-2})$</p>
+<blockquote>
+<p><em>Reescreve a diferença (substitui $F_{n+1}$ pela definição)</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = ((F_{n} + F_{n-1}) + (F_{n} + (F_{n} + F_{n-1}))) - (F_{n-1} + F_{n-2})$</p>
+<blockquote>
+<p><em>Organiza</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = F_{n} + F_{n} + F_{n} + F_{n-1} + F_{n-1} - F_{n-1} - F_{n-2}$</p>
+<blockquote>
+<p><em>Cancela $F_{n-1} - F_{n-1}$ e junta $F_{n} + F_{n} + F_{n}$</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = 3F_{n} + F_{n-1} - F_{n-2}$</p>
+<blockquote>
+<p><em>Reescreve $F_{n-1}$</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = 3F_{n} + F_{n-3} + F_{n-2} - F_{n-2}$</p>
+<blockquote>
+<p><em>Cancela $F_{n-2} - F_{n-2}$</em></p>
+</blockquote>
+<p>$F_{n+3} - F_n = 3F_{n} + F_{n-3}$</p>
+<blockquote>
+<p><em>Resolve $F_{n+3}$</em></p>
+</blockquote>
+<p>$F_{n+3} = 3F_{n} + F_{n-3} + F_n$</p>
+<p>$F_{n+3} = 4F_{n} + F_{n-3}$</p>
+<p>Portanto, o próximo número par da sequência Fibonacci ($F_{n+3}$) é dado por
+$F_{n+3} = 4F_{n} + F_{n-3}$, sendo $F_n$ o número par atual e $F_{n-3}$ o número par anterior.</p>
+<p>Um script para resolver</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>C = 100
+F_n6 = 0
+F_n3 = 2
+soma = F_n3 + F_n6
+while True:
+    F_n = 4 * F_n3 + F_n6
+    if F_n &gt;= C:
+        break
+    soma += F_n
+    F_n6 = F_n3
+    F_n3 = F_n
+print(soma)
+</code></pre></div><p>Pronto, dessa forma é possível calcular a soma de números Fibonacci pares
+evitando calcular os números ímpares e o módulo/resto (<code>%</code>) da divisão.</p>
+</div>
+<footer>
+</footer>
+</article>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1},{left:'\\(',right:'\\)',display:!1},{left:'\\[',right:'\\]',display:!0}]})"></script>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2016 -
+2021
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
+</body>
+</html>

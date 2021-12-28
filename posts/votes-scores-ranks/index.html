@@ -1,0 +1,300 @@
+<!doctype html><html lang=pt-br>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="pt-br">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Júlio César Batista">
+<meta name=description content="Votes, scores e ranks são, normalmente, utilizados em conjunto. Por exemplo, scores são funções utilizadas para reduzir dados multi-dimensionais para uma única dimensão. Com base nesse score, é possível ordenar os dados através de um rank. Assim, é possível acessar o n-ésimo elemento a partir de um rank. Votes, é um dos exemplos que pode ser reduzido a partir de uma função score.
+Um exemplo comum é o ranking de produtos em uma página baseado na avaliação dos usuários.">
+<meta name=keywords content="blog,software,developer">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Votes, scores e ranks">
+<meta name=twitter:description content="Votes, scores e ranks são, normalmente, utilizados em conjunto. Por exemplo, scores são funções utilizadas para reduzir dados multi-dimensionais para uma única dimensão. Com base nesse score, é possível ordenar os dados através de um rank. Assim, é possível acessar o n-ésimo elemento a partir de um rank. Votes, é um dos exemplos que pode ser reduzido a partir de uma função score.
+Um exemplo comum é o ranking de produtos em uma página baseado na avaliação dos usuários.">
+<meta property="og:title" content="Votes, scores e ranks">
+<meta property="og:description" content="Votes, scores e ranks são, normalmente, utilizados em conjunto. Por exemplo, scores são funções utilizadas para reduzir dados multi-dimensionais para uma única dimensão. Com base nesse score, é possível ordenar os dados através de um rank. Assim, é possível acessar o n-ésimo elemento a partir de um rank. Votes, é um dos exemplos que pode ser reduzido a partir de uma função score.
+Um exemplo comum é o ranking de produtos em uma página baseado na avaliação dos usuários.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://juliocesarbatista.com/posts/votes-scores-ranks/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-05-10T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-05-10T00:00:00+00:00">
+<title>
+Votes, scores e ranks · Júlio César Batista
+</title>
+<link rel=canonical href=https://juliocesarbatista.com/posts/votes-scores-ranks/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.91.2">
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+Júlio César Batista
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>Sobre</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/>Categorias</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://juliocesarbatista.com/posts/votes-scores-ranks/>
+Votes, scores e ranks
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-05-10T00:00:00Z>
+2019-05-10
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+4 minutos de leitura
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/an%C3%A1lise-de-dados/>Análise de dados</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/ordena%C3%A7%C3%A3o-topol%C3%B3gica/>Ordenação topológica</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/elo-ranking/>Elo Ranking</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/arrows-impossibility-theorem/>Arrow's Impossibility Theorem</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/bordas-method/>Borda's method</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/icc31/>ICC(3,1)</a>
+</span></div>
+</div>
+</header>
+<div>
+<p><em>Votes</em>, <em>scores</em> e <em>ranks</em> são, normalmente, utilizados em conjunto.
+Por exemplo, <em>scores</em> são funções utilizadas para reduzir dados multi-dimensionais para uma única dimensão.
+Com base nesse <em>score</em>, é possível ordenar os dados através de um <em>rank</em>.
+Assim, é possível acessar o <em>n</em>-ésimo elemento a partir de um <em>rank</em>.
+<em>Votes</em>, é um dos exemplos que pode ser reduzido a partir de uma função <em>score</em>.</p>
+<p>Um exemplo comum é o <em>ranking</em> de produtos em uma página baseado na avaliação dos usuários.
+Nesse caso, a avaliação dos usuários são os <em>votes</em>.
+A partir destes, um <em>score</em> (normalmente a média,
+<a href=http://www.evanmiller.org/how-not-to-sort-by-average-rating.html>que não é uma boa opção</a>)
+é calculado.
+Finalmente, os produtos são apresentados em um <em>ranking</em> com base no <em>score</em>.</p>
+<p>Outros exemplos incluem o <em>ranking</em> de resultados de busca.
+Nesse cenário, mais detalhes podem ser levados em consideração e a função <em>score</em> pode ser probabilística.
+Por exemplo:
+$$
+P(X) = P_r(X) \times P_c(X) \times P_l(X)
+$$</p>
+<p><strong>Em português</strong>: O <em>score</em> de uma página $X$ é calculado como $P(X)$.
+Sendo que esse <em>score</em> é a probabilidade conjunta do <em>PageRank</em> ($P_r(X)$),
+da relevância do conteúdo para o usuário ($P_c(X)$) e do idioma em que o texto
+está escrito em relação ao idioma do usuário ($P_l(X)$).</p>
+<p>Em alguns casos não a distinção entre <em>votes</em>, <em>scores</em> e <em>ranks</em> não é muito clara.
+Por exemplo, o <a href=https://en.wikipedia.org/wiki/Borda_count>método de Borda</a> é um sistema
+de votos que organiza o resultado pelo item com melhor <em>score</em>.
+Assim, existe o <em>vote</em> (o que cada usuário atribuiu para um item),
+o <em>score</em> (calculado a partir dos <em>votes</em> dos usuários),
+e um <em>ranking</em> final a partir dos <em>scores</em>.</p>
+<p><strong>Exemplo do método de Borda.</strong> <a href="https://docs.google.com/presentation/d/1jfpqVZpZDjNT05fUhoa55VZpXN4aujSQO5PZKk0Fd2Q/edit#slide=id.g136fe2f640_0_40">Fonte</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Item / Usuário</th>
+<th>Usuário A</th>
+<th>Usuário B</th>
+<th>Usuário C</th>
+<th>Usuário D</th>
+<th>Total / Ordem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filme A</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Filme B</td>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Filme C</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Filme D</td>
+<td>4</td>
+<td>4</td>
+<td>5</td>
+<td>3</td>
+<td>16</td>
+</tr>
+<tr>
+<td>Filme E</td>
+<td>5</td>
+<td>5</td>
+<td>4</td>
+<td>5</td>
+<td>19</td>
+</tr>
+</tbody>
+</table>
+<p>No exemplo acima, cada usuário votou em um filme com uma nota de 1 à 5
+(que é a ordem de preferência).
+Portanto, se existirem <em>N</em> filmes, o usuário teria que votar entre 1 e <em>N</em>.
+Outro detalhe é que o resultado final para um determinado filme é a simples soma
+dos votos de cada usuário.</p>
+<p>No método de Borda só é necessário tomar cuidado porque os votos em posições centrais
+tendem a ter mais incerteza que os primeiros e últimos.
+Ou seja, existe maior certeza no que o usuário gosta e não gosta, mas os itens
+intermediários tem mais incerteza.</p>
+<p>Ao trabalhar com <em>ranks</em> uma informação que pode ser importante é a correlação entre os usuários.
+Por exemplo, um item que é sempre muito bem avaliado é melhor que um item com avaliações boas e ruins.
+Para isso, uma estatística de correlação como o
+<a href=https://en.wikipedia.org/wiki/Intraclass_correlation><em>ICC(3, 1)</em></a>
+pode ser melhor que a correlação de Pearson.</p>
+<h2 id=outras-ideias-para-_ranks_>
+Outras ideias para <em>ranks</em>
+<a class=heading-link href=#outras-ideias-para-_ranks_>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Se o conjunto de dados a ser ordenado é composto por comparações binárias (A > B, B > C, A > C),
+é possível utilizar a
+<a href=https://en.wikipedia.org/wiki/Topological_sorting>ordenação topológica de um grafo</a>.
+Outra opção é o método <a href=https://en.wikipedia.org/wiki/Elo_rating_system><em>Elo Ranking</em></a>,
+que parte de uma expectativa entre os elementos
+envolvidos na comparação e ajusta o resultado com base no resultado.
+Exemplo (algo comum em jogos):</p>
+<ul>
+<li><em>A</em> ganha de <em>B</em> e <em>B</em> ganha de <em>C</em></li>
+<li>Por transitividade, <em>A</em> ganha de <em>C</em> (tem o <em>ranking</em> melhor)</li>
+<li>Porém, se o resultado entre <em>A</em> e <em>B</em> foi inesperado (<em>B</em> deveria ganhar pela série histórica)</li>
+<li>A condição <em>A</em> ganha de <em>C</em> não é uma total certeza</li>
+<li>Portanto, é necessário que levar em consideração um &ldquo;fator de sorte&rdquo;</li>
+</ul>
+<p>Outro detalhe importante sobre <em>ranks</em> é que
+<a href=http://www.evanmiller.org/how-not-to-sort-by-average-rating.html>a ordem não deveria ser calculada pela média</a></p>
+<h2 id=propriedades-desejadas-em-funções-de-_score_>
+Propriedades desejadas em funções de <em>score</em>
+<a class=heading-link href=#propriedades-desejadas-em-fun%c3%a7%c3%b5es-de-_score_>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<ul>
+<li>Fáceis de entender e calcular</li>
+<li>Interpretação monotônica das variáveis (variáveis aumentam de valor, o <em>score</em> também aumenta)</li>
+<li>Funciona com <em>outliers</em> (ao menos de forma satisfatória)</li>
+<li>As diferenças devem ser normalizadas (<a href=https://en.wikipedia.org/wiki/Standard_score><em>Z-scores</em></a> são um bom exemplo)</li>
+</ul>
+<h2 id=cuidados-com-sistemas-de-votos>
+Cuidados com sistemas de votos
+<a class=heading-link href=#cuidados-com-sistemas-de-votos>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Existem algumas propriedades desejadas em sistemas de votos
+que tornam os <em>ranks</em> difíceis.
+Algumas são:</p>
+<ul>
+<li>Se todos os votos preferem <em>A</em> sobre <em>B</em>, então <em>A</em> deve ter um <em>rank</em> melhor que <em>B</em></li>
+<li>Transitividade: Se <em>A</em> > <em>B</em> e <em>B</em> > <em>C</em>, então <em>A</em> > <em>C</em></li>
+<li><a href="https://docs.google.com/presentation/d/1jfpqVZpZDjNT05fUhoa55VZpXN4aujSQO5PZKk0Fd2Q/edit#slide=id.g173bac2a5c_0_99">Outras</a></li>
+</ul>
+<p>Entretanto, todas as propriedades não podem ser atendidas ao mesmo tempo.
+Essa é a conclusão do <a href=https://en.wikipedia.org/wiki/Arrow%27s_impossibility_theorem>Teorema da impossibilidade de Arrow</a> (<a href="https://www.youtube.com/watch?v=AhVR7gFMKNg">um vídeo explicando</a>).
+Portanto, é necessário escolher as preferências desejadas ao montar um sistema de <em>votes</em> e <em>ranks</em>
+para atender as demandas necessárias.
+Com base nessas escolhas, também será possível escolher o método de <em>rank</em>.
+Por exemplo, a transitividade é uma &ldquo;propriedade violada&rdquo; pelo <em>Elo Ranking</em>.</p>
+<h2 id=_scores_-ou-_ranks_>
+<em>Scores</em> ou <em>Ranks</em>
+<a class=heading-link href=#_scores_-ou-_ranks_>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>A diferença entre apresentar um <em>score</em> ou um <em>rank</em> vai do que se deseja apresentar.
+Uma pequena variação no <em>score</em> pode ser uma mudança significativa no <em>rank</em>.
+Se o resultado isolado faz sentido, apenas um <em>score</em> é suficiente.
+Caso contrário, incluir o <em>rank</em> ajuda na aprensetação.</p>
+</div>
+<footer>
+</footer>
+</article>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1},{left:'\\(',right:'\\)',display:!1},{left:'\\[',right:'\\]',display:!0}]})"></script>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2016 -
+2021
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
+</body>
+</html>

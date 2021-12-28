@@ -1,0 +1,539 @@
+<!doctype html><html lang=pt-br>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="pt-br">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Júlio César Batista">
+<meta name=description content="Uma das vantagens do índice invertido é a possibilidade de otimizar os algoritmos utilizados nas consultas. Esses algoritmos já são implementados por set no python, mas não garantem a sequência dos ids dos documentos e também não permitem algumas otimizações. Portanto, é necessário passar por esses algoritmos para ver as extensões e como elas podem ajudar.
+intersecção de conjuntos    Uma consulta casa AND blumenau precisa efetuar a intersecção entre os documentos de casa e os documentos de blumenau.">
+<meta name=keywords content="blog,software,developer">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Algoritmos para consultar em índices">
+<meta name=twitter:description content="Uma das vantagens do índice invertido é a possibilidade de otimizar os algoritmos utilizados nas consultas. Esses algoritmos já são implementados por set no python, mas não garantem a sequência dos ids dos documentos e também não permitem algumas otimizações. Portanto, é necessário passar por esses algoritmos para ver as extensões e como elas podem ajudar.
+intersecção de conjuntos    Uma consulta casa AND blumenau precisa efetuar a intersecção entre os documentos de casa e os documentos de blumenau.">
+<meta property="og:title" content="Algoritmos para consultar em índices">
+<meta property="og:description" content="Uma das vantagens do índice invertido é a possibilidade de otimizar os algoritmos utilizados nas consultas. Esses algoritmos já são implementados por set no python, mas não garantem a sequência dos ids dos documentos e também não permitem algumas otimizações. Portanto, é necessário passar por esses algoritmos para ver as extensões e como elas podem ajudar.
+intersecção de conjuntos    Uma consulta casa AND blumenau precisa efetuar a intersecção entre os documentos de casa e os documentos de blumenau.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://juliocesarbatista.com/posts/algoritmos-indices/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-12-31T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-12-31T00:00:00+00:00">
+<title>
+Algoritmos para consultar em índices · Júlio César Batista
+</title>
+<link rel=canonical href=https://juliocesarbatista.com/posts/algoritmos-indices/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.91.2">
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+Júlio César Batista
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>Sobre</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/>Categorias</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://juliocesarbatista.com/posts/algoritmos-indices/>
+Algoritmos para consultar em índices
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-12-31T00:00:00Z>
+2019-12-31
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+9 minutos de leitura
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/>Recuperação de informação</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/intersect/>intersect</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/union/>union</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/set/>set</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/python/>python</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/skip-list/>skip list</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/algoritmos/>algoritmos</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/estruturas-de-dados/>estruturas de dados</a>
+</span></div>
+</div>
+</header>
+<div>
+<p>Uma das vantagens do <a href=https://juliocesarbatista.com/post/indice-invertido/>índice invertido</a> é a possibilidade de otimizar os algoritmos utilizados nas consultas.
+Esses algoritmos já são implementados por <code>set</code> no python, mas não garantem a sequência dos <code>ids</code> dos documentos e também não permitem algumas otimizações.
+Portanto, é necessário passar por esses algoritmos para ver as extensões e como elas podem ajudar.</p>
+<h2 id=intersecção-de-conjuntos>
+intersecção de conjuntos
+<a class=heading-link href=#intersec%c3%a7%c3%a3o-de-conjuntos>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Uma consulta <code>casa AND blumenau</code> precisa efetuar a intersecção entre os documentos de <code>casa</code> e os documentos de <code>blumenau</code>.
+O algoritmo de intersecção é uma solução para esse problema</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># Introduction to Information Retrieval, p. 11
+
+def intersect(p1, p2):
+    answer = []
+    p1_i = 0
+    p2_i = 0
+    while len(p1) &gt; p1_i and len(p2) &gt; p2_i:
+        if p1[p1_i] == p2[p2_i]:
+            answer.append(p1[p1_i])
+            p1_i += 1
+            p2_i += 1
+        elif p1[p1_i] &lt; p2[p2_i]:
+            p1_i += 1
+        else:
+            p2_i += 1
+    return answer
+
+
+assert intersect([1, 2, 3], [2, 4]) == [2]
+assert intersect([5, 6], [5, 6]) == [5, 6]
+assert intersect([1], [2, 4]) == []
+assert intersect([7], [2, 4]) == []
+assert intersect([], []) == []
+</code></pre></div><p>O algoritmo é um tanto quanto simples:</p>
+<ul>
+<li>Recebe como entrada duas listas com ids de documentos</li>
+<li>Se os ids são iguais <code>p1[p1_i] == p2[p2_i]</code>
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move os índices das duas listas</li>
+</ul>
+</li>
+<li>Se o id de <code>p1</code> é menor que <code>p2</code>
+<ul>
+<li>Move o índice de <code>p1</code></li>
+<li>Nesse caso <code>p1[p1_i]</code> já foi adicionado, ou não existe em <code>p2</code></li>
+</ul>
+</li>
+<li>Senão
+<ul>
+<li>Move o índice de <code>p2</code></li>
+<li>Nesse caso <code>p2[p2_i]</code> já foi adicionado, ou não existe em <code>p1</code></li>
+</ul>
+</li>
+<li>Retorna a lista com os documentos que ocorrem em <code>p1</code> e <code>p2</code>
+<ul>
+<li>É possível notar que a lista também está ordenada</li>
+</ul>
+</li>
+</ul>
+<h2 id=união-de-conjuntos>
+união de conjuntos
+<a class=heading-link href=#uni%c3%a3o-de-conjuntos>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Seguindo a mesma ideia é possível, efetuar as operações <code>union</code> (união de conjuntos) e <code>diff</code> (diferença de conjuntos).</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>def union(p1, p2):
+    answer = []
+    p1_i = 0
+    p2_i = 0
+    while len(p1) &gt; p1_i or len(p2) &gt; p2_i:
+        if p1_i == len(p1):
+            answer.append(p2[p2_i])
+            p2_i += 1
+        elif len(p2) == p2_i:
+            answer.append(p1[p1_i])
+            p1_i += 1
+        elif p1[p1_i] == p2[p2_i]:
+            answer.append(p1[p1_i])
+            p1_i += 1
+            p2_i += 1
+        elif p1[p1_i] &lt; p2[p2_i]:
+            answer.append(p1[p1_i])
+            p1_i += 1
+        else:
+            answer.append(p2[p2_i])
+            p2_i += 1
+    return answer
+
+
+assert union([1, 2, 3], [2, 4]) == [1, 2, 3, 4]
+assert union([5, 6], [5, 6]) == [5, 6]
+assert union([1], [2, 4]) == [1, 2, 4]
+assert union([7], [2, 4]) == [2, 4, 7]
+assert union([], []) == []
+</code></pre></div><p>Note que esse algoritmo pode não ser a melhor implementação, visto que não tem referência no livro.
+Mesmo assim, a ideia é:</p>
+<ul>
+<li>Recebe como entrada duas listas com ids de documentos</li>
+<li>Se <code>p1</code> terminou, mas ainda tem documentos em <code>p2</code>
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move o índice de <code>p2</code></li>
+</ul>
+</li>
+<li>Se <code>p2</code> terminou, mas ainda tem documentos em <code>p1</code>
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move o índice de <code>p1</code></li>
+</ul>
+</li>
+<li>Se os documentos são iguais
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move os índices de <code>p1</code> e <code>p2</code></li>
+</ul>
+</li>
+<li>Se o id de <code>p1</code> é menor que <code>p2</code>
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move o índice de <code>p1</code></li>
+<li>Nesse caso <code>p1[p1_i]</code> já foi adicionado, ou não existe em <code>p2</code></li>
+</ul>
+</li>
+<li>Senão
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move o índice de <code>p2</code></li>
+<li>Nesse caso <code>p2[p2_i]</code> já foi adicionado, ou não existe em <code>p1</code></li>
+</ul>
+</li>
+<li>Retorna a lista com os documentos que ocorrem em <code>p1</code> e <code>p2</code>
+<ul>
+<li>É possível notar que a lista também está ordenada</li>
+</ul>
+</li>
+</ul>
+<h2 id=diferença-de-conjuntos>
+diferença de conjuntos
+<a class=heading-link href=#diferen%c3%a7a-de-conjuntos>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>def diff(p1, p2):
+    answer = []
+    p1_i = 0
+    p2_i = 0
+    while len(p1) &gt; p1_i:
+        if len(p2) == p2_i or p1[p1_i] &lt; p2[p2_i]:
+            answer.append(p1[p1_i])
+            p1_i += 1
+        elif p1[p1_i] == p2[p2_i]:
+            p1_i += 1
+            p2_i += 1
+        else:
+            p2_i += 1
+    return answer
+
+
+assert diff([1, 2, 3], [2, 4]) == [1, 3]
+assert diff([5, 6], [5, 6]) == []
+assert diff([1], [2, 4]) == [1]
+assert diff([7], [2, 4]) == [7]
+assert diff([], []) == []
+</code></pre></div><p>Mesma ideia que <code>union</code>, pode não ser a melhor implementação.</p>
+<ul>
+<li>Recebe como entrada duas listas com ids de documentos</li>
+<li>Se <code>p2</code> terminou ou o id de <code>p1</code> é menor que <code>p2</code>
+<ul>
+<li>Adiciona no resultado</li>
+<li>Move o índice de <code>p1</code></li>
+</ul>
+</li>
+<li>Se os documentos são iguais
+<ul>
+<li>Move os índices de <code>p1</code> e <code>p2</code></li>
+</ul>
+</li>
+<li>Senão
+<ul>
+<li>Move o índice de <code>p2</code></li>
+<li>Nesse caso <code>p2[p2_i]</code> não existe em <code>p1</code></li>
+</ul>
+</li>
+<li>Retorna a lista com os documentos que ocorrem em <code>p1</code> e <code>p2</code>
+<ul>
+<li>É possível notar que a lista também está ordenada</li>
+</ul>
+</li>
+</ul>
+<p>A partir dessas implementações é possível reescrever consultas com <code>AND</code>, <code>OR</code> <code>NOT</code>.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>print(&#39;voters AND jury&#39;)
+voters = inverted_index[&#39;voters&#39;]
+jury = inverted_index[&#39;jury&#39;]
+doc_ids = intersect(voters, jury)
+for doc_id in doc_ids:
+    print(&#39;&gt; &#39;, &#39; &#39;.join(DOCUMENTOS[doc_id]))
+    
+print(&#39;voters OR jury&#39;)
+voters = inverted_index[&#39;voters&#39;]
+jury = inverted_index[&#39;jury&#39;]
+doc_ids = union(voters, jury)
+for doc_id in doc_ids:
+    print(&#39;&gt; &#39;, &#39; &#39;.join(DOCUMENTOS[doc_id]))
+
+print(&#39;voters AND NOT city&#39;)
+voters = inverted_index[&#39;voters&#39;]
+city = inverted_index[&#39;city&#39;]
+not_city = diff(inverted_index[&#39;__alldocs__&#39;], city)
+doc_ids = intersect(voters, not_city)
+for doc_id in doc_ids:
+    print(&#39;&gt; &#39;, &#39; &#39;.join(DOCUMENTOS[doc_id]))
+</code></pre></div><h2 id=otimização-de-consultas-and>
+otimização de consultas <code>AND</code>
+<a class=heading-link href=#otimiza%c3%a7%c3%a3o-de-consultas-and>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Entretanto, até o momento esses algoritmos são simples implementações sem nenhum tipo de otimização.
+A primeira otimização, também poderia ser feita usando <code>set</code>, é que, em consultas <code>AND</code>, se executar primeiro as listas com menos documentos a execução fica mais rápida.
+O motivo é que, no final, são feitas menos comparações, porque listas maiores ficaram para o fim.
+Assim, é possível executar uma combinação de consultas <code>AND</code> ordenando pelo quantidade de documentos.
+Note que isso só é válido para <code>AND</code> (intersecção) e porque <code>AND</code> é comutativo, portanto, <code>casa AND blumenau</code> é o mesmo que <code>blumenau AND casa</code>.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># Introduction to Information Retrieval, p. 12
+
+def conjunctive_intersect(*p):
+    postings = sorted(p, key=lambda x: len(x))
+    result = postings[0]
+    postings = postings[1:]
+    while postings and result:
+        result = intersect(result, postings[0])
+        postings = postings[1:]
+    return result
+
+
+assert conjunctive_intersect([1, 2, 3], [2, 4]) == [2]
+assert conjunctive_intersect([5, 6], [5, 6]) == [5, 6]
+assert conjunctive_intersect([1], [2, 4]) == []
+assert conjunctive_intersect([7], [2, 4]) == []
+assert conjunctive_intersect([], []) == []
+
+assert conjunctive_intersect([1, 2, 3], [2, 4], [1, 2, 4]) == [2]
+assert conjunctive_intersect([5, 6], [5, 6], [5, 6]) == [5, 6]
+assert conjunctive_intersect([1], [2, 4], [1]) == []
+assert conjunctive_intersect([7], [2, 4], [5], [1]) == []
+assert conjunctive_intersect([], [], [1]) == []
+assert conjunctive_intersect([], [], [], []) == []
+</code></pre></div><p>Essa implementação usa <code>intersect</code> definido anteriormente, mas antes faz uma ordenação pela quantidade de documentos.
+Um detalhe é que consultas <code>casa AND (blumenau OR gaspar) AND venda</code> também podem ser otimizadas.
+O motivo é que é possível fazer uma estimativa do tamanho de <code>(blumenau OR gaspar)</code> apenas somando a quantidade de documentos em cada lista.
+Assim, qualquer consulta com <code>AND</code> pode ser otimizada, independente de ser composta ou não.</p>
+<h2 id=consultas-com-_skip-list_>
+consultas com <em>skip list</em>
+<a class=heading-link href=#consultas-com-_skip-list_>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<p>Ainda assim, nenhuma otimização que justifique a troca de <code>set</code> pelas implementações de <code>intersect</code>, <code>union</code> e <code>diff</code>.
+Outra otimização que pode ser feita é o uso de uma <em>skip list</em>.
+Uma <em>skip list</em> é uma estrutura de dados, estilo uma lista encadeada, mas alguns nós possuem um ponteiro para elementos mais a frente na lista, além do próximo elemento.
+Dessa forma, ao percorrer os elementos da lista é possível verificar elementos mais a frente à fim de saber se é possível pular comparações ou se é necessário passar elemento por elemento.</p>
+<p><img src=https://nlp.stanford.edu/IR-book/html/htmledition/img106.png alt>
+Exemplo de uma <em>skip list</em>. Fonte: <a href=https://nlp.stanford.edu/IR-book/html/htmledition/faster-postings-list-intersection-via-skip-pointers-1.html>Introduction to Information Retrieval</a></p>
+<p>No exemplo acima, o termo <code>Brutus</code> possui os <em>skip pointers</em>:</p>
+<ul>
+<li><code>16</code> na posição <code>0</code></li>
+<li><code>28</code> na posição <code>3</code></li>
+<li><code>72</code> na posição <code>6</code></li>
+<li>Assim por diante</li>
+</ul>
+<p>A detalhe é onde colocar os <em>skip pointers</em>.
+Uma sugestão é colocar a cada $\sqrt{N}$ elementos em uma lista com $N$ elementos.
+Agora é necessário implementar uma versão de <em>skip list</em> para melhorar o tempo de busca.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>from math import sqrt
+
+
+class SkipList(list):
+    
+    def skip(self, i):
+        p = len(self)
+        skip_size = int(sqrt(p))
+        if skip_size and i &lt; p - 1 and i % skip_size == 0:
+            return min(i + skip_size, p - 1)
+        return None
+
+
+sl = SkipList()
+assert sl.skip(0) is None
+
+sl = SkipList([1])
+assert sl.skip(0) is None
+
+sl = SkipList([1, 2])
+assert sl.skip(0) == 1
+assert sl.skip(1) is None
+
+sl = SkipList([1, 2, 3])
+assert sl.skip(0) == 1
+assert sl.skip(1) == 2
+assert sl.skip(2) is None
+
+sl = SkipList([1, 2, 3, 4])
+assert sl.skip(0) == 2
+assert sl.skip(1) is None
+assert sl.skip(2) == 3
+assert sl.skip(3) is None
+
+sl = SkipList([1, 2, 3, 4, 5, 6, 7, 8, 9])
+assert sl.skip(0) == 3
+assert sl.skip(1) is None
+assert sl.skip(2) is None
+assert sl.skip(3) == 6
+assert sl.skip(4) is None
+assert sl.skip(5) is None
+assert sl.skip(6) == 8
+assert sl.skip(7) is None
+assert sl.skip(8) is None
+
+sl = SkipList([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+assert sl.skip(0) == 3
+assert sl.skip(1) is None
+assert sl.skip(2) is None
+assert sl.skip(3) == 6
+assert sl.skip(4) is None
+assert sl.skip(5) is None
+assert sl.skip(6) == 9
+assert sl.skip(7) is None
+assert sl.skip(8) is None
+assert sl.skip(9) is None
+</code></pre></div><p>Note que a implementação estende <code>list</code> do <code>python</code> para manter o mesmo comportamento de lista.
+O detalhe é a adição do método <code>skip</code> que calcula o próximo índice a ser buscado, caso deseje tentar pular comparações.
+Obviamente não é a melhor implementação de uma <em>skip list</em>, mas é o suficiente para testar a intersecção com essa estrutura.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># Introduction to Information Retrieval, p. 37
+
+def intersect_with_skips(p1, p2):
+    p1 = SkipList(p1)
+    p2 = SkipList(p2)
+    answer = []
+    p1_i = 0
+    p2_i = 0
+    while len(p1) &gt; p1_i and len(p2) &gt; p2_i:
+        if p1[p1_i] == p2[p2_i]:
+            answer.append(p1[p1_i])
+            p1_i += 1
+            p2_i += 1
+        elif p1[p1_i] &lt; p2[p2_i]:
+            if p1.skip(p1_i) and p1[p1.skip(p1_i)] &lt;= p2[p2_i]:
+                while p1.skip(p1_i) and p1[p1.skip(p1_i)] &lt;= p2[p2_i]:
+                    p1_i = p1.skip(p1_i)
+            else:
+                p1_i += 1
+        else:
+            if p2.skip(p2_i) and p2[p2.skip(p2_i)] &lt;= p1[p1_i]:
+                while p2.skip(p2_i) and p2[p2.skip(p2_i)] &lt;= p1[p1_i]:
+                    p2_i = p2.skip(p2_i)
+            else:
+                p2_i += 1
+
+    return answer
+
+
+assert intersect_with_skips([1, 2, 3], [2, 4]) == [2]
+assert intersect_with_skips([5, 6], [5, 6]) == [5, 6]
+assert intersect_with_skips([1], [2, 4]) == []
+assert intersect_with_skips([7], [2, 4]) == []
+assert intersect_with_skips([], []) == []
+
+assert intersect_with_skips(
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [2, 4]
+) == [2, 4]
+assert intersect_with_skips(
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    [8, 9, 10, 11, 12, 13]
+) == [8, 9, 10]
+</code></pre></div><p>Note que o algoritmo segue a mesma ideia de <code>intersect</code>, mas faz o uso da <em>skip list</em> quando <code>p1[p1_i] &lt; p2[p2_i]</code> ou <code>p2[p2_i] &lt; p1[p1_i]</code>.
+Nesse caso, a busca tenta evitar comparações pegando o id em <code>p1.skip(p1_i)</code> e comparando com o id atual de <code>p2</code>.
+Se for menor, é possível pular até <code>p1.skip(p1_i)</code> e fazer a mesma verificação.
+Se não for, continua a execução normal da intersecção.</p>
+<p>Finalmente, é bem provável que seja possível trocar a <em>skip list</em> por algo similar à busca binária, visto que os ids estão sempre ordenados.
+Talvez seja uma alternativa para não precisar calcular/manter os <em>skip pointers</em>.</p>
+<h2 id=referências>
+Referências:
+<a class=heading-link href=#refer%c3%aancias>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<ul>
+<li><a href=https://www.systems.ethz.ch/sites/default/files/file/ir2018spring/02%20Information%20Retrieval%20-%20Boolean%20Retrieval.pdf>Boolean Retrieval</a></li>
+<li><a href=https://nlp.stanford.edu/IR-book/html/htmledition/processing-boolean-queries-1.html>Processing Boolean queries</a></li>
+<li><a href=https://nlp.stanford.edu/IR-book/html/htmledition/faster-postings-list-intersection-via-skip-pointers-1.html>Faster postings list intersection via skip pointers</a></li>
+</ul>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2016 -
+2021
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
+</body>
+</html>

@@ -1,0 +1,389 @@
+<!doctype html><html lang=pt-br>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="pt-br">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Júlio César Batista">
+<meta name=description content="Para obter as ocorrências de uma query booleana, por exemplo, casa AND blumenau seria necessário passar em todos os documentos procurando por casa e depois procurar novamente por blumenau. De certa forma, essa abordagem não é completamente ruim. Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.
+Agora considere uma nova consulta, por exemplo, casa AND gaspar, seria necessário repassar em todos os documentos novamente.">
+<meta name=keywords content="blog,software,developer">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Matriz de incidência termo-documento">
+<meta name=twitter:description content="Para obter as ocorrências de uma query booleana, por exemplo, casa AND blumenau seria necessário passar em todos os documentos procurando por casa e depois procurar novamente por blumenau. De certa forma, essa abordagem não é completamente ruim. Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.
+Agora considere uma nova consulta, por exemplo, casa AND gaspar, seria necessário repassar em todos os documentos novamente.">
+<meta property="og:title" content="Matriz de incidência termo-documento">
+<meta property="og:description" content="Para obter as ocorrências de uma query booleana, por exemplo, casa AND blumenau seria necessário passar em todos os documentos procurando por casa e depois procurar novamente por blumenau. De certa forma, essa abordagem não é completamente ruim. Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.
+Agora considere uma nova consulta, por exemplo, casa AND gaspar, seria necessário repassar em todos os documentos novamente.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://juliocesarbatista.com/posts/matriz-incidencia-termo-documento/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2019-12-27T00:00:00+00:00">
+<meta property="article:modified_time" content="2019-12-27T00:00:00+00:00">
+<title>
+Matriz de incidência termo-documento · Júlio César Batista
+</title>
+<link rel=canonical href=https://juliocesarbatista.com/posts/matriz-incidencia-termo-documento/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.91.2">
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+Júlio César Batista
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>Sobre</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/>Categorias</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://juliocesarbatista.com/posts/matriz-incidencia-termo-documento/>
+Matriz de incidência termo-documento
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-12-27T00:00:00Z>
+2019-12-27
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+6 minutos de leitura
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/>Recuperação de informação</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/python/>python</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/matriz-incid%C3%AAncia/>matriz incidência</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/scipy-sparse-matrix/>scipy sparse matrix</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/boolean-query/>boolean query</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/estruturas-de-dados/>estruturas de dados</a>
+</span></div>
+</div>
+</header>
+<div>
+<p>Para obter as ocorrências de uma <em>query booleana</em>, por exemplo, <code>casa AND blumenau</code> seria necessário passar em todos os documentos procurando por <code>casa</code> e depois procurar novamente por <code>blumenau</code>.
+De certa forma, essa abordagem não é completamente ruim.
+Mas existem algumas abordagens que podem melhorar o tempo da consulta e consumo de memória.</p>
+<p>Agora considere uma nova consulta, por exemplo, <code>casa AND gaspar</code>, seria necessário repassar em todos os documentos novamente.
+Assim, existe um certo custo computacional que pode ser otimizado.
+Uma forma de evitar esse problema é criando um índice (assim como no final de um livro, onde são listadas as palavras e as páginas que elas aparecem).
+Nesse caso, a consulta pode ser simplificada procurando pelas palavras <code>casa</code> e <code>blumenau</code> e filtrar apenas os documentos onde ambas aparecem.
+Note que a otimização foi em relação à não precisar passar em todas as palavras de todos os documentos.</p>
+<p>A matriz de incidência termo-documento (<em>term-document incidence matrix</em>) é uma forma de montar esse índice de termos por documento.
+Antes de avançar para a definição da matriz:</p>
+<ul>
+<li><strong>documento</strong>: unidade mínima a ser procurada, pode ser um parágrafo, <em>tweet</em>, frase, PDF, página da web, oturos.</li>
+<li><strong>termo</strong>: normalmente uma palavra/<em>token</em>, mas existem alguns casos especiais como <em>Hong Kong</em> por exemplo que podem ser tratados de forma diferente.</li>
+</ul>
+<p>Dados os seguintes documentos como exemplo:</p>
+<ul>
+<li>Uma casa à venda em Blumenau</li>
+<li>Vendo terreno em Gaspar</li>
+<li>Alugo apartamento em Indaial</li>
+</ul>
+<p>O primeiro passo é separar em termos, para simplicar, apenas separando em espaços:</p>
+<ul>
+<li><code>Uma casa à venda em Blumenau</code> -> <code>["Uma", "casa", "à", "venda", "em", "Blumenau"]</code></li>
+<li><code>Terreno à venda em Gaspar</code> -> <code>["Terreno", "à", venda", "em", "Gaspar"]</code></li>
+<li><code>Alugo apartamento em Indaial</code> -> <code>["Alugo", "apartamento", "em", "Indaial"]</code></li>
+</ul>
+<p>Em seguida, é necessário algum tipo de processamento para limpar as palavras e deixá-las normalizadas.
+Aqui, apenas será feito apenas um <em>lower case</em> e remoção de algumas <em>stop words</em>(palavras que não tem muita importância como: <em>em</em>, <em>à</em>).</p>
+<ul>
+<li><code>["Uma", "casa", "à", "venda", "em", "Blumenau"]</code> -> <code>["casa", "venda", "blumenau"]</code></li>
+<li><code>["Terreno", "à", venda", "em", "Gaspar"]</code> -> <code>["terreno", venda", "gaspar"]</code></li>
+<li><code>["Alugo", "apartamento", "em", "Indaial"]</code> -> <code>["alugo", "apartamento", "indaial"]</code></li>
+</ul>
+<p>Agora é possível montar uma matriz de incidência de cada termo em cada documento.</p>
+<table>
+<thead>
+<tr>
+<th>termo/documento</th>
+<th style=text-align:center>Documento 1</th>
+<th style=text-align:center>Documento 2</th>
+<th style=text-align:center>Documento 3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alugo</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>1</td>
+</tr>
+<tr>
+<td>apartamento</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>1</td>
+</tr>
+<tr>
+<td>blumenau</td>
+<td style=text-align:center>1</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>0</td>
+</tr>
+<tr>
+<td>casa</td>
+<td style=text-align:center>1</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>0</td>
+</tr>
+<tr>
+<td>gaspar</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>1</td>
+<td style=text-align:center>0</td>
+</tr>
+<tr>
+<td>indaial</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>1</td>
+</tr>
+<tr>
+<td>terreno</td>
+<td style=text-align:center>0</td>
+<td style=text-align:center>1</td>
+<td style=text-align:center>0</td>
+</tr>
+<tr>
+<td>venda</td>
+<td style=text-align:center>1</td>
+<td style=text-align:center>1</td>
+<td style=text-align:center>0</td>
+</tr>
+</tbody>
+</table>
+<p>Na matrix acima, o valor da célula é <code>1</code> se determinado termo aparece em determinado documento. Caso contrário, o valor é <code>0</code>.
+Também é possível notar que essa representação considera um documento como um conjunto de termos, ignorando completamente a ordem dos termos.</p>
+<p>A partir da matriz de incidência, é possível simplificar as consultas <em>booleanas</em>.
+Por exemplo, para a consulta <code>venda AND blumenau</code>:</p>
+<ul>
+<li>Encontre a linha da matriz para <code>venda</code>: <code>[1, 1, 0]</code> ou <code>110</code> (binário)</li>
+<li>Encontre a linha da matriz para <code>blumenau</code>: <code>[1, 0, 0]</code> ou <code>100</code> (binário)</li>
+<li>Faça a operação <em>bitwise</em> <code>AND</code> entre <code>110</code> e <code>100</code>: <code>110 & 100</code></li>
+<li>O resultado é <code>100</code> ou <code>[1, 0, 0]</code>, assim apenas o <code>Documento 1</code> tem ambos os termos <code>venda</code> e <code>blumenau</code> e deve ser retornado.</li>
+</ul>
+<p>Exemplo de código com <code>python</code> e <code>numpy</code></p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>import numpy as np
+
+
+def obter_termos(documento):
+    termos = documento.split(&#39; &#39;)
+    termos = (t.lower() for t in termos)
+    return [t for t in termos if t not in STOP_WORDS]
+
+
+STOP_WORDS = {&#39;à&#39;, &#39;uma&#39;, &#39;em&#39;}
+
+
+DOCUMENTOS = np.array([
+    &#39;Uma casa à venda em Blumenau&#39;,
+    &#39;Terreno à venda em Gaspar&#39;,
+    &#39;Alugo apartamento em Indaial&#39;
+])
+
+# converte os documentos em listas de termos
+documentos = [obter_termos(d) for d in DOCUMENTOS]
+
+# lista com os termos únicos ordenados
+termos = set()
+for doc in documentos:
+    for termo in doc:
+        termos.add(termo)
+termos = sorted(termos)
+
+# matriz de incidência, por padrão 0 (False) para todos os termos em todos os documentos
+I = np.zeros(shape=(len(termos), len(documentos)), dtype=bool)
+for (j, doc) in enumerate(documentos):
+    for termo in doc:
+        i = termos.index(termo)
+        I[i, j] = True  # 1
+
+# agora é possível fazer as queries com as operações bitwise do numpy
+
+print(&#39;venda AND blumenau&#39;)
+venda = I[termos.index(&#39;venda&#39;), :]
+blumenau = I[termos.index(&#39;blumenau&#39;), :]
+r = np.bitwise_and(venda, blumenau)
+print(DOCUMENTOS[r])
+
+print(&#39;venda AND NOT gaspar&#39;)
+venda = I[termos.index(&#39;venda&#39;), :]
+gaspar = I[termos.index(&#39;gaspar&#39;), :]
+not_gaspar = np.invert(gaspar)
+r = np.bitwise_and(venda, not_gaspar)
+print(DOCUMENTOS[r])
+
+print(&#39;venda OR alugo&#39;)
+venda = I[termos.index(&#39;venda&#39;), :]
+alugo = I[termos.index(&#39;alugo&#39;), :]
+r = np.bitwise_or(venda, alugo)
+print(DOCUMENTOS[r])
+
+print(&#39;(venda OR alugo) AND NOT blumenau&#39;)
+venda = I[termos.index(&#39;venda&#39;), :]
+alugo = I[termos.index(&#39;alugo&#39;), :]
+blumenau = I[termos.index(&#39;blumenau&#39;), :]
+r = (venda | alugo) &amp; (~blumenau)  # operadores bitwise
+print(DOCUMENTOS[r])
+</code></pre></div><p>Entretanto, esse formato tem um problema.
+Nesse exemplo, com poucos documentos e termos, tudo ocorre perfeitamente.
+O detalhe é que com um conjunto grande de termos e documentos, problemas de memória podem aparecer.
+O principal problema é que a matriz de incidência terá algumas milhares de linhas (termos) e, provavelmente, alguns milhões de colunas (documentos).
+O ponto é que a maioria das células terá valor <code>0</code>, assim ficando uma matriz esparsa (muito mais zeros que outros números).
+Uma forma de melhorar nesse caso, é usando uma <em>sparse matrix</em> do <code>scipy</code>.
+Esse tipo de matriz já é feita para armazenar apenas os valores necessários e otimizar o uso de memória.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>import numpy as np
+from scipy.sparse import lil_matrix
+
+
+def obter_termos(documento):
+    termos = documento.split(&#39; &#39;)
+    termos = (t.lower() for t in termos)
+    return [t for t in termos if t not in STOP_WORDS]
+
+
+STOP_WORDS = {&#39;à&#39;, &#39;uma&#39;, &#39;em&#39;}
+
+
+DOCUMENTOS = np.array([
+    &#39;Uma casa à venda em Blumenau&#39;,
+    &#39;Terreno à venda em Gaspar&#39;,
+    &#39;Alugo apartamento em Indaial&#39;
+])
+
+# converte os documentos em listas de termos
+documentos = [obter_termos(d) for d in DOCUMENTOS]
+
+# lista com os termos únicos ordenados
+termos = set()
+for doc in documentos:
+    for termo in doc:
+        termos.add(termo)
+termos = sorted(termos)
+
+# matriz de incidência, por padrão 0 para todos os termos em todos os documentos
+I = lil_matrix((len(termos), len(documentos)), dtype=bool)
+for (j, doc) in enumerate(documentos):
+    for termo in doc:
+        i = termos.index(termo)
+        I[i, j] = True
+
+# agora é possível fazer as queries com as operações bitwise do numpy
+
+print(&#39;venda AND blumenau&#39;)
+venda = I[termos.index(&#39;venda&#39;), :].toarray().squeeze()
+blumenau = I[termos.index(&#39;blumenau&#39;), :].toarray().squeeze()
+r = np.bitwise_and(venda, blumenau)
+print(DOCUMENTOS[r])
+
+print(&#39;venda AND NOT gaspar&#39;)
+venda = I[termos.index(&#39;venda&#39;), :].toarray().squeeze()
+gaspar = I[termos.index(&#39;gaspar&#39;), :].toarray().squeeze()
+not_gaspar = np.invert(gaspar)
+r = np.bitwise_and(venda, not_gaspar)
+print(DOCUMENTOS[r])
+
+print(&#39;venda OR alugo&#39;)
+venda = I[termos.index(&#39;venda&#39;), :].toarray().squeeze()
+alugo = I[termos.index(&#39;alugo&#39;), :].toarray().squeeze()
+r = np.bitwise_or(venda, alugo)
+print(DOCUMENTOS[r])
+
+print(&#39;(venda OR alugo) AND NOT blumenau&#39;)
+venda = I[termos.index(&#39;venda&#39;), :].toarray().squeeze()
+alugo = I[termos.index(&#39;alugo&#39;), :].toarray().squeeze()
+blumenau = I[termos.index(&#39;blumenau&#39;), :].toarray().squeeze()
+r = (venda | alugo) &amp; (~blumenau)  # operadores bitwise
+print(DOCUMENTOS[r])
+</code></pre></div><p>Existem apenas duas diferenças entre os exemplos de código:</p>
+<ul>
+<li>Inicialização da matriz <code>I</code></li>
+<li>Invocar os métodos <code>toarray().squeeze()</code> para obter <code>np.array</code> para calcular a operação <em>bitwise</em>.</li>
+</ul>
+<p>Este foi um exemplo de como modelar consultas <em>booleanas</em> em documentos a partir de uma matriz de termos e documentos.</p>
+<h2 id=referências>
+Referências
+<a class=heading-link href=#refer%c3%aancias>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<ul>
+<li><a href=https://nlp.stanford.edu/IR-book/html/htmledition/boolean-retrieval-1.html>Capítulo 1, <em>Boolean Retrieval</em></a></li>
+</ul>
+</div>
+<footer>
+</footer>
+</article>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2016 -
+2021
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
+</body>
+</html>

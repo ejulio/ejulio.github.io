@@ -1,0 +1,278 @@
+<!doctype html><html lang=pt-br>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=content-language content="pt-br">
+<meta name=color-scheme content="light dark">
+<meta name=author content="Júlio César Batista">
+<meta name=description content="Ao escrever uma consulta, o usuário pode cometer erros ortográficos durante a digitação. Esses erros podem ter duas formas: escrita incorreta da palavra (comesso ao invés de começo), contexto (no meu casa ao invés de na minha casa). Note que no primeiro exemplo, a palavra está incorreta; no segundo, as palavras estão corretas mas o contexto é errado. Nesse momento, a ideia é ver como é possível fazer a correção de erros de escrito (primeiro caso).">
+<meta name=keywords content="blog,software,developer">
+<meta name=twitter:card content="summary">
+<meta name=twitter:title content="Correção ortográfica com índice k-gram">
+<meta name=twitter:description content="Ao escrever uma consulta, o usuário pode cometer erros ortográficos durante a digitação. Esses erros podem ter duas formas: escrita incorreta da palavra (comesso ao invés de começo), contexto (no meu casa ao invés de na minha casa). Note que no primeiro exemplo, a palavra está incorreta; no segundo, as palavras estão corretas mas o contexto é errado. Nesse momento, a ideia é ver como é possível fazer a correção de erros de escrito (primeiro caso).">
+<meta property="og:title" content="Correção ortográfica com índice k-gram">
+<meta property="og:description" content="Ao escrever uma consulta, o usuário pode cometer erros ortográficos durante a digitação. Esses erros podem ter duas formas: escrita incorreta da palavra (comesso ao invés de começo), contexto (no meu casa ao invés de na minha casa). Note que no primeiro exemplo, a palavra está incorreta; no segundo, as palavras estão corretas mas o contexto é errado. Nesse momento, a ideia é ver como é possível fazer a correção de erros de escrito (primeiro caso).">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://juliocesarbatista.com/posts/correcao-ortografica-k-gram-index/"><meta property="article:section" content="posts">
+<meta property="article:published_time" content="2020-02-11T00:00:00+00:00">
+<meta property="article:modified_time" content="2020-02-11T00:00:00+00:00">
+<title>
+Correção ortográfica com índice k-gram · Júlio César Batista
+</title>
+<link rel=canonical href=https://juliocesarbatista.com/posts/correcao-ortografica-k-gram-index/>
+<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
+<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
+<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
+<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
+<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
+<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
+<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
+<meta name=generator content="Hugo 0.91.2">
+</head>
+<body class="preload-transitions colorscheme-auto">
+<div class=float-container>
+<a id=dark-mode-toggle class=colorscheme-toggle>
+<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
+</a>
+</div>
+<main class=wrapper>
+<nav class=navigation>
+<section class=container>
+<a class=navigation-title href=/>
+Júlio César Batista
+</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle>
+<i class="fa fa-bars fa-fw" aria-hidden=true></i>
+</label>
+<ul class=navigation-list>
+<li class=navigation-item>
+<a class=navigation-link href=/about/>Sobre</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/posts/>Blog</a>
+</li>
+<li class=navigation-item>
+<a class=navigation-link href=/categories/>Categorias</a>
+</li>
+</ul>
+</section>
+</nav>
+<div class=content>
+<section class="container post">
+<article>
+<header>
+<div class=post-title>
+<h1 class=title>
+<a class=title-link href=https://juliocesarbatista.com/posts/correcao-ortografica-k-gram-index/>
+Correção ortográfica com índice k-gram
+</a>
+</h1>
+</div>
+<div class=post-meta>
+<div class=date>
+<span class=posted-on>
+<i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2020-02-11T00:00:00Z>
+2020-02-11
+</time>
+</span>
+<span class=reading-time>
+<i class="fa fa-clock-o" aria-hidden=true></i>
+5 minutos de leitura
+</span>
+</div>
+<div class=categories>
+<i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/recupera%C3%A7%C3%A3o-de-informa%C3%A7%C3%A3o/>Recuperação de informação</a></div>
+<div class=tags>
+<i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag>
+<a href=/tags/python/>python</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/k-gram-index/>k-gram index</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/corre%C3%A7%C3%A3o-ortogr%C3%A1fica/>correção ortográfica</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/spell-correction/>spell correction</a>
+</span>
+<span class=separator>•</span>
+<span class=tag>
+<a href=/tags/jaccard-coefficient/>jaccard coefficient</a>
+</span></div>
+</div>
+</header>
+<div>
+<p>Ao escrever uma consulta, o usuário pode cometer erros ortográficos durante a digitação.
+Esses erros podem ter duas formas: escrita incorreta da palavra (<em>comesso</em> ao invés de <em>começo</em>), contexto (<em>no meu casa</em> ao invés de <em>na minha casa</em>).
+Note que no primeiro exemplo, a palavra está incorreta; no segundo, as palavras estão corretas mas o contexto é errado.
+Nesse momento, a ideia é ver como é possível fazer a correção de erros de escrito (primeiro caso).
+Uma forma de fazer isso é comparando partes menores das palavras (<em>substrings</em>, ou <em>k-grams</em>).
+Um <em>k-gram</em> define uma <em>substring</em> de tamanho <em>k</em>.
+Portanto, os <em>3-grams</em> de <em>começo</em> são: <code>com</code>, <code>ome</code>, <code>meç</code>, <code>eço</code>.
+Um detalhe importante é que, é comum adicionar $k - 1$ caractéres especiais, normalmente <code>$</code> no início e fim da palavra.
+Assim, os <em>3-grams</em> de <em>começo</em> são: <code>$$c</code>, <code>$co</code>, <code>com</code>, <code>ome</code>, <code>meç</code>, <code>eço</code>, <code>ço$</code>, <code>o$$</code>.
+Uma vez que os <em>3-grams</em> da palavra são conhecidos, é possível efetuar o mesmo procedimento para a palavras que será usada na comparação.
+Nesse caso, <em>comesso</em>: <code>$$c</code>, <code>$co</code>, <code>com</code>, <code>ome</code>, <code>mes</code>, <code>ess</code>, <code>sso</code>, <code>so$</code>, <code>o$$</code>.</p>
+<p>Com os <em>3-grams</em> das duas palavras, é possível calcular uma medida de &ldquo;similaridade&rdquo; entre esses <em>k-grams</em>.
+Note que, quanto mais <em>k-grams</em> duas palavras tem em comum, maior a chance de uma delas ser a correção ortográfica da outra.
+Uma forma de medir essa similaridade é com o Coeficiente de Jaccard (<em>Jaccard Coefficient</em>), que é uma medida genérica de similaridade entre conjuntos (<em>sets</em>).
+Portanto, dados dois conjuntos $A$ e $B$ o coeficiente é calculado como $\frac{\lvert A \cap B \rvert}{\lvert A \cup B \rvert}$.
+Sendo o numerador a quantidade de elementos que os conjuntos tem em comum (intersecção) e o denominador o total de elementos na união dos conjuntos.
+Usando a palavras em um exemplo com <em>python</em>:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>A = {<span style=font-style:italic>&#34;$$c&#34;</span>, <span style=font-style:italic>&#34;$co&#34;</span>, <span style=font-style:italic>&#34;com&#34;</span>, <span style=font-style:italic>&#34;ome&#34;</span>, <span style=font-style:italic>&#34;meç&#34;</span>, <span style=font-style:italic>&#34;eço&#34;</span>, <span style=font-style:italic>&#34;ço$&#34;</span>, <span style=font-style:italic>&#34;o$$&#34;</span>}
+B = {<span style=font-style:italic>&#34;$$c&#34;</span>, <span style=font-style:italic>&#34;$co&#34;</span>, <span style=font-style:italic>&#34;com&#34;</span>, <span style=font-style:italic>&#34;ome&#34;</span>, <span style=font-style:italic>&#34;mes&#34;</span>, <span style=font-style:italic>&#34;ess&#34;</span>, <span style=font-style:italic>&#34;sso&#34;</span>, <span style=font-style:italic>&#34;so$&#34;</span>, <span style=font-style:italic>&#34;o$$&#34;</span>}
+jaccard = len(A &amp; B) / len(A | B)
+</code></pre></div><p>Um detalhe é que, para calcular o Coeficiente de Jaccard é apenas necessário saber o tamanho das palavras e quantos <em>k-grams</em> elas tem em comum.
+O motivo para essa otimização, é calcular os <em>k-grams</em> de todos os termos no índice pode ser custoso.
+Assim, sabendo apenas o tamanho dos termos no índice e quantos <em>k-grams</em> o termo da consulta tem em comum com o termo do índice, o cálculo pode ser otimizado.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>k = 3  <span style=font-style:italic># k-grams</span>
+termo_1 = <span style=font-style:italic>&#34;começo&#34;</span>
+termo_2 = <span style=font-style:italic>&#34;comesso&#34;</span>
+n_k_grams_em_comum = 5  <span style=font-style:italic># {&#34;com&#34;, &#34;$co&#34;, &#34;$$c&#34;, &#34;o$$&#34;, &#34;ome&#34;}</span>
+n_k_grams_termo_1 = (k - 1) + len(termo_1)
+n_k_grams_termo_2 = (k - 1) + len(termo_2)
+jaccard = n_k_grams_em_comum / (n_k_grams_termo_1 + n_k_grams_termo_2 - n_k_grams_em_comum)
+</code></pre></div><p>O detalhe da otimização é que, uma palavra de tamanho $m$ terá $m - (k - 1)$ <em>k-grams</em>.
+Entretanto, como são adicionados $k - 1$ caractéres especiais no começo e final da palavra, o resultado é $(k - 1) + m + (k - 1) - (k - 1) = (k - 1) + m$.</p>
+<p>Por fim, a busca das termos candidatos para correção ortográfica não ocorre no índice invertido.
+Para isso é utilizado um índice auxiliar, um índice de <em>k-grams</em> (<em>k-gram index</em>).
+Esse índice mapeia <em>k-grams</em> para os termos que existem no índice invertido.
+Segue um exemplo, considerando alguns dos <em>k-grams</em> anteriores:</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python>k_gram_index = {
+    <span style=font-style:italic>&#34;$$c&#34;</span>: {<span style=font-style:italic>&#34;começo&#34;</span>, <span style=font-style:italic>&#34;capaz&#34;</span>, <span style=font-style:italic>&#34;comer&#34;</span>, <span style=font-style:italic>&#34;correr&#34;</span>, ...},
+    <span style=font-style:italic>&#34;com&#34;</span>: {<span style=font-style:italic>&#34;comigo&#34;</span>, <span style=font-style:italic>&#34;comando&#34;</span>, <span style=font-style:italic>&#34;começo&#34;</span>, ...},
+    <span style=font-style:italic>&#34;ome&#34;</span>, {<span style=font-style:italic>&#34;homem&#34;</span>, <span style=font-style:italic>&#34;começo&#34;</span>, <span style=font-style:italic>&#34;fome&#34;</span>, ...},
+    <span style=font-style:italic>&#34;o$$&#34;</span>, {<span style=font-style:italic>&#34;moço&#34;</span>, <span style=font-style:italic>&#34;carro&#34;</span>, <span style=font-style:italic>&#34;pescoço&#34;</span>, <span style=font-style:italic>&#34;começo&#34;</span>, ...}
+}
+</code></pre></div><p>Com base nesse índice, a correção de um termo consiste em computar os <em>k-grams</em> do termo e encontrar todos termos que possuem <em>k-grams</em> em comum.
+A partir desse ponto, é possível contar quantos <em>k-grams</em> existem em comum para calcular o Coeficiente de Jaccard de forma otimizada.</p>
+<p>Dado um índice invertido (<a href=https://juliocesarbatista.com/post/phrase-queries/>exemplo</a>), o seguinte código monta o índice <em>k-gram</em>.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=font-weight:700>from</span> <span style=font-weight:700>collections</span> <span style=font-weight:700>import</span> defaultdict
+
+
+<span style=font-weight:700>def</span> k_grams(termo, k):
+    pad = k - 1
+    termo = (<span style=font-style:italic>&#39;$&#39;</span> * pad) + termo + (<span style=font-style:italic>&#39;$&#39;</span> * pad)
+    <span style=font-weight:700>return</span> {termo[i:i + k] <span style=font-weight:700>for</span> i <span style=font-weight:700>in</span> range(len(termo) - pad)}
+
+
+k_gram_index = defaultdict(set)
+<span style=font-weight:700>for</span> termo <span style=font-weight:700>in</span> inverted_index:
+    <span style=font-weight:700>for</span> k_gram <span style=font-weight:700>in</span> k_grams(termo, k=3):
+        k_gram_index[k_gram].add(termo)   
+</code></pre></div><p>Uma vez que o índice está construído, é possível encontrar os termos mais similares.</p>
+<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-python data-lang=python><span style=font-weight:700>from</span> <span style=font-weight:700>collections</span> <span style=font-weight:700>import</span> Counter
+
+
+<span style=font-weight:700>def</span> n_k_grams(termo, k):
+    <span style=font-weight:700>return</span> (k - 1) + len(termo)
+
+
+<span style=font-weight:700>def</span> jaccard_coefficient(t1_n_k_grams, t2_n_k_grams, n_shared_k_grams):
+    <span style=font-weight:700>return</span> n_shared_k_grams / (t1_n_k_grams + t2_n_k_grams - n_shared_k_grams)
+    
+
+<span style=font-weight:700>def</span> corrigir_termo(termo):
+    candidatos = [k_gram_index[k_gram] <span style=font-weight:700>for</span> k_gram <span style=font-weight:700>in</span> k_grams(termo, k=3)]
+    candidatos = chain.from_iterable(candidatos)
+    jaccards = []
+    <span style=font-weight:700>for</span> (candidato, n_comum) <span style=font-weight:700>in</span> Counter(candidatos).items():
+        j = jaccard_coefficient(
+            n_k_grams(termo, k=3),
+            n_k_grams(candidato, k=3),
+            n_comum
+        )
+        jaccards.append((candidato, j))
+    <span style=font-weight:700>return</span> max(jaccards, key=<span style=font-weight:700>lambda</span> x: x[1])[0]
+
+
+<span style=font-weight:700>def</span> consultar(query):
+    termos = query.split()
+    docs_ids = [inverted_index[t] <span style=font-weight:700>for</span> t <span style=font-weight:700>in</span> termos]
+    <span style=font-weight:700>if</span> all(docs_ids):
+        <span style=font-weight:700>return</span> <span style=font-style:italic>f</span><span style=font-style:italic>&#34;Resultados para </span><span style=font-weight:700;font-style:italic>{</span>query<span style=font-weight:700;font-style:italic>}</span><span style=font-style:italic> ...&#34;</span>
+    
+    correcao = []
+    <span style=font-weight:700>for</span> (termo, doc_ids) <span style=font-weight:700>in</span> zip(termos, docs_ids):
+        <span style=font-weight:700>if</span> doc_ids:
+            correcao.append(termo)  <span style=font-style:italic># termo existe no índice</span>
+        <span style=font-weight:700>else</span>:
+            correcao.append(corrigir_termo(termo))
+    
+    correcao = <span style=font-style:italic>&#39; &#39;</span>.join(correcao)
+    <span style=font-weight:700>return</span> <span style=font-style:italic>f</span><span style=font-style:italic>&#39;Você quis dizer &#34;</span><span style=font-weight:700;font-style:italic>{</span>correcao<span style=font-weight:700;font-style:italic>}</span><span style=font-style:italic>&#34;&#39;</span>
+</code></pre></div><ul>
+<li><code>consultar('Texas House of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Resultados para Texas House of Representatives &mldr;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Texas House of Represenatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Você quis dizer &ldquo;Texas House of Representatives&rdquo;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Texs House of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Você quis dizer &ldquo;Texts House of Representatives&rdquo;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Teas House of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Você quis dizer &ldquo;Teams House of Representatives&rdquo;&rsquo;</p>
+</blockquote>
+<ul>
+<li><code>consultar('Texas Hose of Representatives')</code></li>
+</ul>
+<blockquote>
+<p>&lsquo;Resultados para Texas Hose of Representatives &mldr;&rsquo;</p>
+</blockquote>
+<p>A partir dos exemplos acima é possível notar que, alguns termos são corrigidos corretamente, mas outros não.
+Um detalhe que é importante adicionar é o contexto, que deve ajudar muito na hora de selecionar o melhor termo para correção.
+Finalmente, o <em>k-gram index</em> é uma boa abordagem inicial para encontrar termos candidatos quando o usuário envia uma consulta com termos incorretos, ou inexistentes no índice invertido.</p>
+<h2 id=referências>
+Referências
+<a class=heading-link href=#refer%c3%aancias>
+<i class="fa fa-link" aria-hidden=true></i>
+</a>
+</h2>
+<ul>
+<li><a href=https://nlp.stanford.edu/IR-book/html/htmledition/k-gram-indexes-for-spelling-correction-1.html>Introduction to Information Retrieval: k-gram indexes for spelling correction</a></li>
+</ul>
+</div>
+<footer>
+</footer>
+</article>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1},{left:'\\(',right:'\\)',display:!1},{left:'\\[',right:'\\]',display:!0}]})"></script>
+</section>
+</div>
+<footer class=footer>
+<section class=container>
+©
+2016 -
+2021
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
+</section>
+</footer>
+</main>
+<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
+</body>
+</html>
