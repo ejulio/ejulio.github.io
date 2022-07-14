@@ -13,7 +13,7 @@ enableEmoji = true
 
 [params]
 author = "Júlio César Batista"
-description = "Some description"
+description = "Júlio's random thoughts on software development and computer science"
 keywords = "blog,software,developer"
 info = ["Software Developer"]
 avatarURL = "img/portrait.jpg"
