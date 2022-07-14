@@ -1,114 +1,17 @@
-<!doctype html><html lang=pt-br>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=content-language content="pt-br">
-<meta name=color-scheme content="light dark">
-<meta name=author content="Júlio César Batista">
-<meta name=description content="O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados.">
-<meta name=keywords content="blog,software,developer">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Experimentos com Machine Learning">
-<meta name=twitter:description content="O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados.">
-<meta property="og:title" content="Experimentos com Machine Learning">
-<meta property="og:description" content="O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://juliocesarbatista.com/posts/experimentos-ml/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2019-07-09T00:00:00+00:00">
-<meta property="article:modified_time" content="2019-07-09T00:00:00+00:00">
-<title>
-Experimentos com Machine Learning · Júlio César Batista
-</title>
-<link rel=canonical href=https://juliocesarbatista.com/posts/experimentos-ml/>
-<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
-<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
-<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
-<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
-<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
-<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.91.2">
-</head>
-<body class="preload-transitions colorscheme-auto">
-<div class=float-container>
-<a id=dark-mode-toggle class=colorscheme-toggle>
-<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
-</a>
-</div>
-<main class=wrapper>
-<nav class=navigation>
-<section class=container>
-<a class=navigation-title href=/>
-Júlio César Batista
-</a>
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="pt-br"><meta name=color-scheme content="light dark"><meta name=author content="Júlio César Batista"><meta name=description content="O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados."><meta name=keywords content="blog,software,developer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Experimentos com Machine Learning"><meta name=twitter:description content="O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados."><meta property="og:title" content="Experimentos com Machine Learning"><meta property="og:description" content="O problema que machine learning visa resolver é encontrar a melhor função de decisão dado um conjunto de dados. Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$. Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil? A resposta é que é necessário avaliar um experimento sobre o desempenho (performance) de $\mathcal{f}$ em um conjunto de dados."><meta property="og:type" content="article"><meta property="og:url" content="https://juliocesarbatista.com/posts/experimentos-ml/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-07-09T00:00:00+00:00"><meta property="article:modified_time" content="2019-07-09T00:00:00+00:00"><title>Experimentos com Machine Learning · Júlio César Batista</title><link rel=canonical href=https://juliocesarbatista.com/posts/experimentos-ml/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.101.0"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Júlio César Batista</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle>
-<i class="fa fa-bars fa-fw" aria-hidden=true></i>
-</label>
-<ul class=navigation-list>
-<li class=navigation-item>
-<a class=navigation-link href=/about/>Sobre</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/posts/>Blog</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/categories/>Categorias</a>
-</li>
-</ul>
-</section>
-</nav>
-<div class=content>
-<section class="container post">
-<article>
-<header>
-<div class=post-title>
-<h1 class=title>
-<a class=title-link href=https://juliocesarbatista.com/posts/experimentos-ml/>
-Experimentos com Machine Learning
-</a>
-</h1>
-</div>
-<div class=post-meta>
-<div class=date>
-<span class=posted-on>
-<i class="fa fa-calendar" aria-hidden=true></i>
-<time datetime=2019-07-09T00:00:00Z>
-2019-07-09
-</time>
-</span>
-<span class=reading-time>
-<i class="fa fa-clock-o" aria-hidden=true></i>
-3 minutos de leitura
-</span>
-</div>
-<div class=categories>
-<i class="fa fa-folder" aria-hidden=true></i>
-<a href=/categories/aprendizado-de-m%C3%A1quina/>Aprendizado de Máquina</a></div>
-<div class=tags>
-<i class="fa fa-tag" aria-hidden=true></i>
-<span class=tag>
-<a href=/tags/experimentos/>Experimentos</a>
-</span>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Sobre</a></li><li class=navigation-item><a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/categories/>Categorias</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://juliocesarbatista.com/posts/experimentos-ml/>Experimentos com Machine Learning</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-07-09T00:00:00Z>2019-07-09</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+3 minutos de leitura</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/aprendizado-de-m%C3%A1quina/>Aprendizado de Máquina</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/experimentos/>Experimentos</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/sample-bias/>Sample bias</a>
-</span>
+<span class=tag><a href=/tags/sample-bias/>Sample bias</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/covariate-shift/>Covariate shift</a>
-</span>
+<span class=tag><a href=/tags/covariate-shift/>Covariate shift</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/concept-drift/>Concept Drift</a>
-</span></div>
-</div>
-</header>
-<div>
-<p>O problema que <em>machine learning</em> visa resolver é <em>encontrar a melhor função de decisão dado um conjunto de dados</em>.
+<span class=tag><a href=/tags/concept-drift/>Concept Drift</a></span></div></div></header><div><p>O problema que <em>machine learning</em> visa resolver é <em>encontrar a melhor função de decisão dado um conjunto de dados</em>.
 Portanto, este problem contém um conjunto de entrada $\mathcal{X}$, um algoritmo de aprendizado $\mathcal{A}$ e, normalmente, um conjunto de saídas esperadas $\mathcal{y}$.
 Assim, como é possível saber se a função de decisão $\mathcal{f}$ gerada por $\mathcal{A}$ é realmente útil?
 A resposta é que é necessário avaliar um experimento sobre o desempenho (<em>performance</em>) de $\mathcal{f}$ em um conjunto de dados.
@@ -118,58 +21,18 @@ A forma mais simples de encontrar esse conjunto é separar uma parte de $\mathca
 Existem algumas formas de fazer essa separação e cada uma varia de acordo com o problema, por exemplo:
 <em>leave one out</em>, <em>k-fold cross validation</em>, <em>forward chain</em> (para séries temporais) e outros.
 O objetivo aqui não é discorrer sobre a melhor forma de separar os dados para o experimento, mas é levantar alguns pontos que devem ser considerados ao separar os dados para treino e teste.
-Alguns problemas que devem ser evitados:</p>
-<ul>
-<li><strong>Covariate shift</strong>: quando a entrada $\mathcal{X}$ muda entre o conjunto de treino e o conjunto de teste.
-<ul>
-<li>Exemplo: utilizar imagens em ambiente controlado para treino, mas a avaliação é com imagens não controladas (<a href=https://cs.nyu.edu/~roweis/papers/invar-chapter.pdf>Preface</a>)</li>
-</ul>
-</li>
-<li><strong>Concept Drift</strong>: quando o resultado $\mathcal{y}$ para uma entrada $\mathcal{X}$ muda com o passar do tempo.
-<ul>
-<li>Exemplo: sazonalidade (interesses mudam conforme a época do ano).</li>
-</ul>
-</li>
-<li><strong>Sample bias</strong>: a distribuição de treino e teste são diferentes.
-<ul>
-<li>Exemplo: a amostra não representa a população (<a href=https://www.geckoboard.com/learn/data-literacy/statistical-fallacies/sampling-bias/><em>sampling bias</em></a>, <a href=https://www.geckoboard.com/learn/data-literacy/statistical-fallacies/survivorship-bias/><em>survivorship bias</em></a>)</li>
-</ul>
-</li>
-</ul>
-<p>Os problemas acima podem ocorrer ao bolar o experimento/separação dos conjuntos e podem ter muito impacto no resutado do modelo obtido.
+Alguns problemas que devem ser evitados:</p><ul><li><strong>Covariate shift</strong>: quando a entrada $\mathcal{X}$ muda entre o conjunto de treino e o conjunto de teste.<ul><li>Exemplo: utilizar imagens em ambiente controlado para treino, mas a avaliação é com imagens não controladas (<a href=https://cs.nyu.edu/~roweis/papers/invar-chapter.pdf>Preface</a>)</li></ul></li><li><strong>Concept Drift</strong>: quando o resultado $\mathcal{y}$ para uma entrada $\mathcal{X}$ muda com o passar do tempo.<ul><li>Exemplo: sazonalidade (interesses mudam conforme a época do ano).</li></ul></li><li><strong>Sample bias</strong>: a distribuição de treino e teste são diferentes.<ul><li>Exemplo: a amostra não representa a população (<a href=https://www.geckoboard.com/learn/data-literacy/statistical-fallacies/sampling-bias/><em>sampling bias</em></a>, <a href=https://www.geckoboard.com/learn/data-literacy/statistical-fallacies/survivorship-bias/><em>survivorship bias</em></a>)</li></ul></li></ul><p>Os problemas acima podem ocorrer ao bolar o experimento/separação dos conjuntos e podem ter muito impacto no resutado do modelo obtido.
 O impacto pode ser tanto no sentido de rejeitar um modelo bom, assim como aceitar um modelo ruim.
 Portanto, é sempre importante avaliar estas circunstâncias ao montar os conjuntos experimentais.
 Outro ponto que é importante é que esses casos devem ser considerados antes de iniciar qualquer avaliação do modelo.
 Caso contrário, é possível obter conhecimento de onde o modelo está falhando e fazer uma otimização especial para esses casos (o que não é correto).
 De forma geral, sempre vale se perguntar se o que é feito na fase de treino do modelo vai ser válido na fase de teste/produção.
-Se a resposta é afirmativa, então é possível proceder; se existe dúvida, é melhor não fazer para evitar um viés do modelo.</p>
-<p>Além dos pontos acima também é importante garantir que não exista <em>leakage</em> em $\mathcal{X}$ para $\mathcal{y}$.
+Se a resposta é afirmativa, então é possível proceder; se existe dúvida, é melhor não fazer para evitar um viés do modelo.</p><p>Além dos pontos acima também é importante garantir que não exista <em>leakage</em> em $\mathcal{X}$ para $\mathcal{y}$.
 Por exemplo, utilizar a pontuação (<em>rating</em>) de uma avaliação junto com o texto para prever o sentimento (bom/ruim) da avaliação.
-Nesse caso, o modelo pode simplesmente ignorar o texto e usar a pontuação, visto que uma pontuação baixa indica uma revisão (sentimento) ruim.</p>
-<p>Referências:</p>
-<ul>
-<li><a href=https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/01.black-box-ML.pdf><em>Black Box Machine Learning</em></a></li>
-</ul>
-</div>
-<footer>
-</footer>
-</article>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1},{left:'\\(',right:'\\)',display:!1},{left:'\\[',right:'\\]',display:!0}]})"></script>
-</section>
-</div>
-<footer class=footer>
-<section class=container>
-©
+Nesse caso, o modelo pode simplesmente ignorar o texto e usar a pontuação, visto que uma pontuação baixa indica uma revisão (sentimento) ruim.</p><p>Referências:</p><ul><li><a href=https://davidrosenberg.github.io/mlcourse/Archive/2017Fall/Lectures/01.black-box-ML.pdf><em>Black Box Machine Learning</em></a></li></ul></div><footer></footer></article><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})'></script></section></div><footer class=footer><section class=container>©
 2016 -
-2021
+2022
 Júlio César Batista
 ·
-Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
-</section>
-</footer>
-</main>
-<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
-</body>
-</html>
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.9cf2dbf9b6989ef8eae941ffb4231c26d1dc026bca38f1d19fdba50177d8a9ac.js integrity="sha256-nPLb+baYnvjq6UH/tCMcJtHcAmvKOPHRn9ulAXfYqaw="></script></body></html>

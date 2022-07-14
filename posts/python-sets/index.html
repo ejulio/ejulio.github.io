@@ -1,275 +1,110 @@
-<!doctype html><html lang=pt-br>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=content-language content="pt-br">
-<meta name=color-scheme content="light dark">
-<meta name=author content="Júlio César Batista">
-<meta name=description content="Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
-Por que conjuntos?    Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.">
-<meta name=keywords content="blog,software,developer">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Python: conjuntos (sets)">
-<meta name=twitter:description content="Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
-Por que conjuntos?    Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.">
-<meta property="og:title" content="Python: conjuntos (sets)">
-<meta property="og:description" content="Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
-Por que conjuntos?    Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://juliocesarbatista.com/posts/python-sets/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2019-04-01T00:00:00+00:00">
-<meta property="article:modified_time" content="2019-04-01T00:00:00+00:00">
-<title>
-Python: conjuntos (sets) · Júlio César Batista
-</title>
-<link rel=canonical href=https://juliocesarbatista.com/posts/python-sets/>
-<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
-<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
-<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
-<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
-<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
-<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.91.2">
-</head>
-<body class="preload-transitions colorscheme-auto">
-<div class=float-container>
-<a id=dark-mode-toggle class=colorscheme-toggle>
-<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
-</a>
-</div>
-<main class=wrapper>
-<nav class=navigation>
-<section class=container>
-<a class=navigation-title href=/>
-Júlio César Batista
-</a>
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="pt-br"><meta name=color-scheme content="light dark"><meta name=author content="Júlio César Batista"><meta name=description content="Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
+Por que conjuntos? Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez."><meta name=keywords content="blog,software,developer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Python: conjuntos (sets)"><meta name=twitter:description content="Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
+Por que conjuntos? Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez."><meta property="og:title" content="Python: conjuntos (sets)"><meta property="og:description" content="Vamos falar um pouco sobre sets (conjuntos) em python. Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.
+Por que conjuntos? Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez."><meta property="og:type" content="article"><meta property="og:url" content="https://juliocesarbatista.com/posts/python-sets/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2019-04-01T00:00:00+00:00"><meta property="article:modified_time" content="2019-04-01T00:00:00+00:00"><title>Python: conjuntos (sets) · Júlio César Batista</title><link rel=canonical href=https://juliocesarbatista.com/posts/python-sets/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.101.0"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Júlio César Batista</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle>
-<i class="fa fa-bars fa-fw" aria-hidden=true></i>
-</label>
-<ul class=navigation-list>
-<li class=navigation-item>
-<a class=navigation-link href=/about/>Sobre</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/posts/>Blog</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/categories/>Categorias</a>
-</li>
-</ul>
-</section>
-</nav>
-<div class=content>
-<section class="container post">
-<article>
-<header>
-<div class=post-title>
-<h1 class=title>
-<a class=title-link href=https://juliocesarbatista.com/posts/python-sets/>
-Python: conjuntos (sets)
-</a>
-</h1>
-</div>
-<div class=post-meta>
-<div class=date>
-<span class=posted-on>
-<i class="fa fa-calendar" aria-hidden=true></i>
-<time datetime=2019-04-01T00:00:00Z>
-2019-04-01
-</time>
-</span>
-<span class=reading-time>
-<i class="fa fa-clock-o" aria-hidden=true></i>
-4 minutos de leitura
-</span>
-</div>
-<div class=categories>
-<i class="fa fa-folder" aria-hidden=true></i>
-<a href=/categories/linguagens-de-programa%C3%A7%C3%A3o/>Linguagens de Programação</a></div>
-<div class=tags>
-<i class="fa fa-tag" aria-hidden=true></i>
-<span class=tag>
-<a href=/tags/exemplos/>Exemplos</a>
-</span>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Sobre</a></li><li class=navigation-item><a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/categories/>Categorias</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://juliocesarbatista.com/posts/python-sets/>Python: conjuntos (sets)</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2019-04-01T00:00:00Z>2019-04-01</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+4 minutos de leitura</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/linguagens-de-programa%C3%A7%C3%A3o/>Linguagens de Programação</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/exemplos/>Exemplos</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/python/>python</a>
-</span></div>
-</div>
-</header>
-<div>
-<p>Vamos falar um pouco sobre <em>sets</em> (conjuntos) em <em>python</em>.
-Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.</p>
-<h2 id=por-que-conjuntos>
-Por que conjuntos?
-<a class=heading-link href=#por-que-conjuntos>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h2>
-<p>Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.</p>
-<p><em>Observação</em>: um <em>set</em> é uma construção matemática da <em>Teoria dos Conjuntos</em> :)</p>
-<h2 id=definindo-um-conjunto>
-Definindo um conjunto
-<a class=heading-link href=#definindo-um-conjunto>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h2>
-<p>Podemos definir um conjunto de duas formas.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql><span style=font-style:italic># utilizando a sintaxe de {}
-</span><span style=font-style:italic></span>conjunto = <span>{</span><span style=font-style:italic>&#39;Terra&#39;</span>, <span style=font-style:italic>&#39;Marte&#39;</span>, <span style=font-style:italic>&#39;Saturno&#39;</span><span>}</span>
-
-<span style=font-style:italic># utilizando a classe `set`
-</span><span style=font-style:italic></span>conjunto = <span>set</span>([<span style=font-style:italic>&#39;Terra&#39;</span>, <span style=font-style:italic>&#39;Marte&#39;</span>, <span style=font-style:italic>&#39;Saturno&#39;</span>])
-</code></pre></div><p>Não existe muita diferença entre as versões, apenas que na segunda podemos utilizar uma lista e definir o conjunto com entradas do usuário.
-Utilizando a sintaxe <code>conjunto = set(['Terra', 'Marte', 'Saturno'])</code> podemos obter uma lista de elementos não repetidos. Por exemplo:</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>uma_lista = [&#39;Terra&#39;, &#39;Marte&#39;, &#39;Saturno&#39;, &#39;Terra&#39;]
-conjunto = set(uma_lista)
-conjunto
-&gt; set([&#39;Saturno&#39;, &#39;Marte&#39;, &#39;Terra&#39;]) # Note que tem apenas um elemento &#39;Terra&#39;
-</code></pre></div><h2 id=operações-com-conjuntos>
-Operações com conjuntos
-<a class=heading-link href=#opera%c3%a7%c3%b5es-com-conjuntos>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h2>
-<p>Além de garantir a unicidade de elementos, também podemos efetuar operações com conjuntos aumentando a sua aplicação.</p>
-<h3 id=união>
-União
-<a class=heading-link href=#uni%c3%a3o>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h3>
-<p>Aqui os elementos de um conjunto <em>A</em> são adicionados aos elementos de um conjunto <em>B</em>.
-Note que o resultado é um novo conjunto.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># exemplos de bibliotecas
-usuario_a = {&#39;pandas&#39;, &#39;numpy&#39;, &#39;tensorflow&#39;}
-usuario_b = {&#39;pandas&#39;, &#39;pytorch&#39;}
-resultado = usuario_a | usuario_b
-resultado
-&gt; set([&#39;tensorflow&#39;, &#39;pytorch&#39;, &#39;numpy&#39;, &#39;pandas&#39;])
-</code></pre></div><p>Note no exemplo acima que <code>pandas</code> ocorre nos dois conjuntos, mas apenas uma vez no conjunto <code>resultado</code>.
-A sintaxe utilizando o operador <code>|</code> é uma facilidade para <code>usuario_a.union(usuario_b)</code>.</p>
-<h3 id=intersecção>
-Intersecção
-<a class=heading-link href=#intersec%c3%a7%c3%a3o>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h3>
-<p>Obtemos os elementos que ocorrem no conjunto <em>A</em> e no conjunto <em>B</em>.
-O resultado também é um novo conjunto.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># exemplos de bibliotecas
-usuario_a = {&#39;pandas&#39;, &#39;numpy&#39;, &#39;tensorflow&#39;}
-usuario_b = {&#39;pandas&#39;, &#39;pytorch&#39;}
-resultado = usuario_a &amp; usuario_b
-resultado
-&gt; set([&#39;pandas&#39;])
-</code></pre></div><p>Note no exemplo acima que <code>pandas</code> é o único elemento que ocorre nos dois conjuntos.
-Nesse exemplo, o operador <code>&</code> também é apenas uma facilidade para <code>usuario_a.intersection(usuario_b)</code>.</p>
-<h3 id=diferença>
-Diferença
-<a class=heading-link href=#diferen%c3%a7a>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h3>
-<p>Outra operação que é muito comum com conjuntos é a diferença.
+<span class=tag><a href=/tags/python/>python</a></span></div></div></header><div><p>Vamos falar um pouco sobre <em>sets</em> (conjuntos) em <em>python</em>.
+Se você já trabalha com a linguagem, provavelmente já se deparou com esses casos, mas se está iniciando na linguagem, talvez sejam exemplos interessantes para aprender.</p><h2 id=por-que-conjuntos>Por que conjuntos?
+<a class=heading-link href=#por-que-conjuntos><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Conjuntos são coleções que não permitem elementos duplicados. Dessa forma, são uma ótima estrutura de dados para verificar se um elemento já existe e garantir que esse elemento exista apenas uma vez.</p><p><em>Observação</em>: um <em>set</em> é uma construção matemática da <em>Teoria dos Conjuntos</em> :)</p><h2 id=definindo-um-conjunto>Definindo um conjunto
+<a class=heading-link href=#definindo-um-conjunto><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Podemos definir um conjunto de duas formas.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-mysql data-lang=mysql><span style=display:flex><span><span style=font-style:italic># utilizando a sintaxe de {}
+</span></span></span><span style=display:flex><span><span style=font-style:italic></span>conjunto = <span>{</span><span style=font-style:italic>&#39;Terra&#39;</span>, <span style=font-style:italic>&#39;Marte&#39;</span>, <span style=font-style:italic>&#39;Saturno&#39;</span><span>}</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=font-style:italic># utilizando a classe `set`
+</span></span></span><span style=display:flex><span><span style=font-style:italic></span>conjunto = <span>set</span>([<span style=font-style:italic>&#39;Terra&#39;</span>, <span style=font-style:italic>&#39;Marte&#39;</span>, <span style=font-style:italic>&#39;Saturno&#39;</span>])
+</span></span></code></pre></div><p>Não existe muita diferença entre as versões, apenas que na segunda podemos utilizar uma lista e definir o conjunto com entradas do usuário.
+Utilizando a sintaxe <code>conjunto = set(['Terra', 'Marte', 'Saturno'])</code> podemos obter uma lista de elementos não repetidos. Por exemplo:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>uma_lista = [&#39;Terra&#39;, &#39;Marte&#39;, &#39;Saturno&#39;, &#39;Terra&#39;]
+</span></span><span style=display:flex><span>conjunto = set(uma_lista)
+</span></span><span style=display:flex><span>conjunto
+</span></span><span style=display:flex><span>&gt; set([&#39;Saturno&#39;, &#39;Marte&#39;, &#39;Terra&#39;]) # Note que tem apenas um elemento &#39;Terra&#39;
+</span></span></code></pre></div><h2 id=operações-com-conjuntos>Operações com conjuntos
+<a class=heading-link href=#opera%c3%a7%c3%b5es-com-conjuntos><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Além de garantir a unicidade de elementos, também podemos efetuar operações com conjuntos aumentando a sua aplicação.</p><h3 id=união>União
+<a class=heading-link href=#uni%c3%a3o><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Aqui os elementos de um conjunto <em>A</em> são adicionados aos elementos de um conjunto <em>B</em>.
+Note que o resultado é um novo conjunto.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span># exemplos de bibliotecas
+</span></span><span style=display:flex><span>usuario_a = {&#39;pandas&#39;, &#39;numpy&#39;, &#39;tensorflow&#39;}
+</span></span><span style=display:flex><span>usuario_b = {&#39;pandas&#39;, &#39;pytorch&#39;}
+</span></span><span style=display:flex><span>resultado = usuario_a | usuario_b
+</span></span><span style=display:flex><span>resultado
+</span></span><span style=display:flex><span>&gt; set([&#39;tensorflow&#39;, &#39;pytorch&#39;, &#39;numpy&#39;, &#39;pandas&#39;])
+</span></span></code></pre></div><p>Note no exemplo acima que <code>pandas</code> ocorre nos dois conjuntos, mas apenas uma vez no conjunto <code>resultado</code>.
+A sintaxe utilizando o operador <code>|</code> é uma facilidade para <code>usuario_a.union(usuario_b)</code>.</p><h3 id=intersecção>Intersecção
+<a class=heading-link href=#intersec%c3%a7%c3%a3o><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Obtemos os elementos que ocorrem no conjunto <em>A</em> e no conjunto <em>B</em>.
+O resultado também é um novo conjunto.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span># exemplos de bibliotecas
+</span></span><span style=display:flex><span>usuario_a = {&#39;pandas&#39;, &#39;numpy&#39;, &#39;tensorflow&#39;}
+</span></span><span style=display:flex><span>usuario_b = {&#39;pandas&#39;, &#39;pytorch&#39;}
+</span></span><span style=display:flex><span>resultado = usuario_a &amp; usuario_b
+</span></span><span style=display:flex><span>resultado
+</span></span><span style=display:flex><span>&gt; set([&#39;pandas&#39;])
+</span></span></code></pre></div><p>Note no exemplo acima que <code>pandas</code> é o único elemento que ocorre nos dois conjuntos.
+Nesse exemplo, o operador <code>&</code> também é apenas uma facilidade para <code>usuario_a.intersection(usuario_b)</code>.</p><h3 id=diferença>Diferença
+<a class=heading-link href=#diferen%c3%a7a><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Outra operação que é muito comum com conjuntos é a diferença.
 Nesse caso, queremos os elementos do conjunto <em>A</em> que não existem no conjunto <em>B</em>.
-Novamente, o resultado é um novo conjunto.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback># exemplos de bibliotecas
-usuario_a = {&#39;pandas&#39;, &#39;numpy&#39;, &#39;tensorflow&#39;}
-usuario_b = {&#39;pandas&#39;, &#39;pytorch&#39;}
-resultado = usuario_a - usuario_b
-resultado
-&gt; set([&#39;tensorflow&#39;, &#39;numpy&#39;])
-</code></pre></div><p>O elemento <code>pandas</code> ocorre nos dois conjuntos, portanto ele foi removido no conjunto resultante.
-Como <code>numpy</code> e <code>tensorflow</code> ocorrem apenas no conjunto <code>usuario_a</code>, eles formam o resultado.</p>
-<h3 id=pertinência>
-Pertinência
-<a class=heading-link href=#pertin%c3%aancia>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h3>
-<p>Como podemos saber se um elemento pertence ao conjunto?
-Aqui a sintaxe é a mesma que para outras sequências em <em>python</em>, utilizamos <code>in</code>.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>cidades = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
-&#39;Blumenau&#39; in cidades
-&gt; True
-&#39;Blumenau&#39; not in cidades
-&gt; False
-&#39;Pomerode&#39; in cidades
-&gt; False
-&#39;Pomerode&#39; not in cidades
-&gt; True
-</code></pre></div><p>Outro caso comum, é saber se um conjunto <em>A</em> contém um conjunto <em>B</em>.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>cidades_a = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
-cidades_b = {&#39;Blumenau&#39;, &#39;Indaial&#39;}
-cidades_b.issubset(cidades_a)
-&gt; True
-cidades_b &lt;= cidades_a
-&gt; True
-
-cidades_c = {&#39;Blumenau&#39;, &#39;Pomerode&#39;}
-cidades_c.issubset(cidades_a)
-&gt; False
-cidades_c &lt;= cidades_a
-&gt; False
-</code></pre></div><p>Note nos exemplos acima que o operador <code>&lt;=</code> é apenas uma facilidade para a função <code>issubset</code> disponível nos conjuntos. Dessa forma, podemos testar se o conjunto <em>B</em> é um subconjunto <em>A</em>.
-Também podemos fazer a operação inversa, utilizando o operador <code>>=</code> ou a função <code>issuperset</code>.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>cidades_a = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
-cidades_b = {&#39;Blumenau&#39;, &#39;Indaial&#39;}
-cidades_a.issuperset(cidades_b)
-&gt; True
-cidades_a &gt;= cidades_b
-&gt; True
-
-cidades_c = {&#39;Blumenau&#39;, &#39;Pomerode&#39;}
-cidades_a.issuperset(cidades_c)
-&gt; False
-cidades_a &gt;= cidades_c
-&gt; False
-</code></pre></div><h3 id=igualdade>
-Igualdade
-<a class=heading-link href=#igualdade>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h3>
-<p>Finalmente, podemos também testar a igualdade de conjuntos.
-Assim como outras sequências em <em>python</em>, a veracidade é dada pelos elmentos internos e não pela instância do objeto.</p>
-<div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback>cidades_a = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
-cidades_b = {&#39;Blumenau&#39;, &#39;Indaial&#39;, &#39;Gaspar&#39;}
-cidades_a == cidades_b
-&gt; True
-cidades_a != cidades_b
-&gt; False
-cidades_c = {&#39;Blumenau&#39;, &#39;Indaial&#39;, &#39;Pomerode&#39;}
-cidades_a == cidades_c
-&gt; False
-cidades_a != cidades_c
-&gt; True
-</code></pre></div><p>Bem pessoal, acho que era isso para hoje.
-Espero ter passado uma ideia de como são as operações e alguns casos de uso que podemos ter com <em>sets</em> em <em>python</em>. E você tem algum caso específico que quer compartilhar ou alguma dúvida? Manda um <em>tweet</em> :)</p>
-<p>Abraço!</p>
-</div>
-<footer>
-</footer>
-</article>
-</section>
-</div>
-<footer class=footer>
-<section class=container>
-©
+Novamente, o resultado é um novo conjunto.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span># exemplos de bibliotecas
+</span></span><span style=display:flex><span>usuario_a = {&#39;pandas&#39;, &#39;numpy&#39;, &#39;tensorflow&#39;}
+</span></span><span style=display:flex><span>usuario_b = {&#39;pandas&#39;, &#39;pytorch&#39;}
+</span></span><span style=display:flex><span>resultado = usuario_a - usuario_b
+</span></span><span style=display:flex><span>resultado
+</span></span><span style=display:flex><span>&gt; set([&#39;tensorflow&#39;, &#39;numpy&#39;])
+</span></span></code></pre></div><p>O elemento <code>pandas</code> ocorre nos dois conjuntos, portanto ele foi removido no conjunto resultante.
+Como <code>numpy</code> e <code>tensorflow</code> ocorrem apenas no conjunto <code>usuario_a</code>, eles formam o resultado.</p><h3 id=pertinência>Pertinência
+<a class=heading-link href=#pertin%c3%aancia><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Como podemos saber se um elemento pertence ao conjunto?
+Aqui a sintaxe é a mesma que para outras sequências em <em>python</em>, utilizamos <code>in</code>.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>cidades = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
+</span></span><span style=display:flex><span>&#39;Blumenau&#39; in cidades
+</span></span><span style=display:flex><span>&gt; True
+</span></span><span style=display:flex><span>&#39;Blumenau&#39; not in cidades
+</span></span><span style=display:flex><span>&gt; False
+</span></span><span style=display:flex><span>&#39;Pomerode&#39; in cidades
+</span></span><span style=display:flex><span>&gt; False
+</span></span><span style=display:flex><span>&#39;Pomerode&#39; not in cidades
+</span></span><span style=display:flex><span>&gt; True
+</span></span></code></pre></div><p>Outro caso comum, é saber se um conjunto <em>A</em> contém um conjunto <em>B</em>.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>cidades_a = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
+</span></span><span style=display:flex><span>cidades_b = {&#39;Blumenau&#39;, &#39;Indaial&#39;}
+</span></span><span style=display:flex><span>cidades_b.issubset(cidades_a)
+</span></span><span style=display:flex><span>&gt; True
+</span></span><span style=display:flex><span>cidades_b &lt;= cidades_a
+</span></span><span style=display:flex><span>&gt; True
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cidades_c = {&#39;Blumenau&#39;, &#39;Pomerode&#39;}
+</span></span><span style=display:flex><span>cidades_c.issubset(cidades_a)
+</span></span><span style=display:flex><span>&gt; False
+</span></span><span style=display:flex><span>cidades_c &lt;= cidades_a
+</span></span><span style=display:flex><span>&gt; False
+</span></span></code></pre></div><p>Note nos exemplos acima que o operador <code>&lt;=</code> é apenas uma facilidade para a função <code>issubset</code> disponível nos conjuntos. Dessa forma, podemos testar se o conjunto <em>B</em> é um subconjunto <em>A</em>.
+Também podemos fazer a operação inversa, utilizando o operador <code>>=</code> ou a função <code>issuperset</code>.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>cidades_a = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
+</span></span><span style=display:flex><span>cidades_b = {&#39;Blumenau&#39;, &#39;Indaial&#39;}
+</span></span><span style=display:flex><span>cidades_a.issuperset(cidades_b)
+</span></span><span style=display:flex><span>&gt; True
+</span></span><span style=display:flex><span>cidades_a &gt;= cidades_b
+</span></span><span style=display:flex><span>&gt; True
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>cidades_c = {&#39;Blumenau&#39;, &#39;Pomerode&#39;}
+</span></span><span style=display:flex><span>cidades_a.issuperset(cidades_c)
+</span></span><span style=display:flex><span>&gt; False
+</span></span><span style=display:flex><span>cidades_a &gt;= cidades_c
+</span></span><span style=display:flex><span>&gt; False
+</span></span></code></pre></div><h3 id=igualdade>Igualdade
+<a class=heading-link href=#igualdade><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Finalmente, podemos também testar a igualdade de conjuntos.
+Assim como outras sequências em <em>python</em>, a veracidade é dada pelos elmentos internos e não pela instância do objeto.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>cidades_a = {&#39;Blumenau&#39;, &#39;Gaspar&#39;, &#39;Indaial&#39;}
+</span></span><span style=display:flex><span>cidades_b = {&#39;Blumenau&#39;, &#39;Indaial&#39;, &#39;Gaspar&#39;}
+</span></span><span style=display:flex><span>cidades_a == cidades_b
+</span></span><span style=display:flex><span>&gt; True
+</span></span><span style=display:flex><span>cidades_a != cidades_b
+</span></span><span style=display:flex><span>&gt; False
+</span></span><span style=display:flex><span>cidades_c = {&#39;Blumenau&#39;, &#39;Indaial&#39;, &#39;Pomerode&#39;}
+</span></span><span style=display:flex><span>cidades_a == cidades_c
+</span></span><span style=display:flex><span>&gt; False
+</span></span><span style=display:flex><span>cidades_a != cidades_c
+</span></span><span style=display:flex><span>&gt; True
+</span></span></code></pre></div><p>Bem pessoal, acho que era isso para hoje.
+Espero ter passado uma ideia de como são as operações e alguns casos de uso que podemos ter com <em>sets</em> em <em>python</em>. E você tem algum caso específico que quer compartilhar ou alguma dúvida? Manda um <em>tweet</em> :)</p><p>Abraço!</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
 2016 -
-2021
+2022
 Júlio César Batista
 ·
-Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
-</section>
-</footer>
-</main>
-<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
-</body>
-</html>
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.9cf2dbf9b6989ef8eae941ffb4231c26d1dc026bca38f1d19fdba50177d8a9ac.js integrity="sha256-nPLb+baYnvjq6UH/tCMcJtHcAmvKOPHRn9ulAXfYqaw="></script></body></html>

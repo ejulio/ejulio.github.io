@@ -1,271 +1,33 @@
-<!doctype html><html lang=pt-br>
-<head>
-<meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<meta http-equiv=content-language content="pt-br">
-<meta name=color-scheme content="light dark">
-<meta name=author content="Júlio César Batista">
-<meta name=description content="Olá, tudo certo!?
-Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos.">
-<meta name=keywords content="blog,software,developer">
-<meta name=twitter:card content="summary">
-<meta name=twitter:title content="Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos">
-<meta name=twitter:description content="Olá, tudo certo!?
-Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos.">
-<meta property="og:title" content="Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos">
-<meta property="og:description" content="Olá, tudo certo!?
-Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://juliocesarbatista.com/posts/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/"><meta property="article:section" content="posts">
-<meta property="article:published_time" content="2016-06-08T00:00:00+00:00">
-<meta property="article:modified_time" content="2016-06-08T00:00:00+00:00">
-<title>
-Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos · Júlio César Batista
-</title>
-<link rel=canonical href=https://juliocesarbatista.com/posts/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/>
-<link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin>
-<link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen>
-<link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen>
-<link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32>
-<link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16>
-<link rel=apple-touch-icon href=/images/apple-touch-icon.png>
-<link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png>
-<meta name=generator content="Hugo 0.91.2">
-</head>
-<body class="preload-transitions colorscheme-auto">
-<div class=float-container>
-<a id=dark-mode-toggle class=colorscheme-toggle>
-<i class="fa fa-adjust fa-fw" aria-hidden=true></i>
-</a>
-</div>
-<main class=wrapper>
-<nav class=navigation>
-<section class=container>
-<a class=navigation-title href=/>
-Júlio César Batista
-</a>
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="pt-br"><meta name=color-scheme content="light dark"><meta name=author content="Júlio César Batista"><meta name=description content="Olá, tudo certo!?
+Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos."><meta name=keywords content="blog,software,developer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos"><meta name=twitter:description content="Olá, tudo certo!?
+Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos."><meta property="og:title" content="Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos"><meta property="og:description" content="Olá, tudo certo!?
+Hoje vamos trabalhar com a ideia de desenhar o símbolo do Batman com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos."><meta property="og:type" content="article"><meta property="og:url" content="https://juliocesarbatista.com/posts/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2016-06-08T00:00:00+00:00"><meta property="article:modified_time" content="2016-06-08T00:00:00+00:00"><title>Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos · Júlio César Batista</title><link rel=canonical href=https://juliocesarbatista.com/posts/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.101.0"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Júlio César Batista</a>
 <input type=checkbox id=menu-toggle>
-<label class="menu-button float-right" for=menu-toggle>
-<i class="fa fa-bars fa-fw" aria-hidden=true></i>
-</label>
-<ul class=navigation-list>
-<li class=navigation-item>
-<a class=navigation-link href=/about/>Sobre</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/posts/>Blog</a>
-</li>
-<li class=navigation-item>
-<a class=navigation-link href=/categories/>Categorias</a>
-</li>
-</ul>
-</section>
-</nav>
-<div class=content>
-<section class="container post">
-<article>
-<header>
-<div class=post-title>
-<h1 class=title>
-<a class=title-link href=https://juliocesarbatista.com/posts/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/>
-Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos
-</a>
-</h1>
-</div>
-<div class=post-meta>
-<div class=date>
-<span class=posted-on>
-<i class="fa fa-calendar" aria-hidden=true></i>
-<time datetime=2016-06-08T00:00:00Z>
-2016-06-08
-</time>
-</span>
-<span class=reading-time>
-<i class="fa fa-clock-o" aria-hidden=true></i>
-9 minutos de leitura
-</span>
-</div>
-<div class=categories>
-<i class="fa fa-folder" aria-hidden=true></i>
-<a href=/categories/matem%C3%A1tica/>Matemática</a></div>
-<div class=tags>
-<i class="fa fa-tag" aria-hidden=true></i>
-<span class=tag>
-<a href=/tags/exemplos/>Exemplos</a>
-</span>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Sobre</a></li><li class=navigation-item><a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/categories/>Categorias</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://juliocesarbatista.com/posts/batman-e-voce-desenhando-o-simbolo-do-batman-com-retas-parabolas-e-circulos/>Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2016-06-08T00:00:00Z>2016-06-08</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+9 minutos de leitura</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/matem%C3%A1tica/>Matemática</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/exemplos/>Exemplos</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/%C3%A1lgebra/>Álgebra</a>
-</span>
+<span class=tag><a href=/tags/%C3%A1lgebra/>Álgebra</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/desmos/>Desmos</a>
-</span>
+<span class=tag><a href=/tags/desmos/>Desmos</a></span>
 <span class=separator>•</span>
-<span class=tag>
-<a href=/tags/transforma%C3%A7%C3%B5es/>Transformações</a>
-</span></div>
-</div>
-</header>
-<div>
-<p>Olá, tudo certo!?</p>
-<p>Hoje vamos trabalhar com a ideia de desenhar o símbolo do <em>Batman</em> com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos. A partir destes componentes básicos, aplicamos transformações e restrições no domínio da equação que formam o desenho. Para fazer o desenho vamos usar o <a href=https://www.desmos.com/calculator>Desmos</a> (calculadora gráfica online).</p>
-<h1 id=ao-infinito-e-além-desenhando-a-cabeça-do-morcego-com-retas>
-Ao infinito e além: desenhando a cabeça do morcego com retas
-<a class=heading-link href=#ao-infinito-e-al%c3%a9m-desenhando-a-cabe%c3%a7a-do-morcego-com-retas>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h1>
-<p>Vamos começar pelos componentes mais simples que são as retas. Usamos três retas para desenhar a cabeça e as orelhas do morcego como pode ser visto da Figura 1.
-<figure><img src=https://s3.amazonaws.com/grapher/exports/z5kd3vxn4q.png><figcaption>
-<h4>Figura 1 - Retas que formam a cabeça do morceço</h4>
-</figcaption>
-</figure>
-A reta horizontal no meio tem equação $y = 6 { -0.5 &lt; x &lt; 0.5 }$</p>
-<blockquote>
-<p>Os valores entre <em>{}</em> limitam os valores (domínio) de <em>x</em> na equação. Por exemplo, a equação só terá valores para <em>y</em> quando <em>x</em> estiver entre <em>-0.5</em> e <em>0.5</em>.</p>
-</blockquote>
-<p>As duas retas inclinadas seguem uma intuição semelhante, mas tem equações diferentes. A reta da direita (laranja) pode ser desenhada com a equação $y = 2x + 5 {0.5 &lt; x &lt; 1} $ e a reta da esquerda com $ y = -2x + 5 {-1 &lt; x &lt; -0.5} $. É possível perceber que as equações são muito parecidas e agora vamos ver porque as retas podem ser desenhadas com as equações anteriores.</p>
-<h2 id=por-que-as-retas-se-comportam-dessa-forma>
-Por que as retas se comportam dessa forma?
-<a class=heading-link href=#por-que-as-retas-se-comportam-dessa-forma>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h2>
-<p>Existem três retas (que eu conheço) que são super simples $ x = 1 $ (reta roxa na Figura 2), $ y = 1 $ (reta laranja na Figura 2) e $ y = x $ (reta preta na Figura 2). A reta $ x = 1 $ é uma reta vertical que passa por qualquer coordenada no eixo <em>y</em>, mas apenas na coordenada <em>1</em> no eixo <em>x</em>. A reta $ y = 1 $ é uma reta horizontal que passa em qualquer coordenada no eixo <em>x</em>, mas apenas na coordenada <em>1</em> do eixo <em>y</em>. A reta $ y = x $ é uma diagonal que passa em qualquer coordenada no eixo <em>x</em> e também em qualquer coordenada do eixo <em>y</em>.
-<figure><img src=https://s3.amazonaws.com/grapher/exports/nrs6m83gwl.png><figcaption>
-<h4>Figura 2 - Exemplos de retas vertical, horizontal e diagonal.</h4>
-</figcaption>
-</figure>
-</p>
-<p>As equações anteriores podem ser alteradas com transformações que mudam o comportamento da reta. Alterando $ y = x $ para $ y = x + 2 $ é possível perceber que a reta foi deslocada um pouco para cima, passando pelo eixo <em>y</em> no ponto <em>(0, 2)</em>. Agora se alterar a reta para $ y = x - 5 $ é possível perceber que a reta foi deslocada um pouco para baixo passando pelo eixo <em>y</em> no ponto <em>(0,-5)</em>. Isso demonstra que é possível construir uma reta apenas sabendo em qual coordenada ela passa pelo eixo <em>y</em>.</p>
-<blockquote>
-<p>Pergunta: Como construir uma reta que passe no eixo <em>y</em> no ponto <em>(0, 7)</em>?
-Resposta: A equação para essa reta é $ y = x + 7 $.</p>
-</blockquote>
-<p>As equações estão no formato $ y = mx + b $ sendo:</p>
-<ul>
-<li><em>b</em> a coordenada <em>y</em> que corta o eixo <em>y</em>;</li>
-<li><em>m</em> é a inclinação da reta.</li>
-</ul>
-<p>Até mesmo a reta $ y = 1 $ está nesse formato, mas no caso dela $ y = 0x + 1 $ por isso $ y = 1 $ o <em>0x</em> é porque ela não tem inclinação. A reta $ y = x $ também está neste formato, mas com a coordenada <em>y</em> com valor <em>0</em> porque ela passa pela origem.</p>
-<p>A inclinação da reta é o quanto a reta muda em <em>y</em> em relação ao quanto a reta muda em <em>x</em>. Nas retas acima, exceto $ y = 1 $, é possível perceber que a reta tem inclinação <em>1</em>. A inclinação <em>1</em> indica uma variação de <em>1</em> para <em>1</em> entre <em>x</em> e <em>y</em>, ou seja, ela move <em>1</em> em <em>x</em> e <em>1</em> em <em>y</em>. Como é possível descobrir a inclinação? Simples, mas é necessário saber 2 pontos onde reta passa e a equação $ m = \frac{y_2 - y_1}{x_2 - x_1} $. Utilizando os pontos <em>(-7, 0)</em> e <em>(-6, 1)</em> da reta $ y = x + 7 $ e aplicando-os na equação obtém-se $ m = \frac{1 - 0}{-6 - (-7)} = \frac{1}{-6 + 1} = \frac{1}{1} = 1 $ validando a inclinação (<em>m</em>) da equação $ y = x + 7 $.</p>
-<blockquote>
-<p>Questão: Qual a equação de uma reta que tem $ m = \frac{2}{3} $ e passa no eixo <em>y</em> no ponto <em>(0, -9)</em>?</p>
-</blockquote>
-<blockquote>
-<p>Resposta: A equação é $ y = \frac{2}{3}x + 3 $.</p>
-</blockquote>
-<blockquote>
-<p>Questão: Qual a equação de uma reta que passa pelos pontos <em>(0, 3)</em> e <em>(3, 13)</em>?</p>
-</blockquote>
-<blockquote>
-<p>Resposta: A inclinação é $ m = \frac{3 - 13}{0 - 3} = \frac{-10}{-3} = \frac{10}{3} $ e a reta é $ y = \frac{10}{3}x - 9 $.</p>
-</blockquote>
-<h1 id=obtendo-o-sinal-de-parabólica-desenhando-as-asas-com-parábolas>
-Obtendo o sinal de parabólica: desenhando as asas com parábolas
-<a class=heading-link href=#obtendo-o-sinal-de-parab%c3%b3lica-desenhando-as-asas-com-par%c3%a1bolas>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h1>
-<p>As asas do morcego são desenhadas com seis parábolas. São duas parábolas para a parte superior e duas para a parte inferior demonstradas na Figura 3.
-<figure><img src=https://s3.amazonaws.com/grapher/exports/wildlc6iwt.png><figcaption>
-<h4>Figura 3 - Parábolas que formam as asas do morcego.</h4>
-</figcaption>
-</figure>
-A equação da parábola superior esquerda é $ y = \frac{1}{4} (x + 5)^2 + 3 { -9 &lt; x &lt; -1 } $ e a equação da parábola superior direita é $ y = \frac{1}{4} (x - 5)^2 + 3 { 1 &lt; x &lt; 9 } $.
+<span class=tag><a href=/tags/transforma%C3%A7%C3%B5es/>Transformações</a></span></div></div></header><div><p>Olá, tudo certo!?</p><p>Hoje vamos trabalhar com a ideia de desenhar o símbolo do <em>Batman</em> com equações. Veremos alguns conceitos matemáticos que permitem fazer esse desenho. O desenho que eu vou demonstrar é um que fiz e talvez não seja com as melhores fórmulas nem a forma otimizada, mas acho que ele é bom um passo a passo sobre alguns conceitos da álgebra. O desenho é composto por retas, parábolas e círculos. A partir destes componentes básicos, aplicamos transformações e restrições no domínio da equação que formam o desenho. Para fazer o desenho vamos usar o <a href=https://www.desmos.com/calculator>Desmos</a> (calculadora gráfica online).</p><h1 id=ao-infinito-e-além-desenhando-a-cabeça-do-morcego-com-retas>Ao infinito e além: desenhando a cabeça do morcego com retas
+<a class=heading-link href=#ao-infinito-e-al%c3%a9m-desenhando-a-cabe%c3%a7a-do-morcego-com-retas><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Vamos começar pelos componentes mais simples que são as retas. Usamos três retas para desenhar a cabeça e as orelhas do morcego como pode ser visto da Figura 1.<figure><img src=https://s3.amazonaws.com/grapher/exports/z5kd3vxn4q.png><figcaption><h4>Figura 1 - Retas que formam a cabeça do morceço</h4></figcaption></figure>A reta horizontal no meio tem equação $y = 6 { -0.5 &lt; x &lt; 0.5 }$</p><blockquote><p>Os valores entre <em>{}</em> limitam os valores (domínio) de <em>x</em> na equação. Por exemplo, a equação só terá valores para <em>y</em> quando <em>x</em> estiver entre <em>-0.5</em> e <em>0.5</em>.</p></blockquote><p>As duas retas inclinadas seguem uma intuição semelhante, mas tem equações diferentes. A reta da direita (laranja) pode ser desenhada com a equação $y = 2x + 5 {0.5 &lt; x &lt; 1} $ e a reta da esquerda com $ y = -2x + 5 {-1 &lt; x &lt; -0.5} $. É possível perceber que as equações são muito parecidas e agora vamos ver porque as retas podem ser desenhadas com as equações anteriores.</p><h2 id=por-que-as-retas-se-comportam-dessa-forma>Por que as retas se comportam dessa forma?
+<a class=heading-link href=#por-que-as-retas-se-comportam-dessa-forma><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Existem três retas (que eu conheço) que são super simples $ x = 1 $ (reta roxa na Figura 2), $ y = 1 $ (reta laranja na Figura 2) e $ y = x $ (reta preta na Figura 2). A reta $ x = 1 $ é uma reta vertical que passa por qualquer coordenada no eixo <em>y</em>, mas apenas na coordenada <em>1</em> no eixo <em>x</em>. A reta $ y = 1 $ é uma reta horizontal que passa em qualquer coordenada no eixo <em>x</em>, mas apenas na coordenada <em>1</em> do eixo <em>y</em>. A reta $ y = x $ é uma diagonal que passa em qualquer coordenada no eixo <em>x</em> e também em qualquer coordenada do eixo <em>y</em>.<figure><img src=https://s3.amazonaws.com/grapher/exports/nrs6m83gwl.png><figcaption><h4>Figura 2 - Exemplos de retas vertical, horizontal e diagonal.</h4></figcaption></figure></p><p>As equações anteriores podem ser alteradas com transformações que mudam o comportamento da reta. Alterando $ y = x $ para $ y = x + 2 $ é possível perceber que a reta foi deslocada um pouco para cima, passando pelo eixo <em>y</em> no ponto <em>(0, 2)</em>. Agora se alterar a reta para $ y = x - 5 $ é possível perceber que a reta foi deslocada um pouco para baixo passando pelo eixo <em>y</em> no ponto <em>(0,-5)</em>. Isso demonstra que é possível construir uma reta apenas sabendo em qual coordenada ela passa pelo eixo <em>y</em>.</p><blockquote><p>Pergunta: Como construir uma reta que passe no eixo <em>y</em> no ponto <em>(0, 7)</em>?
+Resposta: A equação para essa reta é $ y = x + 7 $.</p></blockquote><p>As equações estão no formato $ y = mx + b $ sendo:</p><ul><li><em>b</em> a coordenada <em>y</em> que corta o eixo <em>y</em>;</li><li><em>m</em> é a inclinação da reta.</li></ul><p>Até mesmo a reta $ y = 1 $ está nesse formato, mas no caso dela $ y = 0x + 1 $ por isso $ y = 1 $ o <em>0x</em> é porque ela não tem inclinação. A reta $ y = x $ também está neste formato, mas com a coordenada <em>y</em> com valor <em>0</em> porque ela passa pela origem.</p><p>A inclinação da reta é o quanto a reta muda em <em>y</em> em relação ao quanto a reta muda em <em>x</em>. Nas retas acima, exceto $ y = 1 $, é possível perceber que a reta tem inclinação <em>1</em>. A inclinação <em>1</em> indica uma variação de <em>1</em> para <em>1</em> entre <em>x</em> e <em>y</em>, ou seja, ela move <em>1</em> em <em>x</em> e <em>1</em> em <em>y</em>. Como é possível descobrir a inclinação? Simples, mas é necessário saber 2 pontos onde reta passa e a equação $ m = \frac{y_2 - y_1}{x_2 - x_1} $. Utilizando os pontos <em>(-7, 0)</em> e <em>(-6, 1)</em> da reta $ y = x + 7 $ e aplicando-os na equação obtém-se $ m = \frac{1 - 0}{-6 - (-7)} = \frac{1}{-6 + 1} = \frac{1}{1} = 1 $ validando a inclinação (<em>m</em>) da equação $ y = x + 7 $.</p><blockquote><p>Questão: Qual a equação de uma reta que tem $ m = \frac{2}{3} $ e passa no eixo <em>y</em> no ponto <em>(0, -9)</em>?</p></blockquote><blockquote><p>Resposta: A equação é $ y = \frac{2}{3}x + 3 $.</p></blockquote><blockquote><p>Questão: Qual a equação de uma reta que passa pelos pontos <em>(0, 3)</em> e <em>(3, 13)</em>?</p></blockquote><blockquote><p>Resposta: A inclinação é $ m = \frac{3 - 13}{0 - 3} = \frac{-10}{-3} = \frac{10}{3} $ e a reta é $ y = \frac{10}{3}x - 9 $.</p></blockquote><h1 id=obtendo-o-sinal-de-parabólica-desenhando-as-asas-com-parábolas>Obtendo o sinal de parabólica: desenhando as asas com parábolas
+<a class=heading-link href=#obtendo-o-sinal-de-parab%c3%b3lica-desenhando-as-asas-com-par%c3%a1bolas><i class="fa fa-link" aria-hidden=true></i></a></h1><p>As asas do morcego são desenhadas com seis parábolas. São duas parábolas para a parte superior e duas para a parte inferior demonstradas na Figura 3.<figure><img src=https://s3.amazonaws.com/grapher/exports/wildlc6iwt.png><figcaption><h4>Figura 3 - Parábolas que formam as asas do morcego.</h4></figcaption></figure>A equação da parábola superior esquerda é $ y = \frac{1}{4} (x + 5)^2 + 3 { -9 &lt; x &lt; -1 } $ e a equação da parábola superior direita é $ y = \frac{1}{4} (x - 5)^2 + 3 { 1 &lt; x &lt; 9 } $.
 As equações para as parábolas inferiores da esquerda são respectivamente $ y = -\frac{1}{4}(x+5)^2 { -9 &lt; x &lt; -3 } $ e $ y = -(x + 2)^2 { 0 > x > -3 } $.
-As equações para as parábolas inferiores da direita são respectivamente $ y = -(x - 2)^2 { 0 &lt; x &lt; 3 } $ e $ y = -\frac{1}{4}(x - 5)^2 { 3 &lt; x &lt; 9 } $. Da mesma forma que as retas, é possível perceber que as parábolas são semelhantes em alguns pontos e parecem seguir um padrão.</p>
-<h2 id=por-que-as-parábolas-se-comportam-dessa-forma>
-Por que as parábolas se comportam dessa forma?
-<a class=heading-link href=#por-que-as-par%c3%a1bolas-se-comportam-dessa-forma>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h2>
-<p>A parábola mais simples é $ y = x^2 $ (parábola vermelha na Figura 4) e as demais parábolas são criadas aplicando transformações nessa parábola. As parábolas possuem (da mesma forma que as retas) uma intercepção em <em>y</em> (ponto que passa pelo eixo <em>y</em>). Também é possível notar uma intercepção em <em>x</em> (ponto que passa pelo eixo <em>x</em>). As parábolas podem ter <em>1</em>, <em>2</em> ou <em>nenhuma</em> intercepção em <em>x</em> como nos exemplos a seguir:</p>
-<ul>
-<li>$ y = x^2 + 2 $ (parábola verde na Figura 4) não possui intercepção em <em>x</em> (não passa nenhuma vez pelo eixo <em>x</em>).</li>
-<li>$ y = x^2 - 2 $ (parábola azul na Figura 4) possui duas intercepções em <em>x</em> (passa duas vezes pelo eixo <em>x</em>).</li>
-</ul>
-<p>As transformações acima são semelhantes as aplicadas na reta, adicionando um termo sem variável na equação move o resultado no eixo <em>y</em>.
-<figure><img src=https://s3.amazonaws.com/grapher/exports/gm3s5jzl2s.png><figcaption>
-<h4>Figura 4 - Exemplos de transformações em parábolas no eixo y.</h4>
-</figcaption>
-</figure>
-</p>
-<p>As parábolas também podem ser movimentadas na horizontal pelo eixo <em>x</em> e para isso é necessário alterar o termo $ x^2 $. Para mover a parábola <em>2</em> unidades para a esquerda $ x^2 $ é alterado para $ (x + 2)^2 $ (parábola verde na Figura 5). Para mover a parábola <em>2</em> unidades para a direita $ x^2 $ é alterado para $ (x - 2)^2 $ (parábola azul na Figura 5). Outra propriedade que pode ser percebida é que todos os movimentos efetuados até o momento mudaram a posição do vértice da parábola. Portanto, apenas olhando para a equação $ y = (x + 2)^2 - 2 $ é possível dizer que o vértice da parábola está no ponto <em>(-2, -2)</em>. Dessa forma, podemos mover a parábola pensando apenas onde deve ficar o vértice.
-<figure><img src=https://s3.amazonaws.com/grapher/exports/re4ddvqfdv.png><figcaption>
-<h4>Figura 5 - Exemplos de transformações em parábolas no eixo x.</h4>
-</figcaption>
-</figure>
-</p>
-<p>Além de movimentar a parábola, também é possível alterar a sua largura. Essa propriedade é controlada pelo coeficiente de $ x^2 $. Para que a parábola seja mais larga, deve-se diminuir o coeficiente de $ x^2 $. Por exemplo, $ y = \frac{1}{4}x^2 $ (parábola roxa na Figura 6) e $ y = \frac{1}{2}x^2 $ (parábola azul na Figura 6). Para que a parábola seja mais estreita, deve-se aumentar o coeficiente de $ x^2 $. Por exemplo, $ y = 2x^2 $ (parábola laranja na Figura 6) e $ y = 4x^2 $ (parábola preta na Figura 6).
-<figure><img src=https://s3.amazonaws.com/grapher/exports/xqrvo4b3k4.png><figcaption>
-<h4>Figura 6 - Exemplos de transformações na largura da parábola.</h4>
-</figcaption>
-</figure>
-</p>
-<p>Além da espessura da parábola, o coeficiente de $ x^2 $ também controla a direção da parábola. Com um coeficiente positivo ($ y = 5x^2 $), a parábola abre para cima (parábola vermelha na Figura 7) e com um coeficiente negativo ($ y = -5x^2 $) a parábola abre para baixo (parábola azul na Figura 7).
-<figure><img src=https://s3.amazonaws.com/grapher/exports/kc8h4e0nej.png><figcaption>
-<h4>Figura 7 - Exemplos de transformações na direção da parábola.</h4>
-</figcaption>
-</figure>
-</p>
-<h1 id=correndo-atrás-do-próprio-rabo-desenhando-as-laterais-das-asas-com-círculos>
-Correndo atrás do próprio rabo: desenhando as laterais das asas com círculos
-<a class=heading-link href=#correndo-atr%c3%a1s-do-pr%c3%b3prio-rabo-desenhando-as-laterais-das-asas-com-c%c3%adrculos>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h1>
-<p>As laterais das asas podem ser desenhadas com dois meio círculos como pode ser visto na Figura 8.
-<figure><img src=https://s3.amazonaws.com/grapher/exports/f8x1bw5ecr.png><figcaption>
-<h4>Figura 8 - Asas completas com círculos completando as laterais das asas.</h4>
-</figcaption>
-</figure>
-A equação para o meio círculo da lateral esquerda é $ (x + 9)^2 + (y - \frac{3}{2})^2 = 30 { -9 > x } $ e a equação para o meio círculo da lateral direita é $ (x - 9)^2 + (y - \frac{3}{2})^2 = 30 { 9 &lt; x } $.</p>
-<h2 id=por-que-os-círculos-se-comportam-dessa-forma>
-Por que os círculos se comportam dessa forma?
-<a class=heading-link href=#por-que-os-c%c3%adrculos-se-comportam-dessa-forma>
-<i class="fa fa-link" aria-hidden=true></i>
-</a>
-</h2>
-<p>A equação básica para um círculo é $ x^2 + y^2 = 4 $, sendo $ 4 = r^2 $. A partir dessa equação é possível explorar as mesmas propriedades que já vistas nas parábolas e retas. Para movimentar o círculo no eixo <em>x</em>, é preciso mudar a base de $ x^2 $. Por exemplo, a equação para movimentar o centro <em>2</em> unidades para a esquerda é $ (x + 2)^2 + y^2 = 4 $ (círculo verde na Figura 9) e a equação para movimentar <em>2</em> unidades para a direita é $ (x - 2)^2 + y^2 = 4 $ (círculo roxo na Figura 9). A mesma ideia vale para movimentar no eixo <em>y</em>. A equação para movimentar <em>2</em> unidades para cima é $ x^2 + (y - 2)^2 = 4 $ (círculo preto na Figura 9) e a equação para movimentar <em>2</em> unidades para baixo é $ x^2 + (y + 2)^2 = 4 $ (círculo laranja na Figura 9).
-<figure><img src=https://s3.amazonaws.com/grapher/exports/asdq81q09k.png><figcaption>
-<h4>Figura 9 - Exemplos de transformações no círculo nos eixos x e y.</h4>
-</figcaption>
-</figure>
-</p>
-<p>Também é possível controlar o tamanho do círculo. Para isso, é necessário alterar o termo do lado direito da equação ($ r^2 $). Por exemplo, a equação $ x^2 + y^2 = 9 $ (círculo azul na Figura 10) desenha um círculo maior que a equação $ x^2 + y^2 = 5 $ (círculo vermelho na Figura 10).
-<figure><img src=https://s3.amazonaws.com/grapher/exports/ojsgf1d4ca.png><figcaption>
-<h4>Figura 10 - Exemplos de transformações no tamanho do círculo.</h4>
-</figcaption>
-</figure>
-</p>
-<p>É isso por hoje.
-Abraços e até a próxima :D.</p>
-</div>
-<footer>
-</footer>
-</article>
-<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
-<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:!0},{left:'$',right:'$',display:!1},{left:'\\(',right:'\\)',display:!1},{left:'\\[',right:'\\]',display:!0}]})"></script>
-</section>
-</div>
-<footer class=footer>
-<section class=container>
-©
+As equações para as parábolas inferiores da direita são respectivamente $ y = -(x - 2)^2 { 0 &lt; x &lt; 3 } $ e $ y = -\frac{1}{4}(x - 5)^2 { 3 &lt; x &lt; 9 } $. Da mesma forma que as retas, é possível perceber que as parábolas são semelhantes em alguns pontos e parecem seguir um padrão.</p><h2 id=por-que-as-parábolas-se-comportam-dessa-forma>Por que as parábolas se comportam dessa forma?
+<a class=heading-link href=#por-que-as-par%c3%a1bolas-se-comportam-dessa-forma><i class="fa fa-link" aria-hidden=true></i></a></h2><p>A parábola mais simples é $ y = x^2 $ (parábola vermelha na Figura 4) e as demais parábolas são criadas aplicando transformações nessa parábola. As parábolas possuem (da mesma forma que as retas) uma intercepção em <em>y</em> (ponto que passa pelo eixo <em>y</em>). Também é possível notar uma intercepção em <em>x</em> (ponto que passa pelo eixo <em>x</em>). As parábolas podem ter <em>1</em>, <em>2</em> ou <em>nenhuma</em> intercepção em <em>x</em> como nos exemplos a seguir:</p><ul><li>$ y = x^2 + 2 $ (parábola verde na Figura 4) não possui intercepção em <em>x</em> (não passa nenhuma vez pelo eixo <em>x</em>).</li><li>$ y = x^2 - 2 $ (parábola azul na Figura 4) possui duas intercepções em <em>x</em> (passa duas vezes pelo eixo <em>x</em>).</li></ul><p>As transformações acima são semelhantes as aplicadas na reta, adicionando um termo sem variável na equação move o resultado no eixo <em>y</em>.<figure><img src=https://s3.amazonaws.com/grapher/exports/gm3s5jzl2s.png><figcaption><h4>Figura 4 - Exemplos de transformações em parábolas no eixo y.</h4></figcaption></figure></p><p>As parábolas também podem ser movimentadas na horizontal pelo eixo <em>x</em> e para isso é necessário alterar o termo $ x^2 $. Para mover a parábola <em>2</em> unidades para a esquerda $ x^2 $ é alterado para $ (x + 2)^2 $ (parábola verde na Figura 5). Para mover a parábola <em>2</em> unidades para a direita $ x^2 $ é alterado para $ (x - 2)^2 $ (parábola azul na Figura 5). Outra propriedade que pode ser percebida é que todos os movimentos efetuados até o momento mudaram a posição do vértice da parábola. Portanto, apenas olhando para a equação $ y = (x + 2)^2 - 2 $ é possível dizer que o vértice da parábola está no ponto <em>(-2, -2)</em>. Dessa forma, podemos mover a parábola pensando apenas onde deve ficar o vértice.<figure><img src=https://s3.amazonaws.com/grapher/exports/re4ddvqfdv.png><figcaption><h4>Figura 5 - Exemplos de transformações em parábolas no eixo x.</h4></figcaption></figure></p><p>Além de movimentar a parábola, também é possível alterar a sua largura. Essa propriedade é controlada pelo coeficiente de $ x^2 $. Para que a parábola seja mais larga, deve-se diminuir o coeficiente de $ x^2 $. Por exemplo, $ y = \frac{1}{4}x^2 $ (parábola roxa na Figura 6) e $ y = \frac{1}{2}x^2 $ (parábola azul na Figura 6). Para que a parábola seja mais estreita, deve-se aumentar o coeficiente de $ x^2 $. Por exemplo, $ y = 2x^2 $ (parábola laranja na Figura 6) e $ y = 4x^2 $ (parábola preta na Figura 6).<figure><img src=https://s3.amazonaws.com/grapher/exports/xqrvo4b3k4.png><figcaption><h4>Figura 6 - Exemplos de transformações na largura da parábola.</h4></figcaption></figure></p><p>Além da espessura da parábola, o coeficiente de $ x^2 $ também controla a direção da parábola. Com um coeficiente positivo ($ y = 5x^2 $), a parábola abre para cima (parábola vermelha na Figura 7) e com um coeficiente negativo ($ y = -5x^2 $) a parábola abre para baixo (parábola azul na Figura 7).<figure><img src=https://s3.amazonaws.com/grapher/exports/kc8h4e0nej.png><figcaption><h4>Figura 7 - Exemplos de transformações na direção da parábola.</h4></figcaption></figure></p><h1 id=correndo-atrás-do-próprio-rabo-desenhando-as-laterais-das-asas-com-círculos>Correndo atrás do próprio rabo: desenhando as laterais das asas com círculos
+<a class=heading-link href=#correndo-atr%c3%a1s-do-pr%c3%b3prio-rabo-desenhando-as-laterais-das-asas-com-c%c3%adrculos><i class="fa fa-link" aria-hidden=true></i></a></h1><p>As laterais das asas podem ser desenhadas com dois meio círculos como pode ser visto na Figura 8.<figure><img src=https://s3.amazonaws.com/grapher/exports/f8x1bw5ecr.png><figcaption><h4>Figura 8 - Asas completas com círculos completando as laterais das asas.</h4></figcaption></figure>A equação para o meio círculo da lateral esquerda é $ (x + 9)^2 + (y - \frac{3}{2})^2 = 30 { -9 > x } $ e a equação para o meio círculo da lateral direita é $ (x - 9)^2 + (y - \frac{3}{2})^2 = 30 { 9 &lt; x } $.</p><h2 id=por-que-os-círculos-se-comportam-dessa-forma>Por que os círculos se comportam dessa forma?
+<a class=heading-link href=#por-que-os-c%c3%adrculos-se-comportam-dessa-forma><i class="fa fa-link" aria-hidden=true></i></a></h2><p>A equação básica para um círculo é $ x^2 + y^2 = 4 $, sendo $ 4 = r^2 $. A partir dessa equação é possível explorar as mesmas propriedades que já vistas nas parábolas e retas. Para movimentar o círculo no eixo <em>x</em>, é preciso mudar a base de $ x^2 $. Por exemplo, a equação para movimentar o centro <em>2</em> unidades para a esquerda é $ (x + 2)^2 + y^2 = 4 $ (círculo verde na Figura 9) e a equação para movimentar <em>2</em> unidades para a direita é $ (x - 2)^2 + y^2 = 4 $ (círculo roxo na Figura 9). A mesma ideia vale para movimentar no eixo <em>y</em>. A equação para movimentar <em>2</em> unidades para cima é $ x^2 + (y - 2)^2 = 4 $ (círculo preto na Figura 9) e a equação para movimentar <em>2</em> unidades para baixo é $ x^2 + (y + 2)^2 = 4 $ (círculo laranja na Figura 9).<figure><img src=https://s3.amazonaws.com/grapher/exports/asdq81q09k.png><figcaption><h4>Figura 9 - Exemplos de transformações no círculo nos eixos x e y.</h4></figcaption></figure></p><p>Também é possível controlar o tamanho do círculo. Para isso, é necessário alterar o termo do lado direito da equação ($ r^2 $). Por exemplo, a equação $ x^2 + y^2 = 9 $ (círculo azul na Figura 10) desenha um círculo maior que a equação $ x^2 + y^2 = 5 $ (círculo vermelho na Figura 10).<figure><img src=https://s3.amazonaws.com/grapher/exports/ojsgf1d4ca.png><figcaption><h4>Figura 10 - Exemplos de transformações no tamanho do círculo.</h4></figcaption></figure></p><p>É isso por hoje.
+Abraços e até a próxima :D.</p></div><footer></footer></article><link rel=stylesheet href=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css integrity=sha384-R4558gYOUz8mP9YWpZJjofhk+zx0AS11p36HnD2ZKj/6JR5z27gSSULCNHIRReVs crossorigin=anonymous><script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js integrity=sha384-z1fJDqw8ZApjGO3/unPWUPsIymfsJmyrDVWC8Tv/a1HeOtGmkwNd/7xUS0Xcnvsx crossorigin=anonymous></script>
+<script defer src=https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/contrib/auto-render.min.js integrity=sha384-+XBljXPPiv+OzfbB3cVmLHf4hdUFHlWNZN5spNQ7rmHTXpd7WvJum6fIACpNNfIR crossorigin=anonymous onload='renderMathInElement(document.body,{delimiters:[{left:"$$",right:"$$",display:!0},{left:"$",right:"$",display:!1},{left:"\\(",right:"\\)",display:!1},{left:"\\[",right:"\\]",display:!0}]})'></script></section></div><footer class=footer><section class=container>©
 2016 -
-2021
+2022
 Júlio César Batista
 ·
-Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.
-</section>
-</footer>
-</main>
-<script src=/js/coder.min.39a51230dce2ac866c049b52573e38bf60666af4bc63c1bdf203b9b2d95b1cd6.js integrity="sha256-OaUSMNzirIZsBJtSVz44v2BmavS8Y8G98gO5stlbHNY="></script>
-</body>
-</html>
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.9cf2dbf9b6989ef8eae941ffb4231c26d1dc026bca38f1d19fdba50177d8a9ac.js integrity="sha256-nPLb+baYnvjq6UH/tCMcJtHcAmvKOPHRn9ulAXfYqaw="></script></body></html>
