@@ -1,6 +1,6 @@
 ---
 title: "Designing Data Intensive Applications"
-date: 2023-01-16
+date: 2023-01-15
 categories: ["Livros"]
 tags: ["Designing Data Intensive Applications"]
 ---
