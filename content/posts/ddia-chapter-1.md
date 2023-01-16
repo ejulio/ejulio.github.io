@@ -53,7 +53,7 @@ Nesses casos, boas práticas são a melhor forma de mitigar esses problemas.
 Boa análise das regras de negócio, testes unitários/integração, isolamento de processos e monitoramento (_observability_)
 são alguns exemplos.
 
-## Falhas humananas
+## Falhas humanas
 
 Quando um sistema está operando, é necessário dar manutenção (atualizar o banco de dados, por exemplo) e,
 portanto, pessoas precisam intervir (em muitos casos).
