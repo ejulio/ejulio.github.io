@@ -63,6 +63,13 @@ weight = 4
 url = "docs/cv.pdf"
 target = "_blank"
 
+[[params.social]]
+name = "TripelByte"
+icon = "fa fa-2x fa-star-half-o"
+weight = 4
+url = "https://triplebyte.com/candidates/certificate"
+target = "_blank"
+
 [languages.pt-br]
 languageName = ":brazil:"
 
