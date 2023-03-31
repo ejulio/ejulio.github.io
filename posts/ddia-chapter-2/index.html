@@ -1,0 +1,118 @@
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="pt-br"><meta name=color-scheme content="light dark"><meta name=author content="Júlio César Batista"><meta name=description content="O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema. Esse ponto é bem importante, principalmente se pensamos em algoritmos e estruturas de dados. Muitas vezes usamos a abstração errada e isso torna o problema mais complexo. Por exemplo, você tem uma lista de itens [a, b, c, a, a, b, c, d, d, c, f] e você quer remover os itens duplicados."><meta name=keywords content="blog,software,developer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages"><meta name=twitter:description content="O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema. Esse ponto é bem importante, principalmente se pensamos em algoritmos e estruturas de dados. Muitas vezes usamos a abstração errada e isso torna o problema mais complexo. Por exemplo, você tem uma lista de itens [a, b, c, a, a, b, c, d, d, c, f] e você quer remover os itens duplicados."><meta property="og:title" content="Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages"><meta property="og:description" content="O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema. Esse ponto é bem importante, principalmente se pensamos em algoritmos e estruturas de dados. Muitas vezes usamos a abstração errada e isso torna o problema mais complexo. Por exemplo, você tem uma lista de itens [a, b, c, a, a, b, c, d, d, c, f] e você quer remover os itens duplicados."><meta property="og:type" content="article"><meta property="og:url" content="https://juliocesarbatista.com/posts/ddia-chapter-2/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-31T00:00:00+00:00"><meta property="article:modified_time" content="2023-03-31T00:00:00+00:00"><title>Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages · Júlio César Batista</title><link rel=canonical href=https://juliocesarbatista.com/posts/ddia-chapter-2/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.111.3"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Júlio César Batista</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/about/>Sobre</a></li><li class=navigation-item><a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/categories/>Categorias</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://juliocesarbatista.com/posts/ddia-chapter-2/>Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2023-03-31T00:00:00Z>2023-03-31</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+9 minutos de leitura</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/livros/>Livros</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/designing-data-intensive-applications/>Designing Data Intensive Applications</a></span>
+<span class=separator>•</span>
+<span class=tag><a href=/tags/arquitetura-de-software/>Arquitetura de Software</a></span></div></div></header><div><p>O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema.
+Esse ponto é bem importante, principalmente se pensamos em algoritmos e estruturas de dados.
+Muitas vezes usamos a abstração errada e isso torna o problema mais complexo.
+Por exemplo, você tem uma lista de itens <code>[a, b, c, a, a, b, c, d, d, c, f]</code> e você quer remover os itens duplicados. Como resolver esse problema?
+Se pensarmos apenas na lista como uma abstração, vamos ter que escrever um pouco de código para resolver esse problema.
+Porém, podemos pensar em outra abstração, como um conjunto (<code>set</code>) e esse problema está resolvido.
+O motivo é que um conjunto, por definição, não mantém valores duplicados.
+Então o conjunto final seria algo como <code>{a, b, c, d, f}</code>.
+Outro exemplo é com grafos.
+Podemos pensar neles como estruturas, <code>Vertex</code> e <code>Edge</code>, e todas as arestas de um determinado nó estão em uma lista, algo como <code>vertex.edges</code>.
+Entretanto, é possível representar um grafo a partir de uma matriz de adjacência que permite usar técnicas da álgebra linear para resolver alguns problemas, assim abrindo as portas para diferentes soluções e possivelmente reaproveitando técnicas de outras áreas sem precisar reinventar a roda.
+Note que a ideia aqui é simplesmente explorar como as diferentes representações nos fazem pensar sobre o problema e suas soluções.</p><p>Ainda sobre a importância de um modelo de dados.
+Um modelo bem definido, normalmente gera um nível de abstração.
+Pensando em aplicações de larga escala com muitas pessoas trabalhando em conjunto, esses níveis se abstração fornecem uma ótima chance para colaborção.
+Por exemplo, ao usar SQL não precisamos saber muito sobre como o banco de dados foi construído ou como ele armazena os dados.
+Existe um bom nível de abstração, a linguagem SQL, como intermediário para essa comunicação, permitindo que a aplicação e o banco de dados evoluam separadamente.</p><h1 id=relational-model-versus-document-model>Relational Model Versus Document Model
+<a class=heading-link href=#relational-model-versus-document-model><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Em um bando de dados SQL a tendência é armazenar os dados de forma normalizada em tabelas específicas para cada tipo de registro e criar referências a partir de IDs.
+Esse modelo é extremamente bom para evitar registros duplicados e ter uma fonte.
+Assim, ao atualizar apenas um registro em uma tabela, todos os demais registros que o referenciam possuem a versão atualizada.
+Um exemplo bem básico é o nome de uma rua que pode ser vinculado pelo CEP.
+Ao invés de duplicar o nome em todos os registros, podemos apenas copiar o CEP (ID) e se um dia a rua mudar de nome, todos os registros vinculados terão o nome atualizado.</p><p>A simplicidade em atualizar um registro e refletir em todos os locais que o referenciam parece muito boa, mas em um sistema com alto volume de dados isso muda um pouco.
+O problema é que para buscar o registro normalizado, precisamos fazer um <code>JOIN</code> que implica um consulta em outra tabela.
+Assim, quando um registro possui muitas referências, precisamos de inúmeras consultas para obter todos os registros vinculados, aumentando a carga sobre o banco de dados.
+Isso é um problema de localidade, pois os dados não se encontram agrupados em apenas um lugar e é necessário fazer um conjunto de consultas para obter o registro completo.
+Para esses cenários é que os bancos de dados de documento são uma boa alternativa.</p><p>Em um banco de dados de documentos, MongoDB por exemplo, os dados são armazenados como um documento (JSON, por exemplo).
+Assim, todas as referências passam a ser objetos aninhados, ou <em>arrays</em>.
+Com isso, uma simples consulta pelo objeto principal retorna todo o documento de uma vez, sem a necessidade de fazer outras consultas para complementar os dados.</p><p>Obviamente que o mesmo pode ser feito com SQL, desnormalizando uma tabela de duplicando os registros.
+A contrapartida de ambas as soluções é justamente a perda do dado normalizado, que agora passa a ser duplicado em múltiplos locais.
+Portanto, se precisar atualizar o registro, vai ter que achar todas as instâncias e atualizá-las.
+Sem contar quea o duplicar o registro, abre-se a possibilidade da introdução de erros relacionados a grafia.
+Por exemplo, se os usuários podem escrever o nome da rua, pode a haver a diferença de <code>15 de Novembro</code> e <code>XV de Novembro</code> de acordo com quem escreveu.</p><h1 id=are-document-databases-repeating-history>Are Document Databases Repeating History?
+<a class=heading-link href=#are-document-databases-repeating-history><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Aqui tem um histórico sobre bancos de dados, incluindo um <code>Network Model</code>, que parece com um bando de dados de grafos.
+Porém, o ponto que mais me chamou a atenção foi sobre a abstração de um banco de dados relacional.
+Uma parte muito importante de bancos de dados relacionais é o otimizador de <em>queries</em>.
+Quando um novo índice é criado, não é necessário alterar as consultas já existentes para usar esse novo índice (de forma geral, em alguns casos temos que mudar a consulta para que ela seja otimizada da melhor maneira possível).
+O otimizador faz esse trabalho.
+Novamente, esse nível de abstração permite que as ferramentas evoluam de forma independente permitindo um alto nível de colaboração.</p><p>Por fim, volta a discussão entre o modelo relacional e o modelo de documentos.
+A vantagem da localidade de dados do modelo de documentos permite que relações <em>one-to-many</em> tenham o custo de apenas uma consulta.
+Isso, porque os vários registros vinculados passam a ser uma lista nesse documento, algo como:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>{
+</span></span><span style=display:flex><span>    &#34;produto&#34;: &#34;Camiseta&#34;,
+</span></span><span style=display:flex><span>    &#34;modelos&#34;: [{
+</span></span><span style=display:flex><span>        &#34;cor&#34;: &#34;preta&#34;,
+</span></span><span style=display:flex><span>        &#34;preco&#34;: 87.99
+</span></span><span style=display:flex><span>    }, {
+</span></span><span style=display:flex><span>        &#34;cor&#34;: &#34;amarela&#34;,
+</span></span><span style=display:flex><span>        &#34;preco&#34;: 88.99
+</span></span><span style=display:flex><span>    }]
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>Assim, para buscar os preços e modelos é necessário apenas uma consulta pelo documento.
+Porém, no modelo relacional, seria algo como:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>Tabela Produto
+</span></span><span style=display:flex><span>- ID
+</span></span><span style=display:flex><span>- Nome
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Tabela VariacaoProduto
+</span></span><span style=display:flex><span>- ID Produto
+</span></span><span style=display:flex><span>- Descricao
+</span></span><span style=display:flex><span>- Preco
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>Consulta:
+</span></span><span style=display:flex><span>SELECT
+</span></span><span style=display:flex><span>    p.Nome,
+</span></span><span style=display:flex><span>    vp.Descricao,
+</span></span><span style=display:flex><span>    vp.Preco
+</span></span><span style=display:flex><span>FROM
+</span></span><span style=display:flex><span>    Produto p
+</span></span><span style=display:flex><span>    INNER JOIN VariacaoProduto vp ON (p.ID = vp.IDProduto)
+</span></span></code></pre></div><p>Portanto, seria necessário consultar duas tabelas e juntar os registros, ou seja, um custo maior para essa consulta.</p><p>Porém, existem outros tipos de consulta como <em>many-to-one</em> e <em>many-to-many</em> onde tanto o banco de dados de documentos, quando o relacional terão a mesma complexidade.
+Em ambos os casos, é necessário gerar uma referência para o outro registro e fazer mais de uma consulta.
+Um exemplo aqui é se quiser manter o endereço normalizado (<em>many-to-one</em>), sendo que muitas pessoas vivem na mesma rua e esse registro pode ser mantido de forma normalizada.
+Assim, tanto no modelo relacional quanto no de documentos, seria necessário manter uma referência (ID) para esse registro normalizado e resolver o registro final com mais de uma consulta.
+Ou seja, a escolha de um modelo de dados passa por muitas considerações com a finalidade de tornar o desenvolvimento da aplicação menos complexo.</p><h2 id=schema-flexibility-in-the-document-model>Schema flexibility in the document model
+<a class=heading-link href=#schema-flexibility-in-the-document-model><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Normalmente pensamos em bancos de dados de documentos como não tendo um <em>schema</em> definido.
+Entretanto, eles possuem um <em>schema</em> implícito na leitura dos dados pela aplicação, já que o código espera determinados campos.
+Portanto, esses bancos de dados são <em>schema-on-read</em>.
+Os bandos de dados relacionais são <em>schema-on-write</em> pois forçam e validam os campos na escrita.
+Ambos os modelos tem suas vantagens e desvantagens.
+Para um modelo de dados que está sempre mudando, usar <em>schema-on-write</em> pode se tornar um problema e forçar muitas migrações.
+Ao mesmo tempo, ter diferentes times trabalhando em cima do mesmo conjunto de dados com <em>schema-on-read</em> pode gerar registros muito diferentes se não houver comunicação entre os times para manter um certo padrão.
+Um exemplo clássico para usar <em>schema-on-read</em> é ao integrar com diferentes sistemas.
+Nesse caso, normalmente não temos controle sobre o outro sistema e como ele irá retornar os registros.
+Assim, manter uma base <em>schema-on-read</em> permite receber e armazenar os registros sem problemas e, caso exista alguma mudança, corrigir posteriormente durante o processamento, mas sem a necessidade de ter que buscar/receber o registro novamente.</p><h3 id=data-locality-for-queries>Data locality for queries
+<a class=heading-link href=#data-locality-for-queries><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Como mencionado anteriormente, a localidade dos dados é um fator importante que permite buscar dados relacionados com apenas uma consulta, melhorando o desempenho da aplicação.
+Mas essa vantagem também tem um custo associado ao atualizar os registros.
+Normalmente é muito difícil que uma atualização resulte no mesmo tamanho de documento e assim, uma atualização pode acabar se tornando uma remoção seguida de uma inserção.
+Desta maneira, se a aplicação possuir muitas atualizações de registros, isso, provavelmente, também deverá ser considerado.</p><h2 id=convergence-of-document-and-relational-databases>Convergence of document and relational databases
+<a class=heading-link href=#convergence-of-document-and-relational-databases><i class="fa fa-link" aria-hidden=true></i></a></h2><p>Atualmente, os bancos de dados relacionais tem adicionado suporte para documentos (colunas JSON/XML nas tabelas) e os modelos de documentos tem adicionado suporte para <code>JOIN</code>, permitindo referências.</p><h1 id=query-languages-for-data>Query Languages for Data
+<a class=heading-link href=#query-languages-for-data><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Como mencionado anteriormente, a linguagem SQL é uma camada de abstração entre a aplicação e os dados.
+Com isso, definimos apenas os dados que precisamos e não como buscá-los (SQL é uma linguagem declarativa).
+Assim, o otimizador de consultas pode tomar as decisões de como melhorar o desempenho sem que a aplicação tenha que se preocupar com isso.</p><p>Outro exemplo de linguagem para consultas é o CSS.
+Definimos apenas seletores de elementos (<code>.class</code>, <code>#id</code>, <code>.class .descendent</code>) e não exatamente como o navegador busca esses elementos no HTML.</p><p><em>Map Reduce</em> não é bem uma linguagem para consulta de dados, mas mais uma forma/arquitetura.
+Nesse caso, a consulta é definida em pequenas funções (<em>map</em>) que são agregadas e o resultado final é computado sobre essas agregações (<em>reduce</em>).
+Note que não é um modelo completamente imperativo onde todos os detalhes de acesso a dados são programados.
+Mesmo porque a ideia de <em>Map Reduce</em> é de ser executado em bases de dados distribuídas.
+Mas, ao mesmo tempo, também não é uma completa abstração visto que pensamos em como os dados serão agregados para depois serem processados.</p><h1 id=graph-like-data-models>Graph-Like Data Models
+<a class=heading-link href=#graph-like-data-models><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Por fim, existem os bancos de dados de grafos onde todos os registros podem se relacionar entre si, resolvendo o problema de consultas <em>many-to-many</em> e <em>many-to-one</em>.
+Note que o problema é resolvido da mesma forma que em outros modelos, através de referências.
+Porém, a grande vantagem de bancos de dados de grafos é a abstração da linguagem de consulta.
+Consultas com recursividade (algo comum em grafos) ou com níveis indefinidos de separação são muito difíceis de modelar com tabelas e consultar com SQL e nesses cenários.
+O exemplo desse tipo de consulta é o <a href=https://pt.wikipedia.org/wiki/N%C3%BAmero_de_Erd%C5%91s>número de Erdős</a>.
+Como encontrar os matemáticos com número de Erdős N?
+Em um banco de dados de grafos, essa consulta seria um <code>COUNT</code> sobre a quantidade de arestas separando <em>Erdős</em> de outros matemáticos.</p><h1 id=fim>Fim
+<a class=heading-link href=#fim><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Não existe um modelo de dados que resolva todos os problemas e isso fica evidente com os diversos bancos de dados que existem.
+SQL ainda é um padrão muito comum, mas dependendo do tipo de acesso a dados da aplicação, pode ser necessário explorar outros modelos.
+Também é comum que novos bancos de dados tenham que ser desenvolvidos para suprir as necessidades que aparecem conforme as aplicações, se tornam mais complexas e demandam maior desempenho para processar quantidades enormes de dados.</p></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2016 -
+2023
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.9cf2dbf9b6989ef8eae941ffb4231c26d1dc026bca38f1d19fdba50177d8a9ac.js integrity="sha256-nPLb+baYnvjq6UH/tCMcJtHcAmvKOPHRn9ulAXfYqaw="></script></body></html>
