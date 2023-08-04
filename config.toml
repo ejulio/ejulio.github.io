@@ -8,8 +8,7 @@ pygmentsStyle = "bw"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 enableEmoji = true
-# Enable Disqus comments
-# disqusShortname = "yourdiscussshortname"
+googleAnalytics = "G-1BE56W9H8M"
 
 [params]
 author = "Júlio César Batista"
