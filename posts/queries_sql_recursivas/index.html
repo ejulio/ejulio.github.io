@@ -1,0 +1,235 @@
+<!doctype html><html lang=pt-br><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=content-language content="pt-br"><meta name=color-scheme content="light dark"><meta name=author content="Júlio César Batista"><meta name=description content="Recentemente me deparei com o problema de trabalhar com grafos com SQL. Dado o modelo de dados abaixo, como resolver (no fim do artigo existem alguns exemplos de grafos que podem ser usados para teste):
+Detectar se existem ciclos no grafo Encontrar todos os caminhos no grafo create table graph ( id varchar(100) primary key, name varchar(500) not null ); create table node ( id varchar(100), graph_id varchar(100) references graph(id), name varchar(500) not null, primary key (graph_id, id) ); create table edge ( id varchar(100), graph_id varchar(100) references graph(id), from_id varchar(100), to_id varchar(100), cost float not null, foreign key (graph_id, from_id) references node(graph_id, id), foreign key (graph_id, to_id) references node(graph_id, id) ); Não vou entrar nos méritos no modelo, existem várias formas de modelar o grafo."><meta name=keywords content="blog,software,developer"><meta name=twitter:card content="summary"><meta name=twitter:title content="Grafos e consultas SQL recursivas"><meta name=twitter:description content="Recentemente me deparei com o problema de trabalhar com grafos com SQL. Dado o modelo de dados abaixo, como resolver (no fim do artigo existem alguns exemplos de grafos que podem ser usados para teste):
+Detectar se existem ciclos no grafo Encontrar todos os caminhos no grafo create table graph ( id varchar(100) primary key, name varchar(500) not null ); create table node ( id varchar(100), graph_id varchar(100) references graph(id), name varchar(500) not null, primary key (graph_id, id) ); create table edge ( id varchar(100), graph_id varchar(100) references graph(id), from_id varchar(100), to_id varchar(100), cost float not null, foreign key (graph_id, from_id) references node(graph_id, id), foreign key (graph_id, to_id) references node(graph_id, id) ); Não vou entrar nos méritos no modelo, existem várias formas de modelar o grafo."><meta property="og:title" content="Grafos e consultas SQL recursivas"><meta property="og:description" content="Recentemente me deparei com o problema de trabalhar com grafos com SQL. Dado o modelo de dados abaixo, como resolver (no fim do artigo existem alguns exemplos de grafos que podem ser usados para teste):
+Detectar se existem ciclos no grafo Encontrar todos os caminhos no grafo create table graph ( id varchar(100) primary key, name varchar(500) not null ); create table node ( id varchar(100), graph_id varchar(100) references graph(id), name varchar(500) not null, primary key (graph_id, id) ); create table edge ( id varchar(100), graph_id varchar(100) references graph(id), from_id varchar(100), to_id varchar(100), cost float not null, foreign key (graph_id, from_id) references node(graph_id, id), foreign key (graph_id, to_id) references node(graph_id, id) ); Não vou entrar nos méritos no modelo, existem várias formas de modelar o grafo."><meta property="og:type" content="article"><meta property="og:url" content="https://juliocesarbatista.com/posts/queries_sql_recursivas/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-09-04T00:00:00+00:00"><meta property="article:modified_time" content="2023-09-04T00:00:00+00:00"><title>Grafos e consultas SQL recursivas · Júlio César Batista</title><link rel=canonical href=https://juliocesarbatista.com/posts/queries_sql_recursivas/><link rel=preload href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as=font type=font/woff2 crossorigin><link rel=stylesheet href=/css/coder.min.d9fddbffe6f27e69985dc5fe0471cdb0e57fbf4775714bc3d847accb08f4a1f6.css integrity="sha256-2f3b/+byfmmYXcX+BHHNsOV/v0d1cUvD2Eesywj0ofY=" crossorigin=anonymous media=screen><link rel=stylesheet href=/css/coder-dark.min.002ee2378e14c7a68f1f0a53d9694ed252090987c4e768023fac694a4fc5f793.css integrity="sha256-AC7iN44Ux6aPHwpT2WlO0lIJCYfE52gCP6xpSk/F95M=" crossorigin=anonymous media=screen><link rel=icon type=image/png href=/images/favicon-32x32.png sizes=32x32><link rel=icon type=image/png href=/images/favicon-16x16.png sizes=16x16><link rel=apple-touch-icon href=/images/apple-touch-icon.png><link rel=apple-touch-icon sizes=180x180 href=/images/apple-touch-icon.png><meta name=generator content="Hugo 0.118.2"></head><body class="preload-transitions colorscheme-auto"><div class=float-container><a id=dark-mode-toggle class=colorscheme-toggle><i class="fa fa-adjust fa-fw" aria-hidden=true></i></a></div><main class=wrapper><nav class=navigation><section class=container><a class=navigation-title href=/>Júlio César Batista</a>
+<input type=checkbox id=menu-toggle>
+<label class="menu-button float-right" for=menu-toggle><i class="fa fa-bars fa-fw" aria-hidden=true></i></label><ul class=navigation-list><li class=navigation-item><a class=navigation-link href=/categories/publica%c3%a7%c3%a3o/>Publicações</a></li><li class=navigation-item><a class=navigation-link href=/posts/>Blog</a></li><li class=navigation-item><a class=navigation-link href=/categories/>Categorias</a></li></ul></section></nav><div class=content><section class="container post"><article><header><div class=post-title><h1 class=title><a class=title-link href=https://juliocesarbatista.com/posts/queries_sql_recursivas/>Grafos e consultas SQL recursivas</a></h1></div><div class=post-meta><div class=date><span class=posted-on><i class="fa fa-calendar" aria-hidden=true></i>
+<time datetime=2023-09-04T00:00:00Z>2023-09-04</time></span>
+<span class=reading-time><i class="fa fa-clock-o" aria-hidden=true></i>
+8 minutos de leitura</span></div><div class=categories><i class="fa fa-folder" aria-hidden=true></i>
+<a href=/categories/desenvolvimento-de-software/>Desenvolvimento de Software</a></div><div class=tags><i class="fa fa-tag" aria-hidden=true></i>
+<span class=tag><a href=/tags/sql/>SQL</a></span>
+<span class=separator>•</span>
+<span class=tag><a href=/tags/grafos/>Grafos</a></span></div></div></header><div><p>Recentemente me deparei com o problema de trabalhar com grafos com SQL.
+Dado o modelo de dados abaixo, como resolver (no fim do artigo existem alguns exemplos de grafos que podem ser usados para teste):</p><ol><li>Detectar se existem ciclos no grafo</li><li>Encontrar todos os caminhos no grafo</li></ol><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>create table graph (
+</span></span><span style=display:flex><span>	id varchar(100) primary key,
+</span></span><span style=display:flex><span>	name varchar(500) not null
+</span></span><span style=display:flex><span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>create table node (
+</span></span><span style=display:flex><span>	id varchar(100),
+</span></span><span style=display:flex><span>	graph_id varchar(100) references graph(id),
+</span></span><span style=display:flex><span>	name varchar(500) not null,
+</span></span><span style=display:flex><span>	primary key (graph_id, id)
+</span></span><span style=display:flex><span>);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>create table edge (
+</span></span><span style=display:flex><span>	id varchar(100),
+</span></span><span style=display:flex><span>	graph_id varchar(100) references graph(id),
+</span></span><span style=display:flex><span>	from_id varchar(100),
+</span></span><span style=display:flex><span>	to_id varchar(100),
+</span></span><span style=display:flex><span>	cost float not null,
+</span></span><span style=display:flex><span>	foreign key (graph_id, from_id) references node(graph_id, id),
+</span></span><span style=display:flex><span>	foreign key (graph_id, to_id) references node(graph_id, id)
+</span></span><span style=display:flex><span>);
+</span></span></code></pre></div><p>Não vou entrar nos méritos no modelo, existem várias formas de modelar o grafo.
+O ponto principal é como escrever um <em>query</em> SQL para resolver o problema.</p><p>O algoritmo básico para detecção de ciclos consiste em uma busca em profundidade (<em>Depth First Search</em>, DFS).
+Basicamente, o algoritmo é resursivo e vai visitando todas as ramificações e se, em uma dessas ramificações, ele encontra
+um nó que já foi visitado, então existe um ciclo.
+Não vou entrar em muitos detalhes, <a href=https://cp-algorithms.com/graph/finding-cycle.html>aqui tem uma explicação da ideia</a>.
+A questão é, como resolver esse problemas apenas com SQL?
+É possível usando <a href="https://learn.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-ver16"><em>recursive common table expressions</em></a> (<em>Recursive</em> CTEs).
+Uma CTE é parecica com uma <em>view</em>, mas com a possibilidade de se auto-referenciar, permitindo uma consulta recursiva.
+Uma CTE recursiva tem o formato</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>with recursive cte_name (columns) as (
+</span></span><span style=display:flex><span>	-- base case
+</span></span><span style=display:flex><span>    select * from table
+</span></span><span style=display:flex><span>	union all
+</span></span><span style=display:flex><span>    -- recursive case (select based on the previous cte_name result)
+</span></span><span style=display:flex><span>	select * from cte_name
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>-- final resultset
+</span></span><span style=display:flex><span>select * from cte_name;
+</span></span></code></pre></div><h1 id=encontrar-ciclos>Encontrar ciclos
+<a class=heading-link href=#encontrar-ciclos><i class="fa fa-link" aria-hidden=true></i></a></h1><p>A ideia é ter uma consulta base e depois definir uma consulta recursiva em cima do resultado anterior.
+A consulta termina quando o segundo <code>select</code> (após o <code>union all</code>) retorna vazio.
+Com isso, a detecção de ciclos pode ser resolvida com a seguinte <em>query</em>.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>with recursive graph_traversal as (
+</span></span><span style=display:flex><span>	select
+</span></span><span style=display:flex><span>        graph_id,
+</span></span><span style=display:flex><span>		from_id,
+</span></span><span style=display:flex><span>		to_id,
+</span></span><span style=display:flex><span>		concat(&#39;,&#39;, from_id, &#39;,&#39;, to_id, &#39;,&#39;) as nodes,
+</span></span><span style=display:flex><span>		(case when from_id = to_id then 1 else 0 end) as has_cycle
+</span></span><span style=display:flex><span>	from
+</span></span><span style=display:flex><span>		edge
+</span></span><span style=display:flex><span>    where
+</span></span><span style=display:flex><span>        graph_id = &lt;GRAPH ID HERE&gt;
+</span></span><span style=display:flex><span>	union all
+</span></span><span style=display:flex><span>	select
+</span></span><span style=display:flex><span>        e.graph_id,
+</span></span><span style=display:flex><span>		e.from_id,
+</span></span><span style=display:flex><span>		e.to_id,
+</span></span><span style=display:flex><span>		concat(graph_traversal.nodes, e.to_id, &#39;,&#39;) as nodes,
+</span></span><span style=display:flex><span>		(case when graph_traversal.nodes like concat(&#39;%,&#39;, e.to_id, &#39;,%&#39;) then 1 else 0 end) as has_cycle
+</span></span><span style=display:flex><span>	from
+</span></span><span style=display:flex><span>		graph_traversal
+</span></span><span style=display:flex><span>		join edge e on e.from_id = graph_traversal.to_id and e.graph_id = graph_traversal.graph_id
+</span></span><span style=display:flex><span>	where
+</span></span><span style=display:flex><span>		graph_traversal.has_cycle = 0
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>select exists(select 1 from graph_traversal where has_cycle = 1 limit 1) as has_cycle;
+</span></span></code></pre></div><p>O caso base é a enumeração de todas as arestas do grafo.
+O detalhe é a coluna <code>nodes</code> que mantém uma lista de nós visitados, que é utilizada para detectar ciclos.
+Depois, temos a consulta recursiva sobre a CTE <code>graph_traversal</code>.
+Note que a consulta apenas continua se <code>has_cycle = 0</code>, para que a busca termine assim que um ciclo for encontrado, sem a necessidade de enumerar todas as possibilidades.
+Outro ponto que determina o fim da recursão é se o <code>join</code> retornar vazio, ou seja, não existir um próximo nó.
+Por fim, existe um <code>select exists</code> apenas para determinar se existe ou não o ciclo no grafo em questão.
+Lembrando que no fim desta página existem exemplos de grafos podem ser usados para testar a <em>query</em> acima.</p><h1 id=encontrar-todos-os-caminhos>Encontrar todos os caminhos
+<a class=heading-link href=#encontrar-todos-os-caminhos><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Nesse caso, o problema é basicamente o mesmo de antes, mas com a condição de parada indicada pelo nó de início e fim do grafo.
+Note que nesse caso, não é possível parar assim que encontrar um caminho, é necessário enumerar todas as possibilidades.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>with recursive graph_traversal (graph_id, from_id, to_id, node_path, path_cost, has_cycle) as (
+</span></span><span style=display:flex><span>	select
+</span></span><span style=display:flex><span>        graph_id,
+</span></span><span style=display:flex><span>		from_id,
+</span></span><span style=display:flex><span>		to_id,
+</span></span><span style=display:flex><span>		concat(&#39;,&#39;, from_id, &#39;,&#39;, to_id, &#39;,&#39;) as node_path,
+</span></span><span style=display:flex><span>		cost as path_cost,
+</span></span><span style=display:flex><span>		(case when from_id = to_id then true else false end) as has_cycle
+</span></span><span style=display:flex><span>	from
+</span></span><span style=display:flex><span>		edge
+</span></span><span style=display:flex><span>    where
+</span></span><span style=display:flex><span>        graph_id = &lt;GRAPH ID HERE&gt;
+</span></span><span style=display:flex><span>        and
+</span></span><span style=display:flex><span>        from_id = &lt;FROM ID HERE&gt;
+</span></span><span style=display:flex><span>	union all
+</span></span><span style=display:flex><span>	select
+</span></span><span style=display:flex><span>        e.graph_id,
+</span></span><span style=display:flex><span>		e.from_id,
+</span></span><span style=display:flex><span>		e.to_id,
+</span></span><span style=display:flex><span>		concat(gt.node_path, e.to_id, &#39;,&#39;) as node_path,
+</span></span><span style=display:flex><span>		gt.path_cost + e.cost as path_cost,
+</span></span><span style=display:flex><span>		(case 
+</span></span><span style=display:flex><span>			when gt.has_cycle then true
+</span></span><span style=display:flex><span>			when gt.node_path like concat(&#39;%%,&#39;, e.to_id, &#39;,%%&#39;) then true
+</span></span><span style=display:flex><span>			else false 
+</span></span><span style=display:flex><span>		end) as has_cycle
+</span></span><span style=display:flex><span>	from
+</span></span><span style=display:flex><span>		graph_traversal as gt
+</span></span><span style=display:flex><span>		join edge as e on e.from_id = gt.to_id and e.graph_id = gt.graph_id
+</span></span><span style=display:flex><span>	where
+</span></span><span style=display:flex><span>		not gt.has_cycle
+</span></span><span style=display:flex><span>		or
+</span></span><span style=display:flex><span>		e.to_id = &lt;TO ID HERE&gt;
+</span></span><span style=display:flex><span>)
+</span></span><span style=display:flex><span>select
+</span></span><span style=display:flex><span>	trim(&#39;,&#39; from gt.node_path) as path,
+</span></span><span style=display:flex><span>	gt.path_cost as cost
+</span></span><span style=display:flex><span>from
+</span></span><span style=display:flex><span>	graph_traversal as gt
+</span></span><span style=display:flex><span>where
+</span></span><span style=display:flex><span>	gt.to_id = &lt;TO ID HERE&gt;
+</span></span><span style=display:flex><span>	and
+</span></span><span style=display:flex><span>	not gt.has_cycle;
+</span></span></code></pre></div><p>A <em>query</em> é um tanto diferente da anterior.
+Primeiramente, tem a coluna <code>cost</code> a mais indicando o custo total do caminho até o momento.
+Outro detalhe é que a condição de início é dada por um nó de origem.
+Da mesma forma que na consulta anterior, só são enumerados os caminhos se o grafo não tem ciclos.
+No mais, a consulta é basicamente a mesma e o filtro pelo nó final é feito na consulta fora da CTE.
+A questão aqui é que a CTE está enumerando todos os caminhos a partir de um nó de origem até ao nó de destino desejado.
+No fim também é necessário remover algumas <code>,</code> no começo/fim de <code>node_path</code> para deixar o caminho bem arrumado.</p><p>Note que a consulta acima retorna o custo dos caminhos, dessa forma também é possível usar essa consulta para encontrar o caminho mínimo entre dois pontos.
+Obviamente que não é uma solução ideal, visto que ela enumera todos os caminhos possíveis e algoritmos de busca em largura (<em>Beadth First Search</em>, BFS) são
+muito melhores para isso.
+Porém, é uma forma de resolver o problema apenas com SQL, sem a necessidade de escrever nenhum outro algoritmo.</p><p>Bem, esse foi um desafio interessante que tive que resolver e nunca havia pensado em usar SQL para modelar e fazer operações em grafos.
+Abaixo seguem alguns exemplos para testar as consultas acima.</p><h1 id=alguns-exemplos-de-grafos-para-teste>Alguns exemplos de grafos para teste
+<a class=heading-link href=#alguns-exemplos-de-grafos-para-teste><i class="fa fa-link" aria-hidden=true></i></a></h1><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-fallback data-lang=fallback><span style=display:flex><span>-- cycle 1
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;cycle1&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle1&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle1&#39;, &#39;b&#39;, &#39;b&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle1&#39;, &#39;c&#39;, &#39;c&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle1&#39;, &#39;d&#39;, &#39;d&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle1&#39;, &#39;a&#39;, &#39;c&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle1&#39;, &#39;b&#39;, &#39;a&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle1&#39;, &#39;c&#39;, &#39;b&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle1&#39;, &#39;d&#39;, &#39;c&#39;, 0);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-- cycle 2
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;cycle2&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle2&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle2&#39;, &#39;b&#39;, &#39;b&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle2&#39;, &#39;c&#39;, &#39;c&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle2&#39;, &#39;a&#39;, &#39;c&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle2&#39;, &#39;b&#39;, &#39;a&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle2&#39;, &#39;c&#39;, &#39;b&#39;, 0);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-- cycle 3 and disjoint
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;cycle_disjoint&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle_disjoint&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle_disjoint&#39;, &#39;b&#39;, &#39;b&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle_disjoint&#39;, &#39;c&#39;, &#39;c&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle_disjoint&#39;, &#39;d&#39;, &#39;d&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;cycle_disjoint&#39;, &#39;e&#39;, &#39;e&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle_disjoint&#39;, &#39;a&#39;, &#39;c&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle_disjoint&#39;, &#39;b&#39;, &#39;a&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle_disjoint&#39;, &#39;c&#39;, &#39;b&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;cycle_disjoint&#39;, &#39;d&#39;, &#39;e&#39;, 0);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-- no cycle
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;no_cycle&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;no_cycle&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;no_cycle&#39;, &#39;b&#39;, &#39;b&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;no_cycle&#39;, &#39;c&#39;, &#39;c&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;no_cycle&#39;, &#39;a&#39;, &#39;c&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;no_cycle&#39;, &#39;b&#39;, &#39;a&#39;, 0);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;no_cycle&#39;, &#39;b&#39;, &#39;c&#39;, 0);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-- loop
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;loop&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;loop&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;loop&#39;, &#39;a&#39;, &#39;a&#39;, 0);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-- no_connections
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;no_connections&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;no_connections&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>-- path
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into graph (id, name) values (&#39;path&#39;, &#39;graph&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;path&#39;, &#39;a&#39;, &#39;a&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;path&#39;, &#39;b&#39;, &#39;b&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;path&#39;, &#39;c&#39;, &#39;c&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;path&#39;, &#39;d&#39;, &#39;d&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;path&#39;, &#39;e&#39;, &#39;e&#39;);
+</span></span><span style=display:flex><span>insert into node (graph_id, id, name) values (&#39;path&#39;, &#39;f&#39;, &#39;f&#39;);
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;a&#39;, &#39;b&#39;, 2);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;a&#39;, &#39;c&#39;, 5);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;a&#39;, &#39;f&#39;, 6.5);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;b&#39;, &#39;d&#39;, 3);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;c&#39;, &#39;e&#39;, 3);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;c&#39;, &#39;d&#39;, 1);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;d&#39;, &#39;f&#39;, 2);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;e&#39;, &#39;f&#39;, 2);
+</span></span><span style=display:flex><span>insert into edge (graph_id, from_id, to_id, cost) values (&#39;path&#39;, &#39;e&#39;, &#39;a&#39;, 1);
+</span></span></code></pre></div></div><footer></footer></article></section></div><footer class=footer><section class=container>©
+2016 -
+2023
+Júlio César Batista
+·
+Promovido por <a href=https://gohugo.io/>Hugo</a> & <a href=https://github.com/luizdepra/hugo-coder/>Coder</a>.</section></footer></main><script src=/js/coder.min.9cf2dbf9b6989ef8eae941ffb4231c26d1dc026bca38f1d19fdba50177d8a9ac.js integrity="sha256-nPLb+baYnvjq6UH/tCMcJtHcAmvKOPHRn9ulAXfYqaw="></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1BE56W9H8M"></script>
+<script>var doNotTrack=!1;if(!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-1BE56W9H8M",{anonymize_ip:!1})}</script></body></html>
