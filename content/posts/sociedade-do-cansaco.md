@@ -1,7 +1,8 @@
 ---
 title: "Sociedade do cansaço"
 date: 2023-03-12
-categories: ["Filosofia"]
+categories: ["Livros"]
+tags: ["Filosofia"]
 math: false
 ---
 
