@@ -2,7 +2,7 @@
 title: 'Desmistificando o Deep Learning com TensorFlow'
 date: 2017-05-03
 categories: ["Aprendizado de Máquina"]
-tags: ["Talks", "TensorFlow", "python", "Deep Learning", "Redes Neurais Convolucionais"]
+tags: ["Palestra", "TensorFlow", "python", "Deep Learning", "Redes Neurais Convolucionais"]
 ---
 
 Olá, tudo bem!?
