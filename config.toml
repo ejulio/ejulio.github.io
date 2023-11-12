@@ -68,7 +68,7 @@ languageName = ":brazil:"
 [[menu.main]]
 name = "Publicações"
 weight = 2
-url = "categories/publicação/"
+url = "tags/publicação/"
 
 [[menu.main]]
 name = "Blog"
@@ -76,7 +76,7 @@ weight = 3
 url = "posts/"
 
 [[menu.main]]
-name = "Categorias"
+name = "Tags"
 weight = 4
-url = "categories/"
+url = "tags/"
 

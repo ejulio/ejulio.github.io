@@ -1,8 +1,7 @@
 ---
 title: "Soma dos números pares na sequência Fibonacci"
 date: 2019-07-11
-categories: ["Matemática"]
-tags: ["Fibonacci"]
+tags: ["Matemática", "Fibonacci"]
 math: true
 ---
 

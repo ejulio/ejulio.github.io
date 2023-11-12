@@ -1,8 +1,7 @@
 ---
 title: "Matriz de incidência termo-documento"
 date: 2019-12-27
-categories: ["Recuperação de informação"]
-tags: ["python", "matriz incidência", "scipy sparse matrix", "boolean query", "estruturas de dados"]
+tags: ["Recuperação de informação", "python", "matriz incidência", "scipy sparse matrix", "boolean query", "estruturas de dados"]
 math: false
 ---
 

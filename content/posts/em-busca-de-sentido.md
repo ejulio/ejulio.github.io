@@ -1,8 +1,7 @@
 ---
 title: "Em busca de sentido"
 date: 2023-09-23
-categories: ["Livros"]
-tags: ["Filosofia", "Psicologia"]
+tags: ["Livros", "Filosofia", "Psicologia"]
 math: false
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: "Os primeiros anos do Brasil"
 date: 2023-08-04
-categories: ["Livros"]
-tags: ["História", "Brasil"]
+tags: ["Livros", "História", "Brasil"]
 ---
 
 Recentemente terminei de ler a coleção [Brasilis](https://www.amazon.com.br/Box-Cole%C3%A7%C3%A3o-Brasilis-Descobrimento-Traficantes/dp/8556080561/) de [Eduardo Bueno](https://www.youtube.com/c/BuenasIdeias) que fala dos primeiros 50 anos do Brasil.

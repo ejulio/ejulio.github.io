@@ -1,8 +1,7 @@
 ---
 title: "Sobre métodos ágeis"
 date: 2018-02-10
-categories: ["Desenvolvimento de software"]
-tags: ["Produtividade", "Processo de desenvolvimento", "Métodos ágeis"]
+tags: ["Desenvolvimento de software", "Produtividade", "Processo de desenvolvimento", "Métodos ágeis"]
 ---
 
 Vamos falar sobre metodologias ágeis, principalmente em um SAAS (*Software as a Service*). Para começar, não sou um *expert* em metodologias ágeis, assim como não passei por todos os possíveis casos que eles podem envolver. Portanto, posso ter uma visão enviesada para os conceitos que acredito fazer mais sentido. Depois desse *disclaimer*, vamos lá!

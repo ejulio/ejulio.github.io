@@ -1,8 +1,7 @@
 ---
 title: "Considerações sobre a construção de índices"
 date: 2019-12-30
-categories: ["Recuperação de informação"]
-tags: ["token", "term", "type", "stemming", "lemmatization", "stop-words"]
+tags: ["Recuperação de informação", "token", "term", "type", "stemming", "lemmatization", "stop-words"]
 math: false
 ---
 

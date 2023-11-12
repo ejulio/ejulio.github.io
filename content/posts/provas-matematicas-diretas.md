@@ -1,8 +1,7 @@
 ---
 title: "Provas matemáticas diretas"
 date: 2020-03-23
-categories: ["Matemática"]
-tags: ["Provas", "Lógica", "Conjectura", "Tabela know-show"]
+tags: ["Matemática", "Provas", "Lógica", "Conjectura", "Tabela know-show"]
 math: true
 ---
 

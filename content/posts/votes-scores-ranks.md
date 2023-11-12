@@ -1,9 +1,7 @@
 ---
 title: "Votes, scores e ranks"
 date: 2019-05-10
-categories: ["Análise de dados"]
-tags: ["Ordenação topológica", "Elo Ranking",
-"Arrow's Impossibility Theorem", "Borda's method", "ICC(3,1)"]
+tags: ["Análise de dados", "Ordenação topológica", "Elo Ranking", "Arrow's Impossibility Theorem", "Borda's method", "ICC(3,1)"]
 math: true
 ---
 

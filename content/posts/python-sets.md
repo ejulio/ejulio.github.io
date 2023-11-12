@@ -1,8 +1,7 @@
 ---
 title: "Python: conjuntos (sets)"
 date: 2019-04-01
-categories: ["Linguagens de Programação"]
-tags: ["Exemplos", "python"]
+tags: ["Linguagens de Programação", "Exemplos", "python"]
 ---
 
 Vamos falar um pouco sobre _sets_ (conjuntos) em _python_.

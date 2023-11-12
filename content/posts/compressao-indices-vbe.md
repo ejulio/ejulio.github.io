@@ -1,8 +1,7 @@
 ---
 title: "Compressão de índices: Variable Byte Encoding"
 date: 2020-01-15
-categories: ["Recuperação de informação"]
-tags: ["variable byte encoding", "python", "índice invertido"]
+tags: ["Recuperação de informação", "variable byte encoding", "python", "índice invertido"]
 math: false
 ---
 

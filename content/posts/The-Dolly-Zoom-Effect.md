@@ -1,8 +1,7 @@
 ---
 title: The Dolly Zoom Effect
 date: 2015-08-27
-categories: ["Computação Gráfica"]
-tags: ["three.js", "3D", "Exemplos"]
+tags: ["Computação Gráfica", "three.js", "3D", "Exemplos"]
 ---
 
 ### A ideia 

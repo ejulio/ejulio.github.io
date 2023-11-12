@@ -1,8 +1,7 @@
 ---
 title: "Algoritmos para consultar em índices"
 date: 2019-12-31
-categories: ["Recuperação de informação"]
-tags: ["intersect", "union", "set", "python", "skip list", "algoritmos", "estruturas de dados"]
+tags: ["Recuperação de informação", "intersect", "union", "set", "python", "skip list", "algoritmos", "estruturas de dados"]
 math: false
 ---
 

@@ -1,8 +1,7 @@
 ---
 title: "Objectives and Key-Results (OKRs)"
 date: 2018-01-09
-categories: ["Desenvolvimento de software"]
-tags: ["Produtividade", "Processo de desenvolvimento"]
+tags: ["Desenvolvimento de software", "Produtividade", "Processo de desenvolvimento"]
 ---
 
 Vamos falar sobre desenvolvimento de software.

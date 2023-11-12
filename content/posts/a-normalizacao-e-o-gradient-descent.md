@@ -1,8 +1,7 @@
 ---
 title: "A normalização e o Gradient Descent"
 date: 2017-09-27
-categories: ["Aprendizado de Máquina"]
-tags: ["Exemplos", "python", "Normalização de caracterśiticas", "Gradient descent", "Otimização"]
+tags: ["Aprendizado de Máquina", "Exemplos", "python", "Normalização de caracterśiticas", "Gradient descent", "Otimização"]
 math: true
 ---
 

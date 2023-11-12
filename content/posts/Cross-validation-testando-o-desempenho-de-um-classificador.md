@@ -1,8 +1,7 @@
 ---
 title: 'Cross-validation: testando o desempenho de um classificador'
 date: 2016-05-27
-categories: ["Aprendizado de Máquina"]
-tags: ["Validação Cruzada", "python", "scikit-learn", "Exemplos"]
+tags: ["Aprendizado de Máquina", "Validação Cruzada", "python", "scikit-learn", "Exemplos"]
 ---
 
 Olá pessoal, tudo certo!?

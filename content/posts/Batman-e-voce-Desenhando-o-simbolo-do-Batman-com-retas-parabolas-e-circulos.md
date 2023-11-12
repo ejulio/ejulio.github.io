@@ -2,8 +2,7 @@
 title: 'Batman é você? Desenhando o símbolo do Batman com retas, parábolas e círculos'
 date: 2016-06-08
 math: true
-categories: ["Matemática"]
-tags: ["Exemplos", "Álgebra", "Desmos", "Transformações"]
+tags: ["Matemática", "Exemplos", "Álgebra", "Desmos", "Transformações"]
 ---
 
 Olá, tudo certo!?

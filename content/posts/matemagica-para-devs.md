@@ -1,8 +1,7 @@
 ---
 title: 'Matemágica para devs'
 date: 2018-08-13
-categories: ["Matemática"]
-tags: ["Talks", "Álgebra", "Álgebra linear", "Cálculo", "Estatística", "python"]
+tags: ["Matemática", "Palestra", "Álgebra", "Álgebra linear", "Cálculo", "Estatística", "python"]
 ---
 
 Oi, tudo certo!?

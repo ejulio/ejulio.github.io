@@ -1,8 +1,7 @@
 ---
 title: "Técnicas de combinatória"
 date: 2019-05-27
-categories: ["Matemática"]
-tags: ["Fatorial", "Permutação", "Coeficiente Binomial", "n escolhe k"]
+tags: ["Matemática", "Fatorial", "Permutação", "Coeficiente Binomial", "n escolhe k"]
 math: true
 ---
 

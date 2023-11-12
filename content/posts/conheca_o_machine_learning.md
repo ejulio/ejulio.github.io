@@ -1,8 +1,7 @@
 ---
 title: 'Conheça o machine learning: algoritmos que aprendem a partir de dados, imagens e texto'
 date: 2017-08-13
-categories: ["Aprendizado de Máquina"]
-tags: ["Talks", "Deep Learning", "Redes Neurais Convolucionais"]
+tags: ["Aprendizado de Máquina", "Talks", "Deep Learning", "Redes Neurais Convolucionais"]
 ---
 
 Olá, tudo bem!?

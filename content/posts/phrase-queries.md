@@ -1,8 +1,7 @@
 ---
 title: "Executando consultas por frases"
 date: 2020-01-03
-categories: ["Recuperação de informação"]
-tags: ["python", "k-gram index", "bi-word index", "phrase queries", "phrase index"]
+tags: ["Recuperação de informação", "python", "k-gram index", "bi-word index", "phrase queries", "phrase index"]
 math: true
 ---
 

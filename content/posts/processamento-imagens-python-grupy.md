@@ -1,8 +1,7 @@
 ---
 title: 'Processamento de imagens com python'
 date: 2018-01-20
-categories: ["Processamento de imagens"]
-tags: ["Talks", "Python", "Grupy"]
+tags: ["Processamento de imagens", "Palestra", "Python", "Grupy"]
 ---
 
 Olá, tudo bem!?

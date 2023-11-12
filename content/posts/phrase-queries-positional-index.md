@@ -1,8 +1,7 @@
 ---
 title: "Executando consultas por frases: Positional Index"
 date: 2020-01-20
-categories: ["Recuperação de informação"]
-tags: ["python", "positional index", "phrase queries", "positional intersect"]
+tags: ["Recuperação de informação", "python", "positional index", "phrase queries", "positional intersect"]
 math: true
 ---
 

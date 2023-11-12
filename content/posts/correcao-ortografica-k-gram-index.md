@@ -1,8 +1,7 @@
 ---
 title: "Correção ortográfica com índice k-gram"
 date: 2020-02-11
-categories: ["Recuperação de informação"]
-tags: ["python", "k-gram index", "correção ortográfica", "spell correction", "jaccard coefficient"]
+tags: ["Recuperação de informação", "python", "k-gram index", "correção ortográfica", "spell correction", "jaccard coefficient"]
 math: true
 ---
 

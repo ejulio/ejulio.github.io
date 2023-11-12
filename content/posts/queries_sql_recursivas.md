@@ -1,8 +1,7 @@
 ---
 title: "Grafos e consultas SQL recursivas"
 date: 2023-09-04
-categories: ["Desenvolvimento de Software"]
-tags: ["SQL", "Grafos"]
+tags: ["Desenvolvimento de Software", "SQL", "Grafos"]
 ---
 
 Recentemente me deparei com o problema de trabalhar com grafos com SQL.

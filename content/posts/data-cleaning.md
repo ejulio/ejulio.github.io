@@ -1,8 +1,7 @@
 ---
 title: "Limpando dados (data cleaning)"
 date: 2019-04-20
-categories: ["Análise de dados"]
-tags: ["limpeza de dados", "data cleaning"]
+tags: ["Análise de dados", "limpeza de dados", "data cleaning"]
 ---
 
 A limpeza dos dados é um passo importante na construção de uma análise e modelo.

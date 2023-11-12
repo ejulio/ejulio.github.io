@@ -1,8 +1,7 @@
 ---
 title: "Experimentos com Machine Learning"
 date: 2019-07-09
-categories: ["Aprendizado de Máquina"]
-tags: ["Experimentos", "Sample bias", "Covariate shift", "Concept Drift"]
+tags: ["Aprendizado de Máquina", "Experimentos", "Sample bias", "Covariate shift", "Concept Drift"]
 math: true
 ---
 

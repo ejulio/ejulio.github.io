@@ -1,8 +1,7 @@
 ---
 title: "Isolamento de transações em bancos de dados relacionais"
 date: 2023-11-09
-categories: ["Banco de dados"]
-tags: ["Projeto", "python"]
+tags: ["Banco de dados", "Projeto", "python"]
 ---
 
 Estava lendo sobre os níveis de [isolamento de transações em bancos de dados relacionais, especificamente no PostgreSQL](https://www.postgresql.org/docs/current/transaction-iso.html) e decidi fazer um projeto em python para simular os cenários de concorrência.

@@ -1,8 +1,7 @@
 ---
 title: "Designing Data Intensive Applications - Chapter 1: Reliable, Scalable, and Maintainable Applications"
 date: 2023-01-16
-categories: ["Livros"]
-tags: ["Designing Data Intensive Applications", "Arquitetura de Software"]
+tags: ["Livros", "Designing Data Intensive Applications", "Arquitetura de Software"]
 ---
 Um sistema de dados intensivos (_data intensive applications_) é definido por ter os dados
 como o principal desafio, seja a quantidade, complexidade, ou velocidade com que eles mudam.

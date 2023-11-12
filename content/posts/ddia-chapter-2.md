@@ -1,8 +1,7 @@
 ---
 title: "Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages"
 date: 2023-03-31
-categories: ["Livros"]
-tags: ["Designing Data Intensive Applications", "Arquitetura de Software"]
+tags: ["Livros", "Designing Data Intensive Applications", "Arquitetura de Software"]
 ---
 
 O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema.
