@@ -66,14 +66,19 @@ target = "_blank"
 languageName = ":brazil:"
 
 [[menu.main]]
+name = "Blog"
+weight = 1
+url = "posts/"
+
+[[menu.main]]
 name = "Publicações"
 weight = 2
 url = "tags/publicação/"
 
 [[menu.main]]
-name = "Blog"
+name = "Projetos"
 weight = 3
-url = "posts/"
+url = "tags/projeto/"
 
 [[menu.main]]
 name = "Tags"
