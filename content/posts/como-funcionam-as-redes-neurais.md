@@ -1,7 +1,7 @@
 ---
 title: 'Como funcionam as redes neurais'
 date: 2017-11-30
-tags: ["Aprendizado de Máquina", "Talks", "Deep Learning", "Redes Neurais"]
+tags: ["Aprendizado de Máquina", "Palestra", "Deep Learning", "Redes Neurais"]
 ---
 
 Olá, tudo bem!?
