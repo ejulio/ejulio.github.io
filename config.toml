@@ -81,7 +81,11 @@ weight = 3
 url = "tags/projeto/"
 
 [[menu.main]]
-name = "Tags"
+name = "Notas"
 weight = 4
-url = "tags/"
+url = "tags/notas/"
 
+[[menu.main]]
+name = "Tags"
+weight = 5
+url = "tags/"

@@ -1,7 +1,7 @@
 ---
 title: 'Processamento de imagens com python'
 date: 2018-01-20
-tags: ["Processamento de imagens", "Palestra", "Python", "Grupy"]
+tags: ["Processamento de imagens", "Palestra", "python", "Grupy"]
 ---
 
 Olá, tudo bem!?
