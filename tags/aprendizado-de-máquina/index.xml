@@ -7,5 +7,5 @@ Eu e o Vítor Albiero vamos falar sobre deep learning na The Developers Conferen
 Nesses links você pode acessar os slides da talk e também os códigos.
 Espero que você goste!</description></item><item><title>Cross-validation: testando o desempenho de um classificador</title><link>https://juliocesarbatista.com/posts/cross-validation-testando-o-desempenho-de-um-classificador/</link><pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/cross-validation-testando-o-desempenho-de-um-classificador/</guid><description>Olá pessoal, tudo certo!?
 Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.
-Dados e características O exemplo de teste será a classificação de texto baseado no tutorial de classificação de texto do scikit-learn. O código inicial é:
+Dados e características Link para o cabeçalho O exemplo de teste será a classificação de texto baseado no tutorial de classificação de texto do scikit-learn. O código inicial é:
 Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação.</description></item></channel></rss>
