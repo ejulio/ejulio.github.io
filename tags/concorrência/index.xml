@@ -1,1 +1,31 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Concorrência on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/concorr%C3%AAncia/</link><description>Recent content in Concorrência on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/concorr%C3%AAncia/index.xml" rel="self" type="application/rss+xml"/><item><title>A tale of concurrency through creativity in Python: a deep dive into how gevent works</title><link>https://juliocesarbatista.com/posts/a-tale-of-concurrency-through-creativity-in-python/</link><pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/a-tale-of-concurrency-through-creativity-in-python/</guid><description>gevent usa greenlets (corotinas ou, goroutines em go) ao invés de threads do sistema operacional. Essas operações são colaborativas, portanto elas precisam ceder (yield) a execução para outras rotinas. Por serem apenas rotinas no programa, sem intervenção do sistema operacional, são mais leves. Interessante como a biblioteca em C gevent resolve o problema. A biblioteca manipula a stack/heap para dar continuidade em uma rotina que deceu a execução. libev foi usada para manipular o loop de eventos e controlar a execução das greenlets Com monkey patching é possível tornar um código síncrono em assíncrono.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Concorrência on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/concorr%C3%AAncia/</link><description>Recent content in Concorrência on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Tue, 28 Nov 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/concorr%C3%AAncia/index.xml" rel="self" type="application/rss+xml"/><item><title>A tale of concurrency through creativity in Python: a deep dive into how gevent works</title><link>https://juliocesarbatista.com/posts/a-tale-of-concurrency-through-creativity-in-python/</link><pubDate>Tue, 28 Nov 2023 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/a-tale-of-concurrency-through-creativity-in-python/</guid><description>&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/GunMToxbE0E?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div>
+
+&lt;ul>
+&lt;li>&lt;code>gevent&lt;/code> usa &lt;code>greenlets&lt;/code> (corotinas ou, &lt;code>goroutines&lt;/code> em &lt;em>go&lt;/em>) ao invés de &lt;em>threads&lt;/em> do sistema operacional.
+&lt;ul>
+&lt;li>Essas operações são colaborativas, portanto elas precisam ceder (&lt;code>yield&lt;/code>) a execução para outras rotinas.&lt;/li>
+&lt;li>Por serem apenas rotinas no programa, sem intervenção do sistema operacional, são mais leves.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Interessante como a biblioteca em &lt;em>C&lt;/em> &lt;code>gevent&lt;/code> resolve o problema.
+&lt;ul>
+&lt;li>A biblioteca manipula a &lt;em>stack&lt;/em>/&lt;em>heap&lt;/em> para dar continuidade em uma rotina que deceu a execução.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>libev&lt;/code> foi usada para manipular o &lt;em>loop&lt;/em> de eventos e controlar a execução das &lt;code>greenlets&lt;/code>&lt;/li>
+&lt;li>Com &lt;em>monkey patching&lt;/em> é possível tornar um código síncrono em assíncrono.
+&lt;ul>
+&lt;li>Possível porque &lt;code>gevent&lt;/code> troca &lt;em>socket&lt;/em> bloqueante por não bloqueante.&lt;/li>
+&lt;li>Porém só funciona para biblioteca em &lt;em>python&lt;/em>.
+&lt;ul>
+&lt;li>Se estiver usando uma biblioteca de banco de dados em &lt;em>C&lt;/em> com &lt;em>wrapper&lt;/em> em &lt;em>python&lt;/em>, não vai funcionar.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Só funciona para &lt;em>I/O&lt;/em>, rotinas que precisam de muita CPU não fazem muito sentido rodar com &lt;em>greenlets&lt;/em> (provavelmente que &lt;em>threads&lt;/em> sejam um modelo melhor).&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Deve haver colaboração entre as rotinas, se uma delas não ceder a execução para que as demais continuem quando estiverem prontas, não haverá concorrência, apenas uma rotina continua.&lt;/li>
+&lt;/ul></description></item></channel></rss>

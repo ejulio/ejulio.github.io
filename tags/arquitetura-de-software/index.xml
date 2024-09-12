@@ -1,3 +1,27 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arquitetura De Software on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/arquitetura-de-software/</link><description>Recent content in Arquitetura De Software on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/arquitetura-de-software/index.xml" rel="self" type="application/rss+xml"/><item><title>Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages</title><link>https://juliocesarbatista.com/posts/ddia-chapter-2/</link><pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/ddia-chapter-2/</guid><description>O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema. Esse ponto é bem importante, principalmente se pensamos em algoritmos e estruturas de dados. Muitas vezes usamos a abstração errada e isso torna o problema mais complexo. Por exemplo, você tem uma lista de itens [a, b, c, a, a, b, c, d, d, c, f] e você quer remover os itens duplicados.</description></item><item><title>Designing Data Intensive Applications - Chapter 1: Reliable, Scalable, and Maintainable Applications</title><link>https://juliocesarbatista.com/posts/ddia-chapter-1/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/ddia-chapter-1/</guid><description>Um sistema de dados intensivos (data intensive applications) é definido por ter os dados como o principal desafio, seja a quantidade, complexidade, ou velocidade com que eles mudam.
-As três características principais são: confiança (reliability), escalabilidade (_scalability) e Manutenibilidade (maintainability).
-Confiança (Reliability) Link para o cabeçalho Basicamente, o sistema deve funcionar como o esperado. O desempenho é bom para a carga normal do sistema; mesmo que um usuário faça um erro, o sistema continua operando normalmente; apenas usuários autorizados podem usar a aplicação; assim por diante.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arquitetura De Software on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/arquitetura-de-software/</link><description>Recent content in Arquitetura De Software on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Fri, 31 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/arquitetura-de-software/index.xml" rel="self" type="application/rss+xml"/><item><title>Designing Data Intensive Applications - Chapter 2: Data Models and Query Languages</title><link>https://juliocesarbatista.com/posts/ddia-chapter-2/</link><pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/ddia-chapter-2/</guid><description>&lt;p>O modelo de dados é uma das principais partes de um sistema, porque ele influencia como pensamos sobre o problema.
+Esse ponto é bem importante, principalmente se pensamos em algoritmos e estruturas de dados.
+Muitas vezes usamos a abstração errada e isso torna o problema mais complexo.
+Por exemplo, você tem uma lista de itens &lt;code>[a, b, c, a, a, b, c, d, d, c, f]&lt;/code> e você quer remover os itens duplicados. Como resolver esse problema?
+Se pensarmos apenas na lista como uma abstração, vamos ter que escrever um pouco de código para resolver esse problema.
+Porém, podemos pensar em outra abstração, como um conjunto (&lt;code>set&lt;/code>) e esse problema está resolvido.
+O motivo é que um conjunto, por definição, não mantém valores duplicados.
+Então o conjunto final seria algo como &lt;code>{a, b, c, d, f}&lt;/code>.
+Outro exemplo é com grafos.
+Podemos pensar neles como estruturas, &lt;code>Vertex&lt;/code> e &lt;code>Edge&lt;/code>, e todas as arestas de um determinado nó estão em uma lista, algo como &lt;code>vertex.edges&lt;/code>.
+Entretanto, é possível representar um grafo a partir de uma matriz de adjacência que permite usar técnicas da álgebra linear para resolver alguns problemas, assim abrindo as portas para diferentes soluções e possivelmente reaproveitando técnicas de outras áreas sem precisar reinventar a roda.
+Note que a ideia aqui é simplesmente explorar como as diferentes representações nos fazem pensar sobre o problema e suas soluções.&lt;/p></description></item><item><title>Designing Data Intensive Applications - Chapter 1: Reliable, Scalable, and Maintainable Applications</title><link>https://juliocesarbatista.com/posts/ddia-chapter-1/</link><pubDate>Mon, 16 Jan 2023 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/ddia-chapter-1/</guid><description>&lt;p>Um sistema de dados intensivos (&lt;em>data intensive applications&lt;/em>) é definido por ter os dados
+como o principal desafio, seja a quantidade, complexidade, ou velocidade com que eles mudam.&lt;/p>
+&lt;p>As três características principais são: confiança (&lt;em>reliability&lt;/em>),
+escalabilidade (_scalability) e Manutenibilidade (&lt;em>maintainability&lt;/em>).&lt;/p>
+&lt;h1 id="confiança-_reliability_">
+ Confiança (&lt;em>Reliability&lt;/em>)
+ &lt;a class="heading-link" href="#confian%c3%a7a-_reliability_">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho">&lt;/i>
+ &lt;span class="sr-only">Link para o cabeçalho&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>Basicamente, o sistema deve funcionar como o esperado.
+O desempenho é bom para a carga normal do sistema;
+mesmo que um usuário faça um erro, o sistema continua operando normalmente;
+apenas usuários autorizados podem usar a aplicação;
+assim por diante.&lt;/p></description></item></channel></rss>

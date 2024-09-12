@@ -1,3 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fibonacci on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/fibonacci/</link><description>Recent content in Fibonacci on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/fibonacci/index.xml" rel="self" type="application/rss+xml"/><item><title>Soma dos números pares na sequência Fibonacci</title><link>https://juliocesarbatista.com/posts/soma-pares-fibonacci/</link><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/soma-pares-fibonacci/</guid><description>Os números de Fibonacci (Wikipedia, Wikipedia) são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$. Os primeiros números são 0 e 1, e a partir deles, a sequência segue: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &amp;hellip;. Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n &amp;lt; C$?
-A solução simples é fazer um script conforme
-C = 100 F_n2 = 0 F_n1 = 1 soma = 0 while True: F_n = F_n2 + F_n1 if F_n &amp;gt;= C: break elif F_n % 2 == 0: soma += F_n F_n2 = F_n1 F_n1 = F_n print(soma) Mas é possível fazer melhor?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fibonacci on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/fibonacci/</link><description>Recent content in Fibonacci on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Thu, 11 Jul 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/fibonacci/index.xml" rel="self" type="application/rss+xml"/><item><title>Soma dos números pares na sequência Fibonacci</title><link>https://juliocesarbatista.com/posts/soma-pares-fibonacci/</link><pubDate>Thu, 11 Jul 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/soma-pares-fibonacci/</guid><description>&lt;p>Os números de Fibonacci
+(&lt;a href="https://pt.wikipedia.org/wiki/Sequ%C3%AAncia_de_Fibonacci" class="external-link" target="_blank" rel="noopener">Wikipedia&lt;/a>,
+&lt;a href="https://en.wikipedia.org/wiki/Fibonacci_number" class="external-link" target="_blank" rel="noopener">Wikipedia&lt;/a>)
+são uma sequência definida como $F_n = F_{n-2} + F_{n-1}$.
+Os primeiros números são &lt;em>0&lt;/em> e &lt;em>1&lt;/em>, e a partir deles, a sequência segue:
+&lt;em>0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, &amp;hellip;&lt;/em>.
+Dada a definição da sequência Fibonacci, como se calcula a soma dos números pares até $F_n &amp;lt; C$?&lt;/p>
+&lt;p>A solução simples é fazer um &lt;em>script&lt;/em> conforme&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-fallback" data-lang="fallback">&lt;span style="display:flex;">&lt;span>C = 100
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>F_n2 = 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>F_n1 = 1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>soma = 0
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>while True:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> F_n = F_n2 + F_n1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> if F_n &amp;gt;= C:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> break
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> elif F_n % 2 == 0:
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> soma += F_n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> F_n2 = F_n1
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> F_n1 = F_n
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>print(soma)
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Mas é possível fazer melhor?
+Sim, e isso requer pensar em como um número na sequência Fibonacci é calculado.&lt;/p></description></item></channel></rss>

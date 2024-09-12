@@ -1,2 +1,16 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Limpeza De Dados on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/limpeza-de-dados/</link><description>Recent content in Limpeza De Dados on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/limpeza-de-dados/index.xml" rel="self" type="application/rss+xml"/><item><title>Limpando dados (data cleaning)</title><link>https://juliocesarbatista.com/posts/data-cleaning/</link><pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/data-cleaning/</guid><description>A limpeza dos dados é um passo importante na construção de uma análise e modelo. Entretanto, não existe um fluxo exato para seguir, a ideia é explorar o dataset e identificar registros inválidos e aplicar regras para corrigí-los. A seguir tem uma lista do que procurar/corrigir em datasets.
-1. Conversão de tipos Link para o cabeçalho Simples, se o valor deve ser um numérico e está como string, então usa-se o tipo mais apropriado.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Limpeza De Dados on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/limpeza-de-dados/</link><description>Recent content in Limpeza De Dados on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Sat, 20 Apr 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/limpeza-de-dados/index.xml" rel="self" type="application/rss+xml"/><item><title>Limpando dados (data cleaning)</title><link>https://juliocesarbatista.com/posts/data-cleaning/</link><pubDate>Sat, 20 Apr 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/data-cleaning/</guid><description>&lt;p>A limpeza dos dados é um passo importante na construção de uma análise e modelo.
+Entretanto, não existe um fluxo exato para seguir, a ideia é explorar o dataset e identificar registros inválidos e aplicar regras para corrigí-los.
+A seguir tem uma lista do que procurar/corrigir em &lt;em>datasets&lt;/em>.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="1-conversão-de-tipos">
+ 1. Conversão de tipos
+ &lt;a class="heading-link" href="#1-convers%c3%a3o-de-tipos">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho">&lt;/i>
+ &lt;span class="sr-only">Link para o cabeçalho&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>Simples, se o valor deve ser um numérico e está como &lt;em>string&lt;/em>, então usa-se o tipo mais apropriado. Normalmente &lt;code>float&lt;/code> para medidas contínuas e &lt;code>int&lt;/code> para números discretos.
+O mesmo vale para &lt;code>bool&lt;/code>, datas e outros.
+Também vale ressaltar a precisão de valores &lt;code>float&lt;/code>.
+Se existem valores que precisam de cinco casas decimais e valores com duas casas decimais.
+Arredondar todos os valores para duas casas decimais é uma boa opção.&lt;/p></description></item></channel></rss>

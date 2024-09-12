@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Validação Cruzada on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/valida%C3%A7%C3%A3o-cruzada/</link><description>Recent content in Validação Cruzada on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Fri, 27 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/valida%C3%A7%C3%A3o-cruzada/index.xml" rel="self" type="application/rss+xml"/><item><title>Cross-validation: testando o desempenho de um classificador</title><link>https://juliocesarbatista.com/posts/cross-validation-testando-o-desempenho-de-um-classificador/</link><pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/cross-validation-testando-o-desempenho-de-um-classificador/</guid><description>Olá pessoal, tudo certo!?
-Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.
-Dados e características Link para o cabeçalho O exemplo de teste será a classificação de texto baseado no tutorial de classificação de texto do scikit-learn. O código inicial é:
-Entre as linhas 12 e 15 definimos os dados que serão usados para o teste de classificação.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Validação Cruzada on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/valida%C3%A7%C3%A3o-cruzada/</link><description>Recent content in Validação Cruzada on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Fri, 27 May 2016 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/valida%C3%A7%C3%A3o-cruzada/index.xml" rel="self" type="application/rss+xml"/><item><title>Cross-validation: testando o desempenho de um classificador</title><link>https://juliocesarbatista.com/posts/cross-validation-testando-o-desempenho-de-um-classificador/</link><pubDate>Fri, 27 May 2016 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/cross-validation-testando-o-desempenho-de-um-classificador/</guid><description>&lt;p>Olá pessoal, tudo certo!?&lt;/p>
+&lt;p>Hoje vamos falar sobre aprendizado de máquina. Não vamos falar sobre as técnicas de classificação, mas sobre as técnicas de verificação de desempenho dos algoritmos.&lt;/p>
+&lt;!-- raw HTML omitted -->
+&lt;!-- raw HTML omitted -->
+&lt;h1 id="dados-e-características">
+ Dados e características
+ &lt;a class="heading-link" href="#dados-e-caracter%c3%adsticas">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho">&lt;/i>
+ &lt;span class="sr-only">Link para o cabeçalho&lt;/span>
+ &lt;/a>
+&lt;/h1>
+&lt;p>O exemplo de teste será a classificação de texto baseado no &lt;a href="http://scikit-learn.org/stable/tutorial/text_analytics/working_with_text_data.html" class="external-link" target="_blank" rel="noopener">tutorial de classificação de texto do &lt;em>scikit-learn&lt;/em>&lt;/a>. O código inicial é:&lt;/p></description></item></channel></rss>

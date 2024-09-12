@@ -1,3 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nltk on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/nltk/</link><description>Recent content in Nltk on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/nltk/index.xml" rel="self" type="application/rss+xml"/><item><title>Índice invertido (inverted index)</title><link>https://juliocesarbatista.com/posts/indice-invertido/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/indice-invertido/</guid><description>A matriz de incidência termo-documento é uma das formas de representar um índice de termos por documento. Mesmo usando o conceito de uma matriz esparsa, essa estrutura pode crescer muito para ser usada em memória. Uma alternativa para esse caso é usar um índice invertido (inverted index).
-Dados os seguintes documentos como exemplo:
-Uma casa à venda em Blumenau Vendo terreno em Gaspar Alugo apartamento em Indaial A matriz de incidência é:</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nltk on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/nltk/</link><description>Recent content in Nltk on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Sat, 28 Dec 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/nltk/index.xml" rel="self" type="application/rss+xml"/><item><title>Índice invertido (inverted index)</title><link>https://juliocesarbatista.com/posts/indice-invertido/</link><pubDate>Sat, 28 Dec 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/indice-invertido/</guid><description>&lt;p>&lt;a href="https://juliocesarbatista.com/post/matriz-incidencia-termo-documento/" class="external-link" target="_blank" rel="noopener">A matriz de incidência termo-documento&lt;/a> é uma das formas de representar um índice de termos por documento.
+Mesmo usando o conceito de uma matriz esparsa, essa estrutura pode crescer muito para ser usada em memória.
+Uma alternativa para esse caso é usar um índice invertido (&lt;em>inverted index&lt;/em>).&lt;/p>
+&lt;p>Dados os seguintes documentos como exemplo:&lt;/p>
+&lt;ul>
+&lt;li>Uma casa à venda em Blumenau&lt;/li>
+&lt;li>Vendo terreno em Gaspar&lt;/li>
+&lt;li>Alugo apartamento em Indaial&lt;/li>
+&lt;/ul>
+&lt;p>A matriz de incidência é:&lt;/p></description></item></channel></rss>

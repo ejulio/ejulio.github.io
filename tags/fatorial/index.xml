@@ -1,3 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fatorial on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/fatorial/</link><description>Recent content in Fatorial on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/fatorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Técnicas de combinatória</title><link>https://juliocesarbatista.com/posts/combinatoria/</link><pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/combinatoria/</guid><description>Dado um conjunto $S$ qualquer com $n$ elementos, de quantas formas é possível organizar/ordenar os elementos? Quantos subconjuntos de $S$ com $k &amp;lt;= n$ elementos podem ser criados? Essas respostas podem ser encontradas com algumas técnicas de combinatória.
-Definições Link para o cabeçalho $ S = \text{ { A, B, C, D } } $ e $n = \lvert S \rvert = 4$
-De quantas formas é possível organizar/ordenar os elementos?</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Fatorial on Júlio César Batista</title><link>https://juliocesarbatista.com/tags/fatorial/</link><description>Recent content in Fatorial on Júlio César Batista</description><generator>Hugo</generator><language>pt-br</language><lastBuildDate>Mon, 27 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://juliocesarbatista.com/tags/fatorial/index.xml" rel="self" type="application/rss+xml"/><item><title>Técnicas de combinatória</title><link>https://juliocesarbatista.com/posts/combinatoria/</link><pubDate>Mon, 27 May 2019 00:00:00 +0000</pubDate><guid>https://juliocesarbatista.com/posts/combinatoria/</guid><description>&lt;p>Dado um conjunto $S$ qualquer com $n$ elementos,
+de quantas formas é possível organizar/ordenar os elementos?
+Quantos subconjuntos de $S$ com $k &amp;lt;= n$ elementos podem ser criados?
+Essas respostas podem ser encontradas com algumas técnicas de combinatória.&lt;/p>
+&lt;h2 id="definições">
+ Definições
+ &lt;a class="heading-link" href="#defini%c3%a7%c3%b5es">
+ &lt;i class="fa-solid fa-link" aria-hidden="true" title="Link para o cabeçalho">&lt;/i>
+ &lt;span class="sr-only">Link para o cabeçalho&lt;/span>
+ &lt;/a>
+&lt;/h2>
+&lt;p>$ S = \text{ { A, B, C, D } } $ e $n = \lvert S \rvert = 4$&lt;/p>
+&lt;p>&lt;strong>De quantas formas é possível organizar/ordenar os elementos?&lt;/strong>&lt;/p></description></item></channel></rss>
