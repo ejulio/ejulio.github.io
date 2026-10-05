@@ -1,0 +1,12 @@
+{{- $username := .Get 0 -}}
+{{- $id := .Get 1 -}}
+{{- $file := .Get 2 -}}
+{{- if and $username $id -}}
+  {{- if $file -}}
+    <script src="https://gist.github.com/{{ $username }}/{{ $id }}.js?file={{ $file }}"></script>
+  {{- else -}}
+    <script src="https://gist.github.com/{{ $username }}/{{ $id }}.js"></script>
+  {{- end -}}
+{{- else -}}
+  {{- errorf "Invalid parameters passed to the gist shortcode." -}}
+{{- end -}}
